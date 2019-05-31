@@ -18,13 +18,12 @@ Public Class Form1
 
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'nao sei o que é para escrever
-        Faturas.Hide()
-        Intervencoes.Hide()
-        Internamentos.Hide()
-        Seguros.Hide()
-        GroupBox1.Hide()
-        GroupBox2.Hide()
-        ShowButtons()
+
+        ShowButtonsPaciente()
+        ShowButtonsMedico()
+        ShowButtonsEnfermeiro()
+        'ShowButtonsMedicamentos()
+
 
         CN = New SqlConnection("Data Source=tcp:mednat.ieeta.pt\SQLSERVER,8101;Initial Catalog=p4g9;User ID=p4g9;Password=ClinicG3st;Connection Timeout=50;")
         TerPacientes(CN)
@@ -36,6 +35,30 @@ Public Class Form1
         TerServiços(CN)
         TerMedicamentos(CN)
 
+    End Sub
+
+    Private Sub ShowButtonsMedico()
+        LockControlsDoc()
+        btnAddDoc.Visible = True
+        btnEditDoc.Visible = True
+        btnOkDoc.Visible = False
+        btnCancelDoc.Visible = False
+
+        Button9.Visible = True
+        Button11.Visible = True
+        Button12.Visible = True
+    End Sub
+
+    Private Sub ShowButtonsEnfermeiro()
+        LockControlsEnf()
+        btnAddEnf.Visible = True
+        btnEditEnf.Visible = True
+        btnOkEnf.Visible = False
+        btnCancelEnf.Visible = False
+
+        Button5.Visible = True
+        Button7.Visible = True
+        Button8.Visible = True
     End Sub
 
     Private Sub TerMedicamentos(cN As SqlConnection)
@@ -307,7 +330,7 @@ Public Class Form1
 
 
     ' Helper routines
-    Sub LockControls()
+    Sub LockControlsPaciente()
         TextBox1.ReadOnly = True
         TextBox2.ReadOnly = True
         TextBox3.ReadOnly = True
@@ -321,7 +344,35 @@ Public Class Form1
         TextBox11.ReadOnly = True
     End Sub
 
-    Sub UnlockControls()
+    Sub LockControlsEnf()
+        TextBox62.ReadOnly = True
+        TextBox60.ReadOnly = True
+        TextBox53.ReadOnly = True
+        TextBox55.ReadOnly = True
+        TextBox59.ReadOnly = True
+        TextBox54.ReadOnly = True
+        TextBox58.ReadOnly = True
+        TextBox52.ReadOnly = True
+        TextBox57.ReadOnly = True
+        TextBox61.ReadOnly = True
+        TextBox56.ReadOnly = True
+    End Sub
+
+    Sub UnLockControlsEnf()
+        TextBox62.ReadOnly = False
+        TextBox60.ReadOnly = False
+        TextBox53.ReadOnly = False
+        TextBox55.ReadOnly = False
+        TextBox59.ReadOnly = False
+        TextBox54.ReadOnly = False
+        TextBox58.ReadOnly = False
+        TextBox52.ReadOnly = False
+        TextBox57.ReadOnly = False
+        TextBox61.ReadOnly = False
+        TextBox56.ReadOnly = False
+    End Sub
+
+    Sub UnLockControlsPaciente()
         TextBox1.ReadOnly = False
         TextBox2.ReadOnly = False
         TextBox3.ReadOnly = False
@@ -334,8 +385,37 @@ Public Class Form1
         TextBox10.ReadOnly = False
         TextBox11.ReadOnly = False
     End Sub
+    Sub LockControlsDoc()
+        TextBox22.ReadOnly = True
+        TextBox23.ReadOnly = True
+        TextBox20.ReadOnly = True
+        TextBox13.ReadOnly = True
+        TextBox15.ReadOnly = True
+        TextBox19.ReadOnly = True
+        TextBox14.ReadOnly = True
+        TextBox18.ReadOnly = True
+        TextBox12.ReadOnly = True
+        TextBox17.ReadOnly = True
+        TextBox21.ReadOnly = True
+        TextBox16.ReadOnly = True
+    End Sub
 
-    Sub ClearFields()
+    Sub UnLockControlsDoc()
+        TextBox22.ReadOnly = False
+        TextBox23.ReadOnly = False
+        TextBox20.ReadOnly = False
+        TextBox13.ReadOnly = False
+        TextBox15.ReadOnly = False
+        TextBox19.ReadOnly = False
+        TextBox14.ReadOnly = False
+        TextBox18.ReadOnly = False
+        TextBox12.ReadOnly = False
+        TextBox17.ReadOnly = False
+        TextBox21.ReadOnly = False
+        TextBox16.ReadOnly = False
+    End Sub
+
+    Sub ClearFieldsPaciente()
         TextBox1.Text = ""
         TextBox2.Text = ""
         TextBox3.Text = ""
@@ -347,6 +427,35 @@ Public Class Form1
         TextBox9.Text = ""
         TextBox10.Text = ""
         TextBox11.Text = ""
+    End Sub
+
+    Sub ClearFieldsEnf()
+        TextBox62.Text = ""
+        TextBox60.Text = ""
+        TextBox53.Text = ""
+        TextBox55.Text = ""
+        TextBox59.Text = ""
+        TextBox54.Text = ""
+        TextBox58.Text = ""
+        TextBox52.Text = ""
+        TextBox57.Text = ""
+        TextBox61.Text = ""
+        TextBox56.Text = ""
+    End Sub
+
+    Sub ClearFieldsDoc()
+        TextBox22.Text = ""
+        TextBox23.Text = ""
+        TextBox20.Text = ""
+        TextBox13.Text = ""
+        TextBox15.Text = ""
+        TextBox19.Text = ""
+        TextBox14.Text = ""
+        TextBox18.Text = ""
+        TextBox12.Text = ""
+        TextBox17.Text = ""
+        TextBox21.Text = ""
+        TextBox16.Text = ""
     End Sub
 
     Sub ShowPaciente()
@@ -387,10 +496,10 @@ Public Class Form1
     End Sub
 
     Private Sub SubmitPaciente(ByVal P As Paciente)
-        CMD1.CommandText = "INSERT Paciente (nome, telemovel, cc, email, " &
-                          "endereco, nacionalidade, telefone, data_nasc, sexo, codigo,codigopostal) " &
+        CMD1.CommandText = "INSERT ClinicGest.Pessoa (nome, telemovel, cc, email, " &
+                          "endereco, nacionalidade, telefone, data_nasc, sexo,codigopostal) " &
                           "VALUES (@nome, @telemovel, @cc, @email, " &
-                          "@endereco, @nacionalidade, @telefone, @data_nasc, @sexo, @codigo, @codigopostal) "
+                          "@endereco, @nacionalidade, @telefone, @data_nasc, @sexo, @codigopostal); INSERT ClinicGest.Paciente (cc_pac, codigo_pac) VALUES (@cc, @codigo)"
         CMD1.Parameters.Clear()
         CMD1.Parameters.AddWithValue("@nome", P.Nome)
         CMD1.Parameters.AddWithValue("@telemovel", P.Telemovel)
@@ -538,14 +647,14 @@ Public Class Form1
             If currentPaciente < 0 Then currentPaciente = 0
             ShowPaciente()
         Else
-            ClearFields()
-            LockControls()
+            ClearFieldsPaciente()
+            LockControlsPaciente()
         End If
-        ShowButtons()
+        ShowButtonsPaciente()
     End Sub
 
-    Private Sub ShowButtons()
-        LockControls()
+    Private Sub ShowButtonsPaciente()
+        LockControlsPaciente()
         btnAdd.Visible = True
         btnEdit.Visible = True
         btnOk.Visible = False
@@ -566,18 +675,18 @@ Public Class Form1
         ListBox1.Enabled = True
         Dim idx As Integer = ListBox1.FindString(TextBox1.Text)
         ListBox1.SelectedIndex = idx
-        ShowButtons()
+        ShowButtonsPaciente()
     End Sub
 
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
         adding = True
-        ClearFields()
-        HideButtons()
+        ClearFieldsPaciente()
+        HideButtonsPaciente()
         ListBox1.Enabled = False
     End Sub
 
-    Private Sub HideButtons()
-        UnlockControls()
+    Private Sub HideButtonsPaciente()
+        UnLockControlsPaciente()
         btnAdd.Visible = False
         btnEdit.Visible = False
         btnOk.Visible = True
@@ -589,6 +698,31 @@ Public Class Form1
         Button4.Visible = False
     End Sub
 
+    Private Sub HideButtonsDoc()
+        UnLockControlsDoc()
+        btnAddDoc.Visible = False
+        btnEditDoc.Visible = False
+        btnOkDoc.Visible = True
+        btnCancelDoc.Visible = True
+
+        Button5.Visible = False
+        Button7.Visible = False
+        Button8.Visible = False
+    End Sub
+
+    Private Sub HideButtonsEnf()
+        UnLockControlsEnf()
+        btnAddEnf.Visible = False
+        btnEditEnf.Visible = False
+        btnOkEnf.Visible = True
+        btnCancelEnf.Visible = True
+
+        Button9.Visible = False
+        Button11.Visible = False
+        Button12.Visible = False
+
+    End Sub
+
     Private Sub btnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
         currentPaciente = ListBox1.SelectedIndex
         If currentPaciente < 0 Then
@@ -596,74 +730,14 @@ Public Class Form1
             Exit Sub
         End If
         adding = False
-        HideButtons()
+        HideButtonsPaciente()
         ListBox1.Enabled = False
     End Sub
 
-    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
-        Faturas.Hide()
-    End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Faturas.Show()
-    End Sub
 
-    Private Sub Button13_Click(sender As Object, e As EventArgs) Handles Button13.Click
-        Intervencoes.Hide()
-    End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Intervencoes.Show()
-    End Sub
 
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        Internamentos.Show()
-    End Sub
-
-    Private Sub Button15_Click(sender As Object, e As EventArgs) Handles Button15.Click
-        Internamentos.Hide()
-    End Sub
-
-    Private Sub Button3_Click_1(sender As Object, e As EventArgs) Handles Button3.Click
-        Seguros.Show()
-    End Sub
-
-    Private Sub Button16_Click(sender As Object, e As EventArgs) Handles Button16.Click
-        Seguros.Hide()
-    End Sub
-
-    Private Sub Button14_Click(sender As Object, e As EventArgs) Handles Button14.Click
-        Intervencoes1.Show()
-        Internamentos.Hide()
-    End Sub
-
-    Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
-
-    End Sub
-
-    Private Sub Seguros_Enter(sender As Object, e As EventArgs) Handles Seguros.Enter
-
-    End Sub
-
-    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
-        GroupBox1.Show()
-    End Sub
-
-    Private Sub Button17_Click(sender As Object, e As EventArgs) Handles Button17.Click
-        GroupBox1.Hide()
-    End Sub
-
-    Private Sub Button18_Click(sender As Object, e As EventArgs) Handles Button18.Click
-        GroupBox2.Hide()
-    End Sub
-
-    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
-        GroupBox2.Show()
-    End Sub
-
-    Private Sub Button19_Click(sender As Object, e As EventArgs) Handles Button19.Click
-        Intervencoes1.Hide()
-    End Sub
 
     Private Sub Button20_Click(sender As Object, e As EventArgs) Handles Button20.Click
         For Each lbItem As Object In ListBox14.Items
@@ -740,5 +814,277 @@ Public Class Form1
                 Return
             End If
         Next
+    End Sub
+
+    Private Sub btnAddEnf_Click(sender As Object, e As EventArgs) Handles btnAddEnf.Click
+        adding = True
+        ClearFieldsEnf()
+        HideButtonsEnf()
+        ListBox2.Enabled = False
+    End Sub
+
+    Private Sub btnCancelEnf_Click(sender As Object, e As EventArgs) Handles btnCancelEnf.Click
+        ListBox9.Enabled = True
+        If ListBox9.Items.Count > 0 Then
+            currentEnfermeiro = ListBox9.SelectedIndex
+            If currentEnfermeiro < 0 Then currentEnfermeiro = 0
+            ShowEnfermeiro()
+        Else
+            ClearFieldsEnf()
+            LockControlsEnf()
+
+        End If
+        ShowButtonsEnfermeiro()
+    End Sub
+
+    Private Sub btnAddDoc_Click(sender As Object, e As EventArgs) Handles btnAddDoc.Click
+        adding = True
+        ClearFieldsDoc()
+        HideButtonsDoc()
+        ListBox2.Enabled = False
+    End Sub
+
+    Private Sub btnEditDoc_Click(sender As Object, e As EventArgs) Handles btnEditDoc.Click
+        currentMedico = ListBox2.SelectedIndex
+        If currentMedico < 0 Then
+            MsgBox("Please select a contact to edit")
+            Exit Sub
+        End If
+        adding = False
+        HideButtonsDoc()
+        ListBox2.Enabled = False
+    End Sub
+
+    Private Sub btnCancelDoc_Click(sender As Object, e As EventArgs) Handles btnCancelDoc.Click
+        ListBox2.Enabled = True
+        If ListBox2.Items.Count > 0 Then
+            currentMedico = ListBox2.SelectedIndex
+            If currentMedico < 0 Then currentMedico = 0
+            ShowMedico()
+        Else
+            ClearFieldsDoc()
+            LockControlsDoc()
+        End If
+        ShowButtonsMedico()
+    End Sub
+
+    Private Sub btnOkDoc_Click(sender As Object, e As EventArgs) Handles btnOkDoc.Click
+        Try
+            SaveMedico()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+        ListBox2.Enabled = True
+        Dim idx As Integer = ListBox2.FindString(TextBox22.Text)
+        ListBox2.SelectedIndex = idx
+        ShowButtonsMedico()
+    End Sub
+
+    Private Function SaveMedico() As Boolean
+        Dim medico As New Medico
+        Try
+
+            medico.Nome = TextBox22.Text
+            medico.Especialidade = TextBox23.Text
+            medico.CC = TextBox20.Text
+            medico.Codigo = TextBox13.Text
+            medico.DataDeNascimento = TextBox15.Text
+            medico.Email = TextBox19.Text
+            medico.Sexo = TextBox14.Text
+            medico.Endereço = TextBox18.Text
+            medico.CodigoPostal = TextBox12.Text
+            medico.Nacionalidade = TextBox17.Text
+            medico.Telemovel = TextBox21.Text
+            medico.Telefone = TextBox16.Text
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return False
+        End Try
+        If adding Then
+            SubmitMedico(medico)
+            ListBox2.Items.Add(medico)
+        Else
+            UpdateMedico(medico)
+            ListBox2.Items(currentMedico) = medico
+        End If
+        Return True
+    End Function
+
+    Private Function SaveEnfermeiro() As Boolean
+        Dim enfermeiro As New Enfermeiro
+        Try
+
+            enfermeiro.Nome = TextBox62.Text
+            enfermeiro.CC = TextBox60.Text
+            enfermeiro.Codigo = TextBox53.Text
+            enfermeiro.DataDeNascimento = TextBox55.Text
+            enfermeiro.Email = TextBox59.Text
+            enfermeiro.Sexo = TextBox54.Text
+            enfermeiro.Endereço = TextBox58.Text
+            enfermeiro.CodigoPostal = TextBox52.Text
+            enfermeiro.Nacionalidade = TextBox57.Text
+            enfermeiro.Telemovel = TextBox61.Text
+            enfermeiro.Telefone = TextBox56.Text
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return False
+        End Try
+        If adding Then
+            SubmitEnfermeiro(enfermeiro)
+            ListBox2.Items.Add(enfermeiro)
+        Else
+            UpdateEnfermeiro(enfermeiro)
+            ListBox2.Items(currentMedico) = enfermeiro
+        End If
+        Return True
+    End Function
+
+    Private Sub UpdateMedico(ByVal P As Medico)
+        CMD1.CommandText = "UPDATE ClinicGest.Pessoa " &
+            "SET nome = @nome, " &
+            "    telemovel = @telemovel, " &
+            "    cc = @cc, " &
+            "    email = @email, " &
+            "    endereco = @endereco, " &
+            "    nacionalidade = nacionalidade, " &
+            "    telefone = @telefone, " &
+            "    sexo = @sexo, " &
+            "    codigopostal = @codigopostal " &
+            "WHERE cc = @cc"
+        CMD1.Parameters.Clear()
+        CMD1.Parameters.AddWithValue("@nome", P.Nome)
+        CMD1.Parameters.AddWithValue("@telemovel", P.Telemovel)
+        CMD1.Parameters.AddWithValue("@cc", P.CC)
+        CMD1.Parameters.AddWithValue("@email", P.Email)
+        CMD1.Parameters.AddWithValue("@endereco", P.Endereço)
+        CMD1.Parameters.AddWithValue("@nacionalidade", P.Nacionalidade)
+        CMD1.Parameters.AddWithValue("@telefone", P.Telefone)
+        'CMD1.Parameters.AddWithValue("@data_nasc", P.DataDeNascimento)
+        CMD1.Parameters.AddWithValue("@sexo", P.Sexo)
+        CMD1.Parameters.AddWithValue("@codigo", P.Codigo)
+        CMD1.Parameters.AddWithValue("@codigopostal", P.CodigoPostal)
+        CN.Open()
+        Try
+            CMD1.ExecuteNonQuery()
+        Catch ex As Exception
+            Throw New Exception("Failed to update contact in database. " & vbCrLf & "ERROR MESSAGE: " & vbCrLf & ex.Message)
+        Finally
+            CN.Close()
+        End Try
+    End Sub
+
+    Private Sub SubmitMedico(ByVal P As Medico)
+        CMD1.CommandText = "INSERT ClinicGest.Pessoa (nome, telemovel, cc, email, " &
+                          "endereco, nacionalidade, telefone, sexo,codigopostal) " &
+                          "VALUES (@nome, @telemovel, @cc, @email, " &
+                          "@endereco, @nacionalidade, @telefone, @sexo, @codigopostal); INSERT ClinicGest.Medico (codigo_med, especialidade) VALUES (@codigo, @especialidade);  INSERT ClinicGest.Staff (codigo_staff, cc_staff) VALUES (@codigo, @cc)"
+        CMD1.Parameters.Clear()
+        CMD1.Parameters.AddWithValue("@nome", P.Nome)
+        CMD1.Parameters.AddWithValue("@telemovel", P.Telemovel)
+        CMD1.Parameters.AddWithValue("@cc", P.CC)
+        CMD1.Parameters.AddWithValue("@email", P.Email)
+        CMD1.Parameters.AddWithValue("@endereco", P.Endereço)
+        CMD1.Parameters.AddWithValue("@nacionalidade", P.Nacionalidade)
+        CMD1.Parameters.AddWithValue("@telefone", P.Telefone)
+        ' CMD1.Parameters.AddWithValue("@data_nasc", P.DataDeNascimento)
+        CMD1.Parameters.AddWithValue("@sexo", P.Sexo)
+        CMD1.Parameters.AddWithValue("@codigo", P.Codigo)
+        CMD1.Parameters.AddWithValue("@codigopostal", P.CodigoPostal)
+        CN.Open()
+        Try
+            CMD1.ExecuteNonQuery()
+        Catch ex As Exception
+            Throw New Exception("Failed to update contact in database. " & vbCrLf & "ERROR MESSAGE: " & vbCrLf & ex.Message)
+        Finally
+            CN.Close()
+        End Try
+        CN.Close()
+    End Sub
+
+    Private Sub SubmitEnfermeiro(ByVal P As Enfermeiro)
+        CMD1.CommandText = "INSERT ClinicGest.Pessoa (nome, telemovel, cc, email, " &
+                          "endereco, nacionalidade, telefone, sexo,codigopostal) " &
+                          "VALUES (@nome, @telemovel, @cc, @email, " &
+                          "@endereco, @nacionalidade, @telefone, @sexo, @codigopostal); INSERT ClinicGest.Enfermeiro (codigo_enf) VALUES (@codigo);  INSERT ClinicGest.Staff (codigo_staff, cc_staff) VALUES (@codigo, @cc)"
+        CMD1.Parameters.Clear()
+        CMD1.Parameters.AddWithValue("@nome", P.Nome)
+        CMD1.Parameters.AddWithValue("@telemovel", P.Telemovel)
+        CMD1.Parameters.AddWithValue("@cc", P.CC)
+        CMD1.Parameters.AddWithValue("@email", P.Email)
+        CMD1.Parameters.AddWithValue("@endereco", P.Endereço)
+        CMD1.Parameters.AddWithValue("@nacionalidade", P.Nacionalidade)
+        CMD1.Parameters.AddWithValue("@telefone", P.Telefone)
+        ' CMD1.Parameters.AddWithValue("@data_nasc", P.DataDeNascimento)
+        CMD1.Parameters.AddWithValue("@sexo", P.Sexo)
+        CMD1.Parameters.AddWithValue("@codigo", P.Codigo)
+        CMD1.Parameters.AddWithValue("@codigopostal", P.CodigoPostal)
+        CN.Open()
+        Try
+            CMD1.ExecuteNonQuery()
+        Catch ex As Exception
+            Throw New Exception("Failed to update contact in database. " & vbCrLf & "ERROR MESSAGE: " & vbCrLf & ex.Message)
+        Finally
+            CN.Close()
+        End Try
+        CN.Close()
+    End Sub
+
+    Private Sub UpdateEnfermeiro(ByVal P As Enfermeiro)
+        CMD1.CommandText = "UPDATE ClinicGest.Pessoa " &
+            "SET nome = @nome, " &
+            "    telemovel = @telemovel, " &
+            "    cc = @cc, " &
+            "    email = @email, " &
+            "    endereco = @endereco, " &
+            "    nacionalidade = nacionalidade, " &
+            "    telefone = @telefone, " &
+            "    sexo = @sexo, " &
+            "    codigopostal = @codigopostal " &
+            "WHERE cc = @cc"
+        CMD1.Parameters.Clear()
+        CMD1.Parameters.AddWithValue("@nome", P.Nome)
+        CMD1.Parameters.AddWithValue("@telemovel", P.Telemovel)
+        CMD1.Parameters.AddWithValue("@cc", P.CC)
+        CMD1.Parameters.AddWithValue("@email", P.Email)
+        CMD1.Parameters.AddWithValue("@endereco", P.Endereço)
+        CMD1.Parameters.AddWithValue("@nacionalidade", P.Nacionalidade)
+        CMD1.Parameters.AddWithValue("@telefone", P.Telefone)
+        'CMD1.Parameters.AddWithValue("@data_nasc", P.DataDeNascimento)
+        CMD1.Parameters.AddWithValue("@sexo", P.Sexo)
+        CMD1.Parameters.AddWithValue("@codigo", P.Codigo)
+        CMD1.Parameters.AddWithValue("@codigopostal", P.CodigoPostal)
+        CN.Open()
+        Try
+            CMD1.ExecuteNonQuery()
+        Catch ex As Exception
+            Throw New Exception("Failed to update contact in database. " & vbCrLf & "ERROR MESSAGE: " & vbCrLf & ex.Message)
+        Finally
+            CN.Close()
+        End Try
+    End Sub
+
+    Private Sub btnEditEnf_Click(sender As Object, e As EventArgs) Handles btnEditEnf.Click
+        currentEnfermeiro = ListBox9.SelectedIndex
+        If currentEnfermeiro < 0 Then
+            MsgBox("Please select a contact to edit")
+            'Exit Sub
+        End If
+        adding = False
+        HideButtonsEnf()
+        ListBox9.Enabled = False
+    End Sub
+
+    Private Sub btnOkEnf_Click(sender As Object, e As EventArgs) Handles btnOkEnf.Click
+        Try
+            SaveEnfermeiro()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+        ListBox9.Enabled = True
+        Dim idx As Integer = ListBox9.FindString(TextBox62.Text)
+        ListBox9.SelectedIndex = idx
+        ShowButtonsEnfermeiro()
     End Sub
 End Class

@@ -24,80 +24,8 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.Intervencoes = New System.Windows.Forms.GroupBox()
-        Me.Button13 = New System.Windows.Forms.Button()
-        Me.Label43 = New System.Windows.Forms.Label()
-        Me.Label47 = New System.Windows.Forms.Label()
-        Me.Label48 = New System.Windows.Forms.Label()
-        Me.Label49 = New System.Windows.Forms.Label()
-        Me.TextBox41 = New System.Windows.Forms.TextBox()
-        Me.TextBox46 = New System.Windows.Forms.TextBox()
-        Me.TextBox47 = New System.Windows.Forms.TextBox()
-        Me.TextBox48 = New System.Windows.Forms.TextBox()
-        Me.Label64 = New System.Windows.Forms.Label()
-        Me.ListBox10 = New System.Windows.Forms.ListBox()
-        Me.Label65 = New System.Windows.Forms.Label()
-        Me.Label66 = New System.Windows.Forms.Label()
-        Me.Label67 = New System.Windows.Forms.Label()
-        Me.TextBox63 = New System.Windows.Forms.TextBox()
-        Me.TextBox64 = New System.Windows.Forms.TextBox()
-        Me.TextBox65 = New System.Windows.Forms.TextBox()
-        Me.ListBox11 = New System.Windows.Forms.ListBox()
-        Me.Intervencoes1 = New System.Windows.Forms.GroupBox()
-        Me.Faturas = New System.Windows.Forms.GroupBox()
-        Me.Button6 = New System.Windows.Forms.Button()
-        Me.Label39 = New System.Windows.Forms.Label()
-        Me.Label40 = New System.Windows.Forms.Label()
-        Me.Label41 = New System.Windows.Forms.Label()
-        Me.TextBox38 = New System.Windows.Forms.TextBox()
-        Me.TextBox39 = New System.Windows.Forms.TextBox()
-        Me.TextBox40 = New System.Windows.Forms.TextBox()
-        Me.ListBox7 = New System.Windows.Forms.ListBox()
-        Me.Button19 = New System.Windows.Forms.Button()
-        Me.Label95 = New System.Windows.Forms.Label()
-        Me.Label96 = New System.Windows.Forms.Label()
-        Me.Label97 = New System.Windows.Forms.Label()
-        Me.Label98 = New System.Windows.Forms.Label()
-        Me.TextBox92 = New System.Windows.Forms.TextBox()
-        Me.TextBox93 = New System.Windows.Forms.TextBox()
-        Me.TextBox94 = New System.Windows.Forms.TextBox()
-        Me.TextBox95 = New System.Windows.Forms.TextBox()
-        Me.Label99 = New System.Windows.Forms.Label()
-        Me.ListBox18 = New System.Windows.Forms.ListBox()
-        Me.Label100 = New System.Windows.Forms.Label()
-        Me.Label101 = New System.Windows.Forms.Label()
-        Me.Label102 = New System.Windows.Forms.Label()
-        Me.TextBox96 = New System.Windows.Forms.TextBox()
-        Me.TextBox97 = New System.Windows.Forms.TextBox()
-        Me.TextBox98 = New System.Windows.Forms.TextBox()
-        Me.ListBox19 = New System.Windows.Forms.ListBox()
-        Me.Seguros = New System.Windows.Forms.GroupBox()
-        Me.Button16 = New System.Windows.Forms.Button()
-        Me.Label77 = New System.Windows.Forms.Label()
-        Me.Label76 = New System.Windows.Forms.Label()
-        Me.Label75 = New System.Windows.Forms.Label()
-        Me.TextBox75 = New System.Windows.Forms.TextBox()
-        Me.TextBox74 = New System.Windows.Forms.TextBox()
-        Me.TextBox73 = New System.Windows.Forms.TextBox()
-        Me.ListBox13 = New System.Windows.Forms.ListBox()
-        Me.Internamentos = New System.Windows.Forms.GroupBox()
-        Me.Button15 = New System.Windows.Forms.Button()
-        Me.Label68 = New System.Windows.Forms.Label()
-        Me.TextBox66 = New System.Windows.Forms.TextBox()
-        Me.Button14 = New System.Windows.Forms.Button()
-        Me.Label69 = New System.Windows.Forms.Label()
-        Me.Label70 = New System.Windows.Forms.Label()
-        Me.Label71 = New System.Windows.Forms.Label()
-        Me.Label72 = New System.Windows.Forms.Label()
-        Me.Label73 = New System.Windows.Forms.Label()
-        Me.Label74 = New System.Windows.Forms.Label()
-        Me.TextBox67 = New System.Windows.Forms.TextBox()
-        Me.TextBox68 = New System.Windows.Forms.TextBox()
-        Me.TextBox69 = New System.Windows.Forms.TextBox()
-        Me.TextBox70 = New System.Windows.Forms.TextBox()
-        Me.TextBox71 = New System.Windows.Forms.TextBox()
-        Me.TextBox72 = New System.Windows.Forms.TextBox()
-        Me.ListBox12 = New System.Windows.Forms.ListBox()
+        Me.Button27 = New System.Windows.Forms.Button()
+        Me.TextBox106 = New System.Windows.Forms.TextBox()
         Me.btnOk = New System.Windows.Forms.Button()
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.btnAdd = New System.Windows.Forms.Button()
@@ -130,38 +58,12 @@ Partial Class Form1
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Button18 = New System.Windows.Forms.Button()
-        Me.Label87 = New System.Windows.Forms.Label()
-        Me.Label88 = New System.Windows.Forms.Label()
-        Me.Label89 = New System.Windows.Forms.Label()
-        Me.Label90 = New System.Windows.Forms.Label()
-        Me.TextBox85 = New System.Windows.Forms.TextBox()
-        Me.TextBox86 = New System.Windows.Forms.TextBox()
-        Me.TextBox87 = New System.Windows.Forms.TextBox()
-        Me.TextBox88 = New System.Windows.Forms.TextBox()
-        Me.Label91 = New System.Windows.Forms.Label()
-        Me.ListBox16 = New System.Windows.Forms.ListBox()
-        Me.Label92 = New System.Windows.Forms.Label()
-        Me.Label93 = New System.Windows.Forms.Label()
-        Me.Label94 = New System.Windows.Forms.Label()
-        Me.TextBox89 = New System.Windows.Forms.TextBox()
-        Me.TextBox90 = New System.Windows.Forms.TextBox()
-        Me.TextBox91 = New System.Windows.Forms.TextBox()
-        Me.ListBox17 = New System.Windows.Forms.ListBox()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Button17 = New System.Windows.Forms.Button()
-        Me.Label82 = New System.Windows.Forms.Label()
-        Me.Label83 = New System.Windows.Forms.Label()
-        Me.TextBox80 = New System.Windows.Forms.TextBox()
-        Me.TextBox81 = New System.Windows.Forms.TextBox()
-        Me.Label84 = New System.Windows.Forms.Label()
-        Me.Label85 = New System.Windows.Forms.Label()
-        Me.Label86 = New System.Windows.Forms.Label()
-        Me.TextBox82 = New System.Windows.Forms.TextBox()
-        Me.TextBox83 = New System.Windows.Forms.TextBox()
-        Me.TextBox84 = New System.Windows.Forms.TextBox()
-        Me.ListBox15 = New System.Windows.Forms.ListBox()
+        Me.btnOkDoc = New System.Windows.Forms.Button()
+        Me.btnCancelDoc = New System.Windows.Forms.Button()
+        Me.btnAddDoc = New System.Windows.Forms.Button()
+        Me.btnEditDoc = New System.Windows.Forms.Button()
+        Me.Button23 = New System.Windows.Forms.Button()
+        Me.TextBox102 = New System.Windows.Forms.TextBox()
         Me.Label23 = New System.Windows.Forms.Label()
         Me.TextBox23 = New System.Windows.Forms.TextBox()
         Me.Button5 = New System.Windows.Forms.Button()
@@ -191,6 +93,12 @@ Partial Class Form1
         Me.TextBox22 = New System.Windows.Forms.TextBox()
         Me.ListBox2 = New System.Windows.Forms.ListBox()
         Me.TabPage8 = New System.Windows.Forms.TabPage()
+        Me.btnOkEnf = New System.Windows.Forms.Button()
+        Me.btnCancelEnf = New System.Windows.Forms.Button()
+        Me.btnEditEnf = New System.Windows.Forms.Button()
+        Me.btnAddEnf = New System.Windows.Forms.Button()
+        Me.Button22 = New System.Windows.Forms.Button()
+        Me.TextBox101 = New System.Windows.Forms.TextBox()
         Me.Button12 = New System.Windows.Forms.Button()
         Me.Button9 = New System.Windows.Forms.Button()
         Me.Button11 = New System.Windows.Forms.Button()
@@ -218,6 +126,8 @@ Partial Class Form1
         Me.TextBox62 = New System.Windows.Forms.TextBox()
         Me.ListBox9 = New System.Windows.Forms.ListBox()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.Button25 = New System.Windows.Forms.Button()
+        Me.TextBox104 = New System.Windows.Forms.TextBox()
         Me.Label24 = New System.Windows.Forms.Label()
         Me.TextBox24 = New System.Windows.Forms.TextBox()
         Me.Button10 = New System.Windows.Forms.Button()
@@ -235,6 +145,8 @@ Partial Class Form1
         Me.TextBox35 = New System.Windows.Forms.TextBox()
         Me.ListBox3 = New System.Windows.Forms.ListBox()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.Button24 = New System.Windows.Forms.Button()
+        Me.TextBox103 = New System.Windows.Forms.TextBox()
         Me.Label38 = New System.Windows.Forms.Label()
         Me.Label32 = New System.Windows.Forms.Label()
         Me.Label28 = New System.Windows.Forms.Label()
@@ -253,6 +165,8 @@ Partial Class Form1
         Me.TextBox37 = New System.Windows.Forms.TextBox()
         Me.ListBox4 = New System.Windows.Forms.ListBox()
         Me.TabPage5 = New System.Windows.Forms.TabPage()
+        Me.Button21 = New System.Windows.Forms.Button()
+        Me.TextBox100 = New System.Windows.Forms.TextBox()
         Me.Label42 = New System.Windows.Forms.Label()
         Me.Label44 = New System.Windows.Forms.Label()
         Me.Label45 = New System.Windows.Forms.Label()
@@ -261,6 +175,8 @@ Partial Class Form1
         Me.TextBox44 = New System.Windows.Forms.TextBox()
         Me.ListBox6 = New System.Windows.Forms.ListBox()
         Me.TabPage7 = New System.Windows.Forms.TabPage()
+        Me.Button26 = New System.Windows.Forms.Button()
+        Me.TextBox105 = New System.Windows.Forms.TextBox()
         Me.Label78 = New System.Windows.Forms.Label()
         Me.Label52 = New System.Windows.Forms.Label()
         Me.TextBox76 = New System.Windows.Forms.TextBox()
@@ -273,6 +189,8 @@ Partial Class Form1
         Me.TextBox50 = New System.Windows.Forms.TextBox()
         Me.ListBox8 = New System.Windows.Forms.ListBox()
         Me.TabPage9 = New System.Windows.Forms.TabPage()
+        Me.Button20 = New System.Windows.Forms.Button()
+        Me.TextBox99 = New System.Windows.Forms.TextBox()
         Me.Label79 = New System.Windows.Forms.Label()
         Me.Label80 = New System.Windows.Forms.Label()
         Me.Label81 = New System.Windows.Forms.Label()
@@ -280,38 +198,29 @@ Partial Class Form1
         Me.TextBox78 = New System.Windows.Forms.TextBox()
         Me.TextBox79 = New System.Windows.Forms.TextBox()
         Me.ListBox14 = New System.Windows.Forms.ListBox()
-        Me.TextBox99 = New System.Windows.Forms.TextBox()
-        Me.Button20 = New System.Windows.Forms.Button()
-        Me.Button21 = New System.Windows.Forms.Button()
-        Me.TextBox100 = New System.Windows.Forms.TextBox()
-        Me.Button22 = New System.Windows.Forms.Button()
-        Me.TextBox101 = New System.Windows.Forms.TextBox()
-        Me.Button23 = New System.Windows.Forms.Button()
-        Me.TextBox102 = New System.Windows.Forms.TextBox()
-        Me.Button24 = New System.Windows.Forms.Button()
-        Me.TextBox103 = New System.Windows.Forms.TextBox()
-        Me.Button25 = New System.Windows.Forms.Button()
-        Me.TextBox104 = New System.Windows.Forms.TextBox()
-        Me.Button26 = New System.Windows.Forms.Button()
-        Me.TextBox105 = New System.Windows.Forms.TextBox()
-        Me.Button27 = New System.Windows.Forms.Button()
-        Me.TextBox106 = New System.Windows.Forms.TextBox()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Button17 = New System.Windows.Forms.Button()
+        Me.Label82 = New System.Windows.Forms.Label()
+        Me.Label83 = New System.Windows.Forms.Label()
+        Me.TextBox80 = New System.Windows.Forms.TextBox()
+        Me.TextBox81 = New System.Windows.Forms.TextBox()
+        Me.Label84 = New System.Windows.Forms.Label()
+        Me.Label85 = New System.Windows.Forms.Label()
+        Me.Label86 = New System.Windows.Forms.Label()
+        Me.TextBox82 = New System.Windows.Forms.TextBox()
+        Me.TextBox83 = New System.Windows.Forms.TextBox()
+        Me.TextBox84 = New System.Windows.Forms.TextBox()
+        Me.ListBox15 = New System.Windows.Forms.ListBox()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
-        Me.Intervencoes.SuspendLayout()
-        Me.Intervencoes1.SuspendLayout()
-        Me.Faturas.SuspendLayout()
-        Me.Seguros.SuspendLayout()
-        Me.Internamentos.SuspendLayout()
         Me.TabPage2.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
         Me.TabPage8.SuspendLayout()
         Me.TabPage3.SuspendLayout()
         Me.TabPage4.SuspendLayout()
         Me.TabPage5.SuspendLayout()
         Me.TabPage7.SuspendLayout()
         Me.TabPage9.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -332,10 +241,8 @@ Partial Class Form1
         '
         'TabPage1
         '
-        Me.TabPage1.Controls.Add(Me.Seguros)
         Me.TabPage1.Controls.Add(Me.Button27)
         Me.TabPage1.Controls.Add(Me.TextBox106)
-        Me.TabPage1.Controls.Add(Me.Internamentos)
         Me.TabPage1.Controls.Add(Me.btnOk)
         Me.TabPage1.Controls.Add(Me.btnCancel)
         Me.TabPage1.Controls.Add(Me.btnAdd)
@@ -375,683 +282,21 @@ Partial Class Form1
         Me.TabPage1.Text = "Pacientes"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
-        'Intervencoes
-        '
-        Me.Intervencoes.Controls.Add(Me.Button13)
-        Me.Intervencoes.Controls.Add(Me.Label43)
-        Me.Intervencoes.Controls.Add(Me.Label47)
-        Me.Intervencoes.Controls.Add(Me.Label48)
-        Me.Intervencoes.Controls.Add(Me.Label49)
-        Me.Intervencoes.Controls.Add(Me.TextBox41)
-        Me.Intervencoes.Controls.Add(Me.TextBox46)
-        Me.Intervencoes.Controls.Add(Me.TextBox47)
-        Me.Intervencoes.Controls.Add(Me.TextBox48)
-        Me.Intervencoes.Controls.Add(Me.Label64)
-        Me.Intervencoes.Controls.Add(Me.ListBox10)
-        Me.Intervencoes.Controls.Add(Me.Label65)
-        Me.Intervencoes.Controls.Add(Me.Label66)
-        Me.Intervencoes.Controls.Add(Me.Label67)
-        Me.Intervencoes.Controls.Add(Me.TextBox63)
-        Me.Intervencoes.Controls.Add(Me.TextBox64)
-        Me.Intervencoes.Controls.Add(Me.TextBox65)
-        Me.Intervencoes.Controls.Add(Me.ListBox11)
-        Me.Intervencoes.Location = New System.Drawing.Point(0, 0)
-        Me.Intervencoes.Name = "Intervencoes"
-        Me.Intervencoes.Size = New System.Drawing.Size(601, 350)
-        Me.Intervencoes.TabIndex = 103
-        Me.Intervencoes.TabStop = False
-        Me.Intervencoes.Text = "Intervenções"
-        '
-        'Button13
-        '
-        Me.Button13.Location = New System.Drawing.Point(23, 290)
-        Me.Button13.Name = "Button13"
-        Me.Button13.Size = New System.Drawing.Size(75, 23)
-        Me.Button13.TabIndex = 125
-        Me.Button13.Text = "Sair"
-        Me.Button13.UseVisualStyleBackColor = True
-        '
-        'Label43
-        '
-        Me.Label43.AutoSize = True
-        Me.Label43.Location = New System.Drawing.Point(400, 163)
-        Me.Label43.Name = "Label43"
-        Me.Label43.Size = New System.Drawing.Size(97, 13)
-        Me.Label43.TabIndex = 124
-        Me.Label43.Text = "Código de produto:"
-        '
-        'Label47
-        '
-        Me.Label47.AutoSize = True
-        Me.Label47.Location = New System.Drawing.Point(400, 202)
-        Me.Label47.Name = "Label47"
-        Me.Label47.Size = New System.Drawing.Size(85, 13)
-        Me.Label47.TabIndex = 123
-        Me.Label47.Text = "Tipo de produto:"
-        '
-        'Label48
-        '
-        Me.Label48.AutoSize = True
-        Me.Label48.Location = New System.Drawing.Point(400, 242)
-        Me.Label48.Name = "Label48"
-        Me.Label48.Size = New System.Drawing.Size(91, 13)
-        Me.Label48.TabIndex = 122
-        Me.Label48.Text = "Custo de produto:"
-        '
-        'Label49
-        '
-        Me.Label49.AutoSize = True
-        Me.Label49.Location = New System.Drawing.Point(400, 281)
-        Me.Label49.Name = "Label49"
-        Me.Label49.Size = New System.Drawing.Size(90, 13)
-        Me.Label49.TabIndex = 121
-        Me.Label49.Text = "Custo de limpeza:"
-        '
-        'TextBox41
-        '
-        Me.TextBox41.Location = New System.Drawing.Point(403, 297)
-        Me.TextBox41.Name = "TextBox41"
-        Me.TextBox41.Size = New System.Drawing.Size(149, 20)
-        Me.TextBox41.TabIndex = 120
-        '
-        'TextBox46
-        '
-        Me.TextBox46.Location = New System.Drawing.Point(403, 217)
-        Me.TextBox46.Name = "TextBox46"
-        Me.TextBox46.Size = New System.Drawing.Size(149, 20)
-        Me.TextBox46.TabIndex = 119
-        '
-        'TextBox47
-        '
-        Me.TextBox47.Location = New System.Drawing.Point(403, 258)
-        Me.TextBox47.Name = "TextBox47"
-        Me.TextBox47.Size = New System.Drawing.Size(149, 20)
-        Me.TextBox47.TabIndex = 118
-        '
-        'TextBox48
-        '
-        Me.TextBox48.Location = New System.Drawing.Point(403, 179)
-        Me.TextBox48.Name = "TextBox48"
-        Me.TextBox48.Size = New System.Drawing.Size(149, 20)
-        Me.TextBox48.TabIndex = 117
-        '
-        'Label64
-        '
-        Me.Label64.AutoSize = True
-        Me.Label64.Location = New System.Drawing.Point(269, 152)
-        Me.Label64.Name = "Label64"
-        Me.Label64.Size = New System.Drawing.Size(92, 13)
-        Me.Label64.TabIndex = 116
-        Me.Label64.Text = "Lista de Produtos:"
-        '
-        'ListBox10
-        '
-        Me.ListBox10.FormattingEnabled = True
-        Me.ListBox10.Location = New System.Drawing.Point(265, 179)
-        Me.ListBox10.Name = "ListBox10"
-        Me.ListBox10.Size = New System.Drawing.Size(121, 134)
-        Me.ListBox10.TabIndex = 115
-        '
-        'Label65
-        '
-        Me.Label65.AutoSize = True
-        Me.Label65.Location = New System.Drawing.Point(269, 105)
-        Me.Label65.Name = "Label65"
-        Me.Label65.Size = New System.Drawing.Size(37, 13)
-        Me.Label65.TabIndex = 114
-        Me.Label65.Text = "Custo:"
-        '
-        'Label66
-        '
-        Me.Label66.AutoSize = True
-        Me.Label66.Location = New System.Drawing.Point(269, 68)
-        Me.Label66.Name = "Label66"
-        Me.Label66.Size = New System.Drawing.Size(127, 13)
-        Me.Label66.TabIndex = 113
-        Me.Label66.Text = "Numero de Internamento:"
-        '
-        'Label67
-        '
-        Me.Label67.AutoSize = True
-        Me.Label67.Location = New System.Drawing.Point(265, 26)
-        Me.Label67.Name = "Label67"
-        Me.Label67.Size = New System.Drawing.Size(121, 13)
-        Me.Label67.TabIndex = 112
-        Me.Label67.Text = "Numero de intervenção:"
-        '
-        'TextBox63
-        '
-        Me.TextBox63.Location = New System.Drawing.Point(265, 121)
-        Me.TextBox63.Name = "TextBox63"
-        Me.TextBox63.Size = New System.Drawing.Size(312, 20)
-        Me.TextBox63.TabIndex = 111
-        '
-        'TextBox64
-        '
-        Me.TextBox64.Location = New System.Drawing.Point(265, 82)
-        Me.TextBox64.Name = "TextBox64"
-        Me.TextBox64.Size = New System.Drawing.Size(312, 20)
-        Me.TextBox64.TabIndex = 110
-        '
-        'TextBox65
-        '
-        Me.TextBox65.Location = New System.Drawing.Point(265, 45)
-        Me.TextBox65.Name = "TextBox65"
-        Me.TextBox65.Size = New System.Drawing.Size(312, 20)
-        Me.TextBox65.TabIndex = 109
-        '
-        'ListBox11
-        '
-        Me.ListBox11.FormattingEnabled = True
-        Me.ListBox11.Location = New System.Drawing.Point(10, 23)
-        Me.ListBox11.Name = "ListBox11"
-        Me.ListBox11.Size = New System.Drawing.Size(214, 251)
-        Me.ListBox11.TabIndex = 108
-        '
-        'Intervencoes1
-        '
-        Me.Intervencoes1.Controls.Add(Me.Button19)
-        Me.Intervencoes1.Controls.Add(Me.Label95)
-        Me.Intervencoes1.Controls.Add(Me.Label96)
-        Me.Intervencoes1.Controls.Add(Me.Label97)
-        Me.Intervencoes1.Controls.Add(Me.Label98)
-        Me.Intervencoes1.Controls.Add(Me.TextBox92)
-        Me.Intervencoes1.Controls.Add(Me.TextBox93)
-        Me.Intervencoes1.Controls.Add(Me.TextBox94)
-        Me.Intervencoes1.Controls.Add(Me.TextBox95)
-        Me.Intervencoes1.Controls.Add(Me.Label99)
-        Me.Intervencoes1.Controls.Add(Me.ListBox18)
-        Me.Intervencoes1.Controls.Add(Me.Label100)
-        Me.Intervencoes1.Controls.Add(Me.Label101)
-        Me.Intervencoes1.Controls.Add(Me.Label102)
-        Me.Intervencoes1.Controls.Add(Me.TextBox96)
-        Me.Intervencoes1.Controls.Add(Me.TextBox97)
-        Me.Intervencoes1.Controls.Add(Me.TextBox98)
-        Me.Intervencoes1.Controls.Add(Me.ListBox19)
-        Me.Intervencoes1.Location = New System.Drawing.Point(0, 3)
-        Me.Intervencoes1.Name = "Intervencoes1"
-        Me.Intervencoes1.Size = New System.Drawing.Size(607, 347)
-        Me.Intervencoes1.TabIndex = 8
-        Me.Intervencoes1.TabStop = False
-        Me.Intervencoes1.Text = "Intervencoes1"
-        '
-        'Faturas
-        '
-        Me.Faturas.Controls.Add(Me.Button6)
-        Me.Faturas.Controls.Add(Me.Label39)
-        Me.Faturas.Controls.Add(Me.Label40)
-        Me.Faturas.Controls.Add(Me.Label41)
-        Me.Faturas.Controls.Add(Me.TextBox38)
-        Me.Faturas.Controls.Add(Me.TextBox39)
-        Me.Faturas.Controls.Add(Me.TextBox40)
-        Me.Faturas.Controls.Add(Me.ListBox7)
-        Me.Faturas.Location = New System.Drawing.Point(1, 0)
-        Me.Faturas.Name = "Faturas"
-        Me.Faturas.Size = New System.Drawing.Size(603, 340)
-        Me.Faturas.TabIndex = 96
-        Me.Faturas.TabStop = False
-        Me.Faturas.Text = "Faturas"
-        '
-        'Button6
-        '
-        Me.Button6.Location = New System.Drawing.Point(467, 280)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(75, 23)
-        Me.Button6.TabIndex = 102
-        Me.Button6.Text = "Sair"
-        Me.Button6.UseVisualStyleBackColor = True
-        '
-        'Label39
-        '
-        Me.Label39.AutoSize = True
-        Me.Label39.Location = New System.Drawing.Point(422, 140)
-        Me.Label39.Name = "Label39"
-        Me.Label39.Size = New System.Drawing.Size(104, 13)
-        Me.Label39.TabIndex = 101
-        Me.Label39.Text = "Data de pagamento:"
-        '
-        'Label40
-        '
-        Me.Label40.AutoSize = True
-        Me.Label40.Location = New System.Drawing.Point(262, 140)
-        Me.Label40.Name = "Label40"
-        Me.Label40.Size = New System.Drawing.Size(85, 13)
-        Me.Label40.TabIndex = 100
-        Me.Label40.Text = "Custo de Fatura:"
-        '
-        'Label41
-        '
-        Me.Label41.AutoSize = True
-        Me.Label41.Location = New System.Drawing.Point(258, 98)
-        Me.Label41.Name = "Label41"
-        Me.Label41.Size = New System.Drawing.Size(88, 13)
-        Me.Label41.TabIndex = 99
-        Me.Label41.Text = "Código de Fatura"
-        '
-        'TextBox38
-        '
-        Me.TextBox38.Location = New System.Drawing.Point(425, 154)
-        Me.TextBox38.Name = "TextBox38"
-        Me.TextBox38.Size = New System.Drawing.Size(145, 20)
-        Me.TextBox38.TabIndex = 98
-        '
-        'TextBox39
-        '
-        Me.TextBox39.Location = New System.Drawing.Point(258, 154)
-        Me.TextBox39.Name = "TextBox39"
-        Me.TextBox39.Size = New System.Drawing.Size(161, 20)
-        Me.TextBox39.TabIndex = 97
-        '
-        'TextBox40
-        '
-        Me.TextBox40.Location = New System.Drawing.Point(258, 117)
-        Me.TextBox40.Name = "TextBox40"
-        Me.TextBox40.Size = New System.Drawing.Size(312, 20)
-        Me.TextBox40.TabIndex = 96
-        '
-        'ListBox7
-        '
-        Me.ListBox7.FormattingEnabled = True
-        Me.ListBox7.Location = New System.Drawing.Point(12, 26)
-        Me.ListBox7.Name = "ListBox7"
-        Me.ListBox7.Size = New System.Drawing.Size(214, 277)
-        Me.ListBox7.TabIndex = 95
-        '
-        'Button19
-        '
-        Me.Button19.Location = New System.Drawing.Point(26, 290)
-        Me.Button19.Name = "Button19"
-        Me.Button19.Size = New System.Drawing.Size(75, 23)
-        Me.Button19.TabIndex = 143
-        Me.Button19.Text = "Sair"
-        Me.Button19.UseVisualStyleBackColor = True
-        '
-        'Label95
-        '
-        Me.Label95.AutoSize = True
-        Me.Label95.Location = New System.Drawing.Point(403, 163)
-        Me.Label95.Name = "Label95"
-        Me.Label95.Size = New System.Drawing.Size(97, 13)
-        Me.Label95.TabIndex = 142
-        Me.Label95.Text = "Código de produto:"
-        '
-        'Label96
-        '
-        Me.Label96.AutoSize = True
-        Me.Label96.Location = New System.Drawing.Point(403, 202)
-        Me.Label96.Name = "Label96"
-        Me.Label96.Size = New System.Drawing.Size(85, 13)
-        Me.Label96.TabIndex = 141
-        Me.Label96.Text = "Tipo de produto:"
-        '
-        'Label97
-        '
-        Me.Label97.AutoSize = True
-        Me.Label97.Location = New System.Drawing.Point(403, 242)
-        Me.Label97.Name = "Label97"
-        Me.Label97.Size = New System.Drawing.Size(91, 13)
-        Me.Label97.TabIndex = 140
-        Me.Label97.Text = "Custo de produto:"
-        '
-        'Label98
-        '
-        Me.Label98.AutoSize = True
-        Me.Label98.Location = New System.Drawing.Point(403, 281)
-        Me.Label98.Name = "Label98"
-        Me.Label98.Size = New System.Drawing.Size(90, 13)
-        Me.Label98.TabIndex = 139
-        Me.Label98.Text = "Custo de limpeza:"
-        '
-        'TextBox92
-        '
-        Me.TextBox92.Location = New System.Drawing.Point(406, 297)
-        Me.TextBox92.Name = "TextBox92"
-        Me.TextBox92.Size = New System.Drawing.Size(149, 20)
-        Me.TextBox92.TabIndex = 138
-        '
-        'TextBox93
-        '
-        Me.TextBox93.Location = New System.Drawing.Point(406, 217)
-        Me.TextBox93.Name = "TextBox93"
-        Me.TextBox93.Size = New System.Drawing.Size(149, 20)
-        Me.TextBox93.TabIndex = 137
-        '
-        'TextBox94
-        '
-        Me.TextBox94.Location = New System.Drawing.Point(406, 258)
-        Me.TextBox94.Name = "TextBox94"
-        Me.TextBox94.Size = New System.Drawing.Size(149, 20)
-        Me.TextBox94.TabIndex = 136
-        '
-        'TextBox95
-        '
-        Me.TextBox95.Location = New System.Drawing.Point(406, 179)
-        Me.TextBox95.Name = "TextBox95"
-        Me.TextBox95.Size = New System.Drawing.Size(149, 20)
-        Me.TextBox95.TabIndex = 135
-        '
-        'Label99
-        '
-        Me.Label99.AutoSize = True
-        Me.Label99.Location = New System.Drawing.Point(272, 152)
-        Me.Label99.Name = "Label99"
-        Me.Label99.Size = New System.Drawing.Size(92, 13)
-        Me.Label99.TabIndex = 134
-        Me.Label99.Text = "Lista de Produtos:"
-        '
-        'ListBox18
-        '
-        Me.ListBox18.FormattingEnabled = True
-        Me.ListBox18.Location = New System.Drawing.Point(268, 179)
-        Me.ListBox18.Name = "ListBox18"
-        Me.ListBox18.Size = New System.Drawing.Size(121, 134)
-        Me.ListBox18.TabIndex = 133
-        '
-        'Label100
-        '
-        Me.Label100.AutoSize = True
-        Me.Label100.Location = New System.Drawing.Point(272, 105)
-        Me.Label100.Name = "Label100"
-        Me.Label100.Size = New System.Drawing.Size(37, 13)
-        Me.Label100.TabIndex = 132
-        Me.Label100.Text = "Custo:"
-        '
-        'Label101
-        '
-        Me.Label101.AutoSize = True
-        Me.Label101.Location = New System.Drawing.Point(272, 68)
-        Me.Label101.Name = "Label101"
-        Me.Label101.Size = New System.Drawing.Size(127, 13)
-        Me.Label101.TabIndex = 131
-        Me.Label101.Text = "Numero de Internamento:"
-        '
-        'Label102
-        '
-        Me.Label102.AutoSize = True
-        Me.Label102.Location = New System.Drawing.Point(268, 26)
-        Me.Label102.Name = "Label102"
-        Me.Label102.Size = New System.Drawing.Size(121, 13)
-        Me.Label102.TabIndex = 130
-        Me.Label102.Text = "Numero de intervenção:"
-        '
-        'TextBox96
-        '
-        Me.TextBox96.Location = New System.Drawing.Point(268, 121)
-        Me.TextBox96.Name = "TextBox96"
-        Me.TextBox96.Size = New System.Drawing.Size(312, 20)
-        Me.TextBox96.TabIndex = 129
-        '
-        'TextBox97
-        '
-        Me.TextBox97.Location = New System.Drawing.Point(268, 82)
-        Me.TextBox97.Name = "TextBox97"
-        Me.TextBox97.Size = New System.Drawing.Size(312, 20)
-        Me.TextBox97.TabIndex = 128
-        '
-        'TextBox98
-        '
-        Me.TextBox98.Location = New System.Drawing.Point(268, 45)
-        Me.TextBox98.Name = "TextBox98"
-        Me.TextBox98.Size = New System.Drawing.Size(312, 20)
-        Me.TextBox98.TabIndex = 127
-        '
-        'ListBox19
-        '
-        Me.ListBox19.FormattingEnabled = True
-        Me.ListBox19.Location = New System.Drawing.Point(13, 23)
-        Me.ListBox19.Name = "ListBox19"
-        Me.ListBox19.Size = New System.Drawing.Size(214, 251)
-        Me.ListBox19.TabIndex = 126
-        '
-        'Seguros
-        '
-        Me.Seguros.Controls.Add(Me.Intervencoes)
-        Me.Seguros.Controls.Add(Me.Faturas)
-        Me.Seguros.Controls.Add(Me.Intervencoes1)
-        Me.Seguros.Controls.Add(Me.Button16)
-        Me.Seguros.Controls.Add(Me.Label77)
-        Me.Seguros.Controls.Add(Me.Label76)
-        Me.Seguros.Controls.Add(Me.Label75)
-        Me.Seguros.Controls.Add(Me.TextBox75)
-        Me.Seguros.Controls.Add(Me.TextBox74)
-        Me.Seguros.Controls.Add(Me.TextBox73)
-        Me.Seguros.Controls.Add(Me.ListBox13)
-        Me.Seguros.Location = New System.Drawing.Point(2, 0)
-        Me.Seguros.Name = "Seguros"
-        Me.Seguros.Size = New System.Drawing.Size(596, 340)
-        Me.Seguros.TabIndex = 105
-        Me.Seguros.TabStop = False
-        Me.Seguros.Text = "Seguros"
-        '
-        'Button16
-        '
-        Me.Button16.Location = New System.Drawing.Point(471, 253)
-        Me.Button16.Name = "Button16"
-        Me.Button16.Size = New System.Drawing.Size(75, 23)
-        Me.Button16.TabIndex = 7
-        Me.Button16.Text = "Sair"
-        Me.Button16.UseVisualStyleBackColor = True
-        '
-        'Label77
-        '
-        Me.Label77.AutoSize = True
-        Me.Label77.Location = New System.Drawing.Point(276, 130)
-        Me.Label77.Name = "Label77"
-        Me.Label77.Size = New System.Drawing.Size(53, 13)
-        Me.Label77.TabIndex = 6
-        Me.Label77.Text = "Desconto"
-        '
-        'Label76
-        '
-        Me.Label76.AutoSize = True
-        Me.Label76.Location = New System.Drawing.Point(426, 130)
-        Me.Label76.Name = "Label76"
-        Me.Label76.Size = New System.Drawing.Size(40, 13)
-        Me.Label76.TabIndex = 5
-        Me.Label76.Text = "Código"
-        '
-        'Label75
-        '
-        Me.Label75.AutoSize = True
-        Me.Label75.Location = New System.Drawing.Point(276, 77)
-        Me.Label75.Name = "Label75"
-        Me.Label75.Size = New System.Drawing.Size(49, 13)
-        Me.Label75.TabIndex = 4
-        Me.Label75.Text = "Entidade"
-        '
-        'TextBox75
-        '
-        Me.TextBox75.Location = New System.Drawing.Point(421, 146)
-        Me.TextBox75.Name = "TextBox75"
-        Me.TextBox75.Size = New System.Drawing.Size(125, 20)
-        Me.TextBox75.TabIndex = 3
-        '
-        'TextBox74
-        '
-        Me.TextBox74.Location = New System.Drawing.Point(276, 146)
-        Me.TextBox74.Name = "TextBox74"
-        Me.TextBox74.Size = New System.Drawing.Size(125, 20)
-        Me.TextBox74.TabIndex = 2
-        '
-        'TextBox73
-        '
-        Me.TextBox73.Location = New System.Drawing.Point(276, 96)
-        Me.TextBox73.Name = "TextBox73"
-        Me.TextBox73.Size = New System.Drawing.Size(270, 20)
-        Me.TextBox73.TabIndex = 1
-        '
-        'ListBox13
-        '
-        Me.ListBox13.FormattingEnabled = True
-        Me.ListBox13.Location = New System.Drawing.Point(27, 30)
-        Me.ListBox13.Name = "ListBox13"
-        Me.ListBox13.Size = New System.Drawing.Size(203, 251)
-        Me.ListBox13.TabIndex = 0
-        '
-        'Internamentos
-        '
-        Me.Internamentos.Controls.Add(Me.Button15)
-        Me.Internamentos.Controls.Add(Me.Label68)
-        Me.Internamentos.Controls.Add(Me.TextBox66)
-        Me.Internamentos.Controls.Add(Me.Button14)
-        Me.Internamentos.Controls.Add(Me.Label69)
-        Me.Internamentos.Controls.Add(Me.Label70)
-        Me.Internamentos.Controls.Add(Me.Label71)
-        Me.Internamentos.Controls.Add(Me.Label72)
-        Me.Internamentos.Controls.Add(Me.Label73)
-        Me.Internamentos.Controls.Add(Me.Label74)
-        Me.Internamentos.Controls.Add(Me.TextBox67)
-        Me.Internamentos.Controls.Add(Me.TextBox68)
-        Me.Internamentos.Controls.Add(Me.TextBox69)
-        Me.Internamentos.Controls.Add(Me.TextBox70)
-        Me.Internamentos.Controls.Add(Me.TextBox71)
-        Me.Internamentos.Controls.Add(Me.TextBox72)
-        Me.Internamentos.Controls.Add(Me.ListBox12)
-        Me.Internamentos.Location = New System.Drawing.Point(2, 0)
-        Me.Internamentos.Name = "Internamentos"
-        Me.Internamentos.Size = New System.Drawing.Size(596, 343)
-        Me.Internamentos.TabIndex = 104
-        Me.Internamentos.TabStop = False
-        Me.Internamentos.Text = "Internamentos"
-        '
-        'Button15
-        '
-        Me.Button15.Location = New System.Drawing.Point(57, 286)
-        Me.Button15.Name = "Button15"
-        Me.Button15.Size = New System.Drawing.Size(75, 23)
-        Me.Button15.TabIndex = 126
-        Me.Button15.Text = "Sair"
-        Me.Button15.UseVisualStyleBackColor = True
-        '
-        'Label68
-        '
-        Me.Label68.AutoSize = True
-        Me.Label68.Location = New System.Drawing.Point(474, 30)
-        Me.Label68.Name = "Label68"
-        Me.Label68.Size = New System.Drawing.Size(95, 13)
-        Me.Label68.TabIndex = 99
-        Me.Label68.Text = "Código de serviço:"
-        '
-        'TextBox66
-        '
-        Me.TextBox66.Location = New System.Drawing.Point(477, 49)
-        Me.TextBox66.Name = "TextBox66"
-        Me.TextBox66.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox66.TabIndex = 98
-        '
-        'Button14
-        '
-        Me.Button14.Location = New System.Drawing.Point(268, 244)
-        Me.Button14.Name = "Button14"
-        Me.Button14.Size = New System.Drawing.Size(309, 42)
-        Me.Button14.TabIndex = 97
-        Me.Button14.Text = "Listar Intervenções"
-        Me.Button14.UseVisualStyleBackColor = True
-        '
-        'Label69
-        '
-        Me.Label69.AutoSize = True
-        Me.Label69.Location = New System.Drawing.Point(474, 72)
-        Me.Label69.Name = "Label69"
-        Me.Label69.Size = New System.Drawing.Size(89, 13)
-        Me.Label69.TabIndex = 96
-        Me.Label69.Text = "Custo de serviço:"
-        '
-        'Label70
-        '
-        Me.Label70.AutoSize = True
-        Me.Label70.Location = New System.Drawing.Point(269, 148)
-        Me.Label70.Name = "Label70"
-        Me.Label70.Size = New System.Drawing.Size(54, 13)
-        Me.Label70.TabIndex = 95
-        Me.Label70.Text = "Patologia:"
-        '
-        'Label71
-        '
-        Me.Label71.AutoSize = True
-        Me.Label71.Location = New System.Drawing.Point(269, 109)
-        Me.Label71.Name = "Label71"
-        Me.Label71.Size = New System.Drawing.Size(75, 13)
-        Me.Label71.TabIndex = 94
-        Me.Label71.Text = "Data de inicio:"
-        '
-        'Label72
-        '
-        Me.Label72.AutoSize = True
-        Me.Label72.Location = New System.Drawing.Point(432, 109)
-        Me.Label72.Name = "Label72"
-        Me.Label72.Size = New System.Drawing.Size(64, 13)
-        Me.Label72.TabIndex = 93
-        Me.Label72.Text = "Data de fim:"
-        '
-        'Label73
-        '
-        Me.Label73.AutoSize = True
-        Me.Label73.Location = New System.Drawing.Point(269, 72)
-        Me.Label73.Name = "Label73"
-        Me.Label73.Size = New System.Drawing.Size(90, 13)
-        Me.Label73.TabIndex = 92
-        Me.Label73.Text = "Nome do serviço:"
-        '
-        'Label74
-        '
-        Me.Label74.AutoSize = True
-        Me.Label74.Location = New System.Drawing.Point(265, 30)
-        Me.Label74.Name = "Label74"
-        Me.Label74.Size = New System.Drawing.Size(126, 13)
-        Me.Label74.TabIndex = 91
-        Me.Label74.Text = "Numero de internamento:"
-        '
-        'TextBox67
-        '
-        Me.TextBox67.Location = New System.Drawing.Point(477, 86)
-        Me.TextBox67.Name = "TextBox67"
-        Me.TextBox67.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox67.TabIndex = 90
-        '
-        'TextBox68
-        '
-        Me.TextBox68.Location = New System.Drawing.Point(432, 122)
-        Me.TextBox68.Name = "TextBox68"
-        Me.TextBox68.Size = New System.Drawing.Size(145, 20)
-        Me.TextBox68.TabIndex = 89
-        '
-        'TextBox69
-        '
-        Me.TextBox69.Location = New System.Drawing.Point(265, 164)
-        Me.TextBox69.Multiline = True
-        Me.TextBox69.Name = "TextBox69"
-        Me.TextBox69.Size = New System.Drawing.Size(312, 46)
-        Me.TextBox69.TabIndex = 88
-        '
-        'TextBox70
-        '
-        Me.TextBox70.Location = New System.Drawing.Point(265, 122)
-        Me.TextBox70.Name = "TextBox70"
-        Me.TextBox70.Size = New System.Drawing.Size(161, 20)
-        Me.TextBox70.TabIndex = 87
-        '
-        'TextBox71
-        '
-        Me.TextBox71.Location = New System.Drawing.Point(265, 86)
-        Me.TextBox71.Name = "TextBox71"
-        Me.TextBox71.Size = New System.Drawing.Size(206, 20)
-        Me.TextBox71.TabIndex = 86
-        '
-        'TextBox72
-        '
-        Me.TextBox72.Location = New System.Drawing.Point(265, 49)
-        Me.TextBox72.Name = "TextBox72"
-        Me.TextBox72.Size = New System.Drawing.Size(206, 20)
-        Me.TextBox72.TabIndex = 85
-        '
-        'ListBox12
-        '
-        Me.ListBox12.FormattingEnabled = True
-        Me.ListBox12.Location = New System.Drawing.Point(19, 18)
-        Me.ListBox12.Name = "ListBox12"
-        Me.ListBox12.Size = New System.Drawing.Size(214, 238)
-        Me.ListBox12.TabIndex = 84
+        'Button27
+        '
+        Me.Button27.Location = New System.Drawing.Point(183, 27)
+        Me.Button27.Name = "Button27"
+        Me.Button27.Size = New System.Drawing.Size(50, 24)
+        Me.Button27.TabIndex = 109
+        Me.Button27.Text = "Search"
+        Me.Button27.UseVisualStyleBackColor = True
+        '
+        'TextBox106
+        '
+        Me.TextBox106.Location = New System.Drawing.Point(18, 31)
+        Me.TextBox106.Name = "TextBox106"
+        Me.TextBox106.Size = New System.Drawing.Size(159, 20)
+        Me.TextBox106.TabIndex = 108
         '
         'btnOk
         '
@@ -1311,9 +556,12 @@ Partial Class Form1
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.btnOkDoc)
+        Me.TabPage2.Controls.Add(Me.btnCancelDoc)
+        Me.TabPage2.Controls.Add(Me.btnAddDoc)
+        Me.TabPage2.Controls.Add(Me.btnEditDoc)
         Me.TabPage2.Controls.Add(Me.Button23)
         Me.TabPage2.Controls.Add(Me.TextBox102)
-        Me.TabPage2.Controls.Add(Me.GroupBox2)
         Me.TabPage2.Controls.Add(Me.Label23)
         Me.TabPage2.Controls.Add(Me.TextBox23)
         Me.TabPage2.Controls.Add(Me.Button5)
@@ -1350,296 +598,57 @@ Partial Class Form1
         Me.TabPage2.Text = "Médicos"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
-        'GroupBox2
+        'btnOkDoc
         '
-        Me.GroupBox2.Controls.Add(Me.Button18)
-        Me.GroupBox2.Controls.Add(Me.Label87)
-        Me.GroupBox2.Controls.Add(Me.Label88)
-        Me.GroupBox2.Controls.Add(Me.Label89)
-        Me.GroupBox2.Controls.Add(Me.Label90)
-        Me.GroupBox2.Controls.Add(Me.TextBox85)
-        Me.GroupBox2.Controls.Add(Me.TextBox86)
-        Me.GroupBox2.Controls.Add(Me.TextBox87)
-        Me.GroupBox2.Controls.Add(Me.TextBox88)
-        Me.GroupBox2.Controls.Add(Me.Label91)
-        Me.GroupBox2.Controls.Add(Me.ListBox16)
-        Me.GroupBox2.Controls.Add(Me.Label92)
-        Me.GroupBox2.Controls.Add(Me.Label93)
-        Me.GroupBox2.Controls.Add(Me.Label94)
-        Me.GroupBox2.Controls.Add(Me.TextBox89)
-        Me.GroupBox2.Controls.Add(Me.TextBox90)
-        Me.GroupBox2.Controls.Add(Me.TextBox91)
-        Me.GroupBox2.Controls.Add(Me.ListBox17)
-        Me.GroupBox2.Location = New System.Drawing.Point(-4, 0)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(607, 409)
-        Me.GroupBox2.TabIndex = 113
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Intervenções"
+        Me.btnOkDoc.Location = New System.Drawing.Point(433, 258)
+        Me.btnOkDoc.Name = "btnOkDoc"
+        Me.btnOkDoc.Size = New System.Drawing.Size(97, 46)
+        Me.btnOkDoc.TabIndex = 119
+        Me.btnOkDoc.Text = "Ok"
+        Me.btnOkDoc.UseVisualStyleBackColor = True
         '
-        'Button18
+        'btnCancelDoc
         '
-        Me.Button18.Location = New System.Drawing.Point(34, 299)
-        Me.Button18.Name = "Button18"
-        Me.Button18.Size = New System.Drawing.Size(75, 23)
-        Me.Button18.TabIndex = 125
-        Me.Button18.Text = "Sair"
-        Me.Button18.UseVisualStyleBackColor = True
+        Me.btnCancelDoc.Location = New System.Drawing.Point(316, 258)
+        Me.btnCancelDoc.Name = "btnCancelDoc"
+        Me.btnCancelDoc.Size = New System.Drawing.Size(97, 46)
+        Me.btnCancelDoc.TabIndex = 118
+        Me.btnCancelDoc.Text = "Cancel"
+        Me.btnCancelDoc.UseVisualStyleBackColor = True
         '
-        'Label87
+        'btnAddDoc
         '
-        Me.Label87.AutoSize = True
-        Me.Label87.Location = New System.Drawing.Point(403, 168)
-        Me.Label87.Name = "Label87"
-        Me.Label87.Size = New System.Drawing.Size(97, 13)
-        Me.Label87.TabIndex = 124
-        Me.Label87.Text = "Código de produto:"
+        Me.btnAddDoc.Location = New System.Drawing.Point(18, 290)
+        Me.btnAddDoc.Name = "btnAddDoc"
+        Me.btnAddDoc.Size = New System.Drawing.Size(95, 29)
+        Me.btnAddDoc.TabIndex = 117
+        Me.btnAddDoc.Text = "Add Doctor"
+        Me.btnAddDoc.UseVisualStyleBackColor = True
         '
-        'Label88
+        'btnEditDoc
         '
-        Me.Label88.AutoSize = True
-        Me.Label88.Location = New System.Drawing.Point(403, 207)
-        Me.Label88.Name = "Label88"
-        Me.Label88.Size = New System.Drawing.Size(85, 13)
-        Me.Label88.TabIndex = 123
-        Me.Label88.Text = "Tipo de produto:"
+        Me.btnEditDoc.Location = New System.Drawing.Point(119, 290)
+        Me.btnEditDoc.Name = "btnEditDoc"
+        Me.btnEditDoc.Size = New System.Drawing.Size(113, 29)
+        Me.btnEditDoc.TabIndex = 116
+        Me.btnEditDoc.Text = "Edit Doctor"
+        Me.btnEditDoc.UseVisualStyleBackColor = True
         '
-        'Label89
+        'Button23
         '
-        Me.Label89.AutoSize = True
-        Me.Label89.Location = New System.Drawing.Point(403, 247)
-        Me.Label89.Name = "Label89"
-        Me.Label89.Size = New System.Drawing.Size(91, 13)
-        Me.Label89.TabIndex = 122
-        Me.Label89.Text = "Custo de produto:"
+        Me.Button23.Location = New System.Drawing.Point(183, 26)
+        Me.Button23.Name = "Button23"
+        Me.Button23.Size = New System.Drawing.Size(50, 24)
+        Me.Button23.TabIndex = 115
+        Me.Button23.Text = "Search"
+        Me.Button23.UseVisualStyleBackColor = True
         '
-        'Label90
+        'TextBox102
         '
-        Me.Label90.AutoSize = True
-        Me.Label90.Location = New System.Drawing.Point(403, 286)
-        Me.Label90.Name = "Label90"
-        Me.Label90.Size = New System.Drawing.Size(90, 13)
-        Me.Label90.TabIndex = 121
-        Me.Label90.Text = "Custo de limpeza:"
-        '
-        'TextBox85
-        '
-        Me.TextBox85.Location = New System.Drawing.Point(406, 302)
-        Me.TextBox85.Name = "TextBox85"
-        Me.TextBox85.Size = New System.Drawing.Size(149, 20)
-        Me.TextBox85.TabIndex = 120
-        '
-        'TextBox86
-        '
-        Me.TextBox86.Location = New System.Drawing.Point(406, 222)
-        Me.TextBox86.Name = "TextBox86"
-        Me.TextBox86.Size = New System.Drawing.Size(149, 20)
-        Me.TextBox86.TabIndex = 119
-        '
-        'TextBox87
-        '
-        Me.TextBox87.Location = New System.Drawing.Point(406, 263)
-        Me.TextBox87.Name = "TextBox87"
-        Me.TextBox87.Size = New System.Drawing.Size(149, 20)
-        Me.TextBox87.TabIndex = 118
-        '
-        'TextBox88
-        '
-        Me.TextBox88.Location = New System.Drawing.Point(406, 184)
-        Me.TextBox88.Name = "TextBox88"
-        Me.TextBox88.Size = New System.Drawing.Size(149, 20)
-        Me.TextBox88.TabIndex = 117
-        '
-        'Label91
-        '
-        Me.Label91.AutoSize = True
-        Me.Label91.Location = New System.Drawing.Point(272, 157)
-        Me.Label91.Name = "Label91"
-        Me.Label91.Size = New System.Drawing.Size(92, 13)
-        Me.Label91.TabIndex = 116
-        Me.Label91.Text = "Lista de Produtos:"
-        '
-        'ListBox16
-        '
-        Me.ListBox16.FormattingEnabled = True
-        Me.ListBox16.Location = New System.Drawing.Point(268, 197)
-        Me.ListBox16.Name = "ListBox16"
-        Me.ListBox16.Size = New System.Drawing.Size(121, 121)
-        Me.ListBox16.TabIndex = 115
-        '
-        'Label92
-        '
-        Me.Label92.AutoSize = True
-        Me.Label92.Location = New System.Drawing.Point(272, 110)
-        Me.Label92.Name = "Label92"
-        Me.Label92.Size = New System.Drawing.Size(37, 13)
-        Me.Label92.TabIndex = 114
-        Me.Label92.Text = "Custo:"
-        '
-        'Label93
-        '
-        Me.Label93.AutoSize = True
-        Me.Label93.Location = New System.Drawing.Point(272, 73)
-        Me.Label93.Name = "Label93"
-        Me.Label93.Size = New System.Drawing.Size(127, 13)
-        Me.Label93.TabIndex = 113
-        Me.Label93.Text = "Numero de Internamento:"
-        '
-        'Label94
-        '
-        Me.Label94.AutoSize = True
-        Me.Label94.Location = New System.Drawing.Point(268, 31)
-        Me.Label94.Name = "Label94"
-        Me.Label94.Size = New System.Drawing.Size(121, 13)
-        Me.Label94.TabIndex = 112
-        Me.Label94.Text = "Numero de intervenção:"
-        '
-        'TextBox89
-        '
-        Me.TextBox89.Location = New System.Drawing.Point(268, 126)
-        Me.TextBox89.Name = "TextBox89"
-        Me.TextBox89.Size = New System.Drawing.Size(312, 20)
-        Me.TextBox89.TabIndex = 111
-        '
-        'TextBox90
-        '
-        Me.TextBox90.Location = New System.Drawing.Point(268, 87)
-        Me.TextBox90.Name = "TextBox90"
-        Me.TextBox90.Size = New System.Drawing.Size(312, 20)
-        Me.TextBox90.TabIndex = 110
-        '
-        'TextBox91
-        '
-        Me.TextBox91.Location = New System.Drawing.Point(268, 50)
-        Me.TextBox91.Name = "TextBox91"
-        Me.TextBox91.Size = New System.Drawing.Size(312, 20)
-        Me.TextBox91.TabIndex = 109
-        '
-        'ListBox17
-        '
-        Me.ListBox17.FormattingEnabled = True
-        Me.ListBox17.Location = New System.Drawing.Point(13, 28)
-        Me.ListBox17.Name = "ListBox17"
-        Me.ListBox17.Size = New System.Drawing.Size(214, 251)
-        Me.ListBox17.TabIndex = 108
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.Button17)
-        Me.GroupBox1.Controls.Add(Me.Label82)
-        Me.GroupBox1.Controls.Add(Me.Label83)
-        Me.GroupBox1.Controls.Add(Me.TextBox80)
-        Me.GroupBox1.Controls.Add(Me.TextBox81)
-        Me.GroupBox1.Controls.Add(Me.Label84)
-        Me.GroupBox1.Controls.Add(Me.Label85)
-        Me.GroupBox1.Controls.Add(Me.Label86)
-        Me.GroupBox1.Controls.Add(Me.TextBox82)
-        Me.GroupBox1.Controls.Add(Me.TextBox83)
-        Me.GroupBox1.Controls.Add(Me.TextBox84)
-        Me.GroupBox1.Controls.Add(Me.ListBox15)
-        Me.GroupBox1.Location = New System.Drawing.Point(1, 25)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(600, 343)
-        Me.GroupBox1.TabIndex = 56
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Serviços"
-        '
-        'Button17
-        '
-        Me.Button17.Location = New System.Drawing.Point(470, 281)
-        Me.Button17.Name = "Button17"
-        Me.Button17.Size = New System.Drawing.Size(75, 23)
-        Me.Button17.TabIndex = 112
-        Me.Button17.Text = "Sair"
-        Me.Button17.UseVisualStyleBackColor = True
-        '
-        'Label82
-        '
-        Me.Label82.AutoSize = True
-        Me.Label82.Location = New System.Drawing.Point(266, 216)
-        Me.Label82.Name = "Label82"
-        Me.Label82.Size = New System.Drawing.Size(122, 13)
-        Me.Label82.TabIndex = 111
-        Me.Label82.Text = "Enfermeiro Responsavel"
-        '
-        'Label83
-        '
-        Me.Label83.AutoSize = True
-        Me.Label83.Location = New System.Drawing.Point(266, 176)
-        Me.Label83.Name = "Label83"
-        Me.Label83.Size = New System.Drawing.Size(107, 13)
-        Me.Label83.TabIndex = 110
-        Me.Label83.Text = "Médico Responsavel"
-        '
-        'TextBox80
-        '
-        Me.TextBox80.Location = New System.Drawing.Point(262, 192)
-        Me.TextBox80.Name = "TextBox80"
-        Me.TextBox80.Size = New System.Drawing.Size(312, 20)
-        Me.TextBox80.TabIndex = 109
-        '
-        'TextBox81
-        '
-        Me.TextBox81.Location = New System.Drawing.Point(265, 232)
-        Me.TextBox81.Name = "TextBox81"
-        Me.TextBox81.Size = New System.Drawing.Size(309, 20)
-        Me.TextBox81.TabIndex = 108
-        '
-        'Label84
-        '
-        Me.Label84.AutoSize = True
-        Me.Label84.Location = New System.Drawing.Point(471, 133)
-        Me.Label84.Name = "Label84"
-        Me.Label84.Size = New System.Drawing.Size(89, 13)
-        Me.Label84.TabIndex = 107
-        Me.Label84.Text = "Custo de serviço:"
-        '
-        'Label85
-        '
-        Me.Label85.AutoSize = True
-        Me.Label85.Location = New System.Drawing.Point(266, 133)
-        Me.Label85.Name = "Label85"
-        Me.Label85.Size = New System.Drawing.Size(90, 13)
-        Me.Label85.TabIndex = 106
-        Me.Label85.Text = "Nome do serviço:"
-        '
-        'Label86
-        '
-        Me.Label86.AutoSize = True
-        Me.Label86.Location = New System.Drawing.Point(262, 91)
-        Me.Label86.Name = "Label86"
-        Me.Label86.Size = New System.Drawing.Size(97, 13)
-        Me.Label86.TabIndex = 105
-        Me.Label86.Text = "Código de Serviço:"
-        '
-        'TextBox82
-        '
-        Me.TextBox82.Location = New System.Drawing.Point(474, 147)
-        Me.TextBox82.Name = "TextBox82"
-        Me.TextBox82.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox82.TabIndex = 104
-        '
-        'TextBox83
-        '
-        Me.TextBox83.Location = New System.Drawing.Point(262, 147)
-        Me.TextBox83.Name = "TextBox83"
-        Me.TextBox83.Size = New System.Drawing.Size(206, 20)
-        Me.TextBox83.TabIndex = 103
-        '
-        'TextBox84
-        '
-        Me.TextBox84.Location = New System.Drawing.Point(262, 110)
-        Me.TextBox84.Name = "TextBox84"
-        Me.TextBox84.Size = New System.Drawing.Size(312, 20)
-        Me.TextBox84.TabIndex = 102
-        '
-        'ListBox15
-        '
-        Me.ListBox15.FormattingEnabled = True
-        Me.ListBox15.Location = New System.Drawing.Point(16, 27)
-        Me.ListBox15.Name = "ListBox15"
-        Me.ListBox15.Size = New System.Drawing.Size(214, 277)
-        Me.ListBox15.TabIndex = 101
+        Me.TextBox102.Location = New System.Drawing.Point(18, 30)
+        Me.TextBox102.Name = "TextBox102"
+        Me.TextBox102.Size = New System.Drawing.Size(159, 20)
+        Me.TextBox102.TabIndex = 114
         '
         'Label23
         '
@@ -1865,11 +874,15 @@ Partial Class Form1
         Me.ListBox2.FormattingEnabled = True
         Me.ListBox2.Location = New System.Drawing.Point(18, 70)
         Me.ListBox2.Name = "ListBox2"
-        Me.ListBox2.Size = New System.Drawing.Size(214, 251)
+        Me.ListBox2.Size = New System.Drawing.Size(214, 212)
         Me.ListBox2.TabIndex = 27
         '
         'TabPage8
         '
+        Me.TabPage8.Controls.Add(Me.btnOkEnf)
+        Me.TabPage8.Controls.Add(Me.btnCancelEnf)
+        Me.TabPage8.Controls.Add(Me.btnEditEnf)
+        Me.TabPage8.Controls.Add(Me.btnAddEnf)
         Me.TabPage8.Controls.Add(Me.Button22)
         Me.TabPage8.Controls.Add(Me.TextBox101)
         Me.TabPage8.Controls.Add(Me.Button12)
@@ -1904,6 +917,58 @@ Partial Class Form1
         Me.TabPage8.TabIndex = 7
         Me.TabPage8.Text = "Enfermeiros"
         Me.TabPage8.UseVisualStyleBackColor = True
+        '
+        'btnOkEnf
+        '
+        Me.btnOkEnf.Location = New System.Drawing.Point(419, 263)
+        Me.btnOkEnf.Name = "btnOkEnf"
+        Me.btnOkEnf.Size = New System.Drawing.Size(88, 41)
+        Me.btnOkEnf.TabIndex = 111
+        Me.btnOkEnf.Text = "Ok"
+        Me.btnOkEnf.UseVisualStyleBackColor = True
+        '
+        'btnCancelEnf
+        '
+        Me.btnCancelEnf.Location = New System.Drawing.Point(325, 262)
+        Me.btnCancelEnf.Name = "btnCancelEnf"
+        Me.btnCancelEnf.Size = New System.Drawing.Size(88, 41)
+        Me.btnCancelEnf.TabIndex = 110
+        Me.btnCancelEnf.Text = "Cancel"
+        Me.btnCancelEnf.UseVisualStyleBackColor = True
+        '
+        'btnEditEnf
+        '
+        Me.btnEditEnf.Location = New System.Drawing.Point(122, 290)
+        Me.btnEditEnf.Name = "btnEditEnf"
+        Me.btnEditEnf.Size = New System.Drawing.Size(104, 23)
+        Me.btnEditEnf.TabIndex = 109
+        Me.btnEditEnf.Text = "Edit Nurse"
+        Me.btnEditEnf.UseVisualStyleBackColor = True
+        '
+        'btnAddEnf
+        '
+        Me.btnAddEnf.Location = New System.Drawing.Point(18, 290)
+        Me.btnAddEnf.Name = "btnAddEnf"
+        Me.btnAddEnf.Size = New System.Drawing.Size(98, 23)
+        Me.btnAddEnf.TabIndex = 108
+        Me.btnAddEnf.Text = "Add Nurse"
+        Me.btnAddEnf.UseVisualStyleBackColor = True
+        '
+        'Button22
+        '
+        Me.Button22.Location = New System.Drawing.Point(183, 26)
+        Me.Button22.Name = "Button22"
+        Me.Button22.Size = New System.Drawing.Size(50, 24)
+        Me.Button22.TabIndex = 107
+        Me.Button22.Text = "Search"
+        Me.Button22.UseVisualStyleBackColor = True
+        '
+        'TextBox101
+        '
+        Me.TextBox101.Location = New System.Drawing.Point(18, 30)
+        Me.TextBox101.Name = "TextBox101"
+        Me.TextBox101.Size = New System.Drawing.Size(159, 20)
+        Me.TextBox101.TabIndex = 106
         '
         'Button12
         '
@@ -2113,7 +1178,7 @@ Partial Class Form1
         Me.ListBox9.FormattingEnabled = True
         Me.ListBox9.Location = New System.Drawing.Point(18, 70)
         Me.ListBox9.Name = "ListBox9"
-        Me.ListBox9.Size = New System.Drawing.Size(214, 251)
+        Me.ListBox9.Size = New System.Drawing.Size(214, 199)
         Me.ListBox9.TabIndex = 56
         '
         'TabPage3
@@ -2142,6 +1207,22 @@ Partial Class Form1
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Internamentos"
         Me.TabPage3.UseVisualStyleBackColor = True
+        '
+        'Button25
+        '
+        Me.Button25.Location = New System.Drawing.Point(183, 26)
+        Me.Button25.Name = "Button25"
+        Me.Button25.Size = New System.Drawing.Size(50, 24)
+        Me.Button25.TabIndex = 111
+        Me.Button25.Text = "Search"
+        Me.Button25.UseVisualStyleBackColor = True
+        '
+        'TextBox104
+        '
+        Me.TextBox104.Location = New System.Drawing.Point(18, 30)
+        Me.TextBox104.Name = "TextBox104"
+        Me.TextBox104.Size = New System.Drawing.Size(159, 20)
+        Me.TextBox104.TabIndex = 110
         '
         'Label24
         '
@@ -2301,6 +1382,22 @@ Partial Class Form1
         Me.TabPage4.Text = "Intervenções"
         Me.TabPage4.UseVisualStyleBackColor = True
         '
+        'Button24
+        '
+        Me.Button24.Location = New System.Drawing.Point(175, 26)
+        Me.Button24.Name = "Button24"
+        Me.Button24.Size = New System.Drawing.Size(50, 24)
+        Me.Button24.TabIndex = 109
+        Me.Button24.Text = "Search"
+        Me.Button24.UseVisualStyleBackColor = True
+        '
+        'TextBox103
+        '
+        Me.TextBox103.Location = New System.Drawing.Point(10, 30)
+        Me.TextBox103.Name = "TextBox103"
+        Me.TextBox103.Size = New System.Drawing.Size(159, 20)
+        Me.TextBox103.TabIndex = 108
+        '
         'Label38
         '
         Me.Label38.AutoSize = True
@@ -2456,6 +1553,22 @@ Partial Class Form1
         Me.TabPage5.Text = "Faturas"
         Me.TabPage5.UseVisualStyleBackColor = True
         '
+        'Button21
+        '
+        Me.Button21.Location = New System.Drawing.Point(184, 17)
+        Me.Button21.Name = "Button21"
+        Me.Button21.Size = New System.Drawing.Size(50, 24)
+        Me.Button21.TabIndex = 105
+        Me.Button21.Text = "Search"
+        Me.Button21.UseVisualStyleBackColor = True
+        '
+        'TextBox100
+        '
+        Me.TextBox100.Location = New System.Drawing.Point(19, 21)
+        Me.TextBox100.Name = "TextBox100"
+        Me.TextBox100.Size = New System.Drawing.Size(159, 20)
+        Me.TextBox100.TabIndex = 104
+        '
         'Label42
         '
         Me.Label42.AutoSize = True
@@ -2533,6 +1646,22 @@ Partial Class Form1
         Me.TabPage7.TabIndex = 6
         Me.TabPage7.Text = "Serviços"
         Me.TabPage7.UseVisualStyleBackColor = True
+        '
+        'Button26
+        '
+        Me.Button26.Location = New System.Drawing.Point(184, 27)
+        Me.Button26.Name = "Button26"
+        Me.Button26.Size = New System.Drawing.Size(50, 24)
+        Me.Button26.TabIndex = 107
+        Me.Button26.Text = "Search"
+        Me.Button26.UseVisualStyleBackColor = True
+        '
+        'TextBox105
+        '
+        Me.TextBox105.Location = New System.Drawing.Point(19, 31)
+        Me.TextBox105.Name = "TextBox105"
+        Me.TextBox105.Size = New System.Drawing.Size(159, 20)
+        Me.TextBox105.TabIndex = 106
         '
         'Label78
         '
@@ -2640,6 +1769,22 @@ Partial Class Form1
         Me.TabPage9.Text = "Medicamentos"
         Me.TabPage9.UseVisualStyleBackColor = True
         '
+        'Button20
+        '
+        Me.Button20.Location = New System.Drawing.Point(184, 15)
+        Me.Button20.Name = "Button20"
+        Me.Button20.Size = New System.Drawing.Size(50, 24)
+        Me.Button20.TabIndex = 103
+        Me.Button20.Text = "Search"
+        Me.Button20.UseVisualStyleBackColor = True
+        '
+        'TextBox99
+        '
+        Me.TextBox99.Location = New System.Drawing.Point(19, 19)
+        Me.TextBox99.Name = "TextBox99"
+        Me.TextBox99.Size = New System.Drawing.Size(159, 20)
+        Me.TextBox99.TabIndex = 102
+        '
         'Label79
         '
         Me.Label79.AutoSize = True
@@ -2696,133 +1841,123 @@ Partial Class Form1
         Me.ListBox14.Size = New System.Drawing.Size(214, 277)
         Me.ListBox14.TabIndex = 95
         '
-        'TextBox99
+        'GroupBox1
         '
-        Me.TextBox99.Location = New System.Drawing.Point(19, 19)
-        Me.TextBox99.Name = "TextBox99"
-        Me.TextBox99.Size = New System.Drawing.Size(159, 20)
-        Me.TextBox99.TabIndex = 102
+        Me.GroupBox1.Controls.Add(Me.Button17)
+        Me.GroupBox1.Controls.Add(Me.Label82)
+        Me.GroupBox1.Controls.Add(Me.Label83)
+        Me.GroupBox1.Controls.Add(Me.TextBox80)
+        Me.GroupBox1.Controls.Add(Me.TextBox81)
+        Me.GroupBox1.Controls.Add(Me.Label84)
+        Me.GroupBox1.Controls.Add(Me.Label85)
+        Me.GroupBox1.Controls.Add(Me.Label86)
+        Me.GroupBox1.Controls.Add(Me.TextBox82)
+        Me.GroupBox1.Controls.Add(Me.TextBox83)
+        Me.GroupBox1.Controls.Add(Me.TextBox84)
+        Me.GroupBox1.Controls.Add(Me.ListBox15)
+        Me.GroupBox1.Location = New System.Drawing.Point(1, 25)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(600, 343)
+        Me.GroupBox1.TabIndex = 56
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Serviços"
         '
-        'Button20
+        'Button17
         '
-        Me.Button20.Location = New System.Drawing.Point(184, 15)
-        Me.Button20.Name = "Button20"
-        Me.Button20.Size = New System.Drawing.Size(50, 24)
-        Me.Button20.TabIndex = 103
-        Me.Button20.Text = "Search"
-        Me.Button20.UseVisualStyleBackColor = True
+        Me.Button17.Location = New System.Drawing.Point(470, 281)
+        Me.Button17.Name = "Button17"
+        Me.Button17.Size = New System.Drawing.Size(75, 23)
+        Me.Button17.TabIndex = 112
+        Me.Button17.Text = "Sair"
+        Me.Button17.UseVisualStyleBackColor = True
         '
-        'Button21
+        'Label82
         '
-        Me.Button21.Location = New System.Drawing.Point(184, 17)
-        Me.Button21.Name = "Button21"
-        Me.Button21.Size = New System.Drawing.Size(50, 24)
-        Me.Button21.TabIndex = 105
-        Me.Button21.Text = "Search"
-        Me.Button21.UseVisualStyleBackColor = True
+        Me.Label82.AutoSize = True
+        Me.Label82.Location = New System.Drawing.Point(266, 216)
+        Me.Label82.Name = "Label82"
+        Me.Label82.Size = New System.Drawing.Size(122, 13)
+        Me.Label82.TabIndex = 111
+        Me.Label82.Text = "Enfermeiro Responsavel"
         '
-        'TextBox100
+        'Label83
         '
-        Me.TextBox100.Location = New System.Drawing.Point(19, 21)
-        Me.TextBox100.Name = "TextBox100"
-        Me.TextBox100.Size = New System.Drawing.Size(159, 20)
-        Me.TextBox100.TabIndex = 104
+        Me.Label83.AutoSize = True
+        Me.Label83.Location = New System.Drawing.Point(266, 176)
+        Me.Label83.Name = "Label83"
+        Me.Label83.Size = New System.Drawing.Size(107, 13)
+        Me.Label83.TabIndex = 110
+        Me.Label83.Text = "Médico Responsavel"
         '
-        'Button22
+        'TextBox80
         '
-        Me.Button22.Location = New System.Drawing.Point(183, 26)
-        Me.Button22.Name = "Button22"
-        Me.Button22.Size = New System.Drawing.Size(50, 24)
-        Me.Button22.TabIndex = 107
-        Me.Button22.Text = "Search"
-        Me.Button22.UseVisualStyleBackColor = True
+        Me.TextBox80.Location = New System.Drawing.Point(262, 192)
+        Me.TextBox80.Name = "TextBox80"
+        Me.TextBox80.Size = New System.Drawing.Size(312, 20)
+        Me.TextBox80.TabIndex = 109
         '
-        'TextBox101
+        'TextBox81
         '
-        Me.TextBox101.Location = New System.Drawing.Point(18, 30)
-        Me.TextBox101.Name = "TextBox101"
-        Me.TextBox101.Size = New System.Drawing.Size(159, 20)
-        Me.TextBox101.TabIndex = 106
+        Me.TextBox81.Location = New System.Drawing.Point(265, 232)
+        Me.TextBox81.Name = "TextBox81"
+        Me.TextBox81.Size = New System.Drawing.Size(309, 20)
+        Me.TextBox81.TabIndex = 108
         '
-        'Button23
+        'Label84
         '
-        Me.Button23.Location = New System.Drawing.Point(183, 26)
-        Me.Button23.Name = "Button23"
-        Me.Button23.Size = New System.Drawing.Size(50, 24)
-        Me.Button23.TabIndex = 115
-        Me.Button23.Text = "Search"
-        Me.Button23.UseVisualStyleBackColor = True
+        Me.Label84.AutoSize = True
+        Me.Label84.Location = New System.Drawing.Point(471, 133)
+        Me.Label84.Name = "Label84"
+        Me.Label84.Size = New System.Drawing.Size(89, 13)
+        Me.Label84.TabIndex = 107
+        Me.Label84.Text = "Custo de serviço:"
         '
-        'TextBox102
+        'Label85
         '
-        Me.TextBox102.Location = New System.Drawing.Point(18, 30)
-        Me.TextBox102.Name = "TextBox102"
-        Me.TextBox102.Size = New System.Drawing.Size(159, 20)
-        Me.TextBox102.TabIndex = 114
+        Me.Label85.AutoSize = True
+        Me.Label85.Location = New System.Drawing.Point(266, 133)
+        Me.Label85.Name = "Label85"
+        Me.Label85.Size = New System.Drawing.Size(90, 13)
+        Me.Label85.TabIndex = 106
+        Me.Label85.Text = "Nome do serviço:"
         '
-        'Button24
+        'Label86
         '
-        Me.Button24.Location = New System.Drawing.Point(175, 26)
-        Me.Button24.Name = "Button24"
-        Me.Button24.Size = New System.Drawing.Size(50, 24)
-        Me.Button24.TabIndex = 109
-        Me.Button24.Text = "Search"
-        Me.Button24.UseVisualStyleBackColor = True
+        Me.Label86.AutoSize = True
+        Me.Label86.Location = New System.Drawing.Point(262, 91)
+        Me.Label86.Name = "Label86"
+        Me.Label86.Size = New System.Drawing.Size(97, 13)
+        Me.Label86.TabIndex = 105
+        Me.Label86.Text = "Código de Serviço:"
         '
-        'TextBox103
+        'TextBox82
         '
-        Me.TextBox103.Location = New System.Drawing.Point(10, 30)
-        Me.TextBox103.Name = "TextBox103"
-        Me.TextBox103.Size = New System.Drawing.Size(159, 20)
-        Me.TextBox103.TabIndex = 108
+        Me.TextBox82.Location = New System.Drawing.Point(474, 147)
+        Me.TextBox82.Name = "TextBox82"
+        Me.TextBox82.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox82.TabIndex = 104
         '
-        'Button25
+        'TextBox83
         '
-        Me.Button25.Location = New System.Drawing.Point(183, 26)
-        Me.Button25.Name = "Button25"
-        Me.Button25.Size = New System.Drawing.Size(50, 24)
-        Me.Button25.TabIndex = 111
-        Me.Button25.Text = "Search"
-        Me.Button25.UseVisualStyleBackColor = True
+        Me.TextBox83.Location = New System.Drawing.Point(262, 147)
+        Me.TextBox83.Name = "TextBox83"
+        Me.TextBox83.Size = New System.Drawing.Size(206, 20)
+        Me.TextBox83.TabIndex = 103
         '
-        'TextBox104
+        'TextBox84
         '
-        Me.TextBox104.Location = New System.Drawing.Point(18, 30)
-        Me.TextBox104.Name = "TextBox104"
-        Me.TextBox104.Size = New System.Drawing.Size(159, 20)
-        Me.TextBox104.TabIndex = 110
+        Me.TextBox84.Location = New System.Drawing.Point(262, 110)
+        Me.TextBox84.Name = "TextBox84"
+        Me.TextBox84.Size = New System.Drawing.Size(312, 20)
+        Me.TextBox84.TabIndex = 102
         '
-        'Button26
+        'ListBox15
         '
-        Me.Button26.Location = New System.Drawing.Point(184, 27)
-        Me.Button26.Name = "Button26"
-        Me.Button26.Size = New System.Drawing.Size(50, 24)
-        Me.Button26.TabIndex = 107
-        Me.Button26.Text = "Search"
-        Me.Button26.UseVisualStyleBackColor = True
-        '
-        'TextBox105
-        '
-        Me.TextBox105.Location = New System.Drawing.Point(19, 31)
-        Me.TextBox105.Name = "TextBox105"
-        Me.TextBox105.Size = New System.Drawing.Size(159, 20)
-        Me.TextBox105.TabIndex = 106
-        '
-        'Button27
-        '
-        Me.Button27.Location = New System.Drawing.Point(183, 27)
-        Me.Button27.Name = "Button27"
-        Me.Button27.Size = New System.Drawing.Size(50, 24)
-        Me.Button27.TabIndex = 109
-        Me.Button27.Text = "Search"
-        Me.Button27.UseVisualStyleBackColor = True
-        '
-        'TextBox106
-        '
-        Me.TextBox106.Location = New System.Drawing.Point(18, 31)
-        Me.TextBox106.Name = "TextBox106"
-        Me.TextBox106.Size = New System.Drawing.Size(159, 20)
-        Me.TextBox106.TabIndex = 108
+        Me.ListBox15.FormattingEnabled = True
+        Me.ListBox15.Location = New System.Drawing.Point(16, 27)
+        Me.ListBox15.Name = "ListBox15"
+        Me.ListBox15.Size = New System.Drawing.Size(214, 277)
+        Me.ListBox15.TabIndex = 101
         '
         'Form1
         '
@@ -2836,22 +1971,8 @@ Partial Class Form1
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
-        Me.Intervencoes.ResumeLayout(False)
-        Me.Intervencoes.PerformLayout()
-        Me.Intervencoes1.ResumeLayout(False)
-        Me.Intervencoes1.PerformLayout()
-        Me.Faturas.ResumeLayout(False)
-        Me.Faturas.PerformLayout()
-        Me.Seguros.ResumeLayout(False)
-        Me.Seguros.PerformLayout()
-        Me.Internamentos.ResumeLayout(False)
-        Me.Internamentos.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
         Me.TabPage8.ResumeLayout(False)
         Me.TabPage8.PerformLayout()
         Me.TabPage3.ResumeLayout(False)
@@ -2864,6 +1985,8 @@ Partial Class Form1
         Me.TabPage7.PerformLayout()
         Me.TabPage9.ResumeLayout(False)
         Me.TabPage9.PerformLayout()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -3006,62 +2129,7 @@ Partial Class Form1
     Friend WithEvents TextBox50 As TextBox
     Friend WithEvents ListBox8 As ListBox
     Friend WithEvents btnOk As Button
-    Friend WithEvents Faturas As GroupBox
-    Friend WithEvents Button6 As Button
-    Friend WithEvents Label39 As Label
-    Friend WithEvents Label40 As Label
-    Friend WithEvents Label41 As Label
-    Friend WithEvents TextBox38 As TextBox
-    Friend WithEvents TextBox39 As TextBox
-    Friend WithEvents TextBox40 As TextBox
-    Friend WithEvents ListBox7 As ListBox
-    Friend WithEvents Intervencoes As GroupBox
-    Friend WithEvents Button13 As Button
-    Friend WithEvents Label43 As Label
-    Friend WithEvents Label47 As Label
-    Friend WithEvents Label48 As Label
-    Friend WithEvents Label49 As Label
-    Friend WithEvents TextBox41 As TextBox
-    Friend WithEvents TextBox46 As TextBox
-    Friend WithEvents TextBox47 As TextBox
-    Friend WithEvents TextBox48 As TextBox
-    Friend WithEvents Label64 As Label
-    Friend WithEvents ListBox10 As ListBox
-    Friend WithEvents Label65 As Label
-    Friend WithEvents Label66 As Label
-    Friend WithEvents Label67 As Label
-    Friend WithEvents TextBox63 As TextBox
-    Friend WithEvents TextBox64 As TextBox
-    Friend WithEvents TextBox65 As TextBox
-    Friend WithEvents ListBox11 As ListBox
-    Friend WithEvents Internamentos As GroupBox
-    Friend WithEvents ListBox12 As ListBox
     Friend WithEvents btnCancel As Button
-    Friend WithEvents Seguros As GroupBox
-    Friend WithEvents Button16 As Button
-    Friend WithEvents Label77 As Label
-    Friend WithEvents Label76 As Label
-    Friend WithEvents Label75 As Label
-    Friend WithEvents TextBox75 As TextBox
-    Friend WithEvents TextBox74 As TextBox
-    Friend WithEvents TextBox73 As TextBox
-    Friend WithEvents ListBox13 As ListBox
-    Friend WithEvents Button15 As Button
-    Friend WithEvents Label68 As Label
-    Friend WithEvents TextBox66 As TextBox
-    Friend WithEvents Button14 As Button
-    Friend WithEvents Label69 As Label
-    Friend WithEvents Label70 As Label
-    Friend WithEvents Label71 As Label
-    Friend WithEvents Label72 As Label
-    Friend WithEvents Label73 As Label
-    Friend WithEvents Label74 As Label
-    Friend WithEvents TextBox67 As TextBox
-    Friend WithEvents TextBox68 As TextBox
-    Friend WithEvents TextBox69 As TextBox
-    Friend WithEvents TextBox70 As TextBox
-    Friend WithEvents TextBox71 As TextBox
-    Friend WithEvents TextBox72 As TextBox
     Friend WithEvents Button12 As Button
     Friend WithEvents TabPage9 As TabPage
     Friend WithEvents Label78 As Label
@@ -3088,44 +2156,6 @@ Partial Class Form1
     Friend WithEvents TextBox83 As TextBox
     Friend WithEvents TextBox84 As TextBox
     Friend WithEvents ListBox15 As ListBox
-    Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents Button18 As Button
-    Friend WithEvents Label87 As Label
-    Friend WithEvents Label88 As Label
-    Friend WithEvents Label89 As Label
-    Friend WithEvents Label90 As Label
-    Friend WithEvents TextBox85 As TextBox
-    Friend WithEvents TextBox86 As TextBox
-    Friend WithEvents TextBox87 As TextBox
-    Friend WithEvents TextBox88 As TextBox
-    Friend WithEvents Label91 As Label
-    Friend WithEvents ListBox16 As ListBox
-    Friend WithEvents Label92 As Label
-    Friend WithEvents Label93 As Label
-    Friend WithEvents Label94 As Label
-    Friend WithEvents TextBox89 As TextBox
-    Friend WithEvents TextBox90 As TextBox
-    Friend WithEvents TextBox91 As TextBox
-    Friend WithEvents ListBox17 As ListBox
-    Friend WithEvents Intervencoes1 As GroupBox
-    Friend WithEvents Button19 As Button
-    Friend WithEvents Label95 As Label
-    Friend WithEvents Label96 As Label
-    Friend WithEvents Label97 As Label
-    Friend WithEvents Label98 As Label
-    Friend WithEvents TextBox92 As TextBox
-    Friend WithEvents TextBox93 As TextBox
-    Friend WithEvents TextBox94 As TextBox
-    Friend WithEvents TextBox95 As TextBox
-    Friend WithEvents Label99 As Label
-    Friend WithEvents ListBox18 As ListBox
-    Friend WithEvents Label100 As Label
-    Friend WithEvents Label101 As Label
-    Friend WithEvents Label102 As Label
-    Friend WithEvents TextBox96 As TextBox
-    Friend WithEvents TextBox97 As TextBox
-    Friend WithEvents TextBox98 As TextBox
-    Friend WithEvents ListBox19 As ListBox
     Friend WithEvents Button20 As Button
     Friend WithEvents TextBox99 As TextBox
     Friend WithEvents Button22 As Button
@@ -3142,4 +2172,12 @@ Partial Class Form1
     Friend WithEvents TextBox105 As TextBox
     Friend WithEvents Button27 As Button
     Friend WithEvents TextBox106 As TextBox
+    Friend WithEvents btnEditEnf As Button
+    Friend WithEvents btnAddEnf As Button
+    Friend WithEvents btnCancelEnf As Button
+    Friend WithEvents btnOkEnf As Button
+    Friend WithEvents btnOkDoc As Button
+    Friend WithEvents btnCancelDoc As Button
+    Friend WithEvents btnAddDoc As Button
+    Friend WithEvents btnEditDoc As Button
 End Class
