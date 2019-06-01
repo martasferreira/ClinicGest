@@ -2,7 +2,7 @@
     Public Property Nome As Object
     Public Property Codigo As Object
     Public Property CC As String
-    Public Property DataDeNascimento As String
+    Public Property DataDeNascimento As Date
     Public Property Email As String
     Public Property Sexo As String
     Public Property Endereço As String

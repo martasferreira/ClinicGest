@@ -933,10 +933,10 @@ Public Class Form1
         End Try
         If adding Then
             SubmitEnfermeiro(enfermeiro)
-            ListBox2.Items.Add(enfermeiro)
+            ListBox9.Items.Add(enfermeiro)
         Else
             UpdateEnfermeiro(enfermeiro)
-            ListBox2.Items(currentMedico) = enfermeiro
+            ListBox9.Items(currentEnfermeiro) = enfermeiro
         End If
         Return True
     End Function
@@ -961,7 +961,7 @@ Public Class Form1
         CMD1.Parameters.AddWithValue("@endereco", P.Endereço)
         CMD1.Parameters.AddWithValue("@nacionalidade", P.Nacionalidade)
         CMD1.Parameters.AddWithValue("@telefone", P.Telefone)
-        'CMD1.Parameters.AddWithValue("@data_nasc", P.DataDeNascimento)
+        CMD1.Parameters.AddWithValue("@data_nasc", P.DataDeNascimento)
         CMD1.Parameters.AddWithValue("@sexo", P.Sexo)
         CMD1.Parameters.AddWithValue("@codigo", P.Codigo)
         CMD1.Parameters.AddWithValue("@codigopostal", P.CodigoPostal)
@@ -979,16 +979,17 @@ Public Class Form1
         CMD1.CommandText = "INSERT ClinicGest.Pessoa (nome, telemovel, cc, email, " &
                           "endereco, nacionalidade, telefone, sexo,codigopostal) " &
                           "VALUES (@nome, @telemovel, @cc, @email, " &
-                          "@endereco, @nacionalidade, @telefone, @sexo, @codigopostal); INSERT ClinicGest.Medico (codigo_med, especialidade) VALUES (@codigo, @especialidade);  INSERT ClinicGest.Staff (codigo_staff, cc_staff) VALUES (@codigo, @cc)"
+                          "@endereco, @nacionalidade, @telefone, @sexo, @codigopostal); INSERT ClinicGest.Medico (codigo_emp, especialidade) VALUES (@codigo, @especialidade);  INSERT ClinicGest.Staff (cc_staff) VALUES (@cc)"
         CMD1.Parameters.Clear()
         CMD1.Parameters.AddWithValue("@nome", P.Nome)
+        CMD1.Parameters.AddWithValue("@especialidade", P.Especialidade)
         CMD1.Parameters.AddWithValue("@telemovel", P.Telemovel)
         CMD1.Parameters.AddWithValue("@cc", P.CC)
         CMD1.Parameters.AddWithValue("@email", P.Email)
         CMD1.Parameters.AddWithValue("@endereco", P.Endereço)
         CMD1.Parameters.AddWithValue("@nacionalidade", P.Nacionalidade)
         CMD1.Parameters.AddWithValue("@telefone", P.Telefone)
-        ' CMD1.Parameters.AddWithValue("@data_nasc", P.DataDeNascimento)
+        CMD1.Parameters.AddWithValue("@data_nasc", P.DataDeNascimento)
         CMD1.Parameters.AddWithValue("@sexo", P.Sexo)
         CMD1.Parameters.AddWithValue("@codigo", P.Codigo)
         CMD1.Parameters.AddWithValue("@codigopostal", P.CodigoPostal)
@@ -1016,7 +1017,7 @@ Public Class Form1
         CMD1.Parameters.AddWithValue("@endereco", P.Endereço)
         CMD1.Parameters.AddWithValue("@nacionalidade", P.Nacionalidade)
         CMD1.Parameters.AddWithValue("@telefone", P.Telefone)
-        ' CMD1.Parameters.AddWithValue("@data_nasc", P.DataDeNascimento)
+        CMD1.Parameters.AddWithValue("@data_nasc", P.DataDeNascimento)
         CMD1.Parameters.AddWithValue("@sexo", P.Sexo)
         CMD1.Parameters.AddWithValue("@codigo", P.Codigo)
         CMD1.Parameters.AddWithValue("@codigopostal", P.CodigoPostal)
@@ -1051,7 +1052,7 @@ Public Class Form1
         CMD1.Parameters.AddWithValue("@endereco", P.Endereço)
         CMD1.Parameters.AddWithValue("@nacionalidade", P.Nacionalidade)
         CMD1.Parameters.AddWithValue("@telefone", P.Telefone)
-        'CMD1.Parameters.AddWithValue("@data_nasc", P.DataDeNascimento)
+        CMD1.Parameters.AddWithValue("@data_nasc", P.DataDeNascimento)
         CMD1.Parameters.AddWithValue("@sexo", P.Sexo)
         CMD1.Parameters.AddWithValue("@codigo", P.Codigo)
         CMD1.Parameters.AddWithValue("@codigopostal", P.CodigoPostal)
@@ -1069,7 +1070,7 @@ Public Class Form1
         currentEnfermeiro = ListBox9.SelectedIndex
         If currentEnfermeiro < 0 Then
             MsgBox("Please select a contact to edit")
-            'Exit Sub
+            Exit Sub
         End If
         adding = False
         HideButtonsEnf()

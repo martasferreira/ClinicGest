@@ -6,7 +6,7 @@
     Public Property Endereço As String
     Public Property Nacionalidade As String
     Public Property Telefone As String
-    Public Property DataDeNascimento As String
+    Public Property DataDeNascimento As Date
     Public Property Sexo As String
     Public Property Codigo As String
     Public Property CodigoPostal As String
