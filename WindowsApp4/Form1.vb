@@ -357,18 +357,18 @@ Public Class Form1
         If ListEnfermeiros.Items.Count = 0 Or currentEnfermeiro < 0 Then Exit Sub
         Dim enfermeiro As New Enfermeiro
         enfermeiro = CType(ListEnfermeiros.Items.Item(currentEnfermeiro), Enfermeiro)
-        TextBox62.Text = enfermeiro.Nome
-        TextBox61.Text = enfermeiro.Telemovel
-        TextBox60.Text = enfermeiro.CC
-        TextBox59.Text = enfermeiro.Email
-        TextBox58.Text = enfermeiro.Endereço
-        TextBox57.Text = enfermeiro.Nacionalidade
-        TextBox56.Text = enfermeiro.Telefone
-        TextBox55.Text = enfermeiro.DataDeNascimento
-        TextBox54.Text = enfermeiro.Sexo
-        TextBox53.Text = enfermeiro.Codigo
-        TextBox52.Text = enfermeiro.CodigoPostal
-        TextBox38.Text = enfermeiro.Salario
+        NomeEnfermeiro.Text = enfermeiro.Nome
+        TelemovelEnfermeiro.Text = enfermeiro.Telemovel
+        CcEnfermeiro.Text = enfermeiro.CC
+        EmailEnfermeiro.Text = enfermeiro.Email
+        EnderecoEnfermeiro.Text = enfermeiro.Endereço
+        NacionalidadeEnfermeiro.Text = enfermeiro.Nacionalidade
+        TelefoneEnfermeiro.Text = enfermeiro.Telefone
+        DataEnfermeiro.Text = enfermeiro.DataDeNascimento
+        SexoEnfermeiro.Text = enfermeiro.Sexo
+        CodigoEnfermeiro.Text = enfermeiro.Codigo
+        CodPostalEnfermeiro.Text = enfermeiro.CodigoPostal
+        SalarioEnfermeiro.Text = enfermeiro.Salario
 
     End Sub
 
@@ -378,18 +378,18 @@ Public Class Form1
         Dim medico As New Medico
         medico = CType(ListMedicos.Items.Item(currentMedico), Medico)
         NomeMedico.Text = medico.Nome
-        TextBox23.Text = medico.Especialidade
-        TextBox21.Text = medico.Telemovel
-        TextBox20.Text = medico.CC
-        TextBox19.Text = medico.Email
-        TextBox18.Text = medico.Endereço
-        TextBox17.Text = medico.Nacionalidade
-        TextBox16.Text = medico.Telefone
-        TextBox15.Text = medico.DataDeNascimento
-        TextBox14.Text = medico.Sexo
-        TextBox13.Text = medico.Codigo
-        TextBox12.Text = medico.CodigoPostal
-        TextBox39.Text = medico.Salario
+        EspecialidadeMedico.Text = medico.Especialidade
+        TelemovelMedico.Text = medico.Telemovel
+        CcMedico.Text = medico.CC
+        EmailMedico.Text = medico.Email
+        EnderecoMedico.Text = medico.Endereço
+        NacionalidadeMedico.Text = medico.Nacionalidade
+        TelefoneMedico.Text = medico.Telefone
+        DataMedico.Text = medico.DataDeNascimento
+        SexoMedico.Text = medico.Sexo
+        CodigoMedico.Text = medico.Codigo
+        CodPostalMedico.Text = medico.CodigoPostal
+        SalarioMedico.Text = medico.Salario
 
     End Sub
 
@@ -398,13 +398,13 @@ Public Class Form1
         If ListInternamentos.Items.Count = 0 Or currentInternamento < 0 Then Exit Sub
         Dim internamento As New Internamento
         internamento = CType(ListInternamentos.Items.Item(currentInternamento), Internamento)
-        TextBox35.Text = internamento.NumeroInternamento
-        TextBox24.Text = internamento.CodigoServico
-        TextBox33.Text = internamento.NomeServico
-        TextBox26.Text = internamento.CustoServico
-        TextBox32.Text = internamento.DataInicio
-        TextBox27.Text = internamento.DataFim
-        TextBox31.Text = internamento.Patologia
+        NumeroInternameto.Text = internamento.NumeroInternamento
+        CodigoServicoInternamento.Text = internamento.CodigoServico
+        NomeServicoInternamento.Text = internamento.NomeServico
+        CustoServicoInternamento.Text = internamento.CustoServico
+        DataInicioInternamento.Text = internamento.DataInicio
+        DataFimInternamento.Text = internamento.DataFim
+        PatologiaInternamento.Text = internamento.Patologia
 
 
     End Sub
@@ -413,9 +413,9 @@ Public Class Form1
         If ListMedicamentos.Items.Count = 0 Or currentMedicamento < 0 Then Exit Sub
         Dim medicamento As New Medicamento
         medicamento = CType(ListMedicamentos.Items.Item(currentMedicamento), Medicamento)
-        TextBox79.Text = medicamento.Nome
-        TextBox78.Text = medicamento.Codigo
-        TextBox77.Text = medicamento.Custo
+        NomeMedicamento.Text = medicamento.Nome
+        CodigoMedicamento.Text = medicamento.Codigo
+        CustoMedicamento.Text = medicamento.Custo
     End Sub
 
     Private Sub ShowServico()
@@ -423,11 +423,11 @@ Public Class Form1
         If ListServicos.Items.Count = 0 Or currentServico < 0 Then Exit Sub
         Dim servico As New Servico
         servico = CType(ListServicos.Items.Item(currentServico), Servico)
-        TextBox50.Text = servico.CodigoServico
-        TextBox49.Text = servico.NomeServico
-        TextBox45.Text = servico.Custo
-        TextBox51.Text = servico.EnfermeiroResponsavel
-        TextBox76.Text = servico.MedicoResponsavel
+        CodigoServico.Text = servico.CodigoServico
+        NomeServico.Text = servico.NomeServico
+        CustoServico.Text = servico.Custo
+        EnfermeiroServico.Text = servico.EnfermeiroResponsavel
+        MedicoServico.Text = servico.MedicoResponsavel
 
 
     End Sub
@@ -437,9 +437,9 @@ Public Class Form1
         If ListIntervencoes.Items.Count = 0 Or currentIntervencao < 0 Then Exit Sub
         Dim intervencao As New Intervencao
         intervencao = CType(ListIntervencoes.Items.Item(currentIntervencao), Intervencao)
-        TextBox35.Text = intervencao.NumeroInternamento
-        TextBox24.Text = intervencao.NumeroIntervencao
-        TextBox33.Text = intervencao.Custo
+        NumeroInternameto.Text = intervencao.NumeroInternamento
+        CodigoServicoInternamento.Text = intervencao.NumeroIntervencao
+        NomeServicoInternamento.Text = intervencao.Custo
 
     End Sub
 
@@ -711,17 +711,17 @@ Public Class Form1
         Dim medico As New Medico
 
         medico.Nome = NomeMedico.Text
-        medico.Especialidade = TextBox23.Text
-        medico.CC = TextBox20.Text
-        medico.DataDeNascimento = TextBox15.Text
-        medico.Email = TextBox19.Text
-        medico.Sexo = TextBox14.Text
-        medico.Endereço = TextBox18.Text
-        medico.CodigoPostal = TextBox12.Text
-        medico.Nacionalidade = TextBox17.Text
-        medico.Telemovel = TextBox21.Text
-        medico.Telefone = TextBox16.Text
-        medico.Salario = TextBox39.Text
+        medico.Especialidade = EspecialidadeMedico.Text
+        medico.CC = CcMedico.Text
+        medico.DataDeNascimento = DataMedico.Text
+        medico.Email = EmailMedico.Text
+        medico.Sexo = SexoMedico.Text
+        medico.Endereço = EnderecoMedico.Text
+        medico.CodigoPostal = CodPostalMedico.Text
+        medico.Nacionalidade = NacionalidadeMedico.Text
+        medico.Telemovel = TelemovelMedico.Text
+        medico.Telefone = TelefoneMedico.Text
+        medico.Salario = SalarioMedico.Text
 
         If adding Then
             SubmitMedico(medico)
@@ -737,17 +737,17 @@ Public Class Form1
         Dim enfermeiro As New Enfermeiro
         Try
 
-            enfermeiro.Nome = TextBox62.Text
-            enfermeiro.CC = TextBox60.Text
-            enfermeiro.DataDeNascimento = TextBox55.Text
-            enfermeiro.Email = TextBox59.Text
-            enfermeiro.Sexo = TextBox54.Text
-            enfermeiro.Endereço = TextBox58.Text
-            enfermeiro.CodigoPostal = TextBox52.Text
-            enfermeiro.Nacionalidade = TextBox57.Text
-            enfermeiro.Telemovel = TextBox61.Text
-            enfermeiro.Telefone = TextBox56.Text
-            enfermeiro.Salario = TextBox38.Text
+            enfermeiro.Nome = NomeEnfermeiro.Text
+            enfermeiro.CC = CcEnfermeiro.Text
+            enfermeiro.DataDeNascimento = DataEnfermeiro.Text
+            enfermeiro.Email = EmailEnfermeiro.Text
+            enfermeiro.Sexo = SexoEnfermeiro.Text
+            enfermeiro.Endereço = EnderecoEnfermeiro.Text
+            enfermeiro.CodigoPostal = CodPostalEnfermeiro.Text
+            enfermeiro.Nacionalidade = NacionalidadeEnfermeiro.Text
+            enfermeiro.Telemovel = TelemovelEnfermeiro.Text
+            enfermeiro.Telefone = TelefoneEnfermeiro.Text
+            enfermeiro.Salario = SalarioEnfermeiro.Text
 
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -766,9 +766,9 @@ Public Class Form1
     Private Function SaveMedicamento() As Boolean
         Dim medicamento As New Medicamento
         Try
-            medicamento.Nome = TextBox79.Text
-            medicamento.Codigo = TextBox78.Text
-            medicamento.Custo = TextBox77.Text
+            medicamento.Nome = NomeMedicamento.Text
+            medicamento.Codigo = CodigoMedicamento.Text
+            medicamento.Custo = CustoMedicamento.Text
 
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -803,39 +803,39 @@ Public Class Form1
     End Sub
 
     Sub LockControlsEnf()
-        TextBox62.ReadOnly = True
-        TextBox53.ReadOnly = True
-        TextBox60.ReadOnly = True
-        TextBox55.ReadOnly = True
-        TextBox59.ReadOnly = True
-        TextBox54.ReadOnly = True
-        TextBox58.ReadOnly = True
-        TextBox52.ReadOnly = True
-        TextBox57.ReadOnly = True
-        TextBox61.ReadOnly = True
-        TextBox56.ReadOnly = True
-        TextBox38.ReadOnly = True
+        NomeEnfermeiro.ReadOnly = True
+        CodigoEnfermeiro.ReadOnly = True
+        CcEnfermeiro.ReadOnly = True
+        DataEnfermeiro.ReadOnly = True
+        EmailEnfermeiro.ReadOnly = True
+        SexoEnfermeiro.ReadOnly = True
+        EnderecoEnfermeiro.ReadOnly = True
+        CodPostalEnfermeiro.ReadOnly = True
+        NacionalidadeEnfermeiro.ReadOnly = True
+        TelemovelEnfermeiro.ReadOnly = True
+        TelefoneEnfermeiro.ReadOnly = True
+        SalarioEnfermeiro.ReadOnly = True
     End Sub
 
     Sub LockControlsDoc()
         NomeMedico.ReadOnly = True
-        TextBox23.ReadOnly = True
-        TextBox20.ReadOnly = True
-        TextBox15.ReadOnly = True
-        TextBox13.ReadOnly = True
-        TextBox19.ReadOnly = True
-        TextBox14.ReadOnly = True
-        TextBox18.ReadOnly = True
-        TextBox12.ReadOnly = True
-        TextBox17.ReadOnly = True
-        TextBox21.ReadOnly = True
-        TextBox16.ReadOnly = True
-        TextBox39.ReadOnly = True
+        EspecialidadeMedico.ReadOnly = True
+        CcMedico.ReadOnly = True
+        DataMedico.ReadOnly = True
+        CodigoMedico.ReadOnly = True
+        EmailMedico.ReadOnly = True
+        SexoMedico.ReadOnly = True
+        EnderecoMedico.ReadOnly = True
+        CodPostalMedico.ReadOnly = True
+        NacionalidadeMedico.ReadOnly = True
+        TelemovelMedico.ReadOnly = True
+        TelefoneMedico.ReadOnly = True
+        SalarioMedico.ReadOnly = True
     End Sub
 
     Sub LockControlsMedicine()
-        TextBox77.ReadOnly = False
-        TextBox79.ReadOnly = False
+        CustoMedicamento.ReadOnly = False
+        NomeMedicamento.ReadOnly = False
     End Sub
 
     Sub UnLockControlsPaciente()
@@ -853,32 +853,32 @@ Public Class Form1
     End Sub
 
     Sub UnLockControlsEnf()
-        TextBox62.ReadOnly = False
-        TextBox60.ReadOnly = False
-        TextBox55.ReadOnly = False
-        TextBox59.ReadOnly = False
-        TextBox54.ReadOnly = False
-        TextBox58.ReadOnly = False
-        TextBox52.ReadOnly = False
-        TextBox57.ReadOnly = False
-        TextBox61.ReadOnly = False
-        TextBox56.ReadOnly = False
-        TextBox38.ReadOnly = False
+        NomeEnfermeiro.ReadOnly = False
+        CcEnfermeiro.ReadOnly = False
+        DataEnfermeiro.ReadOnly = False
+        EmailEnfermeiro.ReadOnly = False
+        SexoEnfermeiro.ReadOnly = False
+        EnderecoEnfermeiro.ReadOnly = False
+        CodPostalEnfermeiro.ReadOnly = False
+        NacionalidadeEnfermeiro.ReadOnly = False
+        TelemovelEnfermeiro.ReadOnly = False
+        TelefoneEnfermeiro.ReadOnly = False
+        SalarioEnfermeiro.ReadOnly = False
     End Sub
 
     Sub UnLockControlsDoc()
         NomeMedico.ReadOnly = False
-        TextBox23.ReadOnly = False
-        TextBox20.ReadOnly = False
-        TextBox15.ReadOnly = False
-        TextBox19.ReadOnly = False
-        TextBox14.ReadOnly = False
-        TextBox18.ReadOnly = False
-        TextBox12.ReadOnly = False
-        TextBox17.ReadOnly = False
-        TextBox21.ReadOnly = False
-        TextBox16.ReadOnly = False
-        TextBox39.ReadOnly = False
+        EspecialidadeMedico.ReadOnly = False
+        CcMedico.ReadOnly = False
+        DataMedico.ReadOnly = False
+        EmailMedico.ReadOnly = False
+        SexoMedico.ReadOnly = False
+        EnderecoMedico.ReadOnly = False
+        CodPostalMedico.ReadOnly = False
+        NacionalidadeMedico.ReadOnly = False
+        TelemovelMedico.ReadOnly = False
+        TelefoneMedico.ReadOnly = False
+        SalarioMedico.ReadOnly = False
     End Sub
 
     Sub ClearFieldsPaciente()
@@ -896,39 +896,39 @@ Public Class Form1
     End Sub
 
     Sub ClearFieldsEnf()
-        TextBox62.Text = ""
-        TextBox60.Text = ""
-        TextBox55.Text = ""
-        TextBox59.Text = ""
-        TextBox54.Text = ""
-        TextBox58.Text = ""
-        TextBox52.Text = ""
-        TextBox57.Text = ""
-        TextBox61.Text = ""
-        TextBox56.Text = ""
-        TextBox38.Text = ""
+        NomeEnfermeiro.Text = ""
+        CcEnfermeiro.Text = ""
+        DataEnfermeiro.Text = ""
+        EmailEnfermeiro.Text = ""
+        SexoEnfermeiro.Text = ""
+        EnderecoEnfermeiro.Text = ""
+        CodPostalEnfermeiro.Text = ""
+        NacionalidadeEnfermeiro.Text = ""
+        TelemovelEnfermeiro.Text = ""
+        TelefoneEnfermeiro.Text = ""
+        SalarioEnfermeiro.Text = ""
     End Sub
 
     Sub ClearFieldsDoc()
         NomeMedico.Text = ""
-        TextBox13.Text = ""
-        TextBox23.Text = ""
-        TextBox20.Text = ""
-        TextBox15.Text = ""
-        TextBox19.Text = ""
-        TextBox14.Text = ""
-        TextBox18.Text = ""
-        TextBox12.Text = ""
-        TextBox17.Text = ""
-        TextBox21.Text = ""
-        TextBox16.Text = ""
-        TextBox39.Text = ""
+        CodigoMedico.Text = ""
+        EspecialidadeMedico.Text = ""
+        CcMedico.Text = ""
+        DataMedico.Text = ""
+        EmailMedico.Text = ""
+        SexoMedico.Text = ""
+        EnderecoMedico.Text = ""
+        CodPostalMedico.Text = ""
+        NacionalidadeMedico.Text = ""
+        TelemovelMedico.Text = ""
+        TelefoneMedico.Text = ""
+        SalarioMedico.Text = ""
     End Sub
 
     Sub ClearFieldsMedicine()
-        TextBox77.Text = ""
-        TextBox78.Text = ""
-        TextBox79.Text = ""
+        CustoMedicamento.Text = ""
+        CodigoMedicamento.Text = ""
+        NomeMedicamento.Text = ""
     End Sub
 
 #End Region
@@ -991,7 +991,7 @@ Public Class Form1
     Private Sub SearchMedicamento_Click(sender As Object, e As EventArgs) Handles btnSearchMedicamento.Click
         For Each lbItem As Object In ListMedicamentos.Items
             ' Case-sensitive match
-            If lbItem.ToString = TextBox99.Text Then
+            If lbItem.ToString = SearchMedicamento.Text Then
                 ' Match found: set as selected item and exit procedure
                 ListMedicamentos.SelectedItem = lbItem
                 Return
@@ -1013,7 +1013,7 @@ Public Class Form1
     Private Sub SearchEnfermeiro_Click(sender As Object, e As EventArgs) Handles btnSearchEnfermeiro.Click
         For Each lbItem As Object In ListEnfermeiros.Items
             ' Case-sensitive match
-            If lbItem.ToString = TextBox101.Text Then
+            If lbItem.ToString = SearchEnfermeiro.Text Then
                 ' Match found: set as selected item and exit procedure
                 ListEnfermeiros.SelectedItem = lbItem
                 Return
@@ -1035,7 +1035,7 @@ Public Class Form1
     Private Sub SearchIntervencao_Click(sender As Object, e As EventArgs) Handles btnSearchIntervencao.Click
         For Each lbItem As Object In ListIntervencoes.Items
             ' Case-sensitive match
-            If lbItem.ToString = TextBox103.Text Then
+            If lbItem.ToString = SearchIntervencao.Text Then
                 ' Match found: set as selected item and exit procedure
                 ListIntervencoes.SelectedItem = lbItem
                 Return
@@ -1046,7 +1046,7 @@ Public Class Form1
     Private Sub SearchInternamento_Click(sender As Object, e As EventArgs) Handles btnSearchInternamento.Click
         For Each lbItem As Object In ListInternamentos.Items
             ' Case-sensitive match
-            If lbItem.ToString = TextBox104.Text Then
+            If lbItem.ToString = SearchInternamento.Text Then
                 ' Match found: set as selected item and exit procedure
                 ListInternamentos.SelectedItem = lbItem
                 Return
@@ -1057,7 +1057,7 @@ Public Class Form1
     Private Sub SearchServico_Click(sender As Object, e As EventArgs) Handles btnSearchServico.Click
         For Each lbItem As Object In ListServicos.Items
             ' Case-sensitive match
-            If lbItem.ToString = TextBox105.Text Then
+            If lbItem.ToString = SearchServico.Text Then
                 ' Match found: set as selected item and exit procedure
                 ListServicos.SelectedItem = lbItem
                 Return
@@ -1178,7 +1178,7 @@ Public Class Form1
         Try
             SaveEnfermeiro()
             ListEnfermeiros.Enabled = True
-            Dim idx As Integer = ListEnfermeiros.FindString(TextBox62.Text)
+            Dim idx As Integer = ListEnfermeiros.FindString(NomeEnfermeiro.Text)
             ListEnfermeiros.SelectedIndex = idx
             ShowButtonsEnfermeiro()
         Catch ex As Exception
@@ -1190,7 +1190,7 @@ Public Class Form1
         Try
             SaveMedicamento()
             ListMedicamentos.Enabled = True
-            Dim idx As Integer = ListMedicamentos.FindString(TextBox79.Text)
+            Dim idx As Integer = ListMedicamentos.FindString(NomeMedicamento.Text)
             ListMedicamentos.SelectedIndex = idx
             ShowButtonsMedicine()
         Catch ex As Exception
