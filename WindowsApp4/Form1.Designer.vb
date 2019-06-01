@@ -24,64 +24,64 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.Button27 = New System.Windows.Forms.Button()
-        Me.TextBox106 = New System.Windows.Forms.TextBox()
-        Me.btnOk = New System.Windows.Forms.Button()
-        Me.btnCancel = New System.Windows.Forms.Button()
-        Me.btnAdd = New System.Windows.Forms.Button()
-        Me.btnEdit = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox11 = New System.Windows.Forms.TextBox()
-        Me.TextBox10 = New System.Windows.Forms.TextBox()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.btnSearchPaciente = New System.Windows.Forms.Button()
+        Me.SearchPaciente = New System.Windows.Forms.TextBox()
+        Me.ListPacientes = New System.Windows.Forms.ListBox()
+        Me.btnAddPaciente = New System.Windows.Forms.Button()
+        Me.btnEditPaciente = New System.Windows.Forms.Button()
+        Me.btnListFaturasPaciente = New System.Windows.Forms.Button()
+        Me.btnListSegurosPaciente = New System.Windows.Forms.Button()
+        Me.btnListIntervencoesPaciente = New System.Windows.Forms.Button()
+        Me.btnListInternamentosPaciente = New System.Windows.Forms.Button()
+        Me.LabelNomePaciente = New System.Windows.Forms.Label()
+        Me.LabelCcPaciente = New System.Windows.Forms.Label()
+        Me.LabelCodigoPaciente = New System.Windows.Forms.Label()
+        Me.LabelDataPaciente = New System.Windows.Forms.Label()
+        Me.LabelEmailPaciente = New System.Windows.Forms.Label()
+        Me.LabelSexoPaciente = New System.Windows.Forms.Label()
+        Me.LabelEnderecoPaciente = New System.Windows.Forms.Label()
+        Me.LabelCodPostalPaciente = New System.Windows.Forms.Label()
+        Me.LabelNacionalidadePaciente = New System.Windows.Forms.Label()
+        Me.LabelTelemovelPaciente = New System.Windows.Forms.Label()
+        Me.LabelTelefonePaciente = New System.Windows.Forms.Label()
+        Me.NomePaciente = New System.Windows.Forms.TextBox()
+        Me.CcPaciente = New System.Windows.Forms.TextBox()
+        Me.CodigoPaciente = New System.Windows.Forms.TextBox()
+        Me.DataPaciente = New System.Windows.Forms.TextBox()
+        Me.EmailPaciente = New System.Windows.Forms.TextBox()
+        Me.SexoPaciente = New System.Windows.Forms.TextBox()
+        Me.EnderecoPaciente = New System.Windows.Forms.TextBox()
+        Me.CodPostalPaciente = New System.Windows.Forms.TextBox()
+        Me.NacionalidadePaciente = New System.Windows.Forms.TextBox()
+        Me.TelemovelPaciente = New System.Windows.Forms.TextBox()
+        Me.TelefonePaciente = New System.Windows.Forms.TextBox()
+        Me.btnOkPaciente = New System.Windows.Forms.Button()
+        Me.btnCancelPaciente = New System.Windows.Forms.Button()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.Label39 = New System.Windows.Forms.Label()
+        Me.LabelSalario = New System.Windows.Forms.Label()
         Me.TextBox39 = New System.Windows.Forms.TextBox()
-        Me.btnOkDoc = New System.Windows.Forms.Button()
-        Me.btnCancelDoc = New System.Windows.Forms.Button()
-        Me.btnAddDoc = New System.Windows.Forms.Button()
-        Me.btnEditDoc = New System.Windows.Forms.Button()
-        Me.Button23 = New System.Windows.Forms.Button()
-        Me.TextBox102 = New System.Windows.Forms.TextBox()
-        Me.Label23 = New System.Windows.Forms.Label()
+        Me.btnOkMedico = New System.Windows.Forms.Button()
+        Me.btnCancelMedico = New System.Windows.Forms.Button()
+        Me.btnAddMedico = New System.Windows.Forms.Button()
+        Me.btnEditMedico = New System.Windows.Forms.Button()
+        Me.btnSearchMedico = New System.Windows.Forms.Button()
+        Me.SearchMedico = New System.Windows.Forms.TextBox()
+        Me.LabelEspecialidade = New System.Windows.Forms.Label()
         Me.TextBox23 = New System.Windows.Forms.TextBox()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button7 = New System.Windows.Forms.Button()
-        Me.Button8 = New System.Windows.Forms.Button()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.Label19 = New System.Windows.Forms.Label()
-        Me.Label20 = New System.Windows.Forms.Label()
-        Me.Label21 = New System.Windows.Forms.Label()
-        Me.Label22 = New System.Windows.Forms.Label()
+        Me.btnListInternamentosMedico = New System.Windows.Forms.Button()
+        Me.btnListIntervencoesMedico = New System.Windows.Forms.Button()
+        Me.btnListServicosMedico = New System.Windows.Forms.Button()
+        Me.LabelNacionalidadeMedico = New System.Windows.Forms.Label()
+        Me.LabelDataMedico = New System.Windows.Forms.Label()
+        Me.LabelCodigoMedico = New System.Windows.Forms.Label()
+        Me.LabelCodPostalMedico = New System.Windows.Forms.Label()
+        Me.LabelEnderecoMedico = New System.Windows.Forms.Label()
+        Me.LabelEmailMedico = New System.Windows.Forms.Label()
+        Me.LabelSexoMedico = New System.Windows.Forms.Label()
+        Me.LabelTelefoneMedico = New System.Windows.Forms.Label()
+        Me.LabelTelemovelMedico = New System.Windows.Forms.Label()
+        Me.LabelCcMedico = New System.Windows.Forms.Label()
+        Me.LabelNomeMedico = New System.Windows.Forms.Label()
         Me.TextBox12 = New System.Windows.Forms.TextBox()
         Me.TextBox13 = New System.Windows.Forms.TextBox()
         Me.TextBox14 = New System.Windows.Forms.TextBox()
@@ -92,18 +92,20 @@ Partial Class Form1
         Me.TextBox19 = New System.Windows.Forms.TextBox()
         Me.TextBox20 = New System.Windows.Forms.TextBox()
         Me.TextBox21 = New System.Windows.Forms.TextBox()
-        Me.TextBox22 = New System.Windows.Forms.TextBox()
-        Me.ListBox2 = New System.Windows.Forms.ListBox()
+        Me.NomeMedico = New System.Windows.Forms.TextBox()
+        Me.ListMedicos = New System.Windows.Forms.ListBox()
         Me.TabPage8 = New System.Windows.Forms.TabPage()
-        Me.btnOkEnf = New System.Windows.Forms.Button()
-        Me.btnCancelEnf = New System.Windows.Forms.Button()
-        Me.btnEditEnf = New System.Windows.Forms.Button()
-        Me.btnAddEnf = New System.Windows.Forms.Button()
-        Me.Button22 = New System.Windows.Forms.Button()
+        Me.Label40 = New System.Windows.Forms.Label()
+        Me.TextBox38 = New System.Windows.Forms.TextBox()
+        Me.btnOkEnfermeiro = New System.Windows.Forms.Button()
+        Me.btnCancelEnfermeiro = New System.Windows.Forms.Button()
+        Me.btnEditEnfermeiro = New System.Windows.Forms.Button()
+        Me.btnAddEnfermeiro = New System.Windows.Forms.Button()
+        Me.btnSearchEnfermeiro = New System.Windows.Forms.Button()
         Me.TextBox101 = New System.Windows.Forms.TextBox()
-        Me.Button12 = New System.Windows.Forms.Button()
-        Me.Button9 = New System.Windows.Forms.Button()
-        Me.Button11 = New System.Windows.Forms.Button()
+        Me.btnListReceitasExecEnfermeiro = New System.Windows.Forms.Button()
+        Me.btnListInternamentosEnfermeiro = New System.Windows.Forms.Button()
+        Me.btnListIntervencoesEnfermeiro = New System.Windows.Forms.Button()
         Me.Label53 = New System.Windows.Forms.Label()
         Me.Label54 = New System.Windows.Forms.Label()
         Me.Label55 = New System.Windows.Forms.Label()
@@ -126,13 +128,13 @@ Partial Class Form1
         Me.TextBox60 = New System.Windows.Forms.TextBox()
         Me.TextBox61 = New System.Windows.Forms.TextBox()
         Me.TextBox62 = New System.Windows.Forms.TextBox()
-        Me.ListBox9 = New System.Windows.Forms.ListBox()
+        Me.ListEnfermeiros = New System.Windows.Forms.ListBox()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
-        Me.Button25 = New System.Windows.Forms.Button()
+        Me.btnSearchInternamento = New System.Windows.Forms.Button()
         Me.TextBox104 = New System.Windows.Forms.TextBox()
         Me.Label24 = New System.Windows.Forms.Label()
         Me.TextBox24 = New System.Windows.Forms.TextBox()
-        Me.Button10 = New System.Windows.Forms.Button()
+        Me.btnListIntervencoesInternamento = New System.Windows.Forms.Button()
         Me.Label27 = New System.Windows.Forms.Label()
         Me.Label29 = New System.Windows.Forms.Label()
         Me.Label30 = New System.Windows.Forms.Label()
@@ -145,9 +147,9 @@ Partial Class Form1
         Me.TextBox32 = New System.Windows.Forms.TextBox()
         Me.TextBox33 = New System.Windows.Forms.TextBox()
         Me.TextBox35 = New System.Windows.Forms.TextBox()
-        Me.ListBox3 = New System.Windows.Forms.ListBox()
+        Me.ListInternamentos = New System.Windows.Forms.ListBox()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
-        Me.Button24 = New System.Windows.Forms.Button()
+        Me.btnSearchIntervencao = New System.Windows.Forms.Button()
         Me.TextBox103 = New System.Windows.Forms.TextBox()
         Me.Label38 = New System.Windows.Forms.Label()
         Me.Label32 = New System.Windows.Forms.Label()
@@ -165,9 +167,9 @@ Partial Class Form1
         Me.TextBox29 = New System.Windows.Forms.TextBox()
         Me.TextBox36 = New System.Windows.Forms.TextBox()
         Me.TextBox37 = New System.Windows.Forms.TextBox()
-        Me.ListBox4 = New System.Windows.Forms.ListBox()
+        Me.ListIntervencoes = New System.Windows.Forms.ListBox()
         Me.TabPage5 = New System.Windows.Forms.TabPage()
-        Me.Button21 = New System.Windows.Forms.Button()
+        Me.btnSearchFatura = New System.Windows.Forms.Button()
         Me.TextBox100 = New System.Windows.Forms.TextBox()
         Me.Label42 = New System.Windows.Forms.Label()
         Me.Label44 = New System.Windows.Forms.Label()
@@ -175,9 +177,11 @@ Partial Class Form1
         Me.TextBox42 = New System.Windows.Forms.TextBox()
         Me.TextBox43 = New System.Windows.Forms.TextBox()
         Me.TextBox44 = New System.Windows.Forms.TextBox()
-        Me.ListBox6 = New System.Windows.Forms.ListBox()
+        Me.ListFaturas = New System.Windows.Forms.ListBox()
         Me.TabPage7 = New System.Windows.Forms.TabPage()
-        Me.Button26 = New System.Windows.Forms.Button()
+        Me.btnListEnfermeirosServico = New System.Windows.Forms.Button()
+        Me.btnListMedicosServico = New System.Windows.Forms.Button()
+        Me.btnSearchServico = New System.Windows.Forms.Button()
         Me.TextBox105 = New System.Windows.Forms.TextBox()
         Me.Label78 = New System.Windows.Forms.Label()
         Me.Label52 = New System.Windows.Forms.Label()
@@ -189,9 +193,13 @@ Partial Class Form1
         Me.TextBox45 = New System.Windows.Forms.TextBox()
         Me.TextBox49 = New System.Windows.Forms.TextBox()
         Me.TextBox50 = New System.Windows.Forms.TextBox()
-        Me.ListBox8 = New System.Windows.Forms.ListBox()
+        Me.ListServicos = New System.Windows.Forms.ListBox()
         Me.TabPage9 = New System.Windows.Forms.TabPage()
-        Me.Button20 = New System.Windows.Forms.Button()
+        Me.btnOkMedicamento = New System.Windows.Forms.Button()
+        Me.btnCancelMedicamento = New System.Windows.Forms.Button()
+        Me.btnAddMedicamento = New System.Windows.Forms.Button()
+        Me.btnEditMedicamento = New System.Windows.Forms.Button()
+        Me.btnSearchMedicamento = New System.Windows.Forms.Button()
         Me.TextBox99 = New System.Windows.Forms.TextBox()
         Me.Label79 = New System.Windows.Forms.Label()
         Me.Label80 = New System.Windows.Forms.Label()
@@ -199,9 +207,8 @@ Partial Class Form1
         Me.TextBox77 = New System.Windows.Forms.TextBox()
         Me.TextBox78 = New System.Windows.Forms.TextBox()
         Me.TextBox79 = New System.Windows.Forms.TextBox()
-        Me.ListBox14 = New System.Windows.Forms.ListBox()
+        Me.ListMedicamentos = New System.Windows.Forms.ListBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Button17 = New System.Windows.Forms.Button()
         Me.Label82 = New System.Windows.Forms.Label()
         Me.Label83 = New System.Windows.Forms.Label()
         Me.TextBox80 = New System.Windows.Forms.TextBox()
@@ -213,8 +220,6 @@ Partial Class Form1
         Me.TextBox83 = New System.Windows.Forms.TextBox()
         Me.TextBox84 = New System.Windows.Forms.TextBox()
         Me.ListBox15 = New System.Windows.Forms.ListBox()
-        Me.TextBox38 = New System.Windows.Forms.TextBox()
-        Me.Label40 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -245,39 +250,39 @@ Partial Class Form1
         '
         'TabPage1
         '
-        Me.TabPage1.Controls.Add(Me.Button27)
-        Me.TabPage1.Controls.Add(Me.TextBox106)
-        Me.TabPage1.Controls.Add(Me.btnOk)
-        Me.TabPage1.Controls.Add(Me.btnCancel)
-        Me.TabPage1.Controls.Add(Me.btnAdd)
-        Me.TabPage1.Controls.Add(Me.btnEdit)
-        Me.TabPage1.Controls.Add(Me.Button4)
-        Me.TabPage1.Controls.Add(Me.Button3)
-        Me.TabPage1.Controls.Add(Me.Button2)
-        Me.TabPage1.Controls.Add(Me.Button1)
-        Me.TabPage1.Controls.Add(Me.Label11)
-        Me.TabPage1.Controls.Add(Me.Label10)
-        Me.TabPage1.Controls.Add(Me.Label9)
-        Me.TabPage1.Controls.Add(Me.Label8)
-        Me.TabPage1.Controls.Add(Me.Label7)
-        Me.TabPage1.Controls.Add(Me.Label6)
-        Me.TabPage1.Controls.Add(Me.Label5)
-        Me.TabPage1.Controls.Add(Me.Label4)
-        Me.TabPage1.Controls.Add(Me.Label3)
-        Me.TabPage1.Controls.Add(Me.Label2)
-        Me.TabPage1.Controls.Add(Me.Label1)
-        Me.TabPage1.Controls.Add(Me.TextBox11)
-        Me.TabPage1.Controls.Add(Me.TextBox10)
-        Me.TabPage1.Controls.Add(Me.TextBox9)
-        Me.TabPage1.Controls.Add(Me.TextBox8)
-        Me.TabPage1.Controls.Add(Me.TextBox7)
-        Me.TabPage1.Controls.Add(Me.TextBox6)
-        Me.TabPage1.Controls.Add(Me.TextBox5)
-        Me.TabPage1.Controls.Add(Me.TextBox4)
-        Me.TabPage1.Controls.Add(Me.TextBox3)
-        Me.TabPage1.Controls.Add(Me.TextBox2)
-        Me.TabPage1.Controls.Add(Me.TextBox1)
-        Me.TabPage1.Controls.Add(Me.ListBox1)
+        Me.TabPage1.Controls.Add(Me.btnSearchPaciente)
+        Me.TabPage1.Controls.Add(Me.SearchPaciente)
+        Me.TabPage1.Controls.Add(Me.btnOkPaciente)
+        Me.TabPage1.Controls.Add(Me.btnCancelPaciente)
+        Me.TabPage1.Controls.Add(Me.btnAddPaciente)
+        Me.TabPage1.Controls.Add(Me.btnEditPaciente)
+        Me.TabPage1.Controls.Add(Me.btnListInternamentosPaciente)
+        Me.TabPage1.Controls.Add(Me.btnListSegurosPaciente)
+        Me.TabPage1.Controls.Add(Me.btnListIntervencoesPaciente)
+        Me.TabPage1.Controls.Add(Me.btnListFaturasPaciente)
+        Me.TabPage1.Controls.Add(Me.LabelNacionalidadePaciente)
+        Me.TabPage1.Controls.Add(Me.LabelDataPaciente)
+        Me.TabPage1.Controls.Add(Me.LabelCodigoPaciente)
+        Me.TabPage1.Controls.Add(Me.LabelCodPostalPaciente)
+        Me.TabPage1.Controls.Add(Me.LabelEnderecoPaciente)
+        Me.TabPage1.Controls.Add(Me.LabelEmailPaciente)
+        Me.TabPage1.Controls.Add(Me.LabelSexoPaciente)
+        Me.TabPage1.Controls.Add(Me.LabelTelefonePaciente)
+        Me.TabPage1.Controls.Add(Me.LabelTelemovelPaciente)
+        Me.TabPage1.Controls.Add(Me.LabelCcPaciente)
+        Me.TabPage1.Controls.Add(Me.LabelNomePaciente)
+        Me.TabPage1.Controls.Add(Me.CodPostalPaciente)
+        Me.TabPage1.Controls.Add(Me.CodigoPaciente)
+        Me.TabPage1.Controls.Add(Me.SexoPaciente)
+        Me.TabPage1.Controls.Add(Me.DataPaciente)
+        Me.TabPage1.Controls.Add(Me.TelefonePaciente)
+        Me.TabPage1.Controls.Add(Me.NacionalidadePaciente)
+        Me.TabPage1.Controls.Add(Me.EnderecoPaciente)
+        Me.TabPage1.Controls.Add(Me.EmailPaciente)
+        Me.TabPage1.Controls.Add(Me.CcPaciente)
+        Me.TabPage1.Controls.Add(Me.TelemovelPaciente)
+        Me.TabPage1.Controls.Add(Me.NomePaciente)
+        Me.TabPage1.Controls.Add(Me.ListPacientes)
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
@@ -286,304 +291,305 @@ Partial Class Form1
         Me.TabPage1.Text = "Pacientes"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
-        'Button27
-        '
-        Me.Button27.Location = New System.Drawing.Point(183, 27)
-        Me.Button27.Name = "Button27"
-        Me.Button27.Size = New System.Drawing.Size(50, 24)
-        Me.Button27.TabIndex = 109
-        Me.Button27.Text = "Search"
-        Me.Button27.UseVisualStyleBackColor = True
-        '
-        'TextBox106
-        '
-        Me.TextBox106.Location = New System.Drawing.Point(18, 31)
-        Me.TextBox106.Name = "TextBox106"
-        Me.TextBox106.Size = New System.Drawing.Size(159, 20)
-        Me.TextBox106.TabIndex = 108
-        '
-        'btnOk
-        '
-        Me.btnOk.Location = New System.Drawing.Point(424, 253)
-        Me.btnOk.Name = "btnOk"
-        Me.btnOk.Size = New System.Drawing.Size(97, 46)
-        Me.btnOk.TabIndex = 30
-        Me.btnOk.Text = "Ok"
-        Me.btnOk.UseVisualStyleBackColor = True
-        '
-        'btnCancel
-        '
-        Me.btnCancel.Location = New System.Drawing.Point(307, 253)
-        Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(97, 46)
-        Me.btnCancel.TabIndex = 29
-        Me.btnCancel.Text = "Cancel"
-        Me.btnCancel.UseVisualStyleBackColor = True
-        '
-        'btnAdd
-        '
-        Me.btnAdd.Location = New System.Drawing.Point(19, 289)
-        Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(95, 29)
-        Me.btnAdd.TabIndex = 28
-        Me.btnAdd.Text = "Add Patient"
-        Me.btnAdd.UseVisualStyleBackColor = True
-        '
-        'btnEdit
-        '
-        Me.btnEdit.Location = New System.Drawing.Point(120, 289)
-        Me.btnEdit.Name = "btnEdit"
-        Me.btnEdit.Size = New System.Drawing.Size(113, 29)
-        Me.btnEdit.TabIndex = 27
-        Me.btnEdit.Text = "Edit Patient"
-        Me.btnEdit.UseVisualStyleBackColor = True
-        '
-        'Button4
-        '
-        Me.Button4.Location = New System.Drawing.Point(492, 255)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(89, 42)
-        Me.Button4.TabIndex = 26
-        Me.Button4.Text = "Listar Intermanentos"
-        Me.Button4.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(338, 255)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(63, 42)
-        Me.Button3.TabIndex = 25
-        Me.Button3.Text = "Listar Seguros"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(407, 255)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(79, 42)
-        Me.Button2.TabIndex = 24
-        Me.Button2.Text = "Listar Intervenções"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(272, 255)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(60, 42)
-        Me.Button1.TabIndex = 23
-        Me.Button1.Text = "Listar Faturas"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(265, 188)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(78, 13)
-        Me.Label11.TabIndex = 22
-        Me.Label11.Text = "Nacionalidade:"
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(474, 73)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(105, 13)
-        Me.Label10.TabIndex = 21
-        Me.Label10.Text = "Data de nascimento:"
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(371, 73)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(43, 13)
-        Me.Label9.TabIndex = 20
-        Me.Label9.Text = "Código:"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(474, 149)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(75, 13)
-        Me.Label8.TabIndex = 19
-        Me.Label8.Text = "Codigo Postal:"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(269, 149)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(56, 13)
-        Me.Label7.TabIndex = 18
-        Me.Label7.Text = "Endereço:"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(269, 110)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(38, 13)
-        Me.Label6.TabIndex = 17
-        Me.Label6.Text = "E-mail:"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(474, 110)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(34, 13)
-        Me.Label5.TabIndex = 16
-        Me.Label5.Text = "Sexo:"
-        '
-        'Label4
+        'btnSearchPaciente
+        '
+        Me.btnSearchPaciente.Location = New System.Drawing.Point(175, 27)
+        Me.btnSearchPaciente.Name = "btnSearchPaciente"
+        Me.btnSearchPaciente.Size = New System.Drawing.Size(58, 24)
+        Me.btnSearchPaciente.TabIndex = 109
+        Me.btnSearchPaciente.Text = "Procurar"
+        Me.btnSearchPaciente.UseVisualStyleBackColor = True
+        '
+        'SearchPaciente
+        '
+        Me.SearchPaciente.Location = New System.Drawing.Point(19, 30)
+        Me.SearchPaciente.Name = "SearchPaciente"
+        Me.SearchPaciente.Size = New System.Drawing.Size(151, 20)
+        Me.SearchPaciente.TabIndex = 108
+        '
+        'btnOkPaciente
+        '
+        Me.btnOkPaciente.Location = New System.Drawing.Point(424, 253)
+        Me.btnOkPaciente.Name = "btnOkPaciente"
+        Me.btnOkPaciente.Size = New System.Drawing.Size(97, 46)
+        Me.btnOkPaciente.TabIndex = 30
+        Me.btnOkPaciente.Text = "Ok"
+        Me.btnOkPaciente.UseVisualStyleBackColor = True
+        '
+        'btnCancelPaciente
+        '
+        Me.btnCancelPaciente.Location = New System.Drawing.Point(307, 253)
+        Me.btnCancelPaciente.Name = "btnCancelPaciente"
+        Me.btnCancelPaciente.Size = New System.Drawing.Size(97, 46)
+        Me.btnCancelPaciente.TabIndex = 29
+        Me.btnCancelPaciente.Text = "Cancelar"
+        Me.btnCancelPaciente.UseVisualStyleBackColor = True
+        '
+        'btnAddPaciente
+        '
+        Me.btnAddPaciente.Location = New System.Drawing.Point(19, 289)
+        Me.btnAddPaciente.Name = "btnAddPaciente"
+        Me.btnAddPaciente.Size = New System.Drawing.Size(95, 29)
+        Me.btnAddPaciente.TabIndex = 28
+        Me.btnAddPaciente.Text = "Adicionar"
+        Me.btnAddPaciente.UseVisualStyleBackColor = True
+        '
+        'btnEditPaciente
+        '
+        Me.btnEditPaciente.Location = New System.Drawing.Point(120, 289)
+        Me.btnEditPaciente.Name = "btnEditPaciente"
+        Me.btnEditPaciente.Size = New System.Drawing.Size(113, 29)
+        Me.btnEditPaciente.TabIndex = 27
+        Me.btnEditPaciente.Text = "Editar"
+        Me.btnEditPaciente.UseVisualStyleBackColor = True
+        '
+        'btnListInternamentosPaciente
+        '
+        Me.btnListInternamentosPaciente.Location = New System.Drawing.Point(492, 255)
+        Me.btnListInternamentosPaciente.Name = "btnListInternamentosPaciente"
+        Me.btnListInternamentosPaciente.Size = New System.Drawing.Size(89, 42)
+        Me.btnListInternamentosPaciente.TabIndex = 26
+        Me.btnListInternamentosPaciente.Text = "Listar Intermanentos"
+        Me.btnListInternamentosPaciente.UseVisualStyleBackColor = True
+        '
+        'btnListSegurosPaciente
+        '
+        Me.btnListSegurosPaciente.Location = New System.Drawing.Point(338, 255)
+        Me.btnListSegurosPaciente.Name = "btnListSegurosPaciente"
+        Me.btnListSegurosPaciente.Size = New System.Drawing.Size(63, 42)
+        Me.btnListSegurosPaciente.TabIndex = 25
+        Me.btnListSegurosPaciente.Text = "Listar Seguros"
+        Me.btnListSegurosPaciente.UseVisualStyleBackColor = True
+        '
+        'btnListIntervencoesPaciente
+        '
+        Me.btnListIntervencoesPaciente.Location = New System.Drawing.Point(407, 255)
+        Me.btnListIntervencoesPaciente.Name = "btnListIntervencoesPaciente"
+        Me.btnListIntervencoesPaciente.Size = New System.Drawing.Size(79, 42)
+        Me.btnListIntervencoesPaciente.TabIndex = 24
+        Me.btnListIntervencoesPaciente.Text = "Listar Intervenções"
+        Me.btnListIntervencoesPaciente.UseVisualStyleBackColor = True
+        '
+        'btnListFaturasPaciente
+        '
+        Me.btnListFaturasPaciente.Location = New System.Drawing.Point(272, 255)
+        Me.btnListFaturasPaciente.Name = "btnListFaturasPaciente"
+        Me.btnListFaturasPaciente.Size = New System.Drawing.Size(60, 42)
+        Me.btnListFaturasPaciente.TabIndex = 23
+        Me.btnListFaturasPaciente.Text = "Listar Faturas"
+        Me.btnListFaturasPaciente.UseVisualStyleBackColor = True
+        '
+        'LabelNacionalidadePaciente
+        '
+        Me.LabelNacionalidadePaciente.AutoSize = True
+        Me.LabelNacionalidadePaciente.Location = New System.Drawing.Point(265, 188)
+        Me.LabelNacionalidadePaciente.Name = "LabelNacionalidadePaciente"
+        Me.LabelNacionalidadePaciente.Size = New System.Drawing.Size(78, 13)
+        Me.LabelNacionalidadePaciente.TabIndex = 22
+        Me.LabelNacionalidadePaciente.Text = "Nacionalidade:"
+        '
+        'LabelDataPaciente
+        '
+        Me.LabelDataPaciente.AutoSize = True
+        Me.LabelDataPaciente.Location = New System.Drawing.Point(474, 73)
+        Me.LabelDataPaciente.Name = "LabelDataPaciente"
+        Me.LabelDataPaciente.Size = New System.Drawing.Size(105, 13)
+        Me.LabelDataPaciente.TabIndex = 21
+        Me.LabelDataPaciente.Text = "Data de nascimento:"
+        '
+        'LabelCodigoPaciente
+        '
+        Me.LabelCodigoPaciente.AutoSize = True
+        Me.LabelCodigoPaciente.Location = New System.Drawing.Point(371, 73)
+        Me.LabelCodigoPaciente.Name = "LabelCodigoPaciente"
+        Me.LabelCodigoPaciente.Size = New System.Drawing.Size(43, 13)
+        Me.LabelCodigoPaciente.TabIndex = 20
+        Me.LabelCodigoPaciente.Text = "Código:"
+        '
+        'LabelCodPostalPaciente
+        '
+        Me.LabelCodPostalPaciente.AutoSize = True
+        Me.LabelCodPostalPaciente.Location = New System.Drawing.Point(474, 149)
+        Me.LabelCodPostalPaciente.Name = "LabelCodPostalPaciente"
+        Me.LabelCodPostalPaciente.Size = New System.Drawing.Size(75, 13)
+        Me.LabelCodPostalPaciente.TabIndex = 19
+        Me.LabelCodPostalPaciente.Text = "Codigo Postal:"
+        '
+        'LabelEnderecoPaciente
+        '
+        Me.LabelEnderecoPaciente.AutoSize = True
+        Me.LabelEnderecoPaciente.Location = New System.Drawing.Point(269, 149)
+        Me.LabelEnderecoPaciente.Name = "LabelEnderecoPaciente"
+        Me.LabelEnderecoPaciente.Size = New System.Drawing.Size(56, 13)
+        Me.LabelEnderecoPaciente.TabIndex = 18
+        Me.LabelEnderecoPaciente.Text = "Endereço:"
+        '
+        'LabelEmailPaciente
+        '
+        Me.LabelEmailPaciente.AutoSize = True
+        Me.LabelEmailPaciente.Location = New System.Drawing.Point(269, 110)
+        Me.LabelEmailPaciente.Name = "LabelEmailPaciente"
+        Me.LabelEmailPaciente.Size = New System.Drawing.Size(38, 13)
+        Me.LabelEmailPaciente.TabIndex = 17
+        Me.LabelEmailPaciente.Text = "E-mail:"
+        '
+        'LabelSexoPaciente
+        '
+        Me.LabelSexoPaciente.AutoSize = True
+        Me.LabelSexoPaciente.Location = New System.Drawing.Point(474, 110)
+        Me.LabelSexoPaciente.Name = "LabelSexoPaciente"
+        Me.LabelSexoPaciente.Size = New System.Drawing.Size(34, 13)
+        Me.LabelSexoPaciente.TabIndex = 16
+        Me.LabelSexoPaciente.Text = "Sexo:"
+        '
+        'LabelTelefonePaciente
+        '
+        Me.LabelTelefonePaciente.AutoSize = True
+        Me.LabelTelefonePaciente.Location = New System.Drawing.Point(483, 188)
+        Me.LabelTelefonePaciente.Name = "LabelTelefonePaciente"
+        Me.LabelTelefonePaciente.Size = New System.Drawing.Size(48, 13)
+        Me.LabelTelefonePaciente.TabIndex = 15
+        Me.LabelTelefonePaciente.Text = "telefone:"
+        '
+        'LabelTelemovelPaciente
+        '
+        Me.LabelTelemovelPaciente.AutoSize = True
+        Me.LabelTelemovelPaciente.Location = New System.Drawing.Point(371, 188)
+        Me.LabelTelemovelPaciente.Name = "LabelTelemovelPaciente"
+        Me.LabelTelemovelPaciente.Size = New System.Drawing.Size(55, 13)
+        Me.LabelTelemovelPaciente.TabIndex = 14
+        Me.LabelTelemovelPaciente.Text = "telemovel:"
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(483, 188)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(48, 13)
-        Me.Label4.TabIndex = 15
-        Me.Label4.Text = "telefone:"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(371, 188)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(55, 13)
-        Me.Label3.TabIndex = 14
-        Me.Label3.Text = "telemovel:"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(269, 73)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(22, 13)
-        Me.Label2.TabIndex = 13
-        Me.Label2.Text = "cc:"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(265, 31)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(38, 13)
-        Me.Label1.TabIndex = 12
-        Me.Label1.Text = "Nome:"
-        '
-        'TextBox11
-        '
-        Me.TextBox11.Location = New System.Drawing.Point(477, 165)
-        Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox11.TabIndex = 11
-        '
-        'TextBox10
-        '
-        Me.TextBox10.Location = New System.Drawing.Point(371, 87)
-        Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox10.TabIndex = 10
-        '
-        'TextBox9
-        '
-        Me.TextBox9.Location = New System.Drawing.Point(477, 123)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox9.TabIndex = 9
-        '
-        'TextBox8
-        '
-        Me.TextBox8.Location = New System.Drawing.Point(477, 87)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox8.TabIndex = 8
-        '
-        'TextBox7
-        '
-        Me.TextBox7.Location = New System.Drawing.Point(477, 204)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox7.TabIndex = 7
-        '
-        'TextBox6
-        '
-        Me.TextBox6.Location = New System.Drawing.Point(268, 204)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox6.TabIndex = 6
-        '
-        'TextBox5
-        '
-        Me.TextBox5.Location = New System.Drawing.Point(265, 165)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(206, 20)
-        Me.TextBox5.TabIndex = 5
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Location = New System.Drawing.Point(265, 123)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(206, 20)
-        Me.TextBox4.TabIndex = 4
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(265, 87)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox3.TabIndex = 3
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(374, 204)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 2
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(265, 50)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(312, 20)
-        Me.TextBox1.TabIndex = 1
-        '
-        'ListBox1
-        '
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.Location = New System.Drawing.Point(19, 58)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(214, 225)
-        Me.ListBox1.TabIndex = 0
+        'LabelCcPaciente
+        '
+        Me.LabelCcPaciente.AutoSize = True
+        Me.LabelCcPaciente.Location = New System.Drawing.Point(269, 73)
+        Me.LabelCcPaciente.Name = "LabelCcPaciente"
+        Me.LabelCcPaciente.Size = New System.Drawing.Size(22, 13)
+        Me.LabelCcPaciente.TabIndex = 13
+        Me.LabelCcPaciente.Text = "cc:"
+        '
+        'LabelNomePaciente
+        '
+        Me.LabelNomePaciente.AutoSize = True
+        Me.LabelNomePaciente.Location = New System.Drawing.Point(265, 31)
+        Me.LabelNomePaciente.Name = "LabelNomePaciente"
+        Me.LabelNomePaciente.Size = New System.Drawing.Size(38, 13)
+        Me.LabelNomePaciente.TabIndex = 12
+        Me.LabelNomePaciente.Text = "Nome:"
+        '
+        'CodPostalPaciente
+        '
+        Me.CodPostalPaciente.Location = New System.Drawing.Point(477, 165)
+        Me.CodPostalPaciente.Name = "CodPostalPaciente"
+        Me.CodPostalPaciente.Size = New System.Drawing.Size(100, 20)
+        Me.CodPostalPaciente.TabIndex = 11
+        '
+        'CodigoPaciente
+        '
+        Me.CodigoPaciente.Enabled = False
+        Me.CodigoPaciente.Location = New System.Drawing.Point(371, 87)
+        Me.CodigoPaciente.Name = "CodigoPaciente"
+        Me.CodigoPaciente.Size = New System.Drawing.Size(100, 20)
+        Me.CodigoPaciente.TabIndex = 10
+        '
+        'SexoPaciente
+        '
+        Me.SexoPaciente.Location = New System.Drawing.Point(477, 123)
+        Me.SexoPaciente.Name = "SexoPaciente"
+        Me.SexoPaciente.Size = New System.Drawing.Size(100, 20)
+        Me.SexoPaciente.TabIndex = 9
+        '
+        'DataPaciente
+        '
+        Me.DataPaciente.Location = New System.Drawing.Point(477, 87)
+        Me.DataPaciente.Name = "DataPaciente"
+        Me.DataPaciente.Size = New System.Drawing.Size(100, 20)
+        Me.DataPaciente.TabIndex = 8
+        '
+        'TelefonePaciente
+        '
+        Me.TelefonePaciente.Location = New System.Drawing.Point(477, 204)
+        Me.TelefonePaciente.Name = "TelefonePaciente"
+        Me.TelefonePaciente.Size = New System.Drawing.Size(100, 20)
+        Me.TelefonePaciente.TabIndex = 7
+        '
+        'NacionalidadePaciente
+        '
+        Me.NacionalidadePaciente.Location = New System.Drawing.Point(268, 204)
+        Me.NacionalidadePaciente.Name = "NacionalidadePaciente"
+        Me.NacionalidadePaciente.Size = New System.Drawing.Size(100, 20)
+        Me.NacionalidadePaciente.TabIndex = 6
+        '
+        'EnderecoPaciente
+        '
+        Me.EnderecoPaciente.Location = New System.Drawing.Point(265, 165)
+        Me.EnderecoPaciente.Name = "EnderecoPaciente"
+        Me.EnderecoPaciente.Size = New System.Drawing.Size(206, 20)
+        Me.EnderecoPaciente.TabIndex = 5
+        '
+        'EmailPaciente
+        '
+        Me.EmailPaciente.Location = New System.Drawing.Point(265, 123)
+        Me.EmailPaciente.Name = "EmailPaciente"
+        Me.EmailPaciente.Size = New System.Drawing.Size(206, 20)
+        Me.EmailPaciente.TabIndex = 4
+        '
+        'CcPaciente
+        '
+        Me.CcPaciente.Location = New System.Drawing.Point(265, 87)
+        Me.CcPaciente.Name = "CcPaciente"
+        Me.CcPaciente.Size = New System.Drawing.Size(100, 20)
+        Me.CcPaciente.TabIndex = 3
+        '
+        'TelemovelPaciente
+        '
+        Me.TelemovelPaciente.Location = New System.Drawing.Point(374, 204)
+        Me.TelemovelPaciente.Name = "TelemovelPaciente"
+        Me.TelemovelPaciente.Size = New System.Drawing.Size(100, 20)
+        Me.TelemovelPaciente.TabIndex = 2
+        '
+        'NomePaciente
+        '
+        Me.NomePaciente.Location = New System.Drawing.Point(265, 50)
+        Me.NomePaciente.Name = "NomePaciente"
+        Me.NomePaciente.Size = New System.Drawing.Size(312, 20)
+        Me.NomePaciente.TabIndex = 1
+        '
+        'ListPacientes
+        '
+        Me.ListPacientes.FormattingEnabled = True
+        Me.ListPacientes.Location = New System.Drawing.Point(19, 58)
+        Me.ListPacientes.Name = "ListPacientes"
+        Me.ListPacientes.Size = New System.Drawing.Size(214, 225)
+        Me.ListPacientes.TabIndex = 0
         '
         'TabPage2
         '
-        Me.TabPage2.Controls.Add(Me.Label39)
+        Me.TabPage2.Controls.Add(Me.LabelSalario)
         Me.TabPage2.Controls.Add(Me.TextBox39)
-        Me.TabPage2.Controls.Add(Me.btnOkDoc)
-        Me.TabPage2.Controls.Add(Me.btnCancelDoc)
-        Me.TabPage2.Controls.Add(Me.btnAddDoc)
-        Me.TabPage2.Controls.Add(Me.btnEditDoc)
-        Me.TabPage2.Controls.Add(Me.Button23)
-        Me.TabPage2.Controls.Add(Me.TextBox102)
-        Me.TabPage2.Controls.Add(Me.Label23)
+        Me.TabPage2.Controls.Add(Me.btnOkMedico)
+        Me.TabPage2.Controls.Add(Me.btnCancelMedico)
+        Me.TabPage2.Controls.Add(Me.btnAddMedico)
+        Me.TabPage2.Controls.Add(Me.btnEditMedico)
+        Me.TabPage2.Controls.Add(Me.btnSearchMedico)
+        Me.TabPage2.Controls.Add(Me.SearchMedico)
+        Me.TabPage2.Controls.Add(Me.LabelEspecialidade)
         Me.TabPage2.Controls.Add(Me.TextBox23)
-        Me.TabPage2.Controls.Add(Me.Button5)
-        Me.TabPage2.Controls.Add(Me.Button7)
-        Me.TabPage2.Controls.Add(Me.Button8)
-        Me.TabPage2.Controls.Add(Me.Label12)
-        Me.TabPage2.Controls.Add(Me.Label13)
-        Me.TabPage2.Controls.Add(Me.Label14)
-        Me.TabPage2.Controls.Add(Me.Label15)
-        Me.TabPage2.Controls.Add(Me.Label16)
-        Me.TabPage2.Controls.Add(Me.Label17)
-        Me.TabPage2.Controls.Add(Me.Label18)
-        Me.TabPage2.Controls.Add(Me.Label19)
-        Me.TabPage2.Controls.Add(Me.Label20)
-        Me.TabPage2.Controls.Add(Me.Label21)
-        Me.TabPage2.Controls.Add(Me.Label22)
+        Me.TabPage2.Controls.Add(Me.btnListInternamentosMedico)
+        Me.TabPage2.Controls.Add(Me.btnListIntervencoesMedico)
+        Me.TabPage2.Controls.Add(Me.btnListServicosMedico)
+        Me.TabPage2.Controls.Add(Me.LabelNacionalidadeMedico)
+        Me.TabPage2.Controls.Add(Me.LabelDataMedico)
+        Me.TabPage2.Controls.Add(Me.LabelCodigoMedico)
+        Me.TabPage2.Controls.Add(Me.LabelCodPostalMedico)
+        Me.TabPage2.Controls.Add(Me.LabelEnderecoMedico)
+        Me.TabPage2.Controls.Add(Me.LabelEmailMedico)
+        Me.TabPage2.Controls.Add(Me.LabelSexoMedico)
+        Me.TabPage2.Controls.Add(Me.LabelTelefoneMedico)
+        Me.TabPage2.Controls.Add(Me.LabelTelemovelMedico)
+        Me.TabPage2.Controls.Add(Me.LabelCcMedico)
+        Me.TabPage2.Controls.Add(Me.LabelNomeMedico)
         Me.TabPage2.Controls.Add(Me.TextBox12)
         Me.TabPage2.Controls.Add(Me.TextBox13)
         Me.TabPage2.Controls.Add(Me.TextBox14)
@@ -594,8 +600,8 @@ Partial Class Form1
         Me.TabPage2.Controls.Add(Me.TextBox19)
         Me.TabPage2.Controls.Add(Me.TextBox20)
         Me.TabPage2.Controls.Add(Me.TextBox21)
-        Me.TabPage2.Controls.Add(Me.TextBox22)
-        Me.TabPage2.Controls.Add(Me.ListBox2)
+        Me.TabPage2.Controls.Add(Me.NomeMedico)
+        Me.TabPage2.Controls.Add(Me.ListMedicos)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
@@ -604,14 +610,14 @@ Partial Class Form1
         Me.TabPage2.Text = "Médicos"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
-        'Label39
+        'LabelSalario
         '
-        Me.Label39.AutoSize = True
-        Me.Label39.Location = New System.Drawing.Point(427, 77)
-        Me.Label39.Name = "Label39"
-        Me.Label39.Size = New System.Drawing.Size(39, 13)
-        Me.Label39.TabIndex = 122
-        Me.Label39.Text = "Salario"
+        Me.LabelSalario.AutoSize = True
+        Me.LabelSalario.Location = New System.Drawing.Point(427, 77)
+        Me.LabelSalario.Name = "LabelSalario"
+        Me.LabelSalario.Size = New System.Drawing.Size(39, 13)
+        Me.LabelSalario.TabIndex = 122
+        Me.LabelSalario.Text = "Salario"
         '
         'TextBox39
         '
@@ -620,66 +626,66 @@ Partial Class Form1
         Me.TextBox39.Size = New System.Drawing.Size(146, 20)
         Me.TextBox39.TabIndex = 121
         '
-        'btnOkDoc
+        'btnOkMedico
         '
-        Me.btnOkDoc.Location = New System.Drawing.Point(430, 279)
-        Me.btnOkDoc.Name = "btnOkDoc"
-        Me.btnOkDoc.Size = New System.Drawing.Size(97, 46)
-        Me.btnOkDoc.TabIndex = 119
-        Me.btnOkDoc.Text = "Ok"
-        Me.btnOkDoc.UseVisualStyleBackColor = True
+        Me.btnOkMedico.Location = New System.Drawing.Point(430, 279)
+        Me.btnOkMedico.Name = "btnOkMedico"
+        Me.btnOkMedico.Size = New System.Drawing.Size(97, 46)
+        Me.btnOkMedico.TabIndex = 119
+        Me.btnOkMedico.Text = "Ok"
+        Me.btnOkMedico.UseVisualStyleBackColor = True
         '
-        'btnCancelDoc
+        'btnCancelMedico
         '
-        Me.btnCancelDoc.Location = New System.Drawing.Point(313, 279)
-        Me.btnCancelDoc.Name = "btnCancelDoc"
-        Me.btnCancelDoc.Size = New System.Drawing.Size(97, 46)
-        Me.btnCancelDoc.TabIndex = 118
-        Me.btnCancelDoc.Text = "Cancel"
-        Me.btnCancelDoc.UseVisualStyleBackColor = True
+        Me.btnCancelMedico.Location = New System.Drawing.Point(313, 279)
+        Me.btnCancelMedico.Name = "btnCancelMedico"
+        Me.btnCancelMedico.Size = New System.Drawing.Size(97, 46)
+        Me.btnCancelMedico.TabIndex = 118
+        Me.btnCancelMedico.Text = "Cancel"
+        Me.btnCancelMedico.UseVisualStyleBackColor = True
         '
-        'btnAddDoc
+        'btnAddMedico
         '
-        Me.btnAddDoc.Location = New System.Drawing.Point(18, 290)
-        Me.btnAddDoc.Name = "btnAddDoc"
-        Me.btnAddDoc.Size = New System.Drawing.Size(95, 29)
-        Me.btnAddDoc.TabIndex = 117
-        Me.btnAddDoc.Text = "Add Doctor"
-        Me.btnAddDoc.UseVisualStyleBackColor = True
+        Me.btnAddMedico.Location = New System.Drawing.Point(18, 290)
+        Me.btnAddMedico.Name = "btnAddMedico"
+        Me.btnAddMedico.Size = New System.Drawing.Size(95, 29)
+        Me.btnAddMedico.TabIndex = 117
+        Me.btnAddMedico.Text = "Add Doctor"
+        Me.btnAddMedico.UseVisualStyleBackColor = True
         '
-        'btnEditDoc
+        'btnEditMedico
         '
-        Me.btnEditDoc.Location = New System.Drawing.Point(119, 290)
-        Me.btnEditDoc.Name = "btnEditDoc"
-        Me.btnEditDoc.Size = New System.Drawing.Size(113, 29)
-        Me.btnEditDoc.TabIndex = 116
-        Me.btnEditDoc.Text = "Edit Doctor"
-        Me.btnEditDoc.UseVisualStyleBackColor = True
+        Me.btnEditMedico.Location = New System.Drawing.Point(119, 290)
+        Me.btnEditMedico.Name = "btnEditMedico"
+        Me.btnEditMedico.Size = New System.Drawing.Size(113, 29)
+        Me.btnEditMedico.TabIndex = 116
+        Me.btnEditMedico.Text = "Edit Doctor"
+        Me.btnEditMedico.UseVisualStyleBackColor = True
         '
-        'Button23
+        'btnSearchMedico
         '
-        Me.Button23.Location = New System.Drawing.Point(183, 26)
-        Me.Button23.Name = "Button23"
-        Me.Button23.Size = New System.Drawing.Size(50, 24)
-        Me.Button23.TabIndex = 115
-        Me.Button23.Text = "Search"
-        Me.Button23.UseVisualStyleBackColor = True
+        Me.btnSearchMedico.Location = New System.Drawing.Point(183, 26)
+        Me.btnSearchMedico.Name = "btnSearchMedico"
+        Me.btnSearchMedico.Size = New System.Drawing.Size(50, 24)
+        Me.btnSearchMedico.TabIndex = 115
+        Me.btnSearchMedico.Text = "Search"
+        Me.btnSearchMedico.UseVisualStyleBackColor = True
         '
-        'TextBox102
+        'SearchMedico
         '
-        Me.TextBox102.Location = New System.Drawing.Point(18, 30)
-        Me.TextBox102.Name = "TextBox102"
-        Me.TextBox102.Size = New System.Drawing.Size(159, 20)
-        Me.TextBox102.TabIndex = 114
+        Me.SearchMedico.Location = New System.Drawing.Point(18, 30)
+        Me.SearchMedico.Name = "SearchMedico"
+        Me.SearchMedico.Size = New System.Drawing.Size(159, 20)
+        Me.SearchMedico.TabIndex = 114
         '
-        'Label23
+        'LabelEspecialidade
         '
-        Me.Label23.AutoSize = True
-        Me.Label23.Location = New System.Drawing.Point(264, 77)
-        Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(76, 13)
-        Me.Label23.TabIndex = 55
-        Me.Label23.Text = "Especialidade:"
+        Me.LabelEspecialidade.AutoSize = True
+        Me.LabelEspecialidade.Location = New System.Drawing.Point(264, 77)
+        Me.LabelEspecialidade.Name = "LabelEspecialidade"
+        Me.LabelEspecialidade.Size = New System.Drawing.Size(76, 13)
+        Me.LabelEspecialidade.TabIndex = 55
+        Me.LabelEspecialidade.Text = "Especialidade:"
         '
         'TextBox23
         '
@@ -688,131 +694,131 @@ Partial Class Form1
         Me.TextBox23.Size = New System.Drawing.Size(149, 20)
         Me.TextBox23.TabIndex = 54
         '
-        'Button5
+        'btnListInternamentosMedico
         '
-        Me.Button5.Location = New System.Drawing.Point(476, 283)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(97, 42)
-        Me.Button5.TabIndex = 53
-        Me.Button5.Text = "Listar Intermanentos"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.btnListInternamentosMedico.Location = New System.Drawing.Point(476, 283)
+        Me.btnListInternamentosMedico.Name = "btnListInternamentosMedico"
+        Me.btnListInternamentosMedico.Size = New System.Drawing.Size(97, 42)
+        Me.btnListInternamentosMedico.TabIndex = 53
+        Me.btnListInternamentosMedico.Text = "Listar Intermanentos"
+        Me.btnListInternamentosMedico.UseVisualStyleBackColor = True
         '
-        'Button7
+        'btnListIntervencoesMedico
         '
-        Me.Button7.Location = New System.Drawing.Point(370, 283)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(100, 42)
-        Me.Button7.TabIndex = 51
-        Me.Button7.Text = "Listar Intervenções"
-        Me.Button7.UseVisualStyleBackColor = True
+        Me.btnListIntervencoesMedico.Location = New System.Drawing.Point(370, 283)
+        Me.btnListIntervencoesMedico.Name = "btnListIntervencoesMedico"
+        Me.btnListIntervencoesMedico.Size = New System.Drawing.Size(100, 42)
+        Me.btnListIntervencoesMedico.TabIndex = 51
+        Me.btnListIntervencoesMedico.Text = "Listar Intervenções"
+        Me.btnListIntervencoesMedico.UseVisualStyleBackColor = True
         '
-        'Button8
+        'btnListServicosMedico
         '
-        Me.Button8.Location = New System.Drawing.Point(264, 283)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(100, 42)
-        Me.Button8.TabIndex = 50
-        Me.Button8.Text = "Listar Serviços"
-        Me.Button8.UseVisualStyleBackColor = True
+        Me.btnListServicosMedico.Location = New System.Drawing.Point(264, 283)
+        Me.btnListServicosMedico.Name = "btnListServicosMedico"
+        Me.btnListServicosMedico.Size = New System.Drawing.Size(100, 42)
+        Me.btnListServicosMedico.TabIndex = 50
+        Me.btnListServicosMedico.Text = "Listar Serviços"
+        Me.btnListServicosMedico.UseVisualStyleBackColor = True
         '
-        'Label12
+        'LabelNacionalidadeMedico
         '
-        Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(264, 231)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(78, 13)
-        Me.Label12.TabIndex = 49
-        Me.Label12.Text = "Nacionalidade:"
+        Me.LabelNacionalidadeMedico.AutoSize = True
+        Me.LabelNacionalidadeMedico.Location = New System.Drawing.Point(264, 231)
+        Me.LabelNacionalidadeMedico.Name = "LabelNacionalidadeMedico"
+        Me.LabelNacionalidadeMedico.Size = New System.Drawing.Size(78, 13)
+        Me.LabelNacionalidadeMedico.TabIndex = 49
+        Me.LabelNacionalidadeMedico.Text = "Nacionalidade:"
         '
-        'Label13
+        'LabelDataMedico
         '
-        Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(473, 116)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(105, 13)
-        Me.Label13.TabIndex = 48
-        Me.Label13.Text = "Data de nascimento:"
+        Me.LabelDataMedico.AutoSize = True
+        Me.LabelDataMedico.Location = New System.Drawing.Point(473, 116)
+        Me.LabelDataMedico.Name = "LabelDataMedico"
+        Me.LabelDataMedico.Size = New System.Drawing.Size(105, 13)
+        Me.LabelDataMedico.TabIndex = 48
+        Me.LabelDataMedico.Text = "Data de nascimento:"
         '
-        'Label14
+        'LabelCodigoMedico
         '
-        Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(370, 116)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(43, 13)
-        Me.Label14.TabIndex = 47
-        Me.Label14.Text = "Código:"
+        Me.LabelCodigoMedico.AutoSize = True
+        Me.LabelCodigoMedico.Location = New System.Drawing.Point(370, 116)
+        Me.LabelCodigoMedico.Name = "LabelCodigoMedico"
+        Me.LabelCodigoMedico.Size = New System.Drawing.Size(43, 13)
+        Me.LabelCodigoMedico.TabIndex = 47
+        Me.LabelCodigoMedico.Text = "Código:"
         '
-        'Label15
+        'LabelCodPostalMedico
         '
-        Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(473, 192)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(75, 13)
-        Me.Label15.TabIndex = 46
-        Me.Label15.Text = "Codigo Postal:"
+        Me.LabelCodPostalMedico.AutoSize = True
+        Me.LabelCodPostalMedico.Location = New System.Drawing.Point(473, 192)
+        Me.LabelCodPostalMedico.Name = "LabelCodPostalMedico"
+        Me.LabelCodPostalMedico.Size = New System.Drawing.Size(75, 13)
+        Me.LabelCodPostalMedico.TabIndex = 46
+        Me.LabelCodPostalMedico.Text = "Codigo Postal:"
         '
-        'Label16
+        'LabelEnderecoMedico
         '
-        Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(268, 192)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(56, 13)
-        Me.Label16.TabIndex = 45
-        Me.Label16.Text = "Endereço:"
+        Me.LabelEnderecoMedico.AutoSize = True
+        Me.LabelEnderecoMedico.Location = New System.Drawing.Point(268, 192)
+        Me.LabelEnderecoMedico.Name = "LabelEnderecoMedico"
+        Me.LabelEnderecoMedico.Size = New System.Drawing.Size(56, 13)
+        Me.LabelEnderecoMedico.TabIndex = 45
+        Me.LabelEnderecoMedico.Text = "Endereço:"
         '
-        'Label17
+        'LabelEmailMedico
         '
-        Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(268, 153)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(38, 13)
-        Me.Label17.TabIndex = 44
-        Me.Label17.Text = "E-mail:"
+        Me.LabelEmailMedico.AutoSize = True
+        Me.LabelEmailMedico.Location = New System.Drawing.Point(268, 153)
+        Me.LabelEmailMedico.Name = "LabelEmailMedico"
+        Me.LabelEmailMedico.Size = New System.Drawing.Size(38, 13)
+        Me.LabelEmailMedico.TabIndex = 44
+        Me.LabelEmailMedico.Text = "E-mail:"
         '
-        'Label18
+        'LabelSexoMedico
         '
-        Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(473, 153)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(34, 13)
-        Me.Label18.TabIndex = 43
-        Me.Label18.Text = "Sexo:"
+        Me.LabelSexoMedico.AutoSize = True
+        Me.LabelSexoMedico.Location = New System.Drawing.Point(473, 153)
+        Me.LabelSexoMedico.Name = "LabelSexoMedico"
+        Me.LabelSexoMedico.Size = New System.Drawing.Size(34, 13)
+        Me.LabelSexoMedico.TabIndex = 43
+        Me.LabelSexoMedico.Text = "Sexo:"
         '
-        'Label19
+        'LabelTelefoneMedico
         '
-        Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(482, 231)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(48, 13)
-        Me.Label19.TabIndex = 42
-        Me.Label19.Text = "telefone:"
+        Me.LabelTelefoneMedico.AutoSize = True
+        Me.LabelTelefoneMedico.Location = New System.Drawing.Point(482, 231)
+        Me.LabelTelefoneMedico.Name = "LabelTelefoneMedico"
+        Me.LabelTelefoneMedico.Size = New System.Drawing.Size(48, 13)
+        Me.LabelTelefoneMedico.TabIndex = 42
+        Me.LabelTelefoneMedico.Text = "telefone:"
         '
-        'Label20
+        'LabelTelemovelMedico
         '
-        Me.Label20.AutoSize = True
-        Me.Label20.Location = New System.Drawing.Point(370, 231)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(55, 13)
-        Me.Label20.TabIndex = 41
-        Me.Label20.Text = "telemovel:"
+        Me.LabelTelemovelMedico.AutoSize = True
+        Me.LabelTelemovelMedico.Location = New System.Drawing.Point(370, 231)
+        Me.LabelTelemovelMedico.Name = "LabelTelemovelMedico"
+        Me.LabelTelemovelMedico.Size = New System.Drawing.Size(55, 13)
+        Me.LabelTelemovelMedico.TabIndex = 41
+        Me.LabelTelemovelMedico.Text = "telemovel:"
         '
-        'Label21
+        'LabelCcMedico
         '
-        Me.Label21.AutoSize = True
-        Me.Label21.Location = New System.Drawing.Point(268, 116)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(22, 13)
-        Me.Label21.TabIndex = 40
-        Me.Label21.Text = "cc:"
+        Me.LabelCcMedico.AutoSize = True
+        Me.LabelCcMedico.Location = New System.Drawing.Point(268, 116)
+        Me.LabelCcMedico.Name = "LabelCcMedico"
+        Me.LabelCcMedico.Size = New System.Drawing.Size(22, 13)
+        Me.LabelCcMedico.TabIndex = 40
+        Me.LabelCcMedico.Text = "cc:"
         '
-        'Label22
+        'LabelNomeMedico
         '
-        Me.Label22.AutoSize = True
-        Me.Label22.Location = New System.Drawing.Point(264, 30)
-        Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(38, 13)
-        Me.Label22.TabIndex = 39
-        Me.Label22.Text = "Nome:"
+        Me.LabelNomeMedico.AutoSize = True
+        Me.LabelNomeMedico.Location = New System.Drawing.Point(264, 30)
+        Me.LabelNomeMedico.Name = "LabelNomeMedico"
+        Me.LabelNomeMedico.Size = New System.Drawing.Size(38, 13)
+        Me.LabelNomeMedico.TabIndex = 39
+        Me.LabelNomeMedico.Text = "Nome:"
         '
         'TextBox12
         '
@@ -884,34 +890,34 @@ Partial Class Form1
         Me.TextBox21.Size = New System.Drawing.Size(100, 20)
         Me.TextBox21.TabIndex = 29
         '
-        'TextBox22
+        'NomeMedico
         '
-        Me.TextBox22.Location = New System.Drawing.Point(264, 49)
-        Me.TextBox22.Name = "TextBox22"
-        Me.TextBox22.Size = New System.Drawing.Size(312, 20)
-        Me.TextBox22.TabIndex = 28
+        Me.NomeMedico.Location = New System.Drawing.Point(264, 49)
+        Me.NomeMedico.Name = "NomeMedico"
+        Me.NomeMedico.Size = New System.Drawing.Size(312, 20)
+        Me.NomeMedico.TabIndex = 28
         '
-        'ListBox2
+        'ListMedicos
         '
-        Me.ListBox2.FormattingEnabled = True
-        Me.ListBox2.Location = New System.Drawing.Point(18, 70)
-        Me.ListBox2.Name = "ListBox2"
-        Me.ListBox2.Size = New System.Drawing.Size(214, 212)
-        Me.ListBox2.TabIndex = 27
+        Me.ListMedicos.FormattingEnabled = True
+        Me.ListMedicos.Location = New System.Drawing.Point(18, 57)
+        Me.ListMedicos.Name = "ListMedicos"
+        Me.ListMedicos.Size = New System.Drawing.Size(214, 225)
+        Me.ListMedicos.TabIndex = 27
         '
         'TabPage8
         '
         Me.TabPage8.Controls.Add(Me.Label40)
         Me.TabPage8.Controls.Add(Me.TextBox38)
-        Me.TabPage8.Controls.Add(Me.btnOkEnf)
-        Me.TabPage8.Controls.Add(Me.btnCancelEnf)
-        Me.TabPage8.Controls.Add(Me.btnEditEnf)
-        Me.TabPage8.Controls.Add(Me.btnAddEnf)
-        Me.TabPage8.Controls.Add(Me.Button22)
+        Me.TabPage8.Controls.Add(Me.btnOkEnfermeiro)
+        Me.TabPage8.Controls.Add(Me.btnCancelEnfermeiro)
+        Me.TabPage8.Controls.Add(Me.btnEditEnfermeiro)
+        Me.TabPage8.Controls.Add(Me.btnAddEnfermeiro)
+        Me.TabPage8.Controls.Add(Me.btnSearchEnfermeiro)
         Me.TabPage8.Controls.Add(Me.TextBox101)
-        Me.TabPage8.Controls.Add(Me.Button12)
-        Me.TabPage8.Controls.Add(Me.Button9)
-        Me.TabPage8.Controls.Add(Me.Button11)
+        Me.TabPage8.Controls.Add(Me.btnListReceitasExecEnfermeiro)
+        Me.TabPage8.Controls.Add(Me.btnListInternamentosEnfermeiro)
+        Me.TabPage8.Controls.Add(Me.btnListIntervencoesEnfermeiro)
         Me.TabPage8.Controls.Add(Me.Label53)
         Me.TabPage8.Controls.Add(Me.Label54)
         Me.TabPage8.Controls.Add(Me.Label55)
@@ -934,7 +940,7 @@ Partial Class Form1
         Me.TabPage8.Controls.Add(Me.TextBox60)
         Me.TabPage8.Controls.Add(Me.TextBox61)
         Me.TabPage8.Controls.Add(Me.TextBox62)
-        Me.TabPage8.Controls.Add(Me.ListBox9)
+        Me.TabPage8.Controls.Add(Me.ListEnfermeiros)
         Me.TabPage8.Location = New System.Drawing.Point(4, 22)
         Me.TabPage8.Name = "TabPage8"
         Me.TabPage8.Size = New System.Drawing.Size(599, 346)
@@ -942,50 +948,66 @@ Partial Class Form1
         Me.TabPage8.Text = "Enfermeiros"
         Me.TabPage8.UseVisualStyleBackColor = True
         '
-        'btnOkEnf
+        'Label40
         '
-        Me.btnOkEnf.Location = New System.Drawing.Point(419, 265)
-        Me.btnOkEnf.Name = "btnOkEnf"
-        Me.btnOkEnf.Size = New System.Drawing.Size(88, 41)
-        Me.btnOkEnf.TabIndex = 111
-        Me.btnOkEnf.Text = "Ok"
-        Me.btnOkEnf.UseVisualStyleBackColor = True
+        Me.Label40.AutoSize = True
+        Me.Label40.Location = New System.Drawing.Point(473, 30)
+        Me.Label40.Name = "Label40"
+        Me.Label40.Size = New System.Drawing.Size(39, 13)
+        Me.Label40.TabIndex = 113
+        Me.Label40.Text = "Salario"
         '
-        'btnCancelEnf
+        'TextBox38
         '
-        Me.btnCancelEnf.Location = New System.Drawing.Point(325, 264)
-        Me.btnCancelEnf.Name = "btnCancelEnf"
-        Me.btnCancelEnf.Size = New System.Drawing.Size(88, 41)
-        Me.btnCancelEnf.TabIndex = 110
-        Me.btnCancelEnf.Text = "Cancel"
-        Me.btnCancelEnf.UseVisualStyleBackColor = True
+        Me.TextBox38.Location = New System.Drawing.Point(476, 49)
+        Me.TextBox38.Name = "TextBox38"
+        Me.TextBox38.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox38.TabIndex = 112
         '
-        'btnEditEnf
+        'btnOkEnfermeiro
         '
-        Me.btnEditEnf.Location = New System.Drawing.Point(122, 290)
-        Me.btnEditEnf.Name = "btnEditEnf"
-        Me.btnEditEnf.Size = New System.Drawing.Size(104, 23)
-        Me.btnEditEnf.TabIndex = 109
-        Me.btnEditEnf.Text = "Edit Nurse"
-        Me.btnEditEnf.UseVisualStyleBackColor = True
+        Me.btnOkEnfermeiro.Location = New System.Drawing.Point(419, 265)
+        Me.btnOkEnfermeiro.Name = "btnOkEnfermeiro"
+        Me.btnOkEnfermeiro.Size = New System.Drawing.Size(88, 41)
+        Me.btnOkEnfermeiro.TabIndex = 111
+        Me.btnOkEnfermeiro.Text = "Ok"
+        Me.btnOkEnfermeiro.UseVisualStyleBackColor = True
         '
-        'btnAddEnf
+        'btnCancelEnfermeiro
         '
-        Me.btnAddEnf.Location = New System.Drawing.Point(18, 290)
-        Me.btnAddEnf.Name = "btnAddEnf"
-        Me.btnAddEnf.Size = New System.Drawing.Size(98, 23)
-        Me.btnAddEnf.TabIndex = 108
-        Me.btnAddEnf.Text = "Add Nurse"
-        Me.btnAddEnf.UseVisualStyleBackColor = True
+        Me.btnCancelEnfermeiro.Location = New System.Drawing.Point(325, 264)
+        Me.btnCancelEnfermeiro.Name = "btnCancelEnfermeiro"
+        Me.btnCancelEnfermeiro.Size = New System.Drawing.Size(88, 41)
+        Me.btnCancelEnfermeiro.TabIndex = 110
+        Me.btnCancelEnfermeiro.Text = "Cancel"
+        Me.btnCancelEnfermeiro.UseVisualStyleBackColor = True
         '
-        'Button22
+        'btnEditEnfermeiro
         '
-        Me.Button22.Location = New System.Drawing.Point(183, 26)
-        Me.Button22.Name = "Button22"
-        Me.Button22.Size = New System.Drawing.Size(50, 24)
-        Me.Button22.TabIndex = 107
-        Me.Button22.Text = "Search"
-        Me.Button22.UseVisualStyleBackColor = True
+        Me.btnEditEnfermeiro.Location = New System.Drawing.Point(122, 290)
+        Me.btnEditEnfermeiro.Name = "btnEditEnfermeiro"
+        Me.btnEditEnfermeiro.Size = New System.Drawing.Size(104, 23)
+        Me.btnEditEnfermeiro.TabIndex = 109
+        Me.btnEditEnfermeiro.Text = "Edit Nurse"
+        Me.btnEditEnfermeiro.UseVisualStyleBackColor = True
+        '
+        'btnAddEnfermeiro
+        '
+        Me.btnAddEnfermeiro.Location = New System.Drawing.Point(18, 290)
+        Me.btnAddEnfermeiro.Name = "btnAddEnfermeiro"
+        Me.btnAddEnfermeiro.Size = New System.Drawing.Size(98, 23)
+        Me.btnAddEnfermeiro.TabIndex = 108
+        Me.btnAddEnfermeiro.Text = "Add Nurse"
+        Me.btnAddEnfermeiro.UseVisualStyleBackColor = True
+        '
+        'btnSearchEnfermeiro
+        '
+        Me.btnSearchEnfermeiro.Location = New System.Drawing.Point(183, 26)
+        Me.btnSearchEnfermeiro.Name = "btnSearchEnfermeiro"
+        Me.btnSearchEnfermeiro.Size = New System.Drawing.Size(50, 24)
+        Me.btnSearchEnfermeiro.TabIndex = 107
+        Me.btnSearchEnfermeiro.Text = "Search"
+        Me.btnSearchEnfermeiro.UseVisualStyleBackColor = True
         '
         'TextBox101
         '
@@ -994,32 +1016,32 @@ Partial Class Form1
         Me.TextBox101.Size = New System.Drawing.Size(159, 20)
         Me.TextBox101.TabIndex = 106
         '
-        'Button12
+        'btnListReceitasExecEnfermeiro
         '
-        Me.Button12.Location = New System.Drawing.Point(264, 264)
-        Me.Button12.Name = "Button12"
-        Me.Button12.Size = New System.Drawing.Size(100, 42)
-        Me.Button12.TabIndex = 84
-        Me.Button12.Text = "Listar Receitas Executadas"
-        Me.Button12.UseVisualStyleBackColor = True
+        Me.btnListReceitasExecEnfermeiro.Location = New System.Drawing.Point(264, 264)
+        Me.btnListReceitasExecEnfermeiro.Name = "btnListReceitasExecEnfermeiro"
+        Me.btnListReceitasExecEnfermeiro.Size = New System.Drawing.Size(100, 42)
+        Me.btnListReceitasExecEnfermeiro.TabIndex = 84
+        Me.btnListReceitasExecEnfermeiro.Text = "Listar Receitas Executadas"
+        Me.btnListReceitasExecEnfermeiro.UseVisualStyleBackColor = True
         '
-        'Button9
+        'btnListInternamentosEnfermeiro
         '
-        Me.Button9.Location = New System.Drawing.Point(479, 264)
-        Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(97, 42)
-        Me.Button9.TabIndex = 81
-        Me.Button9.Text = "Listar Intermanentos"
-        Me.Button9.UseVisualStyleBackColor = True
+        Me.btnListInternamentosEnfermeiro.Location = New System.Drawing.Point(479, 264)
+        Me.btnListInternamentosEnfermeiro.Name = "btnListInternamentosEnfermeiro"
+        Me.btnListInternamentosEnfermeiro.Size = New System.Drawing.Size(97, 42)
+        Me.btnListInternamentosEnfermeiro.TabIndex = 81
+        Me.btnListInternamentosEnfermeiro.Text = "Listar Intermanentos"
+        Me.btnListInternamentosEnfermeiro.UseVisualStyleBackColor = True
         '
-        'Button11
+        'btnListIntervencoesEnfermeiro
         '
-        Me.Button11.Location = New System.Drawing.Point(370, 264)
-        Me.Button11.Name = "Button11"
-        Me.Button11.Size = New System.Drawing.Size(100, 42)
-        Me.Button11.TabIndex = 80
-        Me.Button11.Text = "Listar Intervenções"
-        Me.Button11.UseVisualStyleBackColor = True
+        Me.btnListIntervencoesEnfermeiro.Location = New System.Drawing.Point(370, 264)
+        Me.btnListIntervencoesEnfermeiro.Name = "btnListIntervencoesEnfermeiro"
+        Me.btnListIntervencoesEnfermeiro.Size = New System.Drawing.Size(100, 42)
+        Me.btnListIntervencoesEnfermeiro.TabIndex = 80
+        Me.btnListIntervencoesEnfermeiro.Text = "Listar Intervenções"
+        Me.btnListIntervencoesEnfermeiro.UseVisualStyleBackColor = True
         '
         'Label53
         '
@@ -1197,21 +1219,21 @@ Partial Class Form1
         Me.TextBox62.Size = New System.Drawing.Size(206, 20)
         Me.TextBox62.TabIndex = 57
         '
-        'ListBox9
+        'ListEnfermeiros
         '
-        Me.ListBox9.FormattingEnabled = True
-        Me.ListBox9.Location = New System.Drawing.Point(18, 70)
-        Me.ListBox9.Name = "ListBox9"
-        Me.ListBox9.Size = New System.Drawing.Size(214, 199)
-        Me.ListBox9.TabIndex = 56
+        Me.ListEnfermeiros.FormattingEnabled = True
+        Me.ListEnfermeiros.Location = New System.Drawing.Point(18, 70)
+        Me.ListEnfermeiros.Name = "ListEnfermeiros"
+        Me.ListEnfermeiros.Size = New System.Drawing.Size(214, 199)
+        Me.ListEnfermeiros.TabIndex = 56
         '
         'TabPage3
         '
-        Me.TabPage3.Controls.Add(Me.Button25)
+        Me.TabPage3.Controls.Add(Me.btnSearchInternamento)
         Me.TabPage3.Controls.Add(Me.TextBox104)
         Me.TabPage3.Controls.Add(Me.Label24)
         Me.TabPage3.Controls.Add(Me.TextBox24)
-        Me.TabPage3.Controls.Add(Me.Button10)
+        Me.TabPage3.Controls.Add(Me.btnListIntervencoesInternamento)
         Me.TabPage3.Controls.Add(Me.Label27)
         Me.TabPage3.Controls.Add(Me.Label29)
         Me.TabPage3.Controls.Add(Me.Label30)
@@ -1224,7 +1246,7 @@ Partial Class Form1
         Me.TabPage3.Controls.Add(Me.TextBox32)
         Me.TabPage3.Controls.Add(Me.TextBox33)
         Me.TabPage3.Controls.Add(Me.TextBox35)
-        Me.TabPage3.Controls.Add(Me.ListBox3)
+        Me.TabPage3.Controls.Add(Me.ListInternamentos)
         Me.TabPage3.Location = New System.Drawing.Point(4, 22)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Size = New System.Drawing.Size(599, 346)
@@ -1232,14 +1254,14 @@ Partial Class Form1
         Me.TabPage3.Text = "Internamentos"
         Me.TabPage3.UseVisualStyleBackColor = True
         '
-        'Button25
+        'btnSearchInternamento
         '
-        Me.Button25.Location = New System.Drawing.Point(183, 26)
-        Me.Button25.Name = "Button25"
-        Me.Button25.Size = New System.Drawing.Size(50, 24)
-        Me.Button25.TabIndex = 111
-        Me.Button25.Text = "Search"
-        Me.Button25.UseVisualStyleBackColor = True
+        Me.btnSearchInternamento.Location = New System.Drawing.Point(183, 26)
+        Me.btnSearchInternamento.Name = "btnSearchInternamento"
+        Me.btnSearchInternamento.Size = New System.Drawing.Size(50, 24)
+        Me.btnSearchInternamento.TabIndex = 111
+        Me.btnSearchInternamento.Text = "Search"
+        Me.btnSearchInternamento.UseVisualStyleBackColor = True
         '
         'TextBox104
         '
@@ -1264,14 +1286,14 @@ Partial Class Form1
         Me.TextBox24.Size = New System.Drawing.Size(100, 20)
         Me.TextBox24.TabIndex = 82
         '
-        'Button10
+        'btnListIntervencoesInternamento
         '
-        Me.Button10.Location = New System.Drawing.Point(267, 244)
-        Me.Button10.Name = "Button10"
-        Me.Button10.Size = New System.Drawing.Size(309, 42)
-        Me.Button10.TabIndex = 79
-        Me.Button10.Text = "Listar Intervenções"
-        Me.Button10.UseVisualStyleBackColor = True
+        Me.btnListIntervencoesInternamento.Location = New System.Drawing.Point(267, 244)
+        Me.btnListIntervencoesInternamento.Name = "btnListIntervencoesInternamento"
+        Me.btnListIntervencoesInternamento.Size = New System.Drawing.Size(309, 42)
+        Me.btnListIntervencoesInternamento.TabIndex = 79
+        Me.btnListIntervencoesInternamento.Text = "Listar Intervenções"
+        Me.btnListIntervencoesInternamento.UseVisualStyleBackColor = True
         '
         'Label27
         '
@@ -1370,17 +1392,17 @@ Partial Class Form1
         Me.TextBox35.Size = New System.Drawing.Size(206, 20)
         Me.TextBox35.TabIndex = 57
         '
-        'ListBox3
+        'ListInternamentos
         '
-        Me.ListBox3.FormattingEnabled = True
-        Me.ListBox3.Location = New System.Drawing.Point(18, 70)
-        Me.ListBox3.Name = "ListBox3"
-        Me.ListBox3.Size = New System.Drawing.Size(214, 251)
-        Me.ListBox3.TabIndex = 56
+        Me.ListInternamentos.FormattingEnabled = True
+        Me.ListInternamentos.Location = New System.Drawing.Point(18, 70)
+        Me.ListInternamentos.Name = "ListInternamentos"
+        Me.ListInternamentos.Size = New System.Drawing.Size(214, 251)
+        Me.ListInternamentos.TabIndex = 56
         '
         'TabPage4
         '
-        Me.TabPage4.Controls.Add(Me.Button24)
+        Me.TabPage4.Controls.Add(Me.btnSearchIntervencao)
         Me.TabPage4.Controls.Add(Me.TextBox103)
         Me.TabPage4.Controls.Add(Me.Label38)
         Me.TabPage4.Controls.Add(Me.Label32)
@@ -1398,7 +1420,7 @@ Partial Class Form1
         Me.TabPage4.Controls.Add(Me.TextBox29)
         Me.TabPage4.Controls.Add(Me.TextBox36)
         Me.TabPage4.Controls.Add(Me.TextBox37)
-        Me.TabPage4.Controls.Add(Me.ListBox4)
+        Me.TabPage4.Controls.Add(Me.ListIntervencoes)
         Me.TabPage4.Location = New System.Drawing.Point(4, 22)
         Me.TabPage4.Name = "TabPage4"
         Me.TabPage4.Size = New System.Drawing.Size(599, 346)
@@ -1406,14 +1428,14 @@ Partial Class Form1
         Me.TabPage4.Text = "Intervenções"
         Me.TabPage4.UseVisualStyleBackColor = True
         '
-        'Button24
+        'btnSearchIntervencao
         '
-        Me.Button24.Location = New System.Drawing.Point(175, 26)
-        Me.Button24.Name = "Button24"
-        Me.Button24.Size = New System.Drawing.Size(50, 24)
-        Me.Button24.TabIndex = 109
-        Me.Button24.Text = "Search"
-        Me.Button24.UseVisualStyleBackColor = True
+        Me.btnSearchIntervencao.Location = New System.Drawing.Point(175, 26)
+        Me.btnSearchIntervencao.Name = "btnSearchIntervencao"
+        Me.btnSearchIntervencao.Size = New System.Drawing.Size(50, 24)
+        Me.btnSearchIntervencao.TabIndex = 109
+        Me.btnSearchIntervencao.Text = "Search"
+        Me.btnSearchIntervencao.UseVisualStyleBackColor = True
         '
         'TextBox103
         '
@@ -1551,17 +1573,17 @@ Partial Class Form1
         Me.TextBox37.Size = New System.Drawing.Size(312, 20)
         Me.TextBox37.TabIndex = 85
         '
-        'ListBox4
+        'ListIntervencoes
         '
-        Me.ListBox4.FormattingEnabled = True
-        Me.ListBox4.Location = New System.Drawing.Point(10, 66)
-        Me.ListBox4.Name = "ListBox4"
-        Me.ListBox4.Size = New System.Drawing.Size(214, 251)
-        Me.ListBox4.TabIndex = 84
+        Me.ListIntervencoes.FormattingEnabled = True
+        Me.ListIntervencoes.Location = New System.Drawing.Point(10, 66)
+        Me.ListIntervencoes.Name = "ListIntervencoes"
+        Me.ListIntervencoes.Size = New System.Drawing.Size(214, 251)
+        Me.ListIntervencoes.TabIndex = 84
         '
         'TabPage5
         '
-        Me.TabPage5.Controls.Add(Me.Button21)
+        Me.TabPage5.Controls.Add(Me.btnSearchFatura)
         Me.TabPage5.Controls.Add(Me.TextBox100)
         Me.TabPage5.Controls.Add(Me.Label42)
         Me.TabPage5.Controls.Add(Me.Label44)
@@ -1569,7 +1591,7 @@ Partial Class Form1
         Me.TabPage5.Controls.Add(Me.TextBox42)
         Me.TabPage5.Controls.Add(Me.TextBox43)
         Me.TabPage5.Controls.Add(Me.TextBox44)
-        Me.TabPage5.Controls.Add(Me.ListBox6)
+        Me.TabPage5.Controls.Add(Me.ListFaturas)
         Me.TabPage5.Location = New System.Drawing.Point(4, 22)
         Me.TabPage5.Name = "TabPage5"
         Me.TabPage5.Size = New System.Drawing.Size(599, 346)
@@ -1577,14 +1599,14 @@ Partial Class Form1
         Me.TabPage5.Text = "Faturas"
         Me.TabPage5.UseVisualStyleBackColor = True
         '
-        'Button21
+        'btnSearchFatura
         '
-        Me.Button21.Location = New System.Drawing.Point(184, 17)
-        Me.Button21.Name = "Button21"
-        Me.Button21.Size = New System.Drawing.Size(50, 24)
-        Me.Button21.TabIndex = 105
-        Me.Button21.Text = "Search"
-        Me.Button21.UseVisualStyleBackColor = True
+        Me.btnSearchFatura.Location = New System.Drawing.Point(184, 17)
+        Me.btnSearchFatura.Name = "btnSearchFatura"
+        Me.btnSearchFatura.Size = New System.Drawing.Size(50, 24)
+        Me.btnSearchFatura.TabIndex = 105
+        Me.btnSearchFatura.Text = "Search"
+        Me.btnSearchFatura.UseVisualStyleBackColor = True
         '
         'TextBox100
         '
@@ -1641,17 +1663,19 @@ Partial Class Form1
         Me.TextBox44.Size = New System.Drawing.Size(312, 20)
         Me.TextBox44.TabIndex = 85
         '
-        'ListBox6
+        'ListFaturas
         '
-        Me.ListBox6.FormattingEnabled = True
-        Me.ListBox6.Location = New System.Drawing.Point(19, 57)
-        Me.ListBox6.Name = "ListBox6"
-        Me.ListBox6.Size = New System.Drawing.Size(214, 264)
-        Me.ListBox6.TabIndex = 84
+        Me.ListFaturas.FormattingEnabled = True
+        Me.ListFaturas.Location = New System.Drawing.Point(19, 57)
+        Me.ListFaturas.Name = "ListFaturas"
+        Me.ListFaturas.Size = New System.Drawing.Size(214, 264)
+        Me.ListFaturas.TabIndex = 84
         '
         'TabPage7
         '
-        Me.TabPage7.Controls.Add(Me.Button26)
+        Me.TabPage7.Controls.Add(Me.btnListEnfermeirosServico)
+        Me.TabPage7.Controls.Add(Me.btnListMedicosServico)
+        Me.TabPage7.Controls.Add(Me.btnSearchServico)
         Me.TabPage7.Controls.Add(Me.TextBox105)
         Me.TabPage7.Controls.Add(Me.Label78)
         Me.TabPage7.Controls.Add(Me.Label52)
@@ -1663,7 +1687,7 @@ Partial Class Form1
         Me.TabPage7.Controls.Add(Me.TextBox45)
         Me.TabPage7.Controls.Add(Me.TextBox49)
         Me.TabPage7.Controls.Add(Me.TextBox50)
-        Me.TabPage7.Controls.Add(Me.ListBox8)
+        Me.TabPage7.Controls.Add(Me.ListServicos)
         Me.TabPage7.Location = New System.Drawing.Point(4, 22)
         Me.TabPage7.Name = "TabPage7"
         Me.TabPage7.Size = New System.Drawing.Size(599, 346)
@@ -1671,14 +1695,32 @@ Partial Class Form1
         Me.TabPage7.Text = "Serviços"
         Me.TabPage7.UseVisualStyleBackColor = True
         '
-        'Button26
+        'btnListEnfermeirosServico
         '
-        Me.Button26.Location = New System.Drawing.Point(184, 27)
-        Me.Button26.Name = "Button26"
-        Me.Button26.Size = New System.Drawing.Size(50, 24)
-        Me.Button26.TabIndex = 107
-        Me.Button26.Text = "Search"
-        Me.Button26.UseVisualStyleBackColor = True
+        Me.btnListEnfermeirosServico.Location = New System.Drawing.Point(417, 258)
+        Me.btnListEnfermeirosServico.Name = "btnListEnfermeirosServico"
+        Me.btnListEnfermeirosServico.Size = New System.Drawing.Size(89, 42)
+        Me.btnListEnfermeirosServico.TabIndex = 110
+        Me.btnListEnfermeirosServico.Text = "Listar Enfermeiros"
+        Me.btnListEnfermeirosServico.UseVisualStyleBackColor = True
+        '
+        'btnListMedicosServico
+        '
+        Me.btnListMedicosServico.Location = New System.Drawing.Point(332, 258)
+        Me.btnListMedicosServico.Name = "btnListMedicosServico"
+        Me.btnListMedicosServico.Size = New System.Drawing.Size(79, 42)
+        Me.btnListMedicosServico.TabIndex = 109
+        Me.btnListMedicosServico.Text = "Listar Médicos"
+        Me.btnListMedicosServico.UseVisualStyleBackColor = True
+        '
+        'btnSearchServico
+        '
+        Me.btnSearchServico.Location = New System.Drawing.Point(184, 27)
+        Me.btnSearchServico.Name = "btnSearchServico"
+        Me.btnSearchServico.Size = New System.Drawing.Size(50, 24)
+        Me.btnSearchServico.TabIndex = 107
+        Me.btnSearchServico.Text = "Search"
+        Me.btnSearchServico.UseVisualStyleBackColor = True
         '
         'TextBox105
         '
@@ -1690,7 +1732,7 @@ Partial Class Form1
         'Label78
         '
         Me.Label78.AutoSize = True
-        Me.Label78.Location = New System.Drawing.Point(269, 220)
+        Me.Label78.Location = New System.Drawing.Point(269, 197)
         Me.Label78.Name = "Label78"
         Me.Label78.Size = New System.Drawing.Size(122, 13)
         Me.Label78.TabIndex = 100
@@ -1699,7 +1741,7 @@ Partial Class Form1
         'Label52
         '
         Me.Label52.AutoSize = True
-        Me.Label52.Location = New System.Drawing.Point(269, 180)
+        Me.Label52.Location = New System.Drawing.Point(269, 157)
         Me.Label52.Name = "Label52"
         Me.Label52.Size = New System.Drawing.Size(107, 13)
         Me.Label52.TabIndex = 99
@@ -1707,14 +1749,14 @@ Partial Class Form1
         '
         'TextBox76
         '
-        Me.TextBox76.Location = New System.Drawing.Point(265, 196)
+        Me.TextBox76.Location = New System.Drawing.Point(265, 173)
         Me.TextBox76.Name = "TextBox76"
         Me.TextBox76.Size = New System.Drawing.Size(312, 20)
         Me.TextBox76.TabIndex = 98
         '
         'TextBox51
         '
-        Me.TextBox51.Location = New System.Drawing.Point(265, 236)
+        Me.TextBox51.Location = New System.Drawing.Point(265, 213)
         Me.TextBox51.Name = "TextBox51"
         Me.TextBox51.Size = New System.Drawing.Size(312, 20)
         Me.TextBox51.TabIndex = 97
@@ -1722,7 +1764,7 @@ Partial Class Form1
         'Label46
         '
         Me.Label46.AutoSize = True
-        Me.Label46.Location = New System.Drawing.Point(474, 137)
+        Me.Label46.Location = New System.Drawing.Point(474, 114)
         Me.Label46.Name = "Label46"
         Me.Label46.Size = New System.Drawing.Size(89, 13)
         Me.Label46.TabIndex = 96
@@ -1731,7 +1773,7 @@ Partial Class Form1
         'Label50
         '
         Me.Label50.AutoSize = True
-        Me.Label50.Location = New System.Drawing.Point(269, 137)
+        Me.Label50.Location = New System.Drawing.Point(269, 114)
         Me.Label50.Name = "Label50"
         Me.Label50.Size = New System.Drawing.Size(90, 13)
         Me.Label50.TabIndex = 92
@@ -1740,7 +1782,7 @@ Partial Class Form1
         'Label51
         '
         Me.Label51.AutoSize = True
-        Me.Label51.Location = New System.Drawing.Point(265, 95)
+        Me.Label51.Location = New System.Drawing.Point(265, 72)
         Me.Label51.Name = "Label51"
         Me.Label51.Size = New System.Drawing.Size(97, 13)
         Me.Label51.TabIndex = 91
@@ -1748,36 +1790,40 @@ Partial Class Form1
         '
         'TextBox45
         '
-        Me.TextBox45.Location = New System.Drawing.Point(477, 151)
+        Me.TextBox45.Location = New System.Drawing.Point(477, 128)
         Me.TextBox45.Name = "TextBox45"
         Me.TextBox45.Size = New System.Drawing.Size(100, 20)
         Me.TextBox45.TabIndex = 90
         '
         'TextBox49
         '
-        Me.TextBox49.Location = New System.Drawing.Point(265, 151)
+        Me.TextBox49.Location = New System.Drawing.Point(265, 128)
         Me.TextBox49.Name = "TextBox49"
         Me.TextBox49.Size = New System.Drawing.Size(206, 20)
         Me.TextBox49.TabIndex = 86
         '
         'TextBox50
         '
-        Me.TextBox50.Location = New System.Drawing.Point(265, 114)
+        Me.TextBox50.Location = New System.Drawing.Point(265, 91)
         Me.TextBox50.Name = "TextBox50"
         Me.TextBox50.Size = New System.Drawing.Size(312, 20)
         Me.TextBox50.TabIndex = 85
         '
-        'ListBox8
+        'ListServicos
         '
-        Me.ListBox8.FormattingEnabled = True
-        Me.ListBox8.Location = New System.Drawing.Point(19, 70)
-        Me.ListBox8.Name = "ListBox8"
-        Me.ListBox8.Size = New System.Drawing.Size(214, 251)
-        Me.ListBox8.TabIndex = 84
+        Me.ListServicos.FormattingEnabled = True
+        Me.ListServicos.Location = New System.Drawing.Point(19, 70)
+        Me.ListServicos.Name = "ListServicos"
+        Me.ListServicos.Size = New System.Drawing.Size(214, 251)
+        Me.ListServicos.TabIndex = 84
         '
         'TabPage9
         '
-        Me.TabPage9.Controls.Add(Me.Button20)
+        Me.TabPage9.Controls.Add(Me.btnOkMedicamento)
+        Me.TabPage9.Controls.Add(Me.btnCancelMedicamento)
+        Me.TabPage9.Controls.Add(Me.btnAddMedicamento)
+        Me.TabPage9.Controls.Add(Me.btnEditMedicamento)
+        Me.TabPage9.Controls.Add(Me.btnSearchMedicamento)
         Me.TabPage9.Controls.Add(Me.TextBox99)
         Me.TabPage9.Controls.Add(Me.Label79)
         Me.TabPage9.Controls.Add(Me.Label80)
@@ -1785,7 +1831,7 @@ Partial Class Form1
         Me.TabPage9.Controls.Add(Me.TextBox77)
         Me.TabPage9.Controls.Add(Me.TextBox78)
         Me.TabPage9.Controls.Add(Me.TextBox79)
-        Me.TabPage9.Controls.Add(Me.ListBox14)
+        Me.TabPage9.Controls.Add(Me.ListMedicamentos)
         Me.TabPage9.Location = New System.Drawing.Point(4, 22)
         Me.TabPage9.Name = "TabPage9"
         Me.TabPage9.Size = New System.Drawing.Size(599, 346)
@@ -1793,14 +1839,50 @@ Partial Class Form1
         Me.TabPage9.Text = "Medicamentos"
         Me.TabPage9.UseVisualStyleBackColor = True
         '
-        'Button20
+        'btnOkMedicamento
         '
-        Me.Button20.Location = New System.Drawing.Point(184, 15)
-        Me.Button20.Name = "Button20"
-        Me.Button20.Size = New System.Drawing.Size(50, 24)
-        Me.Button20.TabIndex = 103
-        Me.Button20.Text = "Search"
-        Me.Button20.UseVisualStyleBackColor = True
+        Me.btnOkMedicamento.Location = New System.Drawing.Point(425, 257)
+        Me.btnOkMedicamento.Name = "btnOkMedicamento"
+        Me.btnOkMedicamento.Size = New System.Drawing.Size(97, 46)
+        Me.btnOkMedicamento.TabIndex = 107
+        Me.btnOkMedicamento.Text = "Ok"
+        Me.btnOkMedicamento.UseVisualStyleBackColor = True
+        '
+        'btnCancelMedicamento
+        '
+        Me.btnCancelMedicamento.Location = New System.Drawing.Point(308, 257)
+        Me.btnCancelMedicamento.Name = "btnCancelMedicamento"
+        Me.btnCancelMedicamento.Size = New System.Drawing.Size(97, 46)
+        Me.btnCancelMedicamento.TabIndex = 106
+        Me.btnCancelMedicamento.Text = "Cancel"
+        Me.btnCancelMedicamento.UseVisualStyleBackColor = True
+        '
+        'btnAddMedicamento
+        '
+        Me.btnAddMedicamento.Location = New System.Drawing.Point(20, 293)
+        Me.btnAddMedicamento.Name = "btnAddMedicamento"
+        Me.btnAddMedicamento.Size = New System.Drawing.Size(95, 29)
+        Me.btnAddMedicamento.TabIndex = 105
+        Me.btnAddMedicamento.Text = "Add "
+        Me.btnAddMedicamento.UseVisualStyleBackColor = True
+        '
+        'btnEditMedicamento
+        '
+        Me.btnEditMedicamento.Location = New System.Drawing.Point(121, 293)
+        Me.btnEditMedicamento.Name = "btnEditMedicamento"
+        Me.btnEditMedicamento.Size = New System.Drawing.Size(113, 29)
+        Me.btnEditMedicamento.TabIndex = 104
+        Me.btnEditMedicamento.Text = "Edit"
+        Me.btnEditMedicamento.UseVisualStyleBackColor = True
+        '
+        'btnSearchMedicamento
+        '
+        Me.btnSearchMedicamento.Location = New System.Drawing.Point(184, 15)
+        Me.btnSearchMedicamento.Name = "btnSearchMedicamento"
+        Me.btnSearchMedicamento.Size = New System.Drawing.Size(50, 24)
+        Me.btnSearchMedicamento.TabIndex = 103
+        Me.btnSearchMedicamento.Text = "Search"
+        Me.btnSearchMedicamento.UseVisualStyleBackColor = True
         '
         'TextBox99
         '
@@ -1857,17 +1939,16 @@ Partial Class Form1
         Me.TextBox79.Size = New System.Drawing.Size(312, 20)
         Me.TextBox79.TabIndex = 96
         '
-        'ListBox14
+        'ListMedicamentos
         '
-        Me.ListBox14.FormattingEnabled = True
-        Me.ListBox14.Location = New System.Drawing.Point(19, 45)
-        Me.ListBox14.Name = "ListBox14"
-        Me.ListBox14.Size = New System.Drawing.Size(214, 277)
-        Me.ListBox14.TabIndex = 95
+        Me.ListMedicamentos.FormattingEnabled = True
+        Me.ListMedicamentos.Location = New System.Drawing.Point(19, 45)
+        Me.ListMedicamentos.Name = "ListMedicamentos"
+        Me.ListMedicamentos.Size = New System.Drawing.Size(214, 238)
+        Me.ListMedicamentos.TabIndex = 95
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.Button17)
         Me.GroupBox1.Controls.Add(Me.Label82)
         Me.GroupBox1.Controls.Add(Me.Label83)
         Me.GroupBox1.Controls.Add(Me.TextBox80)
@@ -1885,15 +1966,6 @@ Partial Class Form1
         Me.GroupBox1.TabIndex = 56
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Serviços"
-        '
-        'Button17
-        '
-        Me.Button17.Location = New System.Drawing.Point(470, 281)
-        Me.Button17.Name = "Button17"
-        Me.Button17.Size = New System.Drawing.Size(75, 23)
-        Me.Button17.TabIndex = 112
-        Me.Button17.Text = "Sair"
-        Me.Button17.UseVisualStyleBackColor = True
         '
         'Label82
         '
@@ -1983,22 +2055,6 @@ Partial Class Form1
         Me.ListBox15.Size = New System.Drawing.Size(214, 277)
         Me.ListBox15.TabIndex = 101
         '
-        'TextBox38
-        '
-        Me.TextBox38.Location = New System.Drawing.Point(476, 49)
-        Me.TextBox38.Name = "TextBox38"
-        Me.TextBox38.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox38.TabIndex = 112
-        '
-        'Label40
-        '
-        Me.Label40.AutoSize = True
-        Me.Label40.Location = New System.Drawing.Point(473, 30)
-        Me.Label40.Name = "Label40"
-        Me.Label40.Size = New System.Drawing.Size(39, 13)
-        Me.Label40.TabIndex = 113
-        Me.Label40.Text = "Salario"
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2034,50 +2090,50 @@ Partial Class Form1
     Friend WithEvents TabControl1 As TabControl
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents TabPage2 As TabPage
-    Friend WithEvents TextBox11 As TextBox
-    Friend WithEvents TextBox10 As TextBox
-    Friend WithEvents TextBox9 As TextBox
-    Friend WithEvents TextBox8 As TextBox
-    Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents ListBox1 As ListBox
+    Friend WithEvents CodPostalPaciente As TextBox
+    Friend WithEvents CodigoPaciente As TextBox
+    Friend WithEvents SexoPaciente As TextBox
+    Friend WithEvents DataPaciente As TextBox
+    Friend WithEvents TelefonePaciente As TextBox
+    Friend WithEvents NacionalidadePaciente As TextBox
+    Friend WithEvents EnderecoPaciente As TextBox
+    Friend WithEvents EmailPaciente As TextBox
+    Friend WithEvents CcPaciente As TextBox
+    Friend WithEvents TelemovelPaciente As TextBox
+    Friend WithEvents NomePaciente As TextBox
+    Friend WithEvents ListPacientes As ListBox
     Friend WithEvents TabPage3 As TabPage
     Friend WithEvents TabPage4 As TabPage
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label11 As Label
-    Friend WithEvents Label10 As Label
-    Friend WithEvents Label9 As Label
-    Friend WithEvents Label8 As Label
-    Friend WithEvents Label7 As Label
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Label23 As Label
+    Friend WithEvents LabelNomePaciente As Label
+    Friend WithEvents LabelNacionalidadePaciente As Label
+    Friend WithEvents LabelDataPaciente As Label
+    Friend WithEvents LabelCodigoPaciente As Label
+    Friend WithEvents LabelCodPostalPaciente As Label
+    Friend WithEvents LabelEnderecoPaciente As Label
+    Friend WithEvents LabelEmailPaciente As Label
+    Friend WithEvents LabelSexoPaciente As Label
+    Friend WithEvents LabelTelefonePaciente As Label
+    Friend WithEvents LabelTelemovelPaciente As Label
+    Friend WithEvents LabelCcPaciente As Label
+    Friend WithEvents btnListFaturasPaciente As Button
+    Friend WithEvents btnListSegurosPaciente As Button
+    Friend WithEvents btnListIntervencoesPaciente As Button
+    Friend WithEvents btnListInternamentosPaciente As Button
+    Friend WithEvents LabelEspecialidade As Label
     Friend WithEvents TextBox23 As TextBox
-    Friend WithEvents Button5 As Button
-    Friend WithEvents Button7 As Button
-    Friend WithEvents Label12 As Label
-    Friend WithEvents Label13 As Label
-    Friend WithEvents Label14 As Label
-    Friend WithEvents Label15 As Label
-    Friend WithEvents Label16 As Label
-    Friend WithEvents Label17 As Label
-    Friend WithEvents Label18 As Label
-    Friend WithEvents Label19 As Label
-    Friend WithEvents Label20 As Label
-    Friend WithEvents Label21 As Label
-    Friend WithEvents Label22 As Label
+    Friend WithEvents btnListInternamentosMedico As Button
+    Friend WithEvents btnListIntervencoesMedico As Button
+    Friend WithEvents LabelNacionalidadeMedico As Label
+    Friend WithEvents LabelDataMedico As Label
+    Friend WithEvents LabelCodigoMedico As Label
+    Friend WithEvents LabelCodPostalMedico As Label
+    Friend WithEvents LabelEnderecoMedico As Label
+    Friend WithEvents LabelEmailMedico As Label
+    Friend WithEvents LabelSexoMedico As Label
+    Friend WithEvents LabelTelefoneMedico As Label
+    Friend WithEvents LabelTelemovelMedico As Label
+    Friend WithEvents LabelCcMedico As Label
+    Friend WithEvents LabelNomeMedico As Label
     Friend WithEvents TextBox12 As TextBox
     Friend WithEvents TextBox13 As TextBox
     Friend WithEvents TextBox14 As TextBox
@@ -2088,13 +2144,13 @@ Partial Class Form1
     Friend WithEvents TextBox19 As TextBox
     Friend WithEvents TextBox20 As TextBox
     Friend WithEvents TextBox21 As TextBox
-    Friend WithEvents TextBox22 As TextBox
-    Friend WithEvents ListBox2 As ListBox
+    Friend WithEvents NomeMedico As TextBox
+    Friend WithEvents ListMedicos As ListBox
     Friend WithEvents TabPage5 As TabPage
-    Friend WithEvents Button8 As Button
+    Friend WithEvents btnListServicosMedico As Button
     Friend WithEvents Label24 As Label
     Friend WithEvents TextBox24 As TextBox
-    Friend WithEvents Button10 As Button
+    Friend WithEvents btnListIntervencoesInternamento As Button
     Friend WithEvents Label27 As Label
     Friend WithEvents Label29 As Label
     Friend WithEvents Label30 As Label
@@ -2107,14 +2163,14 @@ Partial Class Form1
     Friend WithEvents TextBox32 As TextBox
     Friend WithEvents TextBox33 As TextBox
     Friend WithEvents TextBox35 As TextBox
-    Friend WithEvents ListBox3 As ListBox
+    Friend WithEvents ListInternamentos As ListBox
     Friend WithEvents Label33 As Label
     Friend WithEvents Label36 As Label
     Friend WithEvents Label37 As Label
     Friend WithEvents TextBox29 As TextBox
     Friend WithEvents TextBox36 As TextBox
     Friend WithEvents TextBox37 As TextBox
-    Friend WithEvents ListBox4 As ListBox
+    Friend WithEvents ListIntervencoes As ListBox
     Friend WithEvents Label38 As Label
     Friend WithEvents Label32 As Label
     Friend WithEvents Label28 As Label
@@ -2125,11 +2181,11 @@ Partial Class Form1
     Friend WithEvents TextBox25 As TextBox
     Friend WithEvents Label25 As Label
     Friend WithEvents ListBox5 As ListBox
-    Friend WithEvents btnAdd As Button
-    Friend WithEvents btnEdit As Button
+    Friend WithEvents btnAddPaciente As Button
+    Friend WithEvents btnEditPaciente As Button
     Friend WithEvents TabPage8 As TabPage
-    Friend WithEvents Button9 As Button
-    Friend WithEvents Button11 As Button
+    Friend WithEvents btnListInternamentosEnfermeiro As Button
+    Friend WithEvents btnListIntervencoesEnfermeiro As Button
     Friend WithEvents Label53 As Label
     Friend WithEvents Label54 As Label
     Friend WithEvents Label55 As Label
@@ -2152,14 +2208,14 @@ Partial Class Form1
     Friend WithEvents TextBox60 As TextBox
     Friend WithEvents TextBox61 As TextBox
     Friend WithEvents TextBox62 As TextBox
-    Friend WithEvents ListBox9 As ListBox
+    Friend WithEvents ListEnfermeiros As ListBox
     Friend WithEvents Label42 As Label
     Friend WithEvents Label44 As Label
     Friend WithEvents Label45 As Label
     Friend WithEvents TextBox42 As TextBox
     Friend WithEvents TextBox43 As TextBox
     Friend WithEvents TextBox44 As TextBox
-    Friend WithEvents ListBox6 As ListBox
+    Friend WithEvents ListFaturas As ListBox
     Friend WithEvents TabPage7 As TabPage
     Friend WithEvents Label46 As Label
     Friend WithEvents Label50 As Label
@@ -2167,10 +2223,10 @@ Partial Class Form1
     Friend WithEvents TextBox45 As TextBox
     Friend WithEvents TextBox49 As TextBox
     Friend WithEvents TextBox50 As TextBox
-    Friend WithEvents ListBox8 As ListBox
-    Friend WithEvents btnOk As Button
-    Friend WithEvents btnCancel As Button
-    Friend WithEvents Button12 As Button
+    Friend WithEvents ListServicos As ListBox
+    Friend WithEvents btnOkPaciente As Button
+    Friend WithEvents btnCancelPaciente As Button
+    Friend WithEvents btnListReceitasExecEnfermeiro As Button
     Friend WithEvents TabPage9 As TabPage
     Friend WithEvents Label78 As Label
     Friend WithEvents Label52 As Label
@@ -2182,9 +2238,8 @@ Partial Class Form1
     Friend WithEvents TextBox77 As TextBox
     Friend WithEvents TextBox78 As TextBox
     Friend WithEvents TextBox79 As TextBox
-    Friend WithEvents ListBox14 As ListBox
+    Friend WithEvents ListMedicamentos As ListBox
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents Button17 As Button
     Friend WithEvents Label82 As Label
     Friend WithEvents Label83 As Label
     Friend WithEvents TextBox80 As TextBox
@@ -2196,32 +2251,38 @@ Partial Class Form1
     Friend WithEvents TextBox83 As TextBox
     Friend WithEvents TextBox84 As TextBox
     Friend WithEvents ListBox15 As ListBox
-    Friend WithEvents Button20 As Button
+    Friend WithEvents btnSearchMedicamento As Button
     Friend WithEvents TextBox99 As TextBox
-    Friend WithEvents Button22 As Button
+    Friend WithEvents btnSearchEnfermeiro As Button
     Friend WithEvents TextBox101 As TextBox
-    Friend WithEvents Button21 As Button
+    Friend WithEvents btnSearchFatura As Button
     Friend WithEvents TextBox100 As TextBox
-    Friend WithEvents Button23 As Button
-    Friend WithEvents TextBox102 As TextBox
-    Friend WithEvents Button24 As Button
+    Friend WithEvents btnSearchMedico As Button
+    Friend WithEvents SearchMedico As TextBox
+    Friend WithEvents btnSearchIntervencao As Button
     Friend WithEvents TextBox103 As TextBox
-    Friend WithEvents Button25 As Button
+    Friend WithEvents btnSearchInternamento As Button
     Friend WithEvents TextBox104 As TextBox
-    Friend WithEvents Button26 As Button
+    Friend WithEvents btnSearchServico As Button
     Friend WithEvents TextBox105 As TextBox
-    Friend WithEvents Button27 As Button
-    Friend WithEvents TextBox106 As TextBox
-    Friend WithEvents btnEditEnf As Button
-    Friend WithEvents btnAddEnf As Button
-    Friend WithEvents btnCancelEnf As Button
-    Friend WithEvents btnOkEnf As Button
-    Friend WithEvents btnOkDoc As Button
-    Friend WithEvents btnCancelDoc As Button
-    Friend WithEvents btnAddDoc As Button
-    Friend WithEvents btnEditDoc As Button
-    Friend WithEvents Label39 As Label
+    Friend WithEvents btnSearchPaciente As Button
+    Friend WithEvents SearchPaciente As TextBox
+    Friend WithEvents btnEditEnfermeiro As Button
+    Friend WithEvents btnAddEnfermeiro As Button
+    Friend WithEvents btnCancelEnfermeiro As Button
+    Friend WithEvents btnOkEnfermeiro As Button
+    Friend WithEvents btnOkMedico As Button
+    Friend WithEvents btnCancelMedico As Button
+    Friend WithEvents btnAddMedico As Button
+    Friend WithEvents btnEditMedico As Button
+    Friend WithEvents LabelSalario As Label
     Friend WithEvents TextBox39 As TextBox
     Friend WithEvents Label40 As Label
     Friend WithEvents TextBox38 As TextBox
+    Friend WithEvents btnOkMedicamento As Button
+    Friend WithEvents btnCancelMedicamento As Button
+    Friend WithEvents btnAddMedicamento As Button
+    Friend WithEvents btnEditMedicamento As Button
+    Friend WithEvents btnListEnfermeirosServico As Button
+    Friend WithEvents btnListMedicosServico As Button
 End Class

@@ -1,6 +1,6 @@
 ﻿Friend Class Paciente
-    Public Property Nome As Object
-    Public Property Codigo As Object
+    Public Property Nome As String
+    Public Property Codigo As String
     Public Property CC As String
     Public Property DataDeNascimento As Date
     Public Property Email As String
