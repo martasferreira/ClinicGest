@@ -11,6 +11,7 @@
     Public Property Telemovel As String
     Public Property Telefone As String
     Public Property Endereço As String
+    Public Property Salario As Object
 
     Overrides Function ToString() As String
         Return Nome

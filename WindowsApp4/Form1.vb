@@ -44,9 +44,9 @@ Public Class Form1
         btnOkDoc.Visible = False
         btnCancelDoc.Visible = False
 
-        Button9.Visible = True
-        Button11.Visible = True
-        Button12.Visible = True
+        Button5.Visible = True
+        Button7.Visible = True
+        Button8.Visible = True
     End Sub
 
     Private Sub ShowButtonsEnfermeiro()
@@ -56,9 +56,9 @@ Public Class Form1
         btnOkEnf.Visible = False
         btnCancelEnf.Visible = False
 
-        Button5.Visible = True
-        Button7.Visible = True
-        Button8.Visible = True
+        Button9.Visible = True
+        Button11.Visible = True
+        Button12.Visible = True
     End Sub
 
     Private Sub TerMedicamentos(cN As SqlConnection)
@@ -206,6 +206,7 @@ Public Class Form1
             M.Nacionalidade = Convert.ToString(IIf(RDR.IsDBNull(RDR.GetOrdinal("nacionalidade")), "", RDR.Item("nacionalidade")))
             M.Telemovel = Convert.ToString(IIf(RDR.IsDBNull(RDR.GetOrdinal("telemovel")), "", RDR.Item("telemovel")))
             M.Telefone = Convert.ToString(IIf(RDR.IsDBNull(RDR.GetOrdinal("telefone")), "", RDR.Item("telefone")))
+            M.Salario = Convert.ToString(IIf(RDR.IsDBNull(RDR.GetOrdinal("salario")), "", RDR.Item("salario")))
 
             ListBox9.Items.Add(M)
         End While
@@ -239,6 +240,7 @@ Public Class Form1
             M.Nacionalidade = Convert.ToString(IIf(RDR.IsDBNull(RDR.GetOrdinal("nacionalidade")), "", RDR.Item("nacionalidade")))
             M.Telemovel = Convert.ToString(IIf(RDR.IsDBNull(RDR.GetOrdinal("telemovel")), "", RDR.Item("telemovel")))
             M.Telefone = Convert.ToString(IIf(RDR.IsDBNull(RDR.GetOrdinal("telefone")), "", RDR.Item("telefone")))
+            M.Salario = Convert.ToString(IIf(RDR.IsDBNull(RDR.GetOrdinal("salario")), "", RDR.Item("salario")))
 
             ListBox2.Items.Add(M)
         End While
@@ -265,6 +267,7 @@ Public Class Form1
         TextBox14.Text = medico.Sexo
         TextBox13.Text = medico.Codigo
         TextBox12.Text = medico.CodigoPostal
+        TextBox39.Text = medico.Salario
 
     End Sub
 
@@ -346,8 +349,8 @@ Public Class Form1
 
     Sub LockControlsEnf()
         TextBox62.ReadOnly = True
-        TextBox60.ReadOnly = True
         TextBox53.ReadOnly = True
+        TextBox60.ReadOnly = True
         TextBox55.ReadOnly = True
         TextBox59.ReadOnly = True
         TextBox54.ReadOnly = True
@@ -356,12 +359,12 @@ Public Class Form1
         TextBox57.ReadOnly = True
         TextBox61.ReadOnly = True
         TextBox56.ReadOnly = True
+        TextBox38.ReadOnly = True
     End Sub
 
     Sub UnLockControlsEnf()
         TextBox62.ReadOnly = False
         TextBox60.ReadOnly = False
-        TextBox53.ReadOnly = False
         TextBox55.ReadOnly = False
         TextBox59.ReadOnly = False
         TextBox54.ReadOnly = False
@@ -370,6 +373,7 @@ Public Class Form1
         TextBox57.ReadOnly = False
         TextBox61.ReadOnly = False
         TextBox56.ReadOnly = False
+        TextBox38.ReadOnly = False
     End Sub
 
     Sub UnLockControlsPaciente()
@@ -389,8 +393,8 @@ Public Class Form1
         TextBox22.ReadOnly = True
         TextBox23.ReadOnly = True
         TextBox20.ReadOnly = True
-        TextBox13.ReadOnly = True
         TextBox15.ReadOnly = True
+        TextBox13.ReadOnly = True
         TextBox19.ReadOnly = True
         TextBox14.ReadOnly = True
         TextBox18.ReadOnly = True
@@ -398,13 +402,13 @@ Public Class Form1
         TextBox17.ReadOnly = True
         TextBox21.ReadOnly = True
         TextBox16.ReadOnly = True
+        TextBox39.ReadOnly = True
     End Sub
 
     Sub UnLockControlsDoc()
         TextBox22.ReadOnly = False
         TextBox23.ReadOnly = False
         TextBox20.ReadOnly = False
-        TextBox13.ReadOnly = False
         TextBox15.ReadOnly = False
         TextBox19.ReadOnly = False
         TextBox14.ReadOnly = False
@@ -413,6 +417,7 @@ Public Class Form1
         TextBox17.ReadOnly = False
         TextBox21.ReadOnly = False
         TextBox16.ReadOnly = False
+        TextBox39.ReadOnly = False
     End Sub
 
     Sub ClearFieldsPaciente()
@@ -432,7 +437,6 @@ Public Class Form1
     Sub ClearFieldsEnf()
         TextBox62.Text = ""
         TextBox60.Text = ""
-        TextBox53.Text = ""
         TextBox55.Text = ""
         TextBox59.Text = ""
         TextBox54.Text = ""
@@ -441,13 +445,13 @@ Public Class Form1
         TextBox57.Text = ""
         TextBox61.Text = ""
         TextBox56.Text = ""
+        TextBox38.Text = ""
     End Sub
 
     Sub ClearFieldsDoc()
         TextBox22.Text = ""
         TextBox23.Text = ""
         TextBox20.Text = ""
-        TextBox13.Text = ""
         TextBox15.Text = ""
         TextBox19.Text = ""
         TextBox14.Text = ""
@@ -456,6 +460,7 @@ Public Class Form1
         TextBox17.Text = ""
         TextBox21.Text = ""
         TextBox16.Text = ""
+        TextBox39.Text = ""
     End Sub
 
     Sub ShowPaciente()
@@ -492,6 +497,7 @@ Public Class Form1
         TextBox54.Text = enfermeiro.Sexo
         TextBox53.Text = enfermeiro.Codigo
         TextBox52.Text = enfermeiro.CodigoPostal
+        TextBox38.Text = enfermeiro.Salario
 
     End Sub
 
@@ -887,7 +893,6 @@ Public Class Form1
             medico.Nome = TextBox22.Text
             medico.Especialidade = TextBox23.Text
             medico.CC = TextBox20.Text
-            medico.Codigo = TextBox13.Text
             medico.DataDeNascimento = TextBox15.Text
             medico.Email = TextBox19.Text
             medico.Sexo = TextBox14.Text
@@ -896,6 +901,7 @@ Public Class Form1
             medico.Nacionalidade = TextBox17.Text
             medico.Telemovel = TextBox21.Text
             medico.Telefone = TextBox16.Text
+            medico.Salario = TextBox39.Text
 
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -917,7 +923,6 @@ Public Class Form1
 
             enfermeiro.Nome = TextBox62.Text
             enfermeiro.CC = TextBox60.Text
-            enfermeiro.Codigo = TextBox53.Text
             enfermeiro.DataDeNascimento = TextBox55.Text
             enfermeiro.Email = TextBox59.Text
             enfermeiro.Sexo = TextBox54.Text
@@ -926,6 +931,7 @@ Public Class Form1
             enfermeiro.Nacionalidade = TextBox57.Text
             enfermeiro.Telemovel = TextBox61.Text
             enfermeiro.Telefone = TextBox56.Text
+            enfermeiro.Salario = TextBox38.Text
 
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -952,7 +958,7 @@ Public Class Form1
             "    telefone = @telefone, " &
             "    sexo = @sexo, " &
             "    codigopostal = @codigopostal " &
-            "WHERE cc = @cc"
+            "WHERE cc = @cc; UPDATE ClinicGest.Staff SET salario = @salario, cc_staff = @cc WHERE cc_staff = @cc"
         CMD1.Parameters.Clear()
         CMD1.Parameters.AddWithValue("@nome", P.Nome)
         CMD1.Parameters.AddWithValue("@telemovel", P.Telemovel)
@@ -963,8 +969,8 @@ Public Class Form1
         CMD1.Parameters.AddWithValue("@telefone", P.Telefone)
         CMD1.Parameters.AddWithValue("@data_nasc", P.DataDeNascimento)
         CMD1.Parameters.AddWithValue("@sexo", P.Sexo)
-        CMD1.Parameters.AddWithValue("@codigo", P.Codigo)
         CMD1.Parameters.AddWithValue("@codigopostal", P.CodigoPostal)
+        CMD1.Parameters.AddWithValue("@salario", P.Salario)
         CN.Open()
         Try
             CMD1.ExecuteNonQuery()
@@ -979,7 +985,7 @@ Public Class Form1
         CMD1.CommandText = "INSERT ClinicGest.Pessoa (nome, telemovel, cc, email, " &
                           "endereco, nacionalidade, telefone, sexo,codigopostal) " &
                           "VALUES (@nome, @telemovel, @cc, @email, " &
-                          "@endereco, @nacionalidade, @telefone, @sexo, @codigopostal); INSERT ClinicGest.Medico (codigo_emp, especialidade) VALUES (@codigo, @especialidade);  INSERT ClinicGest.Staff (cc_staff) VALUES (@cc)"
+                          "@endereco, @nacionalidade, @telefone, @sexo, @codigopostal); INSERT ClinicGest.Medico (codigo_emp, especialidade) VALUES ((select codigo_staff from ClinicGest.Staff where cc_staff = @cc) ,@especialidade);  INSERT ClinicGest.Staff (cc_staff,salario) VALUES (@cc, @salario)"
         CMD1.Parameters.Clear()
         CMD1.Parameters.AddWithValue("@nome", P.Nome)
         CMD1.Parameters.AddWithValue("@especialidade", P.Especialidade)
@@ -991,8 +997,8 @@ Public Class Form1
         CMD1.Parameters.AddWithValue("@telefone", P.Telefone)
         CMD1.Parameters.AddWithValue("@data_nasc", P.DataDeNascimento)
         CMD1.Parameters.AddWithValue("@sexo", P.Sexo)
-        CMD1.Parameters.AddWithValue("@codigo", P.Codigo)
         CMD1.Parameters.AddWithValue("@codigopostal", P.CodigoPostal)
+        CMD1.Parameters.AddWithValue("@salario", P.Salario)
         CN.Open()
         Try
             CMD1.ExecuteNonQuery()
@@ -1008,7 +1014,7 @@ Public Class Form1
         CMD1.CommandText = "INSERT ClinicGest.Pessoa (nome, telemovel, cc, email, " &
                           "endereco, nacionalidade, telefone, sexo,codigopostal) " &
                           "VALUES (@nome, @telemovel, @cc, @email, " &
-                          "@endereco, @nacionalidade, @telefone, @sexo, @codigopostal); INSERT ClinicGest.Enfermeiro (codigo_enf) VALUES (@codigo);  INSERT ClinicGest.Staff (codigo_staff, cc_staff) VALUES (@codigo, @cc)"
+                          "@endereco, @nacionalidade, @telefone, @sexo, @codigopostal); INSERT ClinicGest.Enfermeiro (codigo_enf) VALUES (select codigo_staff from ClinicGest.Staff where cc_staff = @cc);  INSERT ClinicGest.Staff (cc_staff,salario) VALUES (@cc, @salario)"
         CMD1.Parameters.Clear()
         CMD1.Parameters.AddWithValue("@nome", P.Nome)
         CMD1.Parameters.AddWithValue("@telemovel", P.Telemovel)
@@ -1019,8 +1025,8 @@ Public Class Form1
         CMD1.Parameters.AddWithValue("@telefone", P.Telefone)
         CMD1.Parameters.AddWithValue("@data_nasc", P.DataDeNascimento)
         CMD1.Parameters.AddWithValue("@sexo", P.Sexo)
-        CMD1.Parameters.AddWithValue("@codigo", P.Codigo)
         CMD1.Parameters.AddWithValue("@codigopostal", P.CodigoPostal)
+        CMD1.Parameters.AddWithValue("@salario", P.Salario)
         CN.Open()
         Try
             CMD1.ExecuteNonQuery()
@@ -1043,7 +1049,7 @@ Public Class Form1
             "    telefone = @telefone, " &
             "    sexo = @sexo, " &
             "    codigopostal = @codigopostal " &
-            "WHERE cc = @cc"
+            "WHERE cc = @cc; UPDATE ClinicGest.Staff SET salario = @salario, cc_staff = @cc WHERE cc_staff = @cc"
         CMD1.Parameters.Clear()
         CMD1.Parameters.AddWithValue("@nome", P.Nome)
         CMD1.Parameters.AddWithValue("@telemovel", P.Telemovel)
@@ -1054,8 +1060,8 @@ Public Class Form1
         CMD1.Parameters.AddWithValue("@telefone", P.Telefone)
         CMD1.Parameters.AddWithValue("@data_nasc", P.DataDeNascimento)
         CMD1.Parameters.AddWithValue("@sexo", P.Sexo)
-        CMD1.Parameters.AddWithValue("@codigo", P.Codigo)
         CMD1.Parameters.AddWithValue("@codigopostal", P.CodigoPostal)
+        CMD1.Parameters.AddWithValue("@salario", P.Salario)
         CN.Open()
         Try
             CMD1.ExecuteNonQuery()
@@ -1088,4 +1094,5 @@ Public Class Form1
         ListBox9.SelectedIndex = idx
         ShowButtonsEnfermeiro()
     End Sub
+
 End Class

@@ -10,7 +10,7 @@
     Public Property Sexo As String
     Public Property Codigo As String
     Public Property CodigoPostal As String
-
+    Public Property Salario As Object
 
     Overrides Function ToString() As String
         Return Nome
