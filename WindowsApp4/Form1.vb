@@ -5,8 +5,8 @@ Imports WindowsApp4
 
 Public Class Form1
 
+    Private Const connectionString = "Data Source=tcp:mednat.ieeta.pt\SQLSERVER,8101;Initial Catalog=p4g9;User ID=p4g9;Password=ClinicG3st;Connection Timeout=50;"
     Dim CN As SqlConnection
-    Dim CMD1 As SqlCommand
     Dim currentPaciente As Integer
     Dim adding As Boolean
     Dim currentMedico As Integer
@@ -15,6 +15,7 @@ Public Class Form1
     Dim currentIntervencao As Integer
     Dim currentServico As Integer
     Dim currentMedicamento As Integer
+    Dim currentProdutoIntervencao As Integer
 
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'nao sei o que é para escrever
@@ -24,16 +25,14 @@ Public Class Form1
         ShowButtonsEnfermeiro()
         ShowButtonsMedicamento()
 
-
-        CN = New SqlConnection("Data Source=tcp:mednat.ieeta.pt\SQLSERVER,8101;Initial Catalog=p4g9;User ID=p4g9;Password=ClinicG3st;Connection Timeout=50;")
-        TerPacientes(CN)
-        TerMedicos(CN)
-        TerEnfermeiros(CN)
-        TerInternamentos(CN)
-        TerIntervencoes(CN)
-        'TerFaturas(CN)
-        TerServiços(CN)
-        TerMedicamentos(CN)
+        CN = New SqlConnection(connectionString)
+        TerPacientes()
+        TerMedicos()
+        TerEnfermeiros()
+        TerInternamentos()
+        'TerFaturas()
+        TerServiços()
+        TerMedicamentos()
 
     End Sub
 
@@ -138,14 +137,15 @@ Public Class Form1
 
 #Region "Add To List"
 
-    Private Sub TerPacientes(CN As SqlConnection)
-        CMD1 = New SqlCommand
-        CMD1.Connection = CN
-        'nao sei qual é o comando porque temos que ir buscar atributos de pessoa e de paciente
-        CMD1.CommandText = "SELECT * FROM ClinicGest.Pessoa JOIN ClinicGest.Paciente ON Pessoa.cc = Paciente.cc_pac"
+    Private Sub TerPacientes()
+        Dim cmd = New SqlCommand With {
+            .Connection = CN,
+            .CommandText = "SELECT * FROM ClinicGest.Pessoa " &
+            "JOIN ClinicGest.Paciente ON Pessoa.cc = Paciente.cc_pac"
+        }
         CN.Open()
         Dim RDR As SqlDataReader
-        RDR = CMD1.ExecuteReader
+        RDR = cmd.ExecuteReader
         ListPacientes.Items.Clear()
         While RDR.Read
             Dim P As New Paciente
@@ -166,17 +166,19 @@ Public Class Form1
         CN.Close()
         currentPaciente = 0
         ShowPaciente()
+
     End Sub
 
-    Private Sub TerEnfermeiros(cN As SqlConnection)
-
-        CMD1 = New SqlCommand
-        CMD1.Connection = cN
-        'nao sei qual é o comando porque temos que ir buscar atributos de pessoa e de paciente
-        CMD1.CommandText = "Select * from ClinicGest.Pessoa as pessoa join ClinicGest.Staff as staff on pessoa.cc =staff.cc_staff join ClinicGest.Enfermeiro as enfermeiro on staff.codigo_staff =enfermeiro.codigo_emp"
-        cN.Open()
+    Private Sub TerEnfermeiros()
+        Dim cmd = New SqlCommand With {
+            .Connection = CN,
+            .CommandText = "SELECT * from ClinicGest.Pessoa AS pessoa " &
+            "JOIN ClinicGest.Staff AS staff ON pessoa.cc = staff.cc_staff " &
+            "JOIN ClinicGest.Enfermeiro AS enfermeiro ON staff.codigo_staff = enfermeiro.codigo_emp"
+        }
+        CN.Open()
         Dim RDR As SqlDataReader
-        RDR = CMD1.ExecuteReader
+        RDR = cmd.ExecuteReader
         ListEnfermeiros.Items.Clear()
         While RDR.Read
             Dim M As New Enfermeiro
@@ -195,21 +197,23 @@ Public Class Form1
 
             ListEnfermeiros.Items.Add(M)
         End While
-        cN.Close()
+        CN.Close()
         currentEnfermeiro = 0
         ShowEnfermeiro()
 
-
     End Sub
 
-    Private Sub TerMedicos(cN As SqlConnection)
-        CMD1 = New SqlCommand
-        CMD1.Connection = cN
-        'nao sei qual é o comando porque temos que ir buscar atributos de pessoa e de paciente
-        CMD1.CommandText = "Select * from ClinicGest.Pessoa as pessoa join ClinicGest.Staff as staff on pessoa.cc =staff.cc_staff join ClinicGest.Medico as medico on staff.codigo_staff =medico.codigo_emp"
-        cN.Open()
+    Private Sub TerMedicos()
+
+        Dim cmd = New SqlCommand With {
+            .Connection = CN,
+            .CommandText = "SELECT * from ClinicGest.Pessoa AS pessoa " &
+            "JOIN ClinicGest.Staff AS staff ON pessoa.cc = staff.cc_staff " &
+            "JOIN ClinicGest.Medico AS medico ON staff.codigo_staff = medico.codigo_emp"
+        }
+        CN.Open()
         Dim RDR As SqlDataReader
-        RDR = CMD1.ExecuteReader
+        RDR = cmd.ExecuteReader
         ListMedicos.Items.Clear()
         While RDR.Read
             Dim M As New Medico
@@ -229,20 +233,21 @@ Public Class Form1
 
             ListMedicos.Items.Add(M)
         End While
-        cN.Close()
+        CN.Close()
         currentMedico = 0
         ShowMedico()
 
     End Sub
 
-    Private Sub TerMedicamentos(cN As SqlConnection)
-        CMD1 = New SqlCommand
-        CMD1.Connection = cN
-        'nao sei qual é o comando porque temos que ir buscar atributos de pessoa e de paciente
-        CMD1.CommandText = "Select * from ClinicGest.Medicamento"
-        cN.Open()
+    Private Sub TerMedicamentos()
+
+        Dim cmd = New SqlCommand With {
+            .Connection = CN,
+            .CommandText = "SELECT * FROM ClinicGest.Medicamento"
+        }
+        CN.Open()
         Dim RDR As SqlDataReader
-        RDR = CMD1.ExecuteReader
+        RDR = cmd.ExecuteReader
         ListMedicamentos.Items.Clear()
         While RDR.Read
             Dim M As New Medicamento
@@ -251,20 +256,21 @@ Public Class Form1
             M.Custo = Convert.ToString(IIf(RDR.IsDBNull(RDR.GetOrdinal("preco_unitario")), "", RDR.Item("preco_unitario")))
             ListMedicamentos.Items.Add(M)
         End While
-        cN.Close()
+        CN.Close()
         currentMedicamento = 0
         ShowMedicamento()
+
     End Sub
 
-    Private Sub TerServiços(cN As SqlConnection)
+    Private Sub TerServiços()
 
-        CMD1 = New SqlCommand
-        CMD1.Connection = cN
-        'nao sei qual é o comando porque temos que ir buscar atributos de pessoa e de paciente
-        CMD1.CommandText = "Select * from ClinicGest.Servico"
-        cN.Open()
+        Dim cmd = New SqlCommand With {
+            .Connection = CN,
+            .CommandText = "SELECT * FROM ClinicGest.Servico"
+        }
+        CN.Open()
         Dim RDR As SqlDataReader
-        RDR = CMD1.ExecuteReader
+        RDR = cmd.ExecuteReader
         ListServicos.Items.Clear()
         While RDR.Read
             Dim M As New Servico
@@ -275,43 +281,22 @@ Public Class Form1
             M.EnfermeiroResponsavel = Convert.ToString(IIf(RDR.IsDBNull(RDR.GetOrdinal("enfermeiro_responsavel")), "", RDR.Item("enfermeiro_responsavel")))
             ListServicos.Items.Add(M)
         End While
-        cN.Close()
+        CN.Close()
         currentServico = 0
         ShowServico()
 
-
     End Sub
 
-    Private Sub TerIntervencoes(cN As SqlConnection)
-        CMD1 = New SqlCommand
-        CMD1.Connection = cN
-        'nao sei qual é o comando porque temos que ir buscar atributos de pessoa e de paciente
-        CMD1.CommandText = "Select * from ClinicGest.Intervencao as intervencao join ClinicGest.GastaProduto as gastaproduto on intervencao.num_intervencao = gastaproduto.gasta_intervencao join ClinicGest.Produto as produto on gastaproduto.gasta_prod =produto.codigo_produto "
-        cN.Open()
-        Dim RDR As SqlDataReader
-        RDR = CMD1.ExecuteReader
-        ListIntervencoes.Items.Clear()
-        While RDR.Read
-            Dim M As New Intervencao
-            M.NumeroInternamento = RDR.Item("int_internamento")
-            M.NumeroIntervencao = RDR.Item("num_intervencao")
-            M.Custo = Convert.ToString(IIf(RDR.IsDBNull(RDR.GetOrdinal("custo")), "", RDR.Item("custo")))
-            ListIntervencoes.Items.Add(M)
-        End While
-        cN.Close()
-        currentIntervencao = 0
-        ShowIntervencao()
+    Private Sub TerInternamentos()
 
-    End Sub
-
-    Private Sub TerInternamentos(cN As SqlConnection)
-        CMD1 = New SqlCommand
-        CMD1.Connection = cN
-        'nao sei qual é o comando porque temos que ir buscar atributos de pessoa e de paciente
-        CMD1.CommandText = "Select * from ClinicGest.Internamento as internamento join ClinicGest.Servico  as servico on internamento.internamento_servico = servico.codigo_servico "
-        cN.Open()
+        Dim cmd = New SqlCommand With {
+            .Connection = CN,
+            .CommandText = "SELECT * FROM ClinicGest.Internamento AS internamento " &
+            "JOIN ClinicGest.Servico AS servico ON internamento.internamento_servico = servico.codigo_servico"
+        }
+        CN.Open()
         Dim RDR As SqlDataReader
-        RDR = CMD1.ExecuteReader
+        RDR = cmd.ExecuteReader
         ListInternamentos.Items.Clear()
         While RDR.Read
             Dim M As New Internamento
@@ -325,9 +310,67 @@ Public Class Form1
 
             ListInternamentos.Items.Add(M)
         End While
-        cN.Close()
+        CN.Close()
         currentInternamento = 0
         ShowInternamento()
+
+    End Sub
+
+    Private Sub TerIntervencoesInternamento()
+
+        If ListInternamentos.Items.Count = 0 Or currentInternamento < 0 Then Exit Sub
+        Dim internamento As New Internamento
+        internamento = CType(ListInternamentos.Items.Item(currentInternamento), Internamento)
+        Dim cmd = New SqlCommand With {
+            .Connection = CN,
+            .CommandText = "SELECT * FROM ClinicGest.Intervencao WHERE int_internamento = @internamento"
+        }
+        cmd.Parameters.Clear()
+        cmd.Parameters.AddWithValue("@internamento", internamento.NumeroInternamento)
+        CN.Open()
+        Dim RDR As SqlDataReader
+        RDR = cmd.ExecuteReader
+        ListIntervencoes.Items.Clear()
+        While RDR.Read
+            Dim M As New Intervencao
+            M.NumeroInternamento = RDR.Item("int_internamento")
+            M.NumeroIntervencao = RDR.Item("num_intervencao")
+            M.Custo = Convert.ToString(IIf(RDR.IsDBNull(RDR.GetOrdinal("custo")), "", RDR.Item("custo")))
+            ListIntervencoes.Items.Add(M)
+        End While
+        CN.Close()
+        currentIntervencao = 0
+        ShowIntervencaoInternamento()
+
+    End Sub
+
+    Private Sub TerProdutosIntervencao()
+
+        If ListIntervencoes.Items.Count = 0 Or currentIntervencao < 0 Then Exit Sub
+        Dim intervencao As New Intervencao
+        intervencao = CType(ListIntervencoes.Items.Item(currentIntervencao), Intervencao)
+
+        Dim cmd = New SqlCommand With {
+            .Connection = CN,
+            .CommandText = "SELECT p.* FROM ClinicGest.GastaProduto gp " &
+            "OUTER JOIN ClinicGest.Produto p ON gp.gasta_prod = p.codigo_produto " &
+            "WHERE gp.gasta_intervencao = @intervencao"
+        }
+        CN.Open()
+        Dim RDR As SqlDataReader
+        RDR = cmd.ExecuteReader
+        ListProdutosIntervencao.Items.Clear()
+        While RDR.Read
+            Dim M As New Produto
+            M.CodigoProduto = RDR.Item("codigo_produto")
+            M.TipoProduto = Convert.ToString(IIf(RDR.IsDBNull(RDR.GetOrdinal("tipo_produto")), "", RDR.Item("tipo_produto")))
+            M.Custo = Convert.ToString(IIf(RDR.IsDBNull(RDR.GetOrdinal("custo")), "", RDR.Item("custo")))
+            M.CustoLimpeza = Convert.ToString(IIf(RDR.IsDBNull(RDR.GetOrdinal("custo_de_limp")), "", RDR.Item("custo_de_limp")))
+            ListProdutosIntervencao.Items.Add(M)
+        End While
+        CN.Close()
+        currentProdutoIntervencao = 0
+        ShowProdutoIntervencao()
 
     End Sub
 
@@ -407,6 +450,30 @@ Public Class Form1
         DataFimInternamento.Text = internamento.DataFim
         PatologiaInternamento.Text = internamento.Patologia
 
+    End Sub
+
+    Private Sub ShowIntervencaoInternamento()
+
+        If ListIntervencoes.Items.Count = 0 Or currentIntervencao < 0 Then Exit Sub
+        Dim intervencao As New Intervencao
+        intervencao = CType(ListIntervencoes.Items.Item(currentIntervencao), Intervencao)
+        NumeroInternameto.Text = intervencao.NumeroInternamento
+        CodigoServicoInternamento.Text = intervencao.NumeroIntervencao
+        NomeServicoInternamento.Text = intervencao.Custo
+
+        TerProdutosIntervencao()
+
+    End Sub
+
+    Private Sub ShowProdutoIntervencao()
+
+        If ListProdutosIntervencao.Items.Count = 0 Or currentProdutoIntervencao < 0 Then Exit Sub
+        Dim produto As New Produto
+        produto = CType(ListProdutosIntervencao.Items.Item(currentProdutoIntervencao), Produto)
+        CodigoProdutoIntervencao.Text = produto.CodigoProduto
+        TipoProdutoIntervencao.Text = produto.TipoProduto
+        CustoProdutoIntervencao.Text = produto.Custo
+        CustoLimpezaIntervencao.Text = produto.CustoLimpeza
 
     End Sub
 
@@ -430,18 +497,6 @@ Public Class Form1
         EnfermeiroServico.Text = servico.EnfermeiroResponsavel
         MedicoServico.Text = servico.MedicoResponsavel
 
-
-    End Sub
-
-    Private Sub ShowIntervencao()
-
-        If ListIntervencoes.Items.Count = 0 Or currentIntervencao < 0 Then Exit Sub
-        Dim intervencao As New Intervencao
-        intervencao = CType(ListIntervencoes.Items.Item(currentIntervencao), Intervencao)
-        NumeroInternameto.Text = intervencao.NumeroInternamento
-        CodigoServicoInternamento.Text = intervencao.NumeroIntervencao
-        NomeServicoInternamento.Text = intervencao.Custo
-
     End Sub
 
 #End Region
@@ -449,24 +504,27 @@ Public Class Form1
 #Region "Submit"
 
     Private Sub SubmitPaciente(ByRef P As Paciente)
-        CMD1.CommandText = "INSERT INTO ClinicGest.Pessoa " &
+        Dim cmd = New SqlCommand With {
+            .Connection = CN,
+            .CommandText = "INSERT INTO ClinicGest.Pessoa " &
             "(nome, telemovel, cc, email, endereco, nacionalidade, telefone, data_nasc, sexo,codigopostal) VALUES " &
             "(@nome, @telemovel, @cc, @email, @endereco, @nacionalidade, @telefone, @data_nasc, @sexo, @codigopostal); " &
             "INSERT INTO ClinicGest.Paciente (cc_pac) VALUES (@cc); SELECT SCOPE_IDENTITY()"
-        CMD1.Parameters.Clear()
-        CMD1.Parameters.AddWithValue("@nome", P.Nome)
-        CMD1.Parameters.AddWithValue("@telemovel", P.Telemovel)
-        CMD1.Parameters.AddWithValue("@cc", P.CC)
-        CMD1.Parameters.AddWithValue("@email", P.Email)
-        CMD1.Parameters.AddWithValue("@endereco", P.Endereço)
-        CMD1.Parameters.AddWithValue("@nacionalidade", P.Nacionalidade)
-        CMD1.Parameters.AddWithValue("@telefone", P.Telefone)
-        CMD1.Parameters.AddWithValue("@data_nasc", P.DataDeNascimento)
-        CMD1.Parameters.AddWithValue("@sexo", P.Sexo)
-        CMD1.Parameters.AddWithValue("@codigopostal", P.CodigoPostal)
+        }
+        cmd.Parameters.Clear()
+        cmd.Parameters.AddWithValue("@nome", P.Nome)
+        cmd.Parameters.AddWithValue("@telemovel", P.Telemovel)
+        cmd.Parameters.AddWithValue("@cc", P.CC)
+        cmd.Parameters.AddWithValue("@email", P.Email)
+        cmd.Parameters.AddWithValue("@endereco", P.Endereço)
+        cmd.Parameters.AddWithValue("@nacionalidade", P.Nacionalidade)
+        cmd.Parameters.AddWithValue("@telefone", P.Telefone)
+        cmd.Parameters.AddWithValue("@data_nasc", P.DataDeNascimento)
+        cmd.Parameters.AddWithValue("@sexo", P.Sexo)
+        cmd.Parameters.AddWithValue("@codigopostal", P.CodigoPostal)
         CN.Open()
         Try
-            P.Codigo = CMD1.ExecuteScalar()
+            P.Codigo = cmd.ExecuteScalar()
         Catch ex As Exception
             Throw New Exception("Failed to update contact in database. " & vbCrLf & "ERROR MESSAGE: " & vbCrLf & ex.Message)
         Finally
@@ -476,29 +534,32 @@ Public Class Form1
     End Sub
 
     Private Sub SubmitMedico(ByRef P As Medico)
-        CMD1.CommandText = "INSERT ClinicGest.Pessoa " &
+        Dim cmd = New SqlCommand With {
+            .Connection = CN,
+            .CommandText = "INSERT ClinicGest.Pessoa " &
             "(nome, telemovel, cc, email, endereco, nacionalidade, telefone, sexo,codigopostal) VALUES " &
             "(@nome, @telemovel, @cc, @email, @endereco, @nacionalidade, @telefone, @sexo, @codigopostal); " &
             "INSERT ClinicGest.Staff (cc_staff,salario) VALUES (@cc, @salario);" &
             "INSERT ClinicGest.Medico (codigo_emp, especialidade) VALUES " &
             "((SELECT codigo_staff FROM ClinicGest.Staff WHERE cc_staff = @cc), @especialidade);" &
             "SELECT SCOPE_IDENTITY()"
-        CMD1.Parameters.Clear()
-        CMD1.Parameters.AddWithValue("@nome", P.Nome)
-        CMD1.Parameters.AddWithValue("@especialidade", P.Especialidade)
-        CMD1.Parameters.AddWithValue("@telemovel", P.Telemovel)
-        CMD1.Parameters.AddWithValue("@cc", P.CC)
-        CMD1.Parameters.AddWithValue("@email", P.Email)
-        CMD1.Parameters.AddWithValue("@endereco", P.Endereço)
-        CMD1.Parameters.AddWithValue("@nacionalidade", P.Nacionalidade)
-        CMD1.Parameters.AddWithValue("@telefone", P.Telefone)
-        CMD1.Parameters.AddWithValue("@data_nasc", P.DataDeNascimento)
-        CMD1.Parameters.AddWithValue("@sexo", P.Sexo)
-        CMD1.Parameters.AddWithValue("@codigopostal", P.CodigoPostal)
-        CMD1.Parameters.AddWithValue("@salario", P.Salario)
+        }
+        cmd.Parameters.Clear()
+        cmd.Parameters.AddWithValue("@nome", P.Nome)
+        cmd.Parameters.AddWithValue("@especialidade", P.Especialidade)
+        cmd.Parameters.AddWithValue("@telemovel", P.Telemovel)
+        cmd.Parameters.AddWithValue("@cc", P.CC)
+        cmd.Parameters.AddWithValue("@email", P.Email)
+        cmd.Parameters.AddWithValue("@endereco", P.Endereço)
+        cmd.Parameters.AddWithValue("@nacionalidade", P.Nacionalidade)
+        cmd.Parameters.AddWithValue("@telefone", P.Telefone)
+        cmd.Parameters.AddWithValue("@data_nasc", P.DataDeNascimento)
+        cmd.Parameters.AddWithValue("@sexo", P.Sexo)
+        cmd.Parameters.AddWithValue("@codigopostal", P.CodigoPostal)
+        cmd.Parameters.AddWithValue("@salario", P.Salario)
         CN.Open()
         Try
-            P.Codigo = CMD1.ExecuteScalar()
+            P.Codigo = cmd.ExecuteScalar()
         Catch ex As Exception
             Throw New Exception("Failed to update contact in database. " & vbCrLf & "ERROR MESSAGE: " & vbCrLf & ex.Message)
         Finally
@@ -508,27 +569,30 @@ Public Class Form1
     End Sub
 
     Private Sub SubmitEnfermeiro(ByRef P As Enfermeiro)
-        CMD1.CommandText = "INSERT ClinicGest.Pessoa " &
+        Dim cmd = New SqlCommand With {
+            .Connection = CN,
+            .CommandText = "INSERT ClinicGest.Pessoa " &
             "(nome, telemovel, cc, email, endereco, nacionalidade, telefone, sexo,codigopostal) VALUES " &
             "(@nome, @telemovel, @cc, @email, @endereco, @nacionalidade, @telefone, @sexo, @codigopostal); " &
             "INSERT ClinicGest.Staff (cc_staff,salario) VALUES (@cc, @salario); " &
             "INSERT ClinicGest.Enfermeiro (codigo_enf) VALUES (SELECT codigo_staff FROM ClinicGest.Staff WHERE cc_staff = @cc); " &
             "SELECT SCOPE_IDENTITY()"
-        CMD1.Parameters.Clear()
-        CMD1.Parameters.AddWithValue("@nome", P.Nome)
-        CMD1.Parameters.AddWithValue("@telemovel", P.Telemovel)
-        CMD1.Parameters.AddWithValue("@cc", P.CC)
-        CMD1.Parameters.AddWithValue("@email", P.Email)
-        CMD1.Parameters.AddWithValue("@endereco", P.Endereço)
-        CMD1.Parameters.AddWithValue("@nacionalidade", P.Nacionalidade)
-        CMD1.Parameters.AddWithValue("@telefone", P.Telefone)
-        CMD1.Parameters.AddWithValue("@data_nasc", P.DataDeNascimento)
-        CMD1.Parameters.AddWithValue("@sexo", P.Sexo)
-        CMD1.Parameters.AddWithValue("@codigopostal", P.CodigoPostal)
-        CMD1.Parameters.AddWithValue("@salario", P.Salario)
+        }
+        cmd.Parameters.Clear()
+        cmd.Parameters.AddWithValue("@nome", P.Nome)
+        cmd.Parameters.AddWithValue("@telemovel", P.Telemovel)
+        cmd.Parameters.AddWithValue("@cc", P.CC)
+        cmd.Parameters.AddWithValue("@email", P.Email)
+        cmd.Parameters.AddWithValue("@endereco", P.Endereço)
+        cmd.Parameters.AddWithValue("@nacionalidade", P.Nacionalidade)
+        cmd.Parameters.AddWithValue("@telefone", P.Telefone)
+        cmd.Parameters.AddWithValue("@data_nasc", P.DataDeNascimento)
+        cmd.Parameters.AddWithValue("@sexo", P.Sexo)
+        cmd.Parameters.AddWithValue("@codigopostal", P.CodigoPostal)
+        cmd.Parameters.AddWithValue("@salario", P.Salario)
         CN.Open()
         Try
-            P.Codigo = CMD1.ExecuteScalar()
+            P.Codigo = cmd.ExecuteScalar()
         Catch ex As Exception
             Throw New Exception("Failed to update contact in database. " & vbCrLf & "ERROR MESSAGE: " & vbCrLf & ex.Message)
         Finally
@@ -538,14 +602,17 @@ Public Class Form1
     End Sub
 
     Private Sub SubmitMedicamento(ByRef P As Medicamento)
-        CMD1.CommandText = "INSERT ClinicGest.Medicamento (nome, preco_unitario) VALUES (@nome, @custo); " &
+        Dim cmd = New SqlCommand With {
+            .Connection = CN,
+            .CommandText = "INSERT ClinicGest.Medicamento (nome, preco_unitario) VALUES (@nome, @custo); " &
             "SELECT SCOPE_IDENTITY()"
-        CMD1.Parameters.Clear()
-        CMD1.Parameters.AddWithValue("@nome", P.Nome)
-        CMD1.Parameters.AddWithValue("@custo", P.Custo)
+        }
+        cmd.Parameters.Clear()
+        cmd.Parameters.AddWithValue("@nome", P.Nome)
+        cmd.Parameters.AddWithValue("@custo", P.Custo)
         CN.Open()
         Try
-            P.Codigo = CMD1.ExecuteScalar()
+            P.Codigo = cmd.ExecuteScalar()
         Catch ex As Exception
             Throw New Exception("Failed to update contact in database. " & vbCrLf & "ERROR MESSAGE: " & vbCrLf & ex.Message)
         Finally
@@ -559,7 +626,9 @@ Public Class Form1
 #Region "Update"
 
     Private Sub UpdatePaciente(ByVal P As Paciente)
-        CMD1.CommandText = "UPDATE ClinicGest.Pessoa " &
+        Dim cmd = New SqlCommand With {
+            .Connection = CN,
+            .CommandText = "UPDATE ClinicGest.Pessoa " &
             "SET nome = @nome, " &
             "    telemovel = @telemovel, " &
             "    cc = @cc, " &
@@ -571,21 +640,22 @@ Public Class Form1
             "    sexo = @sexo, " &
             "    codigopostal = @codigopostal " &
             "WHERE cc = @cc"
-        CMD1.Parameters.Clear()
-        CMD1.Parameters.AddWithValue("@nome", P.Nome)
-        CMD1.Parameters.AddWithValue("@telemovel", P.Telemovel)
-        CMD1.Parameters.AddWithValue("@cc", P.CC)
-        CMD1.Parameters.AddWithValue("@email", P.Email)
-        CMD1.Parameters.AddWithValue("@endereco", P.Endereço)
-        CMD1.Parameters.AddWithValue("@nacionalidade", P.Nacionalidade)
-        CMD1.Parameters.AddWithValue("@telefone", P.Telefone)
-        CMD1.Parameters.AddWithValue("@data_nasc", P.DataDeNascimento)
-        CMD1.Parameters.AddWithValue("@sexo", P.Sexo)
-        CMD1.Parameters.AddWithValue("@codigo", P.Codigo)
-        CMD1.Parameters.AddWithValue("@codigopostal", P.CodigoPostal)
+        }
+        cmd.Parameters.Clear()
+        cmd.Parameters.AddWithValue("@nome", P.Nome)
+        cmd.Parameters.AddWithValue("@telemovel", P.Telemovel)
+        cmd.Parameters.AddWithValue("@cc", P.CC)
+        cmd.Parameters.AddWithValue("@email", P.Email)
+        cmd.Parameters.AddWithValue("@endereco", P.Endereço)
+        cmd.Parameters.AddWithValue("@nacionalidade", P.Nacionalidade)
+        cmd.Parameters.AddWithValue("@telefone", P.Telefone)
+        cmd.Parameters.AddWithValue("@data_nasc", P.DataDeNascimento)
+        cmd.Parameters.AddWithValue("@sexo", P.Sexo)
+        cmd.Parameters.AddWithValue("@codigo", P.Codigo)
+        cmd.Parameters.AddWithValue("@codigopostal", P.CodigoPostal)
         CN.Open()
         Try
-            CMD1.ExecuteNonQuery()
+            cmd.ExecuteNonQuery()
         Catch ex As Exception
             Throw New Exception("Failed to update contact in database. " & vbCrLf & "ERROR MESSAGE: " & vbCrLf & ex.Message)
         Finally
@@ -594,7 +664,9 @@ Public Class Form1
     End Sub
 
     Private Sub UpdateMedico(ByVal P As Medico)
-        CMD1.CommandText = "UPDATE ClinicGest.Pessoa " &
+        Dim cmd = New SqlCommand With {
+            .Connection = CN,
+            .CommandText = "UPDATE ClinicGest.Pessoa " &
             "SET nome = @nome, " &
             "    telemovel = @telemovel, " &
             "    cc = @cc, " &
@@ -605,21 +677,22 @@ Public Class Form1
             "    sexo = @sexo, " &
             "    codigopostal = @codigopostal " &
             "WHERE cc = @cc; UPDATE ClinicGest.Staff SET salario = @salario, cc_staff = @cc WHERE cc_staff = @cc"
-        CMD1.Parameters.Clear()
-        CMD1.Parameters.AddWithValue("@nome", P.Nome)
-        CMD1.Parameters.AddWithValue("@telemovel", P.Telemovel)
-        CMD1.Parameters.AddWithValue("@cc", P.CC)
-        CMD1.Parameters.AddWithValue("@email", P.Email)
-        CMD1.Parameters.AddWithValue("@endereco", P.Endereço)
-        CMD1.Parameters.AddWithValue("@nacionalidade", P.Nacionalidade)
-        CMD1.Parameters.AddWithValue("@telefone", P.Telefone)
-        CMD1.Parameters.AddWithValue("@data_nasc", P.DataDeNascimento)
-        CMD1.Parameters.AddWithValue("@sexo", P.Sexo)
-        CMD1.Parameters.AddWithValue("@codigopostal", P.CodigoPostal)
-        CMD1.Parameters.AddWithValue("@salario", P.Salario)
+        }
+        cmd.Parameters.Clear()
+        cmd.Parameters.AddWithValue("@nome", P.Nome)
+        cmd.Parameters.AddWithValue("@telemovel", P.Telemovel)
+        cmd.Parameters.AddWithValue("@cc", P.CC)
+        cmd.Parameters.AddWithValue("@email", P.Email)
+        cmd.Parameters.AddWithValue("@endereco", P.Endereço)
+        cmd.Parameters.AddWithValue("@nacionalidade", P.Nacionalidade)
+        cmd.Parameters.AddWithValue("@telefone", P.Telefone)
+        cmd.Parameters.AddWithValue("@data_nasc", P.DataDeNascimento)
+        cmd.Parameters.AddWithValue("@sexo", P.Sexo)
+        cmd.Parameters.AddWithValue("@codigopostal", P.CodigoPostal)
+        cmd.Parameters.AddWithValue("@salario", P.Salario)
         CN.Open()
         Try
-            CMD1.ExecuteNonQuery()
+            cmd.ExecuteNonQuery()
         Catch ex As Exception
             Throw New Exception("Failed to update contact in database. " & vbCrLf & "ERROR MESSAGE: " & vbCrLf & ex.Message)
         Finally
@@ -628,7 +701,9 @@ Public Class Form1
     End Sub
 
     Private Sub UpdateEnfermeiro(ByVal P As Enfermeiro)
-        CMD1.CommandText = "UPDATE ClinicGest.Pessoa " &
+        Dim cmd = New SqlCommand With {
+            .Connection = CN,
+            .CommandText = "UPDATE ClinicGest.Pessoa " &
             "SET nome = @nome, " &
             "    telemovel = @telemovel, " &
             "    cc = @cc, " &
@@ -639,21 +714,22 @@ Public Class Form1
             "    sexo = @sexo, " &
             "    codigopostal = @codigopostal " &
             "WHERE cc = @cc; UPDATE ClinicGest.Staff SET salario = @salario, cc_staff = @cc WHERE cc_staff = @cc"
-        CMD1.Parameters.Clear()
-        CMD1.Parameters.AddWithValue("@nome", P.Nome)
-        CMD1.Parameters.AddWithValue("@telemovel", P.Telemovel)
-        CMD1.Parameters.AddWithValue("@cc", P.CC)
-        CMD1.Parameters.AddWithValue("@email", P.Email)
-        CMD1.Parameters.AddWithValue("@endereco", P.Endereço)
-        CMD1.Parameters.AddWithValue("@nacionalidade", P.Nacionalidade)
-        CMD1.Parameters.AddWithValue("@telefone", P.Telefone)
-        CMD1.Parameters.AddWithValue("@data_nasc", P.DataDeNascimento)
-        CMD1.Parameters.AddWithValue("@sexo", P.Sexo)
-        CMD1.Parameters.AddWithValue("@codigopostal", P.CodigoPostal)
-        CMD1.Parameters.AddWithValue("@salario", P.Salario)
+        }
+        cmd.Parameters.Clear()
+        cmd.Parameters.AddWithValue("@nome", P.Nome)
+        cmd.Parameters.AddWithValue("@telemovel", P.Telemovel)
+        cmd.Parameters.AddWithValue("@cc", P.CC)
+        cmd.Parameters.AddWithValue("@email", P.Email)
+        cmd.Parameters.AddWithValue("@endereco", P.Endereço)
+        cmd.Parameters.AddWithValue("@nacionalidade", P.Nacionalidade)
+        cmd.Parameters.AddWithValue("@telefone", P.Telefone)
+        cmd.Parameters.AddWithValue("@data_nasc", P.DataDeNascimento)
+        cmd.Parameters.AddWithValue("@sexo", P.Sexo)
+        cmd.Parameters.AddWithValue("@codigopostal", P.CodigoPostal)
+        cmd.Parameters.AddWithValue("@salario", P.Salario)
         CN.Open()
         Try
-            CMD1.ExecuteNonQuery()
+            cmd.ExecuteNonQuery()
         Catch ex As Exception
             Throw New Exception("Failed to update contact in database. " & vbCrLf & "ERROR MESSAGE: " & vbCrLf & ex.Message)
         Finally
@@ -662,17 +738,20 @@ Public Class Form1
     End Sub
 
     Private Sub UpdateMedicamento(ByVal P As Medicamento)
-        CMD1.CommandText = "UPDATE ClinicGest.Medicamento " &
+        Dim cmd = New SqlCommand With {
+            .Connection = CN,
+            .CommandText = "UPDATE ClinicGest.Medicamento " &
             "SET nome = @nome, " &
             "    preco_unitario = @custo, " &
             "WHERE codigo_medicamento = @codigo"
-        CMD1.Parameters.Clear()
-        CMD1.Parameters.AddWithValue("@nome", P.Nome)
-        CMD1.Parameters.AddWithValue("@codigo", P.Codigo)
-        CMD1.Parameters.AddWithValue("@custo", P.Custo)
+        }
+        cmd.Parameters.Clear()
+        cmd.Parameters.AddWithValue("@nome", P.Nome)
+        cmd.Parameters.AddWithValue("@codigo", P.Codigo)
+        cmd.Parameters.AddWithValue("@custo", P.Custo)
         CN.Open()
         Try
-            CMD1.ExecuteNonQuery()
+            cmd.ExecuteNonQuery()
         Catch ex As Exception
             Throw New Exception("Failed to update contact in database. " & vbCrLf & "ERROR MESSAGE: " & vbCrLf & ex.Message)
         Finally
@@ -969,10 +1048,10 @@ Public Class Form1
         End If
     End Sub
 
-    Private Sub ListIntervencoes_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ListIntervencoes.SelectedIndexChanged
+    Private Sub ListIntervencoes_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
         If ListIntervencoes.SelectedIndex > -1 Then
             currentIntervencao = ListIntervencoes.SelectedIndex
-            ShowIntervencao()
+            ShowIntervencaoInternamento()
         End If
     End Sub
 
@@ -987,6 +1066,13 @@ Public Class Form1
         If ListMedicamentos.SelectedIndex > -1 Then
             currentMedicamento = ListMedicamentos.SelectedIndex
             ShowMedicamento()
+        End If
+    End Sub
+
+    Private Sub ListProdutosIntervencao_SelectedIndexChanged(sender As Object, e As EventArgs)
+        If ListProdutosIntervencao.SelectedIndex > -1 Then
+            currentProdutoIntervencao = ListProdutosIntervencao.SelectedIndex
+            ShowProdutoIntervencao()
         End If
     End Sub
 
@@ -1038,23 +1124,23 @@ Public Class Form1
         Next
     End Sub
 
-    Private Sub SearchIntervencao_Click(sender As Object, e As EventArgs) Handles btnSearchIntervencao.Click
-        For Each lbItem As Object In ListIntervencoes.Items
-            ' Case-sensitive match
-            If lbItem.ToString = SearchIntervencao.Text Then
-                ' Match found: set as selected item and exit procedure
-                ListIntervencoes.SelectedItem = lbItem
-                Return
-            End If
-        Next
-    End Sub
-
     Private Sub SearchInternamento_Click(sender As Object, e As EventArgs) Handles btnSearchInternamento.Click
         For Each lbItem As Object In ListInternamentos.Items
             ' Case-sensitive match
             If lbItem.ToString = SearchInternamento.Text Then
                 ' Match found: set as selected item and exit procedure
                 ListInternamentos.SelectedItem = lbItem
+                Return
+            End If
+        Next
+    End Sub
+
+    Private Sub SearchIntervencaoInternamento_Click(sender As Object, e As EventArgs) Handles btnSearchIntervencao.Click
+        For Each lbItem As Object In ListIntervencoes.Items
+            ' Case-sensitive match
+            If lbItem.ToString = SearchIntervencao.Text Then
+                ' Match found: set as selected item and exit procedure
+                ListIntervencoes.SelectedItem = lbItem
                 Return
             End If
         Next
@@ -1263,6 +1349,15 @@ Public Class Form1
 #End Region
 
 #Region "Other Click Handlers"
+
+    Private Sub ListIntervencoesInternamento_Click(sender As Object, e As EventArgs) Handles btnListIntervencoesInternamento.Click
+        TerIntervencoesInternamento()
+        GroupIntervencoesInternamento.Visible = True
+    End Sub
+
+    Private Sub ExitIntervencoesInternamento_Click(sender As Object, e As EventArgs) Handles btnExitIntervencoesInternamento.Click
+        GroupIntervencoesInternamento.Visible = False
+    End Sub
 
 #End Region
 

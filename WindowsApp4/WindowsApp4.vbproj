@@ -101,6 +101,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Paciente.vb" />
+    <Compile Include="Produto.vb" />
     <Compile Include="Servico.vb" />
   </ItemGroup>
   <ItemGroup>

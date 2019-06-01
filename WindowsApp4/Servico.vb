@@ -1,6 +1,6 @@
 ﻿Friend Class Servico
-    Public Property CodigoServico As Object
-    Public Property NomeServico As Object
+    Public Property CodigoServico As String
+    Public Property NomeServico As String
     Public Property Custo As String
     Public Property MedicoResponsavel As String
     Public Property EnfermeiroResponsavel As String
