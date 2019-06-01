@@ -1,12 +1,10 @@
-
 use p4g9;
-
 
 create table ClinicGest.Pessoa(
     cc              varchar(12) not null,
     nome            varchar(50) not null,
-    telefone        varchar(14), -- atenção a programação defensiva para evitar problemas de segurança ou fiabilidade de dados
-    telemovel       varchar(14), -- atenção a programação defensiva para evitar problemas de segurança ou fiabilidade de dados
+    telefone        varchar(14), -- atenï¿½ï¿½o a programaï¿½ï¿½o defensiva para evitar problemas de seguranï¿½a ou fiabilidade de dados
+    telemovel       varchar(14), -- atenï¿½ï¿½o a programaï¿½ï¿½o defensiva para evitar problemas de seguranï¿½a ou fiabilidade de dados
     email           varchar(100),
     endereco        varchar(150),
     codigopostal    int,
@@ -38,21 +36,22 @@ create table ClinicGest.Medico(
     foreign key (codigo_emp) references ClinicGest.Staff(codigo_staff)
 )
 
+
 create table ClinicGest.Enfermeiro(
     codigo_emp      int not null,
     codigo_enf      int not null identity(1,1),
+	enfermeiro_trabalha    int not null,
     primary key (codigo_enf),
-    foreign key (codigo_emp) references ClinicGest.Staff(codigo_staff)
+    foreign key (codigo_emp) references ClinicGest.Staff(codigo_staff),
 )
 
 create table ClinicGest.Produto(
     codigo_produto  int not null  identity(1,1),
     tipo_produto    varchar(11),
     custo           int,
-    custo_de_limp   int,
+    custo_de_limp   decimal(4,2),
 primary key (codigo_produto)
 )
-
 
 create table ClinicGest.Servico(
     codigo_servico         int not null  identity(1,1),
@@ -61,15 +60,16 @@ create table ClinicGest.Servico(
     medico_responsavel     int not null,
     medico_trabalha        int,
     enfermeiro_responsavel int not null,
-    enfermeiro_trabalha    int not null,
     primary key (codigo_servico),
     foreign key (medico_responsavel) references ClinicGest.Medico(codigo_med),
-    foreign key (medico_trabalha) references ClinicGest.Medico(codigo_med),
+--    foreign key (medico_trabalha) references ClinicGest.Medico(codigo_med),
     foreign key (enfermeiro_responsavel) references ClinicGest.Enfermeiro(codigo_enf),
-    foreign key (enfermeiro_trabalha) references ClinicGest.Enfermeiro(codigo_enf),
+--    foreign key (enfermeiro_trabalha) references ClinicGest.Enfermeiro(codigo_enf),
 )
 
+	alter table ClinicGest.Enfermeiro add foreign key (enfermeiro_trabalha) references ClinicGest.Servico(codigo_servico)
 
+    
 create table ClinicGest.Internamento(
     num_internamento            int not null  identity(1,1),
     internamento_servico        int not null,
@@ -157,4 +157,12 @@ create table ClinicGest.Gastaproduto(
     primary key (gasta_prod,gasta_intervencao),
     foreign key (gasta_prod) references ClinicGest.Produto(codigo_produto),
     foreign key (gasta_intervencao) references ClinicGest.Intervencao(num_intervencao)
+ )
+ 
+ create table ClinicGest.Medicotrabalha(
+ 	codigo_med	int not null,
+ 	codigo_servico int not null,
+	primary key (codigo_med,codigo_servico),
+	foreign key (codigo_med) references ClinicGest.Medico(codigo_med),
+	foreign key (codigo_servico) references ClinicGest.Servico(codigo_servico)
  )
