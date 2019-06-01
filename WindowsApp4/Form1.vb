@@ -22,7 +22,7 @@ Public Class Form1
         ShowButtonsPaciente()
         ShowButtonsMedico()
         ShowButtonsEnfermeiro()
-        ShowButtonsMedicine()
+        ShowButtonsMedicamento()
 
 
         CN = New SqlConnection("Data Source=tcp:mednat.ieeta.pt\SQLSERVER,8101;Initial Catalog=p4g9;User ID=p4g9;Password=ClinicG3st;Connection Timeout=50;")
@@ -53,7 +53,7 @@ Public Class Form1
     End Sub
 
     Private Sub ShowButtonsMedico()
-        LockControlsDoc()
+        LockControlsMedico()
         btnAddMedico.Visible = True
         btnEditMedico.Visible = True
         btnOkMedico.Visible = False
@@ -65,7 +65,7 @@ Public Class Form1
     End Sub
 
     Private Sub ShowButtonsEnfermeiro()
-        LockControlsEnf()
+        LockControlsEnfermeiro()
         btnAddEnfermeiro.Visible = True
         btnEditEnfermeiro.Visible = True
         btnOkEnfermeiro.Visible = False
@@ -76,8 +76,8 @@ Public Class Form1
         btnListReceitasExecEnfermeiro.Visible = True
     End Sub
 
-    Private Sub ShowButtonsMedicine()
-        LockControlsMedicine()
+    Private Sub ShowButtonsMedicamento()
+        LockControlsMedicamento()
         btnAddMedicamento.Visible = True
         btnEditMedicamento.Visible = True
         btnOkMedicamento.Visible = False
@@ -101,8 +101,8 @@ Public Class Form1
         btnListInternamentosPaciente.Visible = False
     End Sub
 
-    Private Sub HideButtonsDoc()
-        UnLockControlsDoc()
+    Private Sub HideButtonsMedico()
+        UnLockControlsMedico()
         btnAddMedico.Visible = False
         btnEditMedico.Visible = False
         btnOkMedico.Visible = True
@@ -113,8 +113,8 @@ Public Class Form1
         btnListServicosMedico.Visible = False
     End Sub
 
-    Private Sub HideButtonsEnf()
-        UnLockControlsEnf()
+    Private Sub HideButtonsEnfermeiro()
+        UnLockControlsEnfermeiro()
         btnAddEnfermeiro.Visible = False
         btnEditEnfermeiro.Visible = False
         btnOkEnfermeiro.Visible = True
@@ -126,7 +126,8 @@ Public Class Form1
 
     End Sub
 
-    Private Sub HideButtonsMedinine()
+    Private Sub HideButtonsMedicamento()
+        UnlockControlsMedicamento()
         btnAddMedicamento.Visible = False
         btnEditMedicamento.Visible = False
         btnOkMedicamento.Visible = True
@@ -660,7 +661,7 @@ Public Class Form1
         End Try
     End Sub
 
-    Private Sub UpdateMedicamento(P As Medicamento)
+    Private Sub UpdateMedicamento(ByVal P As Medicamento)
         CMD1.CommandText = "UPDATE ClinicGest.Medicamento " &
             "SET nome = @nome, " &
             "    preco_unitario = @custo, " &
@@ -683,7 +684,7 @@ Public Class Form1
 
 #Region "Save"
 
-    Private Sub SaveContact()
+    Private Sub SavePaciente()
         Dim paciente As New Paciente
 
         paciente.Nome = NomePaciente.Text
@@ -802,7 +803,7 @@ Public Class Form1
         CodPostalPaciente.ReadOnly = True
     End Sub
 
-    Sub LockControlsEnf()
+    Sub LockControlsEnfermeiro()
         NomeEnfermeiro.ReadOnly = True
         CodigoEnfermeiro.ReadOnly = True
         CcEnfermeiro.ReadOnly = True
@@ -817,7 +818,7 @@ Public Class Form1
         SalarioEnfermeiro.ReadOnly = True
     End Sub
 
-    Sub LockControlsDoc()
+    Sub LockControlsMedico()
         NomeMedico.ReadOnly = True
         EspecialidadeMedico.ReadOnly = True
         CcMedico.ReadOnly = True
@@ -833,9 +834,9 @@ Public Class Form1
         SalarioMedico.ReadOnly = True
     End Sub
 
-    Sub LockControlsMedicine()
-        CustoMedicamento.ReadOnly = False
-        NomeMedicamento.ReadOnly = False
+    Sub LockControlsMedicamento()
+        CustoMedicamento.ReadOnly = True
+        NomeMedicamento.ReadOnly = True
     End Sub
 
     Sub UnLockControlsPaciente()
@@ -852,7 +853,7 @@ Public Class Form1
         CodPostalPaciente.ReadOnly = False
     End Sub
 
-    Sub UnLockControlsEnf()
+    Sub UnLockControlsEnfermeiro()
         NomeEnfermeiro.ReadOnly = False
         CcEnfermeiro.ReadOnly = False
         DataEnfermeiro.ReadOnly = False
@@ -866,7 +867,7 @@ Public Class Form1
         SalarioEnfermeiro.ReadOnly = False
     End Sub
 
-    Sub UnLockControlsDoc()
+    Sub UnLockControlsMedico()
         NomeMedico.ReadOnly = False
         EspecialidadeMedico.ReadOnly = False
         CcMedico.ReadOnly = False
@@ -881,54 +882,59 @@ Public Class Form1
         SalarioMedico.ReadOnly = False
     End Sub
 
+    Sub UnlockControlsMedicamento()
+        CustoMedicamento.ReadOnly = False
+        NomeMedicamento.ReadOnly = False
+    End Sub
+
     Sub ClearFieldsPaciente()
-        NomePaciente.Text = ""
-        TelemovelPaciente.Text = ""
-        CcPaciente.Text = ""
-        EmailPaciente.Text = ""
-        EnderecoPaciente.Text = ""
-        NacionalidadePaciente.Text = ""
-        TelefonePaciente.Text = ""
-        DataPaciente.Text = ""
-        SexoPaciente.Text = ""
-        CodigoPaciente.Text = ""
-        CodPostalPaciente.Text = ""
+        NomePaciente.Clear()
+        TelemovelPaciente.Clear()
+        CcPaciente.Clear()
+        EmailPaciente.Clear()
+        EnderecoPaciente.Clear()
+        NacionalidadePaciente.Clear()
+        TelefonePaciente.Clear()
+        DataPaciente.Clear()
+        SexoPaciente.Clear()
+        CodigoPaciente.Clear()
+        CodPostalPaciente.Clear()
     End Sub
 
-    Sub ClearFieldsEnf()
-        NomeEnfermeiro.Text = ""
-        CcEnfermeiro.Text = ""
-        DataEnfermeiro.Text = ""
-        EmailEnfermeiro.Text = ""
-        SexoEnfermeiro.Text = ""
-        EnderecoEnfermeiro.Text = ""
-        CodPostalEnfermeiro.Text = ""
-        NacionalidadeEnfermeiro.Text = ""
-        TelemovelEnfermeiro.Text = ""
-        TelefoneEnfermeiro.Text = ""
-        SalarioEnfermeiro.Text = ""
+    Sub ClearFieldsEnfermeiro()
+        NomeEnfermeiro.Clear()
+        CcEnfermeiro.Clear()
+        DataEnfermeiro.Clear()
+        EmailEnfermeiro.Clear()
+        SexoEnfermeiro.Clear()
+        EnderecoEnfermeiro.Clear()
+        CodPostalEnfermeiro.Clear()
+        NacionalidadeEnfermeiro.Clear()
+        TelemovelEnfermeiro.Clear()
+        TelefoneEnfermeiro.Clear()
+        SalarioEnfermeiro.Clear()
     End Sub
 
-    Sub ClearFieldsDoc()
-        NomeMedico.Text = ""
-        CodigoMedico.Text = ""
-        EspecialidadeMedico.Text = ""
-        CcMedico.Text = ""
-        DataMedico.Text = ""
-        EmailMedico.Text = ""
-        SexoMedico.Text = ""
-        EnderecoMedico.Text = ""
-        CodPostalMedico.Text = ""
-        NacionalidadeMedico.Text = ""
-        TelemovelMedico.Text = ""
-        TelefoneMedico.Text = ""
-        SalarioMedico.Text = ""
+    Sub ClearFieldsMedico()
+        NomeMedico.Clear()
+        CodigoMedico.Clear()
+        EspecialidadeMedico.Clear()
+        CcMedico.Clear()
+        DataMedico.Clear()
+        EmailMedico.Clear()
+        SexoMedico.Clear()
+        EnderecoMedico.Clear()
+        CodPostalMedico.Clear()
+        NacionalidadeMedico.Clear()
+        TelemovelMedico.Clear()
+        TelefoneMedico.Clear()
+        SalarioMedico.Clear()
     End Sub
 
     Sub ClearFieldsMedicine()
-        CustoMedicamento.Text = ""
-        CodigoMedicamento.Text = ""
-        NomeMedicamento.Text = ""
+        CustoMedicamento.Clear()
+        CodigoMedicamento.Clear()
+        NomeMedicamento.Clear()
     End Sub
 
 #End Region
@@ -1078,22 +1084,22 @@ Public Class Form1
 
     Private Sub AddEnfermeiro_Click(sender As Object, e As EventArgs) Handles btnAddEnfermeiro.Click
         adding = True
-        ClearFieldsEnf()
-        HideButtonsEnf()
+        ClearFieldsEnfermeiro()
+        HideButtonsEnfermeiro()
         ListEnfermeiros.Enabled = False
     End Sub
 
     Private Sub AddMedico_Click(sender As Object, e As EventArgs) Handles btnAddMedico.Click
         adding = True
-        ClearFieldsDoc()
-        HideButtonsDoc()
+        ClearFieldsMedico()
+        HideButtonsMedico()
         ListMedicos.Enabled = False
     End Sub
 
     Private Sub AddMedicamento_Click(sender As Object, e As EventArgs) Handles btnAddMedicamento.Click
         adding = True
         ClearFieldsMedicine()
-        HideButtonsMedinine()
+        HideButtonsMedicamento()
         ListMedicamentos.Enabled = False
     End Sub
 
@@ -1119,7 +1125,7 @@ Public Class Form1
             Exit Sub
         End If
         adding = False
-        HideButtonsDoc()
+        HideButtonsMedico()
         ListMedicos.Enabled = False
     End Sub
 
@@ -1130,7 +1136,7 @@ Public Class Form1
             Exit Sub
         End If
         adding = False
-        HideButtonsEnf()
+        HideButtonsEnfermeiro()
         ListEnfermeiros.Enabled = False
     End Sub
 
@@ -1141,7 +1147,7 @@ Public Class Form1
             Exit Sub
         End If
         adding = False
-        HideButtonsMedinine()
+        HideButtonsMedicamento()
         ListMedicamentos.Enabled = False
     End Sub
 
@@ -1151,7 +1157,7 @@ Public Class Form1
 
     Private Sub OkPaciente_Click(sender As Object, e As EventArgs) Handles btnOkPaciente.Click
         Try
-            SaveContact()
+            SavePaciente()
             ListPacientes.Enabled = True
             Dim idx As Integer = ListPacientes.FindString(NomePaciente.Text)
             ListPacientes.SelectedIndex = idx
@@ -1192,7 +1198,7 @@ Public Class Form1
             ListMedicamentos.Enabled = True
             Dim idx As Integer = ListMedicamentos.FindString(NomeMedicamento.Text)
             ListMedicamentos.SelectedIndex = idx
-            ShowButtonsMedicine()
+            ShowButtonsMedicamento()
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
@@ -1222,8 +1228,8 @@ Public Class Form1
             If currentMedico < 0 Then currentMedico = 0
             ShowMedico()
         Else
-            ClearFieldsDoc()
-            LockControlsDoc()
+            ClearFieldsMedico()
+            LockControlsMedico()
         End If
         ShowButtonsMedico()
     End Sub
@@ -1235,8 +1241,8 @@ Public Class Form1
             If currentEnfermeiro < 0 Then currentEnfermeiro = 0
             ShowEnfermeiro()
         Else
-            ClearFieldsEnf()
-            LockControlsEnf()
+            ClearFieldsEnfermeiro()
+            LockControlsEnfermeiro()
         End If
         ShowButtonsEnfermeiro()
     End Sub
@@ -1249,10 +1255,14 @@ Public Class Form1
             ShowMedicamento()
         Else
             ClearFieldsMedicine()
-            LockControlsMedicine()
+            LockControlsMedicamento()
         End If
-        ShowButtonsMedicine()
+        ShowButtonsMedicamento()
     End Sub
+
+#End Region
+
+#Region "Other Click Handlers"
 
 #End Region
 
