@@ -46,7 +46,6 @@ Public Class Form1
         btnCancelPaciente.Visible = False
 
         btnListFaturasPaciente.Visible = True
-        btnListIntervencoesPaciente.Visible = True
         btnListSegurosPaciente.Visible = True
         btnListInternamentosPaciente.Visible = True
     End Sub
@@ -95,7 +94,6 @@ Public Class Form1
         btnCancelPaciente.Visible = True
 
         btnListFaturasPaciente.Visible = False
-        btnListIntervencoesPaciente.Visible = False
         btnListSegurosPaciente.Visible = False
         btnListInternamentosPaciente.Visible = False
     End Sub
