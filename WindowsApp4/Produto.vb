@@ -3,6 +3,7 @@
     Public Property TipoProduto As String
     Public Property Custo As String
     Public Property CustoLimpeza As String
+    Public Property Quantidade As String
 
     Overrides Function ToString() As String
         Return CodigoProduto

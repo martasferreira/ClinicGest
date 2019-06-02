@@ -6,6 +6,9 @@
     Public Property DataInicio As String
     Public Property DataFim As String
     Public Property Patologia As String
+    Public Property NomePaciente As String
+
+
 
 
     Overrides Function ToString() As String
