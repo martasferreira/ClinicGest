@@ -457,9 +457,9 @@ Public Class Form1
         If ListIntervencoes.Items.Count = 0 Or currentIntervencao < 0 Then Exit Sub
         Dim intervencao As New Intervencao
         intervencao = CType(ListIntervencoes.Items.Item(currentIntervencao), Intervencao)
-        NumeroInternameto.Text = intervencao.NumeroInternamento
-        CodigoServicoInternamento.Text = intervencao.NumeroIntervencao
-        NomeServicoInternamento.Text = intervencao.CodigoStaff
+        NumeroIntervencao.Text = intervencao.NumeroInternamento
+        NumInternamentoIntervencao.Text = intervencao.NumeroIntervencao
+        CustoIntervencao.Text = intervencao.CodigoStaff
 
         TerProdutosIntervencao()
 
