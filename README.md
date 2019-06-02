@@ -8,4 +8,4 @@ Trabalho a desenvolver no âmbito da disciplina de Base de Dados do ano lectivo 
 Tecnologia utilizada:
 - Microsoft SQL Server
 - Microsoft Visual Studio 2017
-- SAP Crystal Report
+- SAP Crystal Report - [link](https://www.crystalreports.com/)
