@@ -1,7 +1,7 @@
 ﻿Friend Class Intervencao
     Public Property NumeroInternamento As Object
     Public Property NumeroIntervencao As Object
-    Public Property Custo As String
+    Public Property CodigoStaff As Object
 
 
 

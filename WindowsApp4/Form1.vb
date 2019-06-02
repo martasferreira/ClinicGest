@@ -174,7 +174,7 @@ Public Class Form1
             .Connection = CN,
             .CommandText = "SELECT * from ClinicGest.Pessoa AS pessoa " &
             "JOIN ClinicGest.Staff AS staff ON pessoa.cc = staff.cc_staff " &
-            "JOIN ClinicGest.Enfermeiro AS enfermeiro ON staff.codigo_staff = enfermeiro.codigo_emp"
+            "JOIN ClinicGest.Enfermeiro AS enfermeiro ON staff.codigo_staff = enfermeiro.codigo_staff"
         }
         CN.Open()
         Dim RDR As SqlDataReader
@@ -209,7 +209,7 @@ Public Class Form1
             .Connection = CN,
             .CommandText = "SELECT * from ClinicGest.Pessoa AS pessoa " &
             "JOIN ClinicGest.Staff AS staff ON pessoa.cc = staff.cc_staff " &
-            "JOIN ClinicGest.Medico AS medico ON staff.codigo_staff = medico.codigo_emp"
+            "JOIN ClinicGest.Medico AS medico ON staff.codigo_staff = medico.codigo_staff"
         }
         CN.Open()
         Dim RDR As SqlDataReader
@@ -292,7 +292,7 @@ Public Class Form1
         Dim cmd = New SqlCommand With {
             .Connection = CN,
             .CommandText = "SELECT * FROM ClinicGest.Internamento AS internamento " &
-            "JOIN ClinicGest.Servico AS servico ON internamento.internamento_servico = servico.codigo_servico"
+            "JOIN ClinicGest.Servico AS servico ON internamento.codigo_servico = servico.codigo_servico"
         }
         CN.Open()
         Dim RDR As SqlDataReader
@@ -301,11 +301,11 @@ Public Class Form1
         While RDR.Read
             Dim M As New Internamento
             M.NumeroInternamento = RDR.Item("num_internamento")
-            M.CodigoServico = RDR.Item("internamento_servico")
+            M.CodigoServico = RDR.Item("codigo_servico")
             M.NomeServico = Convert.ToString(IIf(RDR.IsDBNull(RDR.GetOrdinal("nome")), "", RDR.Item("nome")))
             M.CustoServico = Convert.ToString(IIf(RDR.IsDBNull(RDR.GetOrdinal("custo")), "", RDR.Item("custo")))
             M.DataInicio = Convert.ToString(IIf(RDR.IsDBNull(RDR.GetOrdinal("data_entrada")), "", RDR.Item("data_entrada")))
-            M.DataFim = Convert.ToString(IIf(RDR.IsDBNull(RDR.GetOrdinal("data_saida")), "", RDR.Item("data_aida")))
+            M.DataFim = Convert.ToString(IIf(RDR.IsDBNull(RDR.GetOrdinal("data_saida")), "", RDR.Item("data_saida")))
             M.Patologia = Convert.ToString(IIf(RDR.IsDBNull(RDR.GetOrdinal("patologia")), "", RDR.Item("patologia")))
 
             ListInternamentos.Items.Add(M)
@@ -323,7 +323,7 @@ Public Class Form1
         internamento = CType(ListInternamentos.Items.Item(currentInternamento), Internamento)
         Dim cmd = New SqlCommand With {
             .Connection = CN,
-            .CommandText = "SELECT * FROM ClinicGest.Intervencao WHERE int_internamento = @internamento"
+            .CommandText = "SELECT * FROM ClinicGest.Intervencao WHERE num_internamento = @internamento"
         }
         cmd.Parameters.Clear()
         cmd.Parameters.AddWithValue("@internamento", internamento.NumeroInternamento)
@@ -333,9 +333,9 @@ Public Class Form1
         ListIntervencoes.Items.Clear()
         While RDR.Read
             Dim M As New Intervencao
-            M.NumeroInternamento = RDR.Item("int_internamento")
+            M.NumeroInternamento = RDR.Item("num_internamento")
             M.NumeroIntervencao = RDR.Item("num_intervencao")
-            M.Custo = Convert.ToString(IIf(RDR.IsDBNull(RDR.GetOrdinal("custo")), "", RDR.Item("custo")))
+            M.CodigoStaff = Convert.ToString(IIf(RDR.IsDBNull(RDR.GetOrdinal("codigo_staff")), "", RDR.Item("codigo_staff")))
             ListIntervencoes.Items.Add(M)
         End While
         CN.Close()
@@ -352,10 +352,12 @@ Public Class Form1
 
         Dim cmd = New SqlCommand With {
             .Connection = CN,
-            .CommandText = "SELECT p.* FROM ClinicGest.GastaProduto gp " &
-            "OUTER JOIN ClinicGest.Produto p ON gp.gasta_prod = p.codigo_produto " &
-            "WHERE gp.gasta_intervencao = @intervencao"
+            .CommandText = "SELECT p.* FROM ClinicGest.ProdutoIntervencao gp " &
+            "RIGHT JOIN ClinicGest.Produto p ON gp.codigo_produto = p.codigo_produto " &
+            "WHERE gp.numero_intervencao = @intervencao"
         }
+        cmd.Parameters.Clear()
+        cmd.Parameters.AddWithValue("@intervencao", intervencao.NumeroIntervencao)
         CN.Open()
         Dim RDR As SqlDataReader
         RDR = cmd.ExecuteReader
@@ -459,7 +461,7 @@ Public Class Form1
         intervencao = CType(ListIntervencoes.Items.Item(currentIntervencao), Intervencao)
         NumeroInternameto.Text = intervencao.NumeroInternamento
         CodigoServicoInternamento.Text = intervencao.NumeroIntervencao
-        NomeServicoInternamento.Text = intervencao.Custo
+        NomeServicoInternamento.Text = intervencao.CodigoStaff
 
         TerProdutosIntervencao()
 
@@ -540,7 +542,7 @@ Public Class Form1
             "(nome, telemovel, cc, email, endereco, nacionalidade, telefone, sexo,codigopostal) VALUES " &
             "(@nome, @telemovel, @cc, @email, @endereco, @nacionalidade, @telefone, @sexo, @codigopostal); " &
             "INSERT ClinicGest.Staff (cc_staff,salario) VALUES (@cc, @salario);" &
-            "INSERT ClinicGest.Medico (codigo_emp, especialidade) VALUES " &
+            "INSERT ClinicGest.Medico (codigo_staff, especialidade) VALUES " &
             "((SELECT codigo_staff FROM ClinicGest.Staff WHERE cc_staff = @cc), @especialidade);" &
             "SELECT SCOPE_IDENTITY()"
         }
@@ -1358,6 +1360,7 @@ Public Class Form1
     Private Sub ExitIntervencoesInternamento_Click(sender As Object, e As EventArgs) Handles btnExitIntervencoesInternamento.Click
         GroupIntervencoesInternamento.Visible = False
     End Sub
+
 
 #End Region
 

@@ -205,7 +205,6 @@ Partial Class Form1
         Me.btnEditPaciente = New System.Windows.Forms.Button()
         Me.btnListFaturasPaciente = New System.Windows.Forms.Button()
         Me.btnListSegurosPaciente = New System.Windows.Forms.Button()
-        Me.btnListIntervencoesPaciente = New System.Windows.Forms.Button()
         Me.btnListInternamentosPaciente = New System.Windows.Forms.Button()
         Me.btnCancelPaciente = New System.Windows.Forms.Button()
         Me.btnOkPaciente = New System.Windows.Forms.Button()
@@ -1657,7 +1656,6 @@ Partial Class Form1
         Me.TabPaciente.Controls.Add(Me.btnEditPaciente)
         Me.TabPaciente.Controls.Add(Me.btnListFaturasPaciente)
         Me.TabPaciente.Controls.Add(Me.btnListSegurosPaciente)
-        Me.TabPaciente.Controls.Add(Me.btnListIntervencoesPaciente)
         Me.TabPaciente.Controls.Add(Me.btnListInternamentosPaciente)
         Me.TabPaciente.Controls.Add(Me.btnCancelPaciente)
         Me.TabPaciente.Controls.Add(Me.btnOkPaciente)
@@ -1890,34 +1888,25 @@ Partial Class Form1
         '
         'btnListFaturasPaciente
         '
-        Me.btnListFaturasPaciente.Location = New System.Drawing.Point(265, 280)
+        Me.btnListFaturasPaciente.Location = New System.Drawing.Point(290, 280)
         Me.btnListFaturasPaciente.Name = "btnListFaturasPaciente"
-        Me.btnListFaturasPaciente.Size = New System.Drawing.Size(60, 42)
+        Me.btnListFaturasPaciente.Size = New System.Drawing.Size(75, 42)
         Me.btnListFaturasPaciente.TabIndex = 28
         Me.btnListFaturasPaciente.Text = "Listar Faturas"
         Me.btnListFaturasPaciente.UseVisualStyleBackColor = True
         '
         'btnListSegurosPaciente
         '
-        Me.btnListSegurosPaciente.Location = New System.Drawing.Point(331, 280)
+        Me.btnListSegurosPaciente.Location = New System.Drawing.Point(374, 280)
         Me.btnListSegurosPaciente.Name = "btnListSegurosPaciente"
-        Me.btnListSegurosPaciente.Size = New System.Drawing.Size(63, 42)
+        Me.btnListSegurosPaciente.Size = New System.Drawing.Size(80, 42)
         Me.btnListSegurosPaciente.TabIndex = 29
         Me.btnListSegurosPaciente.Text = "Listar Seguros"
         Me.btnListSegurosPaciente.UseVisualStyleBackColor = True
         '
-        'btnListIntervencoesPaciente
-        '
-        Me.btnListIntervencoesPaciente.Location = New System.Drawing.Point(400, 280)
-        Me.btnListIntervencoesPaciente.Name = "btnListIntervencoesPaciente"
-        Me.btnListIntervencoesPaciente.Size = New System.Drawing.Size(79, 42)
-        Me.btnListIntervencoesPaciente.TabIndex = 30
-        Me.btnListIntervencoesPaciente.Text = "Listar Intervenções"
-        Me.btnListIntervencoesPaciente.UseVisualStyleBackColor = True
-        '
         'btnListInternamentosPaciente
         '
-        Me.btnListInternamentosPaciente.Location = New System.Drawing.Point(488, 280)
+        Me.btnListInternamentosPaciente.Location = New System.Drawing.Point(460, 280)
         Me.btnListInternamentosPaciente.Name = "btnListInternamentosPaciente"
         Me.btnListInternamentosPaciente.Size = New System.Drawing.Size(89, 42)
         Me.btnListInternamentosPaciente.TabIndex = 31
@@ -2169,7 +2158,6 @@ Partial Class Form1
     Friend WithEvents btnEditPaciente As Button
     Friend WithEvents btnListFaturasPaciente As Button
     Friend WithEvents btnListSegurosPaciente As Button
-    Friend WithEvents btnListIntervencoesPaciente As Button
     Friend WithEvents btnListInternamentosPaciente As Button
     Friend WithEvents btnCancelPaciente As Button
     Friend WithEvents btnOkPaciente As Button
