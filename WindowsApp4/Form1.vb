@@ -1337,6 +1337,21 @@ Public Class Form1
         End If
     End Sub
 
+    Private Sub ListProdutosIntervencaoPaciente_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListProdutosIntervencaoPaciente.SelectedIndexChanged
+        If ListProdutosIntervencaoPaciente.SelectedIndex > -1 Then
+            currentProdutoIntervencaoPaciente = ListProdutosIntervencaoPaciente.SelectedIndex
+            ShowProdutoIntervencaoPaciente()
+        End If
+    End Sub
+
+
+    Private Sub ListIntervencaoPaciente_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ListIntervencaoPaciente.SelectedIndexChanged
+        If ListIntervencaoPaciente.SelectedIndex > -1 Then
+            currentIntervencaoPaciente = ListIntervencaoPaciente.SelectedIndex
+            ShowIntervencaoInternamentoPaciente()
+        End If
+    End Sub
+
 #End Region
 
 #Region "Search Handlers"
@@ -1666,6 +1681,12 @@ Public Class Form1
     Private Sub ListIntervencoesInternamentoPaciente_Click(sender As Object, e As EventArgs) Handles ListarIntervencoesInternamentoPaciente.Click
         TerIntervencoesInternamentoPaciente()
         GroupIntervencoesInternamentosPaciente.Visible = True
+        GroupInternamentosPaciente.Visible = False
+    End Sub
+
+    Private Sub btnExitIntervencoesInternamentoPaciente_Click(sender As Object, e As EventArgs) Handles btnExitIntervencoesInternamentoPaciente.Click
+        GroupIntervencoesInternamentosPaciente.Visible = False
+        GroupInternamentosPaciente.Visible = True
     End Sub
 
 
