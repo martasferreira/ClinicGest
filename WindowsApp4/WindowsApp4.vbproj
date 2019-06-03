@@ -103,6 +103,7 @@
     </Compile>
     <Compile Include="Paciente.vb" />
     <Compile Include="Produto.vb" />
+    <Compile Include="Seguro.vb" />
     <Compile Include="Seguros.vb" />
     <Compile Include="Servico.vb" />
     <Compile Include="SplashScreen1.Designer.vb">
