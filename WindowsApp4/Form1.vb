@@ -25,6 +25,8 @@ Public Class Form1
     Dim currentMedicoServico As Integer
     Dim currentEnfermeiroServico As Integer
 
+
+
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'nao sei o que é para escrever
 
