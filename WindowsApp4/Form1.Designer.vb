@@ -278,8 +278,9 @@ Partial Class Form1
         Me.btnOkPaciente = New System.Windows.Forms.Button()
         Me.TabControl = New System.Windows.Forms.TabControl()
         Me.Seguros = New System.Windows.Forms.TabPage()
-        Me.ListSeguros = New System.Windows.Forms.ListBox()
         Me.desconto = New System.Windows.Forms.TextBox()
+        Me.ListSeguros = New System.Windows.Forms.ListBox()
+        Me.Label26 = New System.Windows.Forms.Label()
         Me.TabMedicamento.SuspendLayout()
         Me.TabServico.SuspendLayout()
         Me.TabFatura.SuspendLayout()
@@ -2648,6 +2649,7 @@ Partial Class Form1
         '
         'Seguros
         '
+        Me.Seguros.Controls.Add(Me.Label26)
         Me.Seguros.Controls.Add(Me.desconto)
         Me.Seguros.Controls.Add(Me.ListSeguros)
         Me.Seguros.Location = New System.Drawing.Point(4, 22)
@@ -2657,6 +2659,13 @@ Partial Class Form1
         Me.Seguros.Text = "Seguros"
         Me.Seguros.UseVisualStyleBackColor = True
         '
+        'desconto
+        '
+        Me.desconto.Location = New System.Drawing.Point(190, 113)
+        Me.desconto.Name = "desconto"
+        Me.desconto.Size = New System.Drawing.Size(173, 20)
+        Me.desconto.TabIndex = 1
+        '
         'ListSeguros
         '
         Me.ListSeguros.FormattingEnabled = True
@@ -2665,12 +2674,14 @@ Partial Class Form1
         Me.ListSeguros.Size = New System.Drawing.Size(120, 95)
         Me.ListSeguros.TabIndex = 0
         '
-        'desconto
+        'Label26
         '
-        Me.desconto.Location = New System.Drawing.Point(283, 61)
-        Me.desconto.Name = "desconto"
-        Me.desconto.Size = New System.Drawing.Size(115, 20)
-        Me.desconto.TabIndex = 1
+        Me.Label26.AutoSize = True
+        Me.Label26.Location = New System.Drawing.Point(187, 97)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(176, 13)
+        Me.Label26.TabIndex = 2
+        Me.Label26.Text = "Valor do desconto em Percentagem"
         '
         'Form1
         '
@@ -2968,4 +2979,5 @@ Partial Class Form1
     Friend WithEvents Seguros As TabPage
     Friend WithEvents ListSeguros As ListBox
     Friend WithEvents desconto As TextBox
+    Friend WithEvents Label26 As Label
 End Class

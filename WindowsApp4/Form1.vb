@@ -24,6 +24,8 @@ Public Class Form1
     Dim currentSeguros As Integer
 
 
+
+
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'nao sei o que é para escrever
 
