@@ -18,9 +18,7 @@ Public Class Form1
     Dim currentFatura As Integer
     Dim currentProdutoIntervencao As Integer
     Dim currentFaturasPaciente As Integer
-    Dim currentInternamentoPaciente As Integer
-    Dim currentIntervencaoPaciente As Integer
-    Dim currentProdutoIntervencaoPaciente As Integer
+    Dim currentSeguros As Integer
 
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'nao sei o que é para escrever
@@ -38,6 +36,7 @@ Public Class Form1
         TerFaturas()
         TerServiços()
         TerMedicamentos()
+        TerSeguros()
 
     End Sub
 
@@ -265,6 +264,28 @@ Public Class Form1
 
     End Sub
 
+    Private Sub TerSeguros()
+
+        Dim cmd = New SqlCommand With {
+            .Connection = CN,
+            .CommandText = "SELECT * FROM ClinicGest.Seguro"
+        }
+        CN.Open()
+        Dim RDR As SqlDataReader
+        RDR = cmd.ExecuteReader
+        ListSeguros.Items.Clear()
+        While RDR.Read
+            Dim seg As New Seguros
+            seg.Codigo = RDR.Item("codigo_seguro")
+            seg.Nome = RDR.Item("entidade")
+            seg.Custo = RDR.Item("desconto")
+            ListSeguros.Items.Add(seg)
+        End While
+        CN.Close()
+        currentSeguros = 0
+        ShowSeguros()
+
+    End Sub
     Private Sub TerServiços()
 
         Dim cmd = New SqlCommand With {
@@ -384,7 +405,6 @@ Public Class Form1
     End Sub
 
 
-
     Private Sub TerFaturas()
         Dim cmd = New SqlCommand With {
             .Connection = CN,
@@ -440,107 +460,6 @@ Public Class Form1
         CN.Close()
         currentFaturasPaciente = 0
         ShowFaturasPaciente()
-
-    End Sub
-
-    Private Sub TerInternamentosPaciente()
-
-        If ListPacientes.Items.Count = 0 Or currentPaciente < 0 Then Exit Sub
-        Dim paciente As New Paciente
-        paciente = CType(ListPacientes.Items.Item(currentPaciente), Paciente)
-
-
-        Dim cmd = New SqlCommand With {
-           .Connection = CN,
-           .CommandText = "SELECT Servico.codigo_servico as codigoServico, Servico.nome as nomeServico,Pessoa.nome as nomePessoa, num_internamento, custo, data_entrada, data_saida, patologia FROM ClinicGest.Internamento AS internamento " &
-           "JOIN ClinicGest.Servico AS servico ON internamento.codigo_servico = servico.codigo_servico " &
-           "JOIN ClinicGest.Paciente as paciente on internamento.codigo_pac = paciente.codigo_pac " &
-           "JOIN ClinicGest.Pessoa as pessoa on paciente.cc_pac = pessoa.cc where internamento.codigo_pac = @paciente_codigo"
-       }
-        CN.Open()
-        cmd.Parameters.Clear()
-        cmd.Parameters.AddWithValue("@paciente_codigo", paciente.Codigo)
-        Dim RDR As SqlDataReader
-        RDR = cmd.ExecuteReader
-        ListInternamentosPaciente.Items.Clear()
-        While RDR.Read
-            Dim M As New Internamento
-            M.NumeroInternamento = RDR.Item("num_internamento")
-            M.CodigoServico = RDR.Item("codigoServico")
-            M.NomeServico = Convert.ToString(IIf(RDR.IsDBNull(RDR.GetOrdinal("nomeServico")), "", RDR.Item("nomeServico")))
-            M.NomePaciente = Convert.ToString(IIf(RDR.IsDBNull(RDR.GetOrdinal("nomePessoa")), "", RDR.Item("nomePessoa")))
-            M.CustoServico = Convert.ToString(IIf(RDR.IsDBNull(RDR.GetOrdinal("custo")), "", RDR.Item("custo")))
-            M.DataInicio = Convert.ToString(IIf(RDR.IsDBNull(RDR.GetOrdinal("data_entrada")), "", RDR.Item("data_entrada")))
-            M.DataFim = Convert.ToString(IIf(RDR.IsDBNull(RDR.GetOrdinal("data_saida")), "", RDR.Item("data_saida")))
-            M.Patologia = Convert.ToString(IIf(RDR.IsDBNull(RDR.GetOrdinal("patologia")), "", RDR.Item("patologia")))
-
-            ListInternamentosPaciente.Items.Add(M)
-        End While
-        CN.Close()
-        currentInternamentoPaciente = 0
-        ShowInternamentoPaciente()
-
-
-    End Sub
-
-    Private Sub TerIntervencoesInternamentoPaciente()
-
-        If ListInternamentosPaciente.Items.Count = 0 Or currentInternamentoPaciente < 0 Then Exit Sub
-        Dim internamento As New Internamento
-        internamento = CType(ListInternamentosPaciente.Items.Item(currentInternamentoPaciente), Internamento)
-        Dim cmd = New SqlCommand With {
-            .Connection = CN,
-            .CommandText = "SELECT * FROM ClinicGest.Intervencao WHERE num_internamento = @internamento"
-        }
-        cmd.Parameters.Clear()
-        cmd.Parameters.AddWithValue("@internamento", internamento.NumeroInternamento)
-        CN.Open()
-        Dim RDR As SqlDataReader
-        RDR = cmd.ExecuteReader
-        ListIntervencaoPaciente.Items.Clear()
-        While RDR.Read
-            Dim M As New Intervencao
-            M.NumeroInternamento = RDR.Item("num_internamento")
-            M.NumeroIntervencao = RDR.Item("num_intervencao")
-            M.CodigoStaff = Convert.ToString(IIf(RDR.IsDBNull(RDR.GetOrdinal("codigo_staff")), "", RDR.Item("codigo_staff")))
-            ListIntervencaoPaciente.Items.Add(M)
-        End While
-        CN.Close()
-        currentIntervencaoPaciente = 0
-        ShowIntervencaoInternamentoPaciente()
-
-    End Sub
-
-    Private Sub TerProdutosIntervencaoPaciente()
-
-        If ListIntervencaoPaciente.Items.Count = 0 Or currentIntervencaoPaciente < 0 Then Exit Sub
-        Dim intervencao As New Intervencao
-        intervencao = CType(ListIntervencaoPaciente.Items.Item(currentIntervencaoPaciente), Intervencao)
-
-        Dim cmd = New SqlCommand With {
-            .Connection = CN,
-            .CommandText = "SELECT * FROM ClinicGest.ProdutoIntervencao gp " &
-            "RIGHT JOIN ClinicGest.Produto p ON gp.codigo_produto = p.codigo_produto " &
-            "WHERE gp.numero_intervencao = @intervencao"
-        }
-        cmd.Parameters.Clear()
-        cmd.Parameters.AddWithValue("@intervencao", intervencao.NumeroIntervencao)
-        CN.Open()
-        Dim RDR As SqlDataReader
-        RDR = cmd.ExecuteReader
-        ListProdutosIntervencaoPaciente.Items.Clear()
-        While RDR.Read
-            Dim M As New Produto
-            M.CodigoProduto = RDR.Item("codigo_produto")
-            M.TipoProduto = Convert.ToString(IIf(RDR.IsDBNull(RDR.GetOrdinal("tipo_produto")), "", RDR.Item("tipo_produto")))
-            M.Custo = Convert.ToString(IIf(RDR.IsDBNull(RDR.GetOrdinal("custo")), "", RDR.Item("custo")))
-            M.CustoLimpeza = Convert.ToString(IIf(RDR.IsDBNull(RDR.GetOrdinal("custo_de_limp")), "", RDR.Item("custo_de_limp")))
-            M.Quantidade = Convert.ToString(IIf(RDR.IsDBNull(RDR.GetOrdinal("quantidade")), "", RDR.Item("quantidade")))
-            ListProdutosIntervencaoPaciente.Items.Add(M)
-        End While
-        CN.Close()
-        currentProdutoIntervencaoPaciente = 0
-        ShowProdutoIntervencaoPaciente()
 
     End Sub
 
@@ -649,6 +568,17 @@ Public Class Form1
 
     End Sub
 
+    Private Sub ShowSeguros()
+
+        If ListSeguros.Items.Count = 0 Or currentSeguros < 0 Then Exit Sub
+        Dim seguros As New Seguros
+        seguros = CType(ListSeguros.Items.Item(currentSeguros), Seguros)
+        'CodigoSeguro.Text = seguros.Codigo
+        Seguradora.Text = seguros.Nome
+        Desconto.Text = seguros.Custo
+
+    End Sub
+
     Private Sub ShowMedicamento()
         If ListMedicamentos.Items.Count = 0 Or currentMedicamento < 0 Then Exit Sub
         Dim medicamento As New Medicamento
@@ -692,49 +622,6 @@ Public Class Form1
         CodigoFaturaPaciente.Text = fatura.CodigoFatura
         CustoFaturaPaciente.Text = fatura.CustoFatura
         DataPagamentoFaturaPaciente.Text = fatura.DataPagamento
-
-    End Sub
-
-    Private Sub ShowInternamentoPaciente()
-
-        If ListInternamentosPaciente.Items.Count = 0 Or currentInternamentoPaciente < 0 Then Exit Sub
-        Dim internamento As New Internamento
-        internamento = CType(ListInternamentosPaciente.Items.Item(currentInternamentoPaciente), Internamento)
-        NumeroInternamentoPaciente.Text = internamento.NumeroInternamento
-        CodigoServicoInternamentoPaciente.Text = internamento.CodigoServico
-        NomePacienteInternamentoPaciente.Text = internamento.NomePaciente
-        NomeServicoInternamentoPaciente.Text = internamento.NomeServico
-        CustoServicoInternamentoPaciente.Text = internamento.CustoServico
-        DataInicioInternamentoPaciente.Text = internamento.DataInicio
-        DataFimInternamentoPaciente.Text = internamento.DataFim
-        PatologiaInternamentoPaciente.Text = internamento.Patologia
-
-    End Sub
-
-    Private Sub ShowIntervencaoInternamentoPaciente()
-
-
-        If ListIntervencaoPaciente.Items.Count = 0 Or currentIntervencaoPaciente < 0 Then Exit Sub
-        Dim intervencao As New Intervencao
-        intervencao = CType(ListIntervencaoPaciente.Items.Item(currentIntervencaoPaciente), Intervencao)
-        NumeroIntervencaoPaciente.Text = intervencao.NumeroInternamento
-        NumeroInternamentoIntervencaoPaciente.Text = intervencao.NumeroIntervencao
-        CustoIntervencaoPaciente.Text = intervencao.CodigoStaff
-
-        TerProdutosIntervencaoPaciente()
-
-    End Sub
-
-    Private Sub ShowProdutoIntervencaoPaciente()
-
-        If ListProdutosIntervencaoPaciente.Items.Count = 0 Or currentProdutoIntervencaoPaciente < 0 Then Exit Sub
-        Dim produto As New Produto
-        produto = CType(ListProdutosIntervencaoPaciente.Items.Item(currentProdutoIntervencaoPaciente), Produto)
-        CodigoProdutoIntervencaoPaciente.Text = produto.CodigoProduto
-        TipoProdutoIntervencaoPaciente.Text = produto.TipoProduto
-        CustoProdutoIntervencaoPaciente.Text = produto.Custo
-        CustoLimpezaIntervencaoPaciente.Text = produto.CustoLimpeza
-        ProdutoQuantidadePaciente.Text = produto.Quantidade
 
     End Sub
 
@@ -1316,6 +1203,13 @@ Public Class Form1
         End If
     End Sub
 
+    Private Sub ListSeguros_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListSeguros.SelectedIndexChanged
+        If ListSeguros.SelectedIndex > -1 Then
+            currentSeguros = ListSeguros.SelectedIndex
+            ShowSeguros()
+        End If
+    End Sub
+
     Private Sub ListFaturas_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ListFaturas.SelectedIndexChanged
         If ListFaturas.SelectedIndex > -1 Then
             currentFatura = ListFaturas.SelectedIndex
@@ -1327,13 +1221,6 @@ Public Class Form1
         If ListFaturasPaciente.SelectedIndex > -1 Then
             currentFaturasPaciente = ListFaturasPaciente.SelectedIndex
             ShowFaturasPaciente()
-        End If
-    End Sub
-
-    Private Sub ListInternamentosPaciente_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ListInternamentosPaciente.SelectedIndexChanged
-        If ListInternamentosPaciente.SelectedIndex > -1 Then
-            currentInternamentoPaciente = ListInternamentosPaciente.SelectedIndex
-            ShowInternamentoPaciente()
         End If
     End Sub
 
@@ -1427,17 +1314,6 @@ Public Class Form1
             If lbItem.ToString = SearchFaturasPaciente.Text Then
                 ' Match found: set as selected item and exit procedure
                 ListFaturasPaciente.SelectedItem = lbItem
-                Return
-            End If
-        Next
-    End Sub
-
-    Private Sub SearchInternamentoPaciente_Click(sender As Object, e As EventArgs) Handles btnSearchInternamentoPaciente.Click
-        For Each lbItem As Object In ListInternamentosPaciente.Items
-            ' Case-sensitive match
-            If lbItem.ToString = SearchInternamentoPaciente.Text Then
-                ' Match found: set as selected item and exit procedure
-                ListInternamentosPaciente.SelectedItem = lbItem
                 Return
             End If
         Next
@@ -1646,11 +1522,6 @@ Public Class Form1
         GroupFaturasPaciente.Visible = True
     End Sub
 
-    Private Sub ListInternamentosPaciente_Click(sender As Object, e As EventArgs) Handles btnListInternamentosPaciente.Click
-        TerInternamentosPaciente()
-        GroupInternamentosPaciente.Visible = True
-    End Sub
-
     Private Sub ExitIntervencoesInternamento_Click(sender As Object, e As EventArgs) Handles btnExitIntervencoesInternamento.Click
         GroupIntervencoesInternamento.Visible = False
     End Sub
@@ -1658,16 +1529,6 @@ Public Class Form1
     Private Sub btbSairFaturasPaciente_Click(sender As Object, e As EventArgs) Handles btbSairFaturasPaciente.Click
         GroupFaturasPaciente.Visible = False
     End Sub
-
-    Private Sub btnSairInternamentosPaciente_Click(sender As Object, e As EventArgs) Handles btnSairInternamentosPaciente.Click
-        GroupInternamentosPaciente.Visible = False
-    End Sub
-
-    Private Sub ListIntervencoesInternamentoPaciente_Click(sender As Object, e As EventArgs) Handles ListarIntervencoesInternamentoPaciente.Click
-        TerIntervencoesInternamentoPaciente()
-        GroupIntervencoesInternamentosPaciente.Visible = True
-    End Sub
-
 
 
 #End Region
