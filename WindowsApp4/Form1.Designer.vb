@@ -38,6 +38,35 @@ Partial Class Form1
         Me.btnCancelMedicamento = New System.Windows.Forms.Button()
         Me.btnOkMedicamento = New System.Windows.Forms.Button()
         Me.TabServico = New System.Windows.Forms.TabPage()
+        Me.GroupEnfermeirosServico = New System.Windows.Forms.GroupBox()
+        Me.btnExitEnfermeirosServico = New System.Windows.Forms.Button()
+        Me.SearchInfermeiroServico = New System.Windows.Forms.TextBox()
+        Me.NomeEnfermeiroServico = New System.Windows.Forms.TextBox()
+        Me.SalarioEnfermeiroServico = New System.Windows.Forms.TextBox()
+        Me.CcEnfermeiroServico = New System.Windows.Forms.TextBox()
+        Me.CodigoEnfermeiroServico = New System.Windows.Forms.TextBox()
+        Me.DataNascimentoEnfermeiroServico = New System.Windows.Forms.TextBox()
+        Me.EmailEnfermeiroServico = New System.Windows.Forms.TextBox()
+        Me.GeneroEnfermeiroServico = New System.Windows.Forms.TextBox()
+        Me.MoradaEnfermeiroServico = New System.Windows.Forms.TextBox()
+        Me.CodigoPostalEnfermeiroServico = New System.Windows.Forms.TextBox()
+        Me.NacionalidadeEnfermeiroServico = New System.Windows.Forms.TextBox()
+        Me.TelemovelEnfermeiroServico = New System.Windows.Forms.TextBox()
+        Me.TelefoneEnfermeiroServico = New System.Windows.Forms.TextBox()
+        Me.btnSearchInfermeiroServico = New System.Windows.Forms.Button()
+        Me.ListEnfermeirosServico = New System.Windows.Forms.ListBox()
+        Me.Label42 = New System.Windows.Forms.Label()
+        Me.Label43 = New System.Windows.Forms.Label()
+        Me.Label44 = New System.Windows.Forms.Label()
+        Me.Label45 = New System.Windows.Forms.Label()
+        Me.Label46 = New System.Windows.Forms.Label()
+        Me.Label47 = New System.Windows.Forms.Label()
+        Me.Label48 = New System.Windows.Forms.Label()
+        Me.Label49 = New System.Windows.Forms.Label()
+        Me.Label50 = New System.Windows.Forms.Label()
+        Me.Label51 = New System.Windows.Forms.Label()
+        Me.Label52 = New System.Windows.Forms.Label()
+        Me.Label53 = New System.Windows.Forms.Label()
         Me.GroupMedicosServico = New System.Windows.Forms.GroupBox()
         Me.btnSairMedicosServico = New System.Windows.Forms.Button()
         Me.SearchMedicoServico = New System.Windows.Forms.TextBox()
@@ -321,6 +350,7 @@ Partial Class Form1
         Me.TabControl = New System.Windows.Forms.TabControl()
         Me.TabMedicamento.SuspendLayout()
         Me.TabServico.SuspendLayout()
+        Me.GroupEnfermeirosServico.SuspendLayout()
         Me.GroupMedicosServico.SuspendLayout()
         Me.TabFatura.SuspendLayout()
         Me.TabInternamento.SuspendLayout()
@@ -361,7 +391,7 @@ Partial Class Form1
         Me.TabMedicamento.Controls.Add(Me.btnOkMedicamento)
         Me.TabMedicamento.Location = New System.Drawing.Point(4, 22)
         Me.TabMedicamento.Name = "TabMedicamento"
-        Me.TabMedicamento.Size = New System.Drawing.Size(602, 339)
+        Me.TabMedicamento.Size = New System.Drawing.Size(605, 339)
         Me.TabMedicamento.TabIndex = 9
         Me.TabMedicamento.Text = "Medicamentos"
         Me.TabMedicamento.UseVisualStyleBackColor = True
@@ -477,6 +507,7 @@ Partial Class Form1
         '
         'TabServico
         '
+        Me.TabServico.Controls.Add(Me.GroupEnfermeirosServico)
         Me.TabServico.Controls.Add(Me.GroupMedicosServico)
         Me.TabServico.Controls.Add(Me.SearchServico)
         Me.TabServico.Controls.Add(Me.CodigoServico)
@@ -495,10 +526,273 @@ Partial Class Form1
         Me.TabServico.Controls.Add(Me.btnListEnfermeirosServico)
         Me.TabServico.Location = New System.Drawing.Point(4, 22)
         Me.TabServico.Name = "TabServico"
-        Me.TabServico.Size = New System.Drawing.Size(602, 339)
+        Me.TabServico.Size = New System.Drawing.Size(605, 339)
         Me.TabServico.TabIndex = 6
         Me.TabServico.Text = "Serviços"
         Me.TabServico.UseVisualStyleBackColor = True
+        '
+        'GroupEnfermeirosServico
+        '
+        Me.GroupEnfermeirosServico.Controls.Add(Me.btnExitEnfermeirosServico)
+        Me.GroupEnfermeirosServico.Controls.Add(Me.SearchInfermeiroServico)
+        Me.GroupEnfermeirosServico.Controls.Add(Me.NomeEnfermeiroServico)
+        Me.GroupEnfermeirosServico.Controls.Add(Me.SalarioEnfermeiroServico)
+        Me.GroupEnfermeirosServico.Controls.Add(Me.CcEnfermeiroServico)
+        Me.GroupEnfermeirosServico.Controls.Add(Me.CodigoEnfermeiroServico)
+        Me.GroupEnfermeirosServico.Controls.Add(Me.DataNascimentoEnfermeiroServico)
+        Me.GroupEnfermeirosServico.Controls.Add(Me.EmailEnfermeiroServico)
+        Me.GroupEnfermeirosServico.Controls.Add(Me.GeneroEnfermeiroServico)
+        Me.GroupEnfermeirosServico.Controls.Add(Me.MoradaEnfermeiroServico)
+        Me.GroupEnfermeirosServico.Controls.Add(Me.CodigoPostalEnfermeiroServico)
+        Me.GroupEnfermeirosServico.Controls.Add(Me.NacionalidadeEnfermeiroServico)
+        Me.GroupEnfermeirosServico.Controls.Add(Me.TelemovelEnfermeiroServico)
+        Me.GroupEnfermeirosServico.Controls.Add(Me.TelefoneEnfermeiroServico)
+        Me.GroupEnfermeirosServico.Controls.Add(Me.btnSearchInfermeiroServico)
+        Me.GroupEnfermeirosServico.Controls.Add(Me.ListEnfermeirosServico)
+        Me.GroupEnfermeirosServico.Controls.Add(Me.Label42)
+        Me.GroupEnfermeirosServico.Controls.Add(Me.Label43)
+        Me.GroupEnfermeirosServico.Controls.Add(Me.Label44)
+        Me.GroupEnfermeirosServico.Controls.Add(Me.Label45)
+        Me.GroupEnfermeirosServico.Controls.Add(Me.Label46)
+        Me.GroupEnfermeirosServico.Controls.Add(Me.Label47)
+        Me.GroupEnfermeirosServico.Controls.Add(Me.Label48)
+        Me.GroupEnfermeirosServico.Controls.Add(Me.Label49)
+        Me.GroupEnfermeirosServico.Controls.Add(Me.Label50)
+        Me.GroupEnfermeirosServico.Controls.Add(Me.Label51)
+        Me.GroupEnfermeirosServico.Controls.Add(Me.Label52)
+        Me.GroupEnfermeirosServico.Controls.Add(Me.Label53)
+        Me.GroupEnfermeirosServico.Location = New System.Drawing.Point(7, 3)
+        Me.GroupEnfermeirosServico.Name = "GroupEnfermeirosServico"
+        Me.GroupEnfermeirosServico.Size = New System.Drawing.Size(595, 343)
+        Me.GroupEnfermeirosServico.TabIndex = 63
+        Me.GroupEnfermeirosServico.TabStop = False
+        Me.GroupEnfermeirosServico.Text = "Enfermeiros"
+        Me.GroupEnfermeirosServico.Visible = False
+        '
+        'btnExitEnfermeirosServico
+        '
+        Me.btnExitEnfermeirosServico.Location = New System.Drawing.Point(18, 288)
+        Me.btnExitEnfermeirosServico.Name = "btnExitEnfermeirosServico"
+        Me.btnExitEnfermeirosServico.Size = New System.Drawing.Size(58, 22)
+        Me.btnExitEnfermeirosServico.TabIndex = 56
+        Me.btnExitEnfermeirosServico.Text = "Sair"
+        Me.btnExitEnfermeirosServico.UseVisualStyleBackColor = True
+        '
+        'SearchInfermeiroServico
+        '
+        Me.SearchInfermeiroServico.Location = New System.Drawing.Point(18, 44)
+        Me.SearchInfermeiroServico.Name = "SearchInfermeiroServico"
+        Me.SearchInfermeiroServico.Size = New System.Drawing.Size(151, 20)
+        Me.SearchInfermeiroServico.TabIndex = 29
+        '
+        'NomeEnfermeiroServico
+        '
+        Me.NomeEnfermeiroServico.Location = New System.Drawing.Point(265, 64)
+        Me.NomeEnfermeiroServico.Name = "NomeEnfermeiroServico"
+        Me.NomeEnfermeiroServico.Size = New System.Drawing.Size(206, 20)
+        Me.NomeEnfermeiroServico.TabIndex = 33
+        '
+        'SalarioEnfermeiroServico
+        '
+        Me.SalarioEnfermeiroServico.Location = New System.Drawing.Point(476, 64)
+        Me.SalarioEnfermeiroServico.Name = "SalarioEnfermeiroServico"
+        Me.SalarioEnfermeiroServico.Size = New System.Drawing.Size(100, 20)
+        Me.SalarioEnfermeiroServico.TabIndex = 35
+        '
+        'CcEnfermeiroServico
+        '
+        Me.CcEnfermeiroServico.Location = New System.Drawing.Point(265, 106)
+        Me.CcEnfermeiroServico.Name = "CcEnfermeiroServico"
+        Me.CcEnfermeiroServico.Size = New System.Drawing.Size(102, 20)
+        Me.CcEnfermeiroServico.TabIndex = 37
+        '
+        'CodigoEnfermeiroServico
+        '
+        Me.CodigoEnfermeiroServico.Location = New System.Drawing.Point(373, 106)
+        Me.CodigoEnfermeiroServico.Name = "CodigoEnfermeiroServico"
+        Me.CodigoEnfermeiroServico.Size = New System.Drawing.Size(87, 20)
+        Me.CodigoEnfermeiroServico.TabIndex = 39
+        '
+        'DataNascimentoEnfermeiroServico
+        '
+        Me.DataNascimentoEnfermeiroServico.Location = New System.Drawing.Point(466, 106)
+        Me.DataNascimentoEnfermeiroServico.Name = "DataNascimentoEnfermeiroServico"
+        Me.DataNascimentoEnfermeiroServico.Size = New System.Drawing.Size(110, 20)
+        Me.DataNascimentoEnfermeiroServico.TabIndex = 41
+        '
+        'EmailEnfermeiroServico
+        '
+        Me.EmailEnfermeiroServico.Location = New System.Drawing.Point(265, 148)
+        Me.EmailEnfermeiroServico.Name = "EmailEnfermeiroServico"
+        Me.EmailEnfermeiroServico.Size = New System.Drawing.Size(206, 20)
+        Me.EmailEnfermeiroServico.TabIndex = 43
+        '
+        'GeneroEnfermeiroServico
+        '
+        Me.GeneroEnfermeiroServico.Location = New System.Drawing.Point(476, 148)
+        Me.GeneroEnfermeiroServico.Name = "GeneroEnfermeiroServico"
+        Me.GeneroEnfermeiroServico.Size = New System.Drawing.Size(100, 20)
+        Me.GeneroEnfermeiroServico.TabIndex = 45
+        '
+        'MoradaEnfermeiroServico
+        '
+        Me.MoradaEnfermeiroServico.Location = New System.Drawing.Point(265, 192)
+        Me.MoradaEnfermeiroServico.Name = "MoradaEnfermeiroServico"
+        Me.MoradaEnfermeiroServico.Size = New System.Drawing.Size(206, 20)
+        Me.MoradaEnfermeiroServico.TabIndex = 47
+        '
+        'CodigoPostalEnfermeiroServico
+        '
+        Me.CodigoPostalEnfermeiroServico.Location = New System.Drawing.Point(476, 192)
+        Me.CodigoPostalEnfermeiroServico.Name = "CodigoPostalEnfermeiroServico"
+        Me.CodigoPostalEnfermeiroServico.Size = New System.Drawing.Size(100, 20)
+        Me.CodigoPostalEnfermeiroServico.TabIndex = 49
+        '
+        'NacionalidadeEnfermeiroServico
+        '
+        Me.NacionalidadeEnfermeiroServico.Location = New System.Drawing.Point(265, 237)
+        Me.NacionalidadeEnfermeiroServico.Name = "NacionalidadeEnfermeiroServico"
+        Me.NacionalidadeEnfermeiroServico.Size = New System.Drawing.Size(100, 20)
+        Me.NacionalidadeEnfermeiroServico.TabIndex = 51
+        '
+        'TelemovelEnfermeiroServico
+        '
+        Me.TelemovelEnfermeiroServico.Location = New System.Drawing.Point(370, 237)
+        Me.TelemovelEnfermeiroServico.Name = "TelemovelEnfermeiroServico"
+        Me.TelemovelEnfermeiroServico.Size = New System.Drawing.Size(100, 20)
+        Me.TelemovelEnfermeiroServico.TabIndex = 53
+        '
+        'TelefoneEnfermeiroServico
+        '
+        Me.TelefoneEnfermeiroServico.Location = New System.Drawing.Point(476, 237)
+        Me.TelefoneEnfermeiroServico.Name = "TelefoneEnfermeiroServico"
+        Me.TelefoneEnfermeiroServico.Size = New System.Drawing.Size(100, 20)
+        Me.TelefoneEnfermeiroServico.TabIndex = 55
+        '
+        'btnSearchInfermeiroServico
+        '
+        Me.btnSearchInfermeiroServico.Location = New System.Drawing.Point(175, 43)
+        Me.btnSearchInfermeiroServico.Name = "btnSearchInfermeiroServico"
+        Me.btnSearchInfermeiroServico.Size = New System.Drawing.Size(58, 22)
+        Me.btnSearchInfermeiroServico.TabIndex = 30
+        Me.btnSearchInfermeiroServico.Text = "Procurar"
+        Me.btnSearchInfermeiroServico.UseVisualStyleBackColor = True
+        '
+        'ListEnfermeirosServico
+        '
+        Me.ListEnfermeirosServico.FormattingEnabled = True
+        Me.ListEnfermeirosServico.Location = New System.Drawing.Point(19, 75)
+        Me.ListEnfermeirosServico.Name = "ListEnfermeirosServico"
+        Me.ListEnfermeirosServico.Size = New System.Drawing.Size(214, 199)
+        Me.ListEnfermeirosServico.TabIndex = 31
+        '
+        'Label42
+        '
+        Me.Label42.AutoSize = True
+        Me.Label42.Location = New System.Drawing.Point(262, 48)
+        Me.Label42.Name = "Label42"
+        Me.Label42.Size = New System.Drawing.Size(38, 13)
+        Me.Label42.TabIndex = 32
+        Me.Label42.Text = "Nome:"
+        '
+        'Label43
+        '
+        Me.Label43.AutoSize = True
+        Me.Label43.Location = New System.Drawing.Point(473, 48)
+        Me.Label43.Name = "Label43"
+        Me.Label43.Size = New System.Drawing.Size(42, 13)
+        Me.Label43.TabIndex = 34
+        Me.Label43.Text = "Salário:"
+        '
+        'Label44
+        '
+        Me.Label44.AutoSize = True
+        Me.Label44.Location = New System.Drawing.Point(262, 90)
+        Me.Label44.Name = "Label44"
+        Me.Label44.Size = New System.Drawing.Size(24, 13)
+        Me.Label44.TabIndex = 36
+        Me.Label44.Text = "CC:"
+        '
+        'Label45
+        '
+        Me.Label45.AutoSize = True
+        Me.Label45.Location = New System.Drawing.Point(370, 90)
+        Me.Label45.Name = "Label45"
+        Me.Label45.Size = New System.Drawing.Size(43, 13)
+        Me.Label45.TabIndex = 38
+        Me.Label45.Text = "Código:"
+        '
+        'Label46
+        '
+        Me.Label46.AutoSize = True
+        Me.Label46.Location = New System.Drawing.Point(463, 90)
+        Me.Label46.Name = "Label46"
+        Me.Label46.Size = New System.Drawing.Size(107, 13)
+        Me.Label46.TabIndex = 40
+        Me.Label46.Text = "Data de Nascimento:"
+        '
+        'Label47
+        '
+        Me.Label47.AutoSize = True
+        Me.Label47.Location = New System.Drawing.Point(262, 132)
+        Me.Label47.Name = "Label47"
+        Me.Label47.Size = New System.Drawing.Size(38, 13)
+        Me.Label47.TabIndex = 42
+        Me.Label47.Text = "E-mail:"
+        '
+        'Label48
+        '
+        Me.Label48.AutoSize = True
+        Me.Label48.Location = New System.Drawing.Point(473, 132)
+        Me.Label48.Name = "Label48"
+        Me.Label48.Size = New System.Drawing.Size(45, 13)
+        Me.Label48.TabIndex = 44
+        Me.Label48.Text = "Género:"
+        '
+        'Label49
+        '
+        Me.Label49.AutoSize = True
+        Me.Label49.Location = New System.Drawing.Point(262, 176)
+        Me.Label49.Name = "Label49"
+        Me.Label49.Size = New System.Drawing.Size(46, 13)
+        Me.Label49.TabIndex = 46
+        Me.Label49.Text = "Morada:"
+        '
+        'Label50
+        '
+        Me.Label50.AutoSize = True
+        Me.Label50.Location = New System.Drawing.Point(473, 176)
+        Me.Label50.Name = "Label50"
+        Me.Label50.Size = New System.Drawing.Size(75, 13)
+        Me.Label50.TabIndex = 48
+        Me.Label50.Text = "Código Postal:"
+        '
+        'Label51
+        '
+        Me.Label51.AutoSize = True
+        Me.Label51.Location = New System.Drawing.Point(262, 221)
+        Me.Label51.Name = "Label51"
+        Me.Label51.Size = New System.Drawing.Size(78, 13)
+        Me.Label51.TabIndex = 50
+        Me.Label51.Text = "Nacionalidade:"
+        '
+        'Label52
+        '
+        Me.Label52.AutoSize = True
+        Me.Label52.Location = New System.Drawing.Point(367, 221)
+        Me.Label52.Name = "Label52"
+        Me.Label52.Size = New System.Drawing.Size(59, 13)
+        Me.Label52.TabIndex = 52
+        Me.Label52.Text = "Telemóvel:"
+        '
+        'Label53
+        '
+        Me.Label53.AutoSize = True
+        Me.Label53.Location = New System.Drawing.Point(473, 221)
+        Me.Label53.Name = "Label53"
+        Me.Label53.Size = New System.Drawing.Size(52, 13)
+        Me.Label53.TabIndex = 54
+        Me.Label53.Text = "Telefone:"
         '
         'GroupMedicosServico
         '
@@ -532,9 +826,9 @@ Partial Class Form1
         Me.GroupMedicosServico.Controls.Add(Me.Label39)
         Me.GroupMedicosServico.Controls.Add(Me.Label40)
         Me.GroupMedicosServico.Controls.Add(Me.Label41)
-        Me.GroupMedicosServico.Location = New System.Drawing.Point(0, 0)
+        Me.GroupMedicosServico.Location = New System.Drawing.Point(7, 1)
         Me.GroupMedicosServico.Name = "GroupMedicosServico"
-        Me.GroupMedicosServico.Size = New System.Drawing.Size(602, 339)
+        Me.GroupMedicosServico.Size = New System.Drawing.Size(598, 339)
         Me.GroupMedicosServico.TabIndex = 15
         Me.GroupMedicosServico.TabStop = False
         Me.GroupMedicosServico.Text = "Medicos"
@@ -920,7 +1214,7 @@ Partial Class Form1
         Me.TabFatura.Controls.Add(Me.LabelDataPagamentoFatura)
         Me.TabFatura.Location = New System.Drawing.Point(4, 22)
         Me.TabFatura.Name = "TabFatura"
-        Me.TabFatura.Size = New System.Drawing.Size(602, 339)
+        Me.TabFatura.Size = New System.Drawing.Size(605, 339)
         Me.TabFatura.TabIndex = 4
         Me.TabFatura.Text = "Faturas"
         Me.TabFatura.UseVisualStyleBackColor = True
@@ -1053,7 +1347,7 @@ Partial Class Form1
         Me.TabInternamento.Controls.Add(Me.Label7)
         Me.TabInternamento.Location = New System.Drawing.Point(4, 22)
         Me.TabInternamento.Name = "TabInternamento"
-        Me.TabInternamento.Size = New System.Drawing.Size(602, 339)
+        Me.TabInternamento.Size = New System.Drawing.Size(605, 339)
         Me.TabInternamento.TabIndex = 2
         Me.TabInternamento.Text = "Internamentos"
         Me.TabInternamento.UseVisualStyleBackColor = True
@@ -1469,7 +1763,7 @@ Partial Class Form1
         Me.TabEnfermeiro.Controls.Add(Me.btnOkEnfermeiro)
         Me.TabEnfermeiro.Location = New System.Drawing.Point(4, 22)
         Me.TabEnfermeiro.Name = "TabEnfermeiro"
-        Me.TabEnfermeiro.Size = New System.Drawing.Size(602, 339)
+        Me.TabEnfermeiro.Size = New System.Drawing.Size(605, 339)
         Me.TabEnfermeiro.TabIndex = 7
         Me.TabEnfermeiro.Text = "Enfermeiros"
         Me.TabEnfermeiro.UseVisualStyleBackColor = True
@@ -1794,7 +2088,7 @@ Partial Class Form1
         Me.TabMedico.Location = New System.Drawing.Point(4, 22)
         Me.TabMedico.Name = "TabMedico"
         Me.TabMedico.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabMedico.Size = New System.Drawing.Size(602, 339)
+        Me.TabMedico.Size = New System.Drawing.Size(605, 339)
         Me.TabMedico.TabIndex = 1
         Me.TabMedico.Text = "Médicos"
         Me.TabMedico.UseVisualStyleBackColor = True
@@ -2135,7 +2429,7 @@ Partial Class Form1
         Me.TabPaciente.Location = New System.Drawing.Point(4, 22)
         Me.TabPaciente.Name = "TabPaciente"
         Me.TabPaciente.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPaciente.Size = New System.Drawing.Size(602, 339)
+        Me.TabPaciente.Size = New System.Drawing.Size(605, 339)
         Me.TabPaciente.TabIndex = 0
         Me.TabPaciente.Text = "Pacientes"
         Me.TabPaciente.UseVisualStyleBackColor = True
@@ -3066,7 +3360,7 @@ Partial Class Form1
         Me.TabControl.Location = New System.Drawing.Point(1, 3)
         Me.TabControl.Name = "TabControl"
         Me.TabControl.SelectedIndex = 0
-        Me.TabControl.Size = New System.Drawing.Size(610, 365)
+        Me.TabControl.Size = New System.Drawing.Size(613, 365)
         Me.TabControl.TabIndex = 1
         '
         'Form1
@@ -3082,6 +3376,8 @@ Partial Class Form1
         Me.TabMedicamento.PerformLayout()
         Me.TabServico.ResumeLayout(False)
         Me.TabServico.PerformLayout()
+        Me.GroupEnfermeirosServico.ResumeLayout(False)
+        Me.GroupEnfermeirosServico.PerformLayout()
         Me.GroupMedicosServico.ResumeLayout(False)
         Me.GroupMedicosServico.PerformLayout()
         Me.TabFatura.ResumeLayout(False)
@@ -3406,4 +3702,33 @@ Partial Class Form1
     Friend WithEvents Label39 As Label
     Friend WithEvents Label40 As Label
     Friend WithEvents Label41 As Label
+    Friend WithEvents GroupEnfermeirosServico As GroupBox
+    Friend WithEvents btnExitEnfermeirosServico As Button
+    Friend WithEvents SearchInfermeiroServico As TextBox
+    Friend WithEvents NomeEnfermeiroServico As TextBox
+    Friend WithEvents SalarioEnfermeiroServico As TextBox
+    Friend WithEvents CcEnfermeiroServico As TextBox
+    Friend WithEvents CodigoEnfermeiroServico As TextBox
+    Friend WithEvents DataNascimentoEnfermeiroServico As TextBox
+    Friend WithEvents EmailEnfermeiroServico As TextBox
+    Friend WithEvents GeneroEnfermeiroServico As TextBox
+    Friend WithEvents MoradaEnfermeiroServico As TextBox
+    Friend WithEvents CodigoPostalEnfermeiroServico As TextBox
+    Friend WithEvents NacionalidadeEnfermeiroServico As TextBox
+    Friend WithEvents TelemovelEnfermeiroServico As TextBox
+    Friend WithEvents TelefoneEnfermeiroServico As TextBox
+    Friend WithEvents btnSearchInfermeiroServico As Button
+    Friend WithEvents ListEnfermeirosServico As ListBox
+    Friend WithEvents Label42 As Label
+    Friend WithEvents Label43 As Label
+    Friend WithEvents Label44 As Label
+    Friend WithEvents Label45 As Label
+    Friend WithEvents Label46 As Label
+    Friend WithEvents Label47 As Label
+    Friend WithEvents Label48 As Label
+    Friend WithEvents Label49 As Label
+    Friend WithEvents Label50 As Label
+    Friend WithEvents Label51 As Label
+    Friend WithEvents Label52 As Label
+    Friend WithEvents Label53 As Label
 End Class

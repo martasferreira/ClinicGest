@@ -23,6 +23,7 @@ Public Class Form1
     Dim currentProdutoIntervencaoPaciente As Integer
     Dim currentSeguroPaciente As Integer
     Dim currentMedicoServico As Integer
+    Dim currentEnfermeiroServico As Integer
 
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'nao sei o que é para escrever
@@ -623,6 +624,50 @@ Public Class Form1
 
     End Sub
 
+    Private Sub TerEnfermeiroServico()
+
+
+        If ListServicos.Items.Count = 0 Or currentServico < 0 Then Exit Sub
+        Dim servico As New Servico
+        servico = CType(ListServicos.Items.Item(currentServico), Servico)
+
+        Dim cmd = New SqlCommand With {
+            .Connection = CN,
+            .CommandText = "SELECT * from ClinicGest.Pessoa AS pessoa " &
+            "JOIN ClinicGest.Staff AS staff ON pessoa.cc = staff.cc_staff " &
+            "JOIN ClinicGest.Enfermeiro AS enfermeiro ON staff.codigo_staff = enfermeiro.codigo_staff " &
+            "JOIN ClinicGest.Servico as servico on enfermeiro.trabalha_servico = servico.codigo_servico where servico.codigo_servico = @servico"
+        }
+
+        cmd.Parameters.Clear()
+        cmd.Parameters.AddWithValue("@servico", servico.CodigoServico)
+        CN.Open()
+        Dim RDR As SqlDataReader
+        RDR = cmd.ExecuteReader
+        ListEnfermeirosServico.Items.Clear()
+        While RDR.Read
+            Dim M As New Enfermeiro
+            M.Nome = RDR.Item("nome")
+            M.Codigo = RDR.Item("codigo_enf")
+            M.CC = Convert.ToString(IIf(RDR.IsDBNull(RDR.GetOrdinal("cc")), "", RDR.Item("cc")))
+            M.DataDeNascimento = Convert.ToString(IIf(RDR.IsDBNull(RDR.GetOrdinal("data_nasc")), "", RDR.Item("data_nasc")))
+            M.Email = Convert.ToString(IIf(RDR.IsDBNull(RDR.GetOrdinal("email")), "", RDR.Item("email")))
+            M.Sexo = Convert.ToString(IIf(RDR.IsDBNull(RDR.GetOrdinal("sexo")), "", RDR.Item("sexo")))
+            M.Endereço = Convert.ToString(IIf(RDR.IsDBNull(RDR.GetOrdinal("endereco")), "", RDR.Item("endereco")))
+            M.CodigoPostal = Convert.ToString(IIf(RDR.IsDBNull(RDR.GetOrdinal("codigopostal")), "", RDR.Item("codigopostal")))
+            M.Nacionalidade = Convert.ToString(IIf(RDR.IsDBNull(RDR.GetOrdinal("nacionalidade")), "", RDR.Item("nacionalidade")))
+            M.Telemovel = Convert.ToString(IIf(RDR.IsDBNull(RDR.GetOrdinal("telemovel")), "", RDR.Item("telemovel")))
+            M.Telefone = Convert.ToString(IIf(RDR.IsDBNull(RDR.GetOrdinal("telefone")), "", RDR.Item("telefone")))
+            M.Salario = Convert.ToString(IIf(RDR.IsDBNull(RDR.GetOrdinal("salario")), "", RDR.Item("salario")))
+
+            ListEnfermeirosServico.Items.Add(M)
+        End While
+        CN.Close()
+        currentEnfermeiroServico = 0
+        ShowEnfermeiroServico()
+
+    End Sub
+
 
 #End Region
 
@@ -847,6 +892,26 @@ Public Class Form1
         CodigMedicoServico.Text = medico.Codigo
         CodigoPostalMedicoServico.Text = medico.CodigoPostal
         SalarioMedicoServico.Text = medico.Salario
+
+    End Sub
+
+    Private Sub ShowEnfermeiroServico()
+
+        If ListEnfermeirosServico.Items.Count = 0 Or currentEnfermeiroServico < 0 Then Exit Sub
+        Dim enfermeiro As New Enfermeiro
+        enfermeiro = CType(ListEnfermeirosServico.Items.Item(currentEnfermeiroServico), Enfermeiro)
+        NomeEnfermeiroServico.Text = enfermeiro.Nome
+        TelemovelEnfermeiroServico.Text = enfermeiro.Telemovel
+        CcEnfermeiroServico.Text = enfermeiro.CC
+        EmailEnfermeiroServico.Text = enfermeiro.Email
+        MoradaEnfermeiroServico.Text = enfermeiro.Endereço
+        NacionalidadeEnfermeiroServico.Text = enfermeiro.Nacionalidade
+        TelefoneEnfermeiroServico.Text = enfermeiro.Telefone
+        DataNascimentoEnfermeiroServico.Text = enfermeiro.DataDeNascimento
+        GeneroEnfermeiroServico.Text = enfermeiro.Sexo
+        CodigoEnfermeiroServico.Text = enfermeiro.Codigo
+        CodigoPostalEnfermeiroServico.Text = enfermeiro.CodigoPostal
+        SalarioEnfermeiroServico.Text = enfermeiro.Salario
 
     End Sub
 
@@ -1478,6 +1543,13 @@ Public Class Form1
         End If
     End Sub
 
+    Private Sub ListEnfermeirosServico_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ListEnfermeirosServico.SelectedIndexChanged
+        If ListEnfermeirosServico.SelectedIndex > -1 Then
+            currentEnfermeiroServico = ListEnfermeirosServico.SelectedIndex
+            ShowEnfermeiroServico()
+        End If
+    End Sub
+
 #End Region
 
 #Region "Search Handlers"
@@ -1486,6 +1558,17 @@ Public Class Form1
         For Each lbItem As Object In ListMedicamentos.Items
             ' Case-sensitive match
             If lbItem.ToString = SearchMedicamento.Text Then
+                ' Match found: set as selected item and exit procedure
+                ListMedicamentos.SelectedItem = lbItem
+                Return
+            End If
+        Next
+    End Sub
+
+    Private Sub btnSearchInfermeiroServico_Click(sender As Object, e As EventArgs) Handles btnSearchInfermeiroServico.Click
+        For Each lbItem As Object In ListEnfermeirosServico.Items
+            ' Case-sensitive match
+            If lbItem.ToString = SearchInfermeiroServico.Text Then
                 ' Match found: set as selected item and exit procedure
                 ListMedicamentos.SelectedItem = lbItem
                 Return
@@ -1853,6 +1936,15 @@ Public Class Form1
     Private Sub btnListMedicosServico_Click(sender As Object, e As EventArgs) Handles btnListMedicosServico.Click
         TerMedicosServico()
         GroupMedicosServico.Visible = True
+    End Sub
+
+    Private Sub btnExitEnfermeirosServico_Click(sender As Object, e As EventArgs) Handles btnExitEnfermeirosServico.Click
+        GroupEnfermeirosServico.Visible = False
+    End Sub
+
+    Private Sub btnListEnfermeirosServico_Click(sender As Object, e As EventArgs) Handles btnListEnfermeirosServico.Click
+        TerEnfermeiroServico()
+        GroupEnfermeirosServico.Visible = True
     End Sub
 
 
