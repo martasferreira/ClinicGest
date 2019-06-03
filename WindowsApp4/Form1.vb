@@ -18,6 +18,7 @@ Public Class Form1
     Dim currentFatura As Integer
     Dim currentProdutoIntervencao As Integer
     Dim currentFaturasPaciente As Integer
+    Dim currentSeguros As Integer
 
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'nao sei o que é para escrever
@@ -35,6 +36,7 @@ Public Class Form1
         TerFaturas()
         TerServiços()
         TerMedicamentos()
+        TerSeguros()
 
     End Sub
 
@@ -262,6 +264,28 @@ Public Class Form1
 
     End Sub
 
+    Private Sub TerSeguros()
+
+        Dim cmd = New SqlCommand With {
+            .Connection = CN,
+            .CommandText = "SELECT * FROM ClinicGest.Seguro"
+        }
+        CN.Open()
+        Dim RDR As SqlDataReader
+        RDR = cmd.ExecuteReader
+        ListSeguros.Items.Clear()
+        While RDR.Read
+            Dim seg As New Seguros
+            seg.Codigo = RDR.Item("codigo_seguro")
+            seg.Nome = RDR.Item("entidade")
+            seg.Custo = RDR.Item("desconto")
+            ListSeguros.Items.Add(seg)
+        End While
+        CN.Close()
+        currentSeguros = 0
+        ShowSeguros()
+
+    End Sub
     Private Sub TerServiços()
 
         Dim cmd = New SqlCommand With {
@@ -541,6 +565,17 @@ Public Class Form1
         CustoProdutoIntervencao.Text = produto.Custo
         CustoLimpezaIntervencao.Text = produto.CustoLimpeza
         ProdutoQuantidade.Text = produto.Quantidade
+
+    End Sub
+
+    Private Sub ShowSeguros()
+
+        If ListSeguros.Items.Count = 0 Or currentSeguros < 0 Then Exit Sub
+        Dim seguros As New Seguros
+        seguros = CType(ListSeguros.Items.Item(currentSeguros), Seguros)
+        'CodigoSeguro.Text = seguros.Codigo
+        Seguradora.Text = seguros.Nome
+        Desconto.Text = seguros.Custo
 
     End Sub
 
@@ -1168,6 +1203,13 @@ Public Class Form1
         End If
     End Sub
 
+    Private Sub ListSeguros_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListSeguros.SelectedIndexChanged
+        If ListSeguros.SelectedIndex > -1 Then
+            currentSeguros = ListSeguros.SelectedIndex
+            ShowSeguros()
+        End If
+    End Sub
+
     Private Sub ListFaturas_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ListFaturas.SelectedIndexChanged
         If ListFaturas.SelectedIndex > -1 Then
             currentFatura = ListFaturas.SelectedIndex
@@ -1487,7 +1529,6 @@ Public Class Form1
     Private Sub btbSairFaturasPaciente_Click(sender As Object, e As EventArgs) Handles btbSairFaturasPaciente.Click
         GroupFaturasPaciente.Visible = False
     End Sub
-
 
 
 #End Region
