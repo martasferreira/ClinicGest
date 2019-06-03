@@ -11,6 +11,7 @@
     Public Property Codigo As String
     Public Property CodigoPostal As String
     Public Property Salario As Object
+    Public Property Servico As String
 
     Overrides Function ToString() As String
         Return Nome

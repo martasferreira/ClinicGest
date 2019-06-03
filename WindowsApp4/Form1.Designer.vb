@@ -348,6 +348,8 @@ Partial Class Form1
         Me.btnCancelPaciente = New System.Windows.Forms.Button()
         Me.btnOkPaciente = New System.Windows.Forms.Button()
         Me.TabControl = New System.Windows.Forms.TabControl()
+        Me.ServicoEnfermeiro = New System.Windows.Forms.TextBox()
+        Me.Label54 = New System.Windows.Forms.Label()
         Me.TabMedicamento.SuspendLayout()
         Me.TabServico.SuspendLayout()
         Me.GroupEnfermeirosServico.SuspendLayout()
@@ -1727,6 +1729,8 @@ Partial Class Form1
         '
         'TabEnfermeiro
         '
+        Me.TabEnfermeiro.Controls.Add(Me.Label54)
+        Me.TabEnfermeiro.Controls.Add(Me.ServicoEnfermeiro)
         Me.TabEnfermeiro.Controls.Add(Me.SearchEnfermeiro)
         Me.TabEnfermeiro.Controls.Add(Me.NomeEnfermeiro)
         Me.TabEnfermeiro.Controls.Add(Me.SalarioEnfermeiro)
@@ -3363,6 +3367,22 @@ Partial Class Form1
         Me.TabControl.Size = New System.Drawing.Size(613, 365)
         Me.TabControl.TabIndex = 1
         '
+        'ServicoEnfermeiro
+        '
+        Me.ServicoEnfermeiro.Location = New System.Drawing.Point(476, 254)
+        Me.ServicoEnfermeiro.Name = "ServicoEnfermeiro"
+        Me.ServicoEnfermeiro.Size = New System.Drawing.Size(100, 20)
+        Me.ServicoEnfermeiro.TabIndex = 34
+        '
+        'Label54
+        '
+        Me.Label54.AutoSize = True
+        Me.Label54.Location = New System.Drawing.Point(424, 257)
+        Me.Label54.Name = "Label54"
+        Me.Label54.Size = New System.Drawing.Size(46, 13)
+        Me.Label54.TabIndex = 35
+        Me.Label54.Text = "Servico:"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -3731,4 +3751,6 @@ Partial Class Form1
     Friend WithEvents Label51 As Label
     Friend WithEvents Label52 As Label
     Friend WithEvents Label53 As Label
+    Friend WithEvents Label54 As Label
+    Friend WithEvents ServicoEnfermeiro As TextBox
 End Class

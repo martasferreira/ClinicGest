@@ -202,6 +202,7 @@ Public Class Form1
             M.Telemovel = Convert.ToString(IIf(RDR.IsDBNull(RDR.GetOrdinal("telemovel")), "", RDR.Item("telemovel")))
             M.Telefone = Convert.ToString(IIf(RDR.IsDBNull(RDR.GetOrdinal("telefone")), "", RDR.Item("telefone")))
             M.Salario = Convert.ToString(IIf(RDR.IsDBNull(RDR.GetOrdinal("salario")), "", RDR.Item("salario")))
+            M.Servico = Convert.ToString(IIf(RDR.IsDBNull(RDR.GetOrdinal("trabalha_servico")), "", RDR.Item("trabalha_servico")))
 
             ListEnfermeiros.Items.Add(M)
         End While
@@ -710,6 +711,7 @@ Public Class Form1
         CodigoEnfermeiro.Text = enfermeiro.Codigo
         CodPostalEnfermeiro.Text = enfermeiro.CodigoPostal
         SalarioEnfermeiro.Text = enfermeiro.Salario
+        ServicoEnfermeiro.Text = enfermeiro.Servico
 
     End Sub
 
@@ -993,7 +995,7 @@ Public Class Form1
             "(nome, telemovel, cc, email, endereco, nacionalidade, telefone, sexo,codigopostal) VALUES " &
             "(@nome, @telemovel, @cc, @email, @endereco, @nacionalidade, @telefone, @sexo, @codigopostal); " &
             "INSERT ClinicGest.Staff (cc_staff,salario) VALUES (@cc, @salario); " &
-            "INSERT ClinicGest.Enfermeiro (codigo_enf) VALUES (SELECT codigo_staff FROM ClinicGest.Staff WHERE cc_staff = @cc); " &
+            "INSERT ClinicGest.Enfermeiro (codigo_enf, trabalha_servico) VALUES (SELECT codigo_staff FROM ClinicGest.Staff WHERE cc_staff = @cc, @servico); " &
             "SELECT SCOPE_IDENTITY()"
         }
         cmd.Parameters.Clear()
@@ -1008,6 +1010,7 @@ Public Class Form1
         cmd.Parameters.AddWithValue("@sexo", P.Sexo)
         cmd.Parameters.AddWithValue("@codigopostal", P.CodigoPostal)
         cmd.Parameters.AddWithValue("@salario", P.Salario)
+        cmd.Parameters.AddWithValue("@servico", P.Servico)
         CN.Open()
         Try
             P.Codigo = cmd.ExecuteScalar()
@@ -1127,11 +1130,12 @@ Public Class Form1
             "    cc = @cc, " &
             "    email = @email, " &
             "    endereco = @endereco, " &
-            "    nacionalidade = nacionalidade, " &
+            "    nacionalidade = @nacionalidade, " &
             "    telefone = @telefone, " &
             "    sexo = @sexo, " &
             "    codigopostal = @codigopostal " &
-            "WHERE cc = @cc; UPDATE ClinicGest.Staff SET salario = @salario, cc_staff = @cc WHERE cc_staff = @cc"
+            "WHERE cc = @cc; UPDATE ClinicGest.Staff SET salario = @salario, cc_staff = @cc WHERE cc_staff = @cc; " &
+            "UPDATE ClinicGest.Enfermeiro SET trabalha_servico = @servico WHERE codigo_enf = @codigo"
         }
         cmd.Parameters.Clear()
         cmd.Parameters.AddWithValue("@nome", P.Nome)
@@ -1145,6 +1149,8 @@ Public Class Form1
         cmd.Parameters.AddWithValue("@sexo", P.Sexo)
         cmd.Parameters.AddWithValue("@codigopostal", P.CodigoPostal)
         cmd.Parameters.AddWithValue("@salario", P.Salario)
+        cmd.Parameters.AddWithValue("@servico", P.Servico)
+        cmd.Parameters.AddWithValue("@codigo", P.Codigo)
         CN.Open()
         Try
             cmd.ExecuteNonQuery()
@@ -1196,6 +1202,7 @@ Public Class Form1
         paciente.Codigo = CodigoPaciente.Text
         paciente.CodigoPostal = CodPostalPaciente.Text
 
+
         If adding Then
             SubmitPaciente(paciente)
             ListPacientes.Items.Add(paciente)
@@ -1246,6 +1253,8 @@ Public Class Form1
             enfermeiro.Telemovel = TelemovelEnfermeiro.Text
             enfermeiro.Telefone = TelefoneEnfermeiro.Text
             enfermeiro.Salario = SalarioEnfermeiro.Text
+            enfermeiro.Servico = ServicoEnfermeiro.Text
+            enfermeiro.Codigo = CodigoEnfermeiro.Text
 
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -1298,6 +1307,7 @@ Public Class Form1
         SexoPaciente.ReadOnly = True
         CodigoPaciente.ReadOnly = True
         CodPostalPaciente.ReadOnly = True
+
     End Sub
 
     Sub LockControlsEnfermeiro()
@@ -1313,6 +1323,7 @@ Public Class Form1
         TelemovelEnfermeiro.ReadOnly = True
         TelefoneEnfermeiro.ReadOnly = True
         SalarioEnfermeiro.ReadOnly = True
+        ServicoEnfermeiro.ReadOnly = True
     End Sub
 
     Sub LockControlsMedico()
@@ -1362,6 +1373,7 @@ Public Class Form1
         TelemovelEnfermeiro.ReadOnly = False
         TelefoneEnfermeiro.ReadOnly = False
         SalarioEnfermeiro.ReadOnly = False
+        ServicoEnfermeiro.ReadOnly = False
     End Sub
 
     Sub UnLockControlsMedico()
