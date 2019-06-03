@@ -68,25 +68,6 @@ Partial Class Form1
         Me.LabelCustoFatura = New System.Windows.Forms.Label()
         Me.LabelDataPagamentoFatura = New System.Windows.Forms.Label()
         Me.TabInternamento = New System.Windows.Forms.TabPage()
-        Me.NomePacienteInternamento = New System.Windows.Forms.TextBox()
-        Me.SearchInternamento = New System.Windows.Forms.TextBox()
-        Me.btnSearchInternamento = New System.Windows.Forms.Button()
-        Me.NumeroInternameto = New System.Windows.Forms.TextBox()
-        Me.ListInternamentos = New System.Windows.Forms.ListBox()
-        Me.btnListIntervencoesInternamento = New System.Windows.Forms.Button()
-        Me.CodigoServicoInternamento = New System.Windows.Forms.TextBox()
-        Me.PatologiaInternamento = New System.Windows.Forms.TextBox()
-        Me.LabelCodigoServicoInternamento = New System.Windows.Forms.Label()
-        Me.LabelDataFimInternamento = New System.Windows.Forms.Label()
-        Me.LabelCustoServicoInternamento = New System.Windows.Forms.Label()
-        Me.NomeServicoInternamento = New System.Windows.Forms.TextBox()
-        Me.LabelDataInicioInternamento = New System.Windows.Forms.Label()
-        Me.LabelNomeServicoInternamento = New System.Windows.Forms.Label()
-        Me.CustoServicoInternamento = New System.Windows.Forms.TextBox()
-        Me.LabelNumInternamentoIntervencao = New System.Windows.Forms.Label()
-        Me.DataFimInternamento = New System.Windows.Forms.TextBox()
-        Me.DataInicioInternamento = New System.Windows.Forms.TextBox()
-        Me.Label7 = New System.Windows.Forms.Label()
         Me.GroupIntervencoesInternamento = New System.Windows.Forms.GroupBox()
         Me.LabelProdutoQuantidade = New System.Windows.Forms.Label()
         Me.ProdutoQuantidade = New System.Windows.Forms.TextBox()
@@ -111,6 +92,25 @@ Partial Class Form1
         Me.LabelCustoLimpezaIntervencao = New System.Windows.Forms.Label()
         Me.CustoLimpezaIntervencao = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
+        Me.NomePacienteInternamento = New System.Windows.Forms.TextBox()
+        Me.SearchInternamento = New System.Windows.Forms.TextBox()
+        Me.btnSearchInternamento = New System.Windows.Forms.Button()
+        Me.NumeroInternameto = New System.Windows.Forms.TextBox()
+        Me.ListInternamentos = New System.Windows.Forms.ListBox()
+        Me.btnListIntervencoesInternamento = New System.Windows.Forms.Button()
+        Me.CodigoServicoInternamento = New System.Windows.Forms.TextBox()
+        Me.PatologiaInternamento = New System.Windows.Forms.TextBox()
+        Me.LabelCodigoServicoInternamento = New System.Windows.Forms.Label()
+        Me.LabelDataFimInternamento = New System.Windows.Forms.Label()
+        Me.LabelCustoServicoInternamento = New System.Windows.Forms.Label()
+        Me.NomeServicoInternamento = New System.Windows.Forms.TextBox()
+        Me.LabelDataInicioInternamento = New System.Windows.Forms.Label()
+        Me.LabelNomeServicoInternamento = New System.Windows.Forms.Label()
+        Me.CustoServicoInternamento = New System.Windows.Forms.TextBox()
+        Me.LabelNumInternamentoIntervencao = New System.Windows.Forms.Label()
+        Me.DataFimInternamento = New System.Windows.Forms.TextBox()
+        Me.DataInicioInternamento = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.TabEnfermeiro = New System.Windows.Forms.TabPage()
         Me.SearchEnfermeiro = New System.Windows.Forms.TextBox()
         Me.NomeEnfermeiro = New System.Windows.Forms.TextBox()
@@ -184,6 +184,45 @@ Partial Class Form1
         Me.btnCancelMedico = New System.Windows.Forms.Button()
         Me.btnOkMedico = New System.Windows.Forms.Button()
         Me.TabPaciente = New System.Windows.Forms.TabPage()
+        Me.GroupIntervencoesInternamentosPaciente = New System.Windows.Forms.GroupBox()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.ProdutoQuantidadePaciente = New System.Windows.Forms.TextBox()
+        Me.btnExitIntervencoesInternamentoPaciente = New System.Windows.Forms.Button()
+        Me.SearchIntervencaoPaciente = New System.Windows.Forms.TextBox()
+        Me.btnSeacrIntervencaoPaciente = New System.Windows.Forms.Button()
+        Me.ListIntervencaoPaciente = New System.Windows.Forms.ListBox()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.NumeroIntervencaoPaciente = New System.Windows.Forms.TextBox()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.NumeroInternamentoIntervencaoPaciente = New System.Windows.Forms.TextBox()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.CustoIntervencaoPaciente = New System.Windows.Forms.TextBox()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.ListProdutosIntervencaoPaciente = New System.Windows.Forms.ListBox()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.CodigoProdutoIntervencaoPaciente = New System.Windows.Forms.TextBox()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.TipoProdutoIntervencaoPaciente = New System.Windows.Forms.TextBox()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.CustoProdutoIntervencaoPaciente = New System.Windows.Forms.TextBox()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.CustoLimpezaIntervencaoPaciente = New System.Windows.Forms.TextBox()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.GroupFaturasPaciente = New System.Windows.Forms.GroupBox()
+        Me.btbSairFaturasPaciente = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.FaturaPacienteSeguro = New System.Windows.Forms.TextBox()
+        Me.FaturaPacienteNome = New System.Windows.Forms.TextBox()
+        Me.SearchFaturasPaciente = New System.Windows.Forms.TextBox()
+        Me.CodigoFaturaPaciente = New System.Windows.Forms.TextBox()
+        Me.CustoFaturaPaciente = New System.Windows.Forms.TextBox()
+        Me.DataPagamentoFaturaPaciente = New System.Windows.Forms.TextBox()
+        Me.btnSearchFaturasPaciente = New System.Windows.Forms.Button()
+        Me.ListFaturasPaciente = New System.Windows.Forms.ListBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.SearchPaciente = New System.Windows.Forms.TextBox()
         Me.NomePaciente = New System.Windows.Forms.TextBox()
         Me.CcPaciente = New System.Windows.Forms.TextBox()
@@ -217,48 +256,27 @@ Partial Class Form1
         Me.btnCancelPaciente = New System.Windows.Forms.Button()
         Me.btnOkPaciente = New System.Windows.Forms.Button()
         Me.GroupInternamentosPaciente = New System.Windows.Forms.GroupBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.btnSairInternamentosPaciente = New System.Windows.Forms.Button()
+        Me.NomePacienteInternamentoPaciente = New System.Windows.Forms.TextBox()
+        Me.SearchInternamentoPaciente = New System.Windows.Forms.TextBox()
+        Me.btnSearchInternamentoPaciente = New System.Windows.Forms.Button()
+        Me.NumeroInternamentoPaciente = New System.Windows.Forms.TextBox()
+        Me.ListInternamentosPaciente = New System.Windows.Forms.ListBox()
+        Me.ListarIntervencoesInternamentoPaciente = New System.Windows.Forms.Button()
+        Me.CodigoServicoInternamentoPaciente = New System.Windows.Forms.TextBox()
+        Me.PatologiaInternamentoPaciente = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.NomeServicoInternamentoPaciente = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.CustoServicoInternamentoPaciente = New System.Windows.Forms.TextBox()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.DataFimInternamentoPaciente = New System.Windows.Forms.TextBox()
+        Me.DataInicioInternamentoPaciente = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.GroupFaturasPaciente = New System.Windows.Forms.GroupBox()
-        Me.btbSairFaturasPaciente = New System.Windows.Forms.Button()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.FaturaPacienteSeguro = New System.Windows.Forms.TextBox()
-        Me.FaturaPacienteNome = New System.Windows.Forms.TextBox()
-        Me.SearchFaturasPaciente = New System.Windows.Forms.TextBox()
-        Me.CodigoFaturaPaciente = New System.Windows.Forms.TextBox()
-        Me.CustoFaturaPaciente = New System.Windows.Forms.TextBox()
-        Me.DataPagamentoFaturaPaciente = New System.Windows.Forms.TextBox()
-        Me.btnSearchFaturasPaciente = New System.Windows.Forms.Button()
-        Me.ListFaturasPaciente = New System.Windows.Forms.ListBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
         Me.TabControl = New System.Windows.Forms.TabControl()
-        Me.TabSeguros = New System.Windows.Forms.TabPage()
-        Me.ListSeguros = New System.Windows.Forms.ListBox()
-        Me.DescontoLabel = New System.Windows.Forms.Label()
-        Me.SeguroLabel = New System.Windows.Forms.Label()
-        Me.Desconto = New System.Windows.Forms.TextBox()
-        Me.Seguradora = New System.Windows.Forms.TextBox()
-        Me.Listadeseguros_label = New System.Windows.Forms.Label()
         Me.TabMedicamento.SuspendLayout()
         Me.TabServico.SuspendLayout()
         Me.TabFatura.SuspendLayout()
@@ -267,10 +285,10 @@ Partial Class Form1
         Me.TabEnfermeiro.SuspendLayout()
         Me.TabMedico.SuspendLayout()
         Me.TabPaciente.SuspendLayout()
-        Me.GroupInternamentosPaciente.SuspendLayout()
+        Me.GroupIntervencoesInternamentosPaciente.SuspendLayout()
         Me.GroupFaturasPaciente.SuspendLayout()
+        Me.GroupInternamentosPaciente.SuspendLayout()
         Me.TabControl.SuspendLayout()
-        Me.TabSeguros.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -687,6 +705,7 @@ Partial Class Form1
         '
         'TabInternamento
         '
+        Me.TabInternamento.Controls.Add(Me.GroupIntervencoesInternamento)
         Me.TabInternamento.Controls.Add(Me.NomePacienteInternamento)
         Me.TabInternamento.Controls.Add(Me.SearchInternamento)
         Me.TabInternamento.Controls.Add(Me.btnSearchInternamento)
@@ -706,166 +725,12 @@ Partial Class Form1
         Me.TabInternamento.Controls.Add(Me.DataFimInternamento)
         Me.TabInternamento.Controls.Add(Me.DataInicioInternamento)
         Me.TabInternamento.Controls.Add(Me.Label7)
-        Me.TabInternamento.Controls.Add(Me.GroupIntervencoesInternamento)
         Me.TabInternamento.Location = New System.Drawing.Point(4, 22)
         Me.TabInternamento.Name = "TabInternamento"
         Me.TabInternamento.Size = New System.Drawing.Size(604, 346)
         Me.TabInternamento.TabIndex = 2
         Me.TabInternamento.Text = "Internamentos"
         Me.TabInternamento.UseVisualStyleBackColor = True
-        '
-        'NomePacienteInternamento
-        '
-        Me.NomePacienteInternamento.Location = New System.Drawing.Point(266, 47)
-        Me.NomePacienteInternamento.Name = "NomePacienteInternamento"
-        Me.NomePacienteInternamento.Size = New System.Drawing.Size(311, 20)
-        Me.NomePacienteInternamento.TabIndex = 22
-        '
-        'SearchInternamento
-        '
-        Me.SearchInternamento.Location = New System.Drawing.Point(18, 27)
-        Me.SearchInternamento.Name = "SearchInternamento"
-        Me.SearchInternamento.Size = New System.Drawing.Size(151, 20)
-        Me.SearchInternamento.TabIndex = 0
-        '
-        'btnSearchInternamento
-        '
-        Me.btnSearchInternamento.Location = New System.Drawing.Point(175, 26)
-        Me.btnSearchInternamento.Name = "btnSearchInternamento"
-        Me.btnSearchInternamento.Size = New System.Drawing.Size(58, 22)
-        Me.btnSearchInternamento.TabIndex = 1
-        Me.btnSearchInternamento.Text = "Procurar"
-        Me.btnSearchInternamento.UseVisualStyleBackColor = True
-        '
-        'NumeroInternameto
-        '
-        Me.NumeroInternameto.Location = New System.Drawing.Point(266, 95)
-        Me.NumeroInternameto.Name = "NumeroInternameto"
-        Me.NumeroInternameto.Size = New System.Drawing.Size(205, 20)
-        Me.NumeroInternameto.TabIndex = 4
-        '
-        'ListInternamentos
-        '
-        Me.ListInternamentos.FormattingEnabled = True
-        Me.ListInternamentos.Location = New System.Drawing.Point(19, 58)
-        Me.ListInternamentos.Name = "ListInternamentos"
-        Me.ListInternamentos.Size = New System.Drawing.Size(214, 264)
-        Me.ListInternamentos.TabIndex = 2
-        '
-        'btnListIntervencoesInternamento
-        '
-        Me.btnListIntervencoesInternamento.Location = New System.Drawing.Point(265, 280)
-        Me.btnListIntervencoesInternamento.Name = "btnListIntervencoesInternamento"
-        Me.btnListIntervencoesInternamento.Size = New System.Drawing.Size(311, 42)
-        Me.btnListIntervencoesInternamento.TabIndex = 17
-        Me.btnListIntervencoesInternamento.Text = "Listar Intervenções"
-        Me.btnListIntervencoesInternamento.UseVisualStyleBackColor = True
-        '
-        'CodigoServicoInternamento
-        '
-        Me.CodigoServicoInternamento.Location = New System.Drawing.Point(477, 95)
-        Me.CodigoServicoInternamento.Name = "CodigoServicoInternamento"
-        Me.CodigoServicoInternamento.Size = New System.Drawing.Size(100, 20)
-        Me.CodigoServicoInternamento.TabIndex = 6
-        '
-        'PatologiaInternamento
-        '
-        Me.PatologiaInternamento.Location = New System.Drawing.Point(266, 226)
-        Me.PatologiaInternamento.Multiline = True
-        Me.PatologiaInternamento.Name = "PatologiaInternamento"
-        Me.PatologiaInternamento.Size = New System.Drawing.Size(311, 33)
-        Me.PatologiaInternamento.TabIndex = 16
-        '
-        'LabelCodigoServicoInternamento
-        '
-        Me.LabelCodigoServicoInternamento.AutoSize = True
-        Me.LabelCodigoServicoInternamento.Location = New System.Drawing.Point(474, 77)
-        Me.LabelCodigoServicoInternamento.Name = "LabelCodigoServicoInternamento"
-        Me.LabelCodigoServicoInternamento.Size = New System.Drawing.Size(97, 13)
-        Me.LabelCodigoServicoInternamento.TabIndex = 5
-        Me.LabelCodigoServicoInternamento.Text = "Código de Serviço:"
-        '
-        'LabelDataFimInternamento
-        '
-        Me.LabelDataFimInternamento.AutoSize = True
-        Me.LabelDataFimInternamento.Location = New System.Drawing.Point(429, 166)
-        Me.LabelDataFimInternamento.Name = "LabelDataFimInternamento"
-        Me.LabelDataFimInternamento.Size = New System.Drawing.Size(67, 13)
-        Me.LabelDataFimInternamento.TabIndex = 13
-        Me.LabelDataFimInternamento.Text = "Data de Fim:"
-        '
-        'LabelCustoServicoInternamento
-        '
-        Me.LabelCustoServicoInternamento.AutoSize = True
-        Me.LabelCustoServicoInternamento.Location = New System.Drawing.Point(474, 123)
-        Me.LabelCustoServicoInternamento.Name = "LabelCustoServicoInternamento"
-        Me.LabelCustoServicoInternamento.Size = New System.Drawing.Size(91, 13)
-        Me.LabelCustoServicoInternamento.TabIndex = 9
-        Me.LabelCustoServicoInternamento.Text = "Custo de Serviço:"
-        '
-        'NomeServicoInternamento
-        '
-        Me.NomeServicoInternamento.Location = New System.Drawing.Point(266, 139)
-        Me.NomeServicoInternamento.Name = "NomeServicoInternamento"
-        Me.NomeServicoInternamento.Size = New System.Drawing.Size(205, 20)
-        Me.NomeServicoInternamento.TabIndex = 8
-        '
-        'LabelDataInicioInternamento
-        '
-        Me.LabelDataInicioInternamento.AutoSize = True
-        Me.LabelDataInicioInternamento.Location = New System.Drawing.Point(263, 166)
-        Me.LabelDataInicioInternamento.Name = "LabelDataInicioInternamento"
-        Me.LabelDataInicioInternamento.Size = New System.Drawing.Size(76, 13)
-        Me.LabelDataInicioInternamento.TabIndex = 11
-        Me.LabelDataInicioInternamento.Text = "Data de Inicio:"
-        '
-        'LabelNomeServicoInternamento
-        '
-        Me.LabelNomeServicoInternamento.AutoSize = True
-        Me.LabelNomeServicoInternamento.Location = New System.Drawing.Point(263, 123)
-        Me.LabelNomeServicoInternamento.Name = "LabelNomeServicoInternamento"
-        Me.LabelNomeServicoInternamento.Size = New System.Drawing.Size(92, 13)
-        Me.LabelNomeServicoInternamento.TabIndex = 7
-        Me.LabelNomeServicoInternamento.Text = "Nome do Serviço:"
-        '
-        'CustoServicoInternamento
-        '
-        Me.CustoServicoInternamento.Location = New System.Drawing.Point(477, 139)
-        Me.CustoServicoInternamento.Name = "CustoServicoInternamento"
-        Me.CustoServicoInternamento.Size = New System.Drawing.Size(100, 20)
-        Me.CustoServicoInternamento.TabIndex = 10
-        '
-        'LabelNumInternamentoIntervencao
-        '
-        Me.LabelNumInternamentoIntervencao.AutoSize = True
-        Me.LabelNumInternamentoIntervencao.Location = New System.Drawing.Point(263, 74)
-        Me.LabelNumInternamentoIntervencao.Name = "LabelNumInternamentoIntervencao"
-        Me.LabelNumInternamentoIntervencao.Size = New System.Drawing.Size(127, 13)
-        Me.LabelNumInternamentoIntervencao.TabIndex = 5
-        Me.LabelNumInternamentoIntervencao.Text = "Numero de Internamento:"
-        '
-        'DataFimInternamento
-        '
-        Me.DataFimInternamento.Location = New System.Drawing.Point(432, 182)
-        Me.DataFimInternamento.Name = "DataFimInternamento"
-        Me.DataFimInternamento.Size = New System.Drawing.Size(145, 20)
-        Me.DataFimInternamento.TabIndex = 14
-        '
-        'DataInicioInternamento
-        '
-        Me.DataInicioInternamento.Location = New System.Drawing.Point(266, 182)
-        Me.DataInicioInternamento.Name = "DataInicioInternamento"
-        Me.DataInicioInternamento.Size = New System.Drawing.Size(161, 20)
-        Me.DataInicioInternamento.TabIndex = 12
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(263, 31)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(98, 13)
-        Me.Label7.TabIndex = 23
-        Me.Label7.Text = "Nome de Paciente:"
         '
         'GroupIntervencoesInternamento
         '
@@ -1086,6 +951,159 @@ Partial Class Form1
         Me.Label8.Size = New System.Drawing.Size(51, 13)
         Me.Label8.TabIndex = 24
         Me.Label8.Text = "Patologia"
+        '
+        'NomePacienteInternamento
+        '
+        Me.NomePacienteInternamento.Location = New System.Drawing.Point(266, 47)
+        Me.NomePacienteInternamento.Name = "NomePacienteInternamento"
+        Me.NomePacienteInternamento.Size = New System.Drawing.Size(311, 20)
+        Me.NomePacienteInternamento.TabIndex = 22
+        '
+        'SearchInternamento
+        '
+        Me.SearchInternamento.Location = New System.Drawing.Point(18, 27)
+        Me.SearchInternamento.Name = "SearchInternamento"
+        Me.SearchInternamento.Size = New System.Drawing.Size(151, 20)
+        Me.SearchInternamento.TabIndex = 0
+        '
+        'btnSearchInternamento
+        '
+        Me.btnSearchInternamento.Location = New System.Drawing.Point(175, 26)
+        Me.btnSearchInternamento.Name = "btnSearchInternamento"
+        Me.btnSearchInternamento.Size = New System.Drawing.Size(58, 22)
+        Me.btnSearchInternamento.TabIndex = 1
+        Me.btnSearchInternamento.Text = "Procurar"
+        Me.btnSearchInternamento.UseVisualStyleBackColor = True
+        '
+        'NumeroInternameto
+        '
+        Me.NumeroInternameto.Location = New System.Drawing.Point(266, 95)
+        Me.NumeroInternameto.Name = "NumeroInternameto"
+        Me.NumeroInternameto.Size = New System.Drawing.Size(205, 20)
+        Me.NumeroInternameto.TabIndex = 4
+        '
+        'ListInternamentos
+        '
+        Me.ListInternamentos.FormattingEnabled = True
+        Me.ListInternamentos.Location = New System.Drawing.Point(19, 58)
+        Me.ListInternamentos.Name = "ListInternamentos"
+        Me.ListInternamentos.Size = New System.Drawing.Size(214, 264)
+        Me.ListInternamentos.TabIndex = 2
+        '
+        'btnListIntervencoesInternamento
+        '
+        Me.btnListIntervencoesInternamento.Location = New System.Drawing.Point(265, 280)
+        Me.btnListIntervencoesInternamento.Name = "btnListIntervencoesInternamento"
+        Me.btnListIntervencoesInternamento.Size = New System.Drawing.Size(311, 42)
+        Me.btnListIntervencoesInternamento.TabIndex = 17
+        Me.btnListIntervencoesInternamento.Text = "Listar Intervenções"
+        Me.btnListIntervencoesInternamento.UseVisualStyleBackColor = True
+        '
+        'CodigoServicoInternamento
+        '
+        Me.CodigoServicoInternamento.Location = New System.Drawing.Point(477, 95)
+        Me.CodigoServicoInternamento.Name = "CodigoServicoInternamento"
+        Me.CodigoServicoInternamento.Size = New System.Drawing.Size(100, 20)
+        Me.CodigoServicoInternamento.TabIndex = 6
+        '
+        'PatologiaInternamento
+        '
+        Me.PatologiaInternamento.Location = New System.Drawing.Point(266, 226)
+        Me.PatologiaInternamento.Multiline = True
+        Me.PatologiaInternamento.Name = "PatologiaInternamento"
+        Me.PatologiaInternamento.Size = New System.Drawing.Size(311, 33)
+        Me.PatologiaInternamento.TabIndex = 16
+        '
+        'LabelCodigoServicoInternamento
+        '
+        Me.LabelCodigoServicoInternamento.AutoSize = True
+        Me.LabelCodigoServicoInternamento.Location = New System.Drawing.Point(474, 77)
+        Me.LabelCodigoServicoInternamento.Name = "LabelCodigoServicoInternamento"
+        Me.LabelCodigoServicoInternamento.Size = New System.Drawing.Size(97, 13)
+        Me.LabelCodigoServicoInternamento.TabIndex = 5
+        Me.LabelCodigoServicoInternamento.Text = "Código de Serviço:"
+        '
+        'LabelDataFimInternamento
+        '
+        Me.LabelDataFimInternamento.AutoSize = True
+        Me.LabelDataFimInternamento.Location = New System.Drawing.Point(429, 166)
+        Me.LabelDataFimInternamento.Name = "LabelDataFimInternamento"
+        Me.LabelDataFimInternamento.Size = New System.Drawing.Size(67, 13)
+        Me.LabelDataFimInternamento.TabIndex = 13
+        Me.LabelDataFimInternamento.Text = "Data de Fim:"
+        '
+        'LabelCustoServicoInternamento
+        '
+        Me.LabelCustoServicoInternamento.AutoSize = True
+        Me.LabelCustoServicoInternamento.Location = New System.Drawing.Point(474, 123)
+        Me.LabelCustoServicoInternamento.Name = "LabelCustoServicoInternamento"
+        Me.LabelCustoServicoInternamento.Size = New System.Drawing.Size(91, 13)
+        Me.LabelCustoServicoInternamento.TabIndex = 9
+        Me.LabelCustoServicoInternamento.Text = "Custo de Serviço:"
+        '
+        'NomeServicoInternamento
+        '
+        Me.NomeServicoInternamento.Location = New System.Drawing.Point(266, 139)
+        Me.NomeServicoInternamento.Name = "NomeServicoInternamento"
+        Me.NomeServicoInternamento.Size = New System.Drawing.Size(205, 20)
+        Me.NomeServicoInternamento.TabIndex = 8
+        '
+        'LabelDataInicioInternamento
+        '
+        Me.LabelDataInicioInternamento.AutoSize = True
+        Me.LabelDataInicioInternamento.Location = New System.Drawing.Point(263, 166)
+        Me.LabelDataInicioInternamento.Name = "LabelDataInicioInternamento"
+        Me.LabelDataInicioInternamento.Size = New System.Drawing.Size(76, 13)
+        Me.LabelDataInicioInternamento.TabIndex = 11
+        Me.LabelDataInicioInternamento.Text = "Data de Inicio:"
+        '
+        'LabelNomeServicoInternamento
+        '
+        Me.LabelNomeServicoInternamento.AutoSize = True
+        Me.LabelNomeServicoInternamento.Location = New System.Drawing.Point(263, 123)
+        Me.LabelNomeServicoInternamento.Name = "LabelNomeServicoInternamento"
+        Me.LabelNomeServicoInternamento.Size = New System.Drawing.Size(92, 13)
+        Me.LabelNomeServicoInternamento.TabIndex = 7
+        Me.LabelNomeServicoInternamento.Text = "Nome do Serviço:"
+        '
+        'CustoServicoInternamento
+        '
+        Me.CustoServicoInternamento.Location = New System.Drawing.Point(477, 139)
+        Me.CustoServicoInternamento.Name = "CustoServicoInternamento"
+        Me.CustoServicoInternamento.Size = New System.Drawing.Size(100, 20)
+        Me.CustoServicoInternamento.TabIndex = 10
+        '
+        'LabelNumInternamentoIntervencao
+        '
+        Me.LabelNumInternamentoIntervencao.AutoSize = True
+        Me.LabelNumInternamentoIntervencao.Location = New System.Drawing.Point(263, 74)
+        Me.LabelNumInternamentoIntervencao.Name = "LabelNumInternamentoIntervencao"
+        Me.LabelNumInternamentoIntervencao.Size = New System.Drawing.Size(127, 13)
+        Me.LabelNumInternamentoIntervencao.TabIndex = 5
+        Me.LabelNumInternamentoIntervencao.Text = "Numero de Internamento:"
+        '
+        'DataFimInternamento
+        '
+        Me.DataFimInternamento.Location = New System.Drawing.Point(432, 182)
+        Me.DataFimInternamento.Name = "DataFimInternamento"
+        Me.DataFimInternamento.Size = New System.Drawing.Size(145, 20)
+        Me.DataFimInternamento.TabIndex = 14
+        '
+        'DataInicioInternamento
+        '
+        Me.DataInicioInternamento.Location = New System.Drawing.Point(266, 182)
+        Me.DataInicioInternamento.Name = "DataInicioInternamento"
+        Me.DataInicioInternamento.Size = New System.Drawing.Size(161, 20)
+        Me.DataInicioInternamento.TabIndex = 12
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(263, 31)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(98, 13)
+        Me.Label7.TabIndex = 23
+        Me.Label7.Text = "Nome de Paciente:"
         '
         'TabEnfermeiro
         '
@@ -1752,6 +1770,9 @@ Partial Class Form1
         '
         'TabPaciente
         '
+        Me.TabPaciente.Controls.Add(Me.GroupIntervencoesInternamentosPaciente)
+        Me.TabPaciente.Controls.Add(Me.GroupInternamentosPaciente)
+        Me.TabPaciente.Controls.Add(Me.GroupFaturasPaciente)
         Me.TabPaciente.Controls.Add(Me.SearchPaciente)
         Me.TabPaciente.Controls.Add(Me.NomePaciente)
         Me.TabPaciente.Controls.Add(Me.CcPaciente)
@@ -1784,8 +1805,6 @@ Partial Class Form1
         Me.TabPaciente.Controls.Add(Me.btnListInternamentosPaciente)
         Me.TabPaciente.Controls.Add(Me.btnCancelPaciente)
         Me.TabPaciente.Controls.Add(Me.btnOkPaciente)
-        Me.TabPaciente.Controls.Add(Me.GroupInternamentosPaciente)
-        Me.TabPaciente.Controls.Add(Me.GroupFaturasPaciente)
         Me.TabPaciente.Location = New System.Drawing.Point(4, 22)
         Me.TabPaciente.Name = "TabPaciente"
         Me.TabPaciente.Padding = New System.Windows.Forms.Padding(3)
@@ -1793,6 +1812,363 @@ Partial Class Form1
         Me.TabPaciente.TabIndex = 0
         Me.TabPaciente.Text = "Pacientes"
         Me.TabPaciente.UseVisualStyleBackColor = True
+        '
+        'GroupIntervencoesInternamentosPaciente
+        '
+        Me.GroupIntervencoesInternamentosPaciente.Controls.Add(Me.Label16)
+        Me.GroupIntervencoesInternamentosPaciente.Controls.Add(Me.ProdutoQuantidadePaciente)
+        Me.GroupIntervencoesInternamentosPaciente.Controls.Add(Me.btnExitIntervencoesInternamentoPaciente)
+        Me.GroupIntervencoesInternamentosPaciente.Controls.Add(Me.SearchIntervencaoPaciente)
+        Me.GroupIntervencoesInternamentosPaciente.Controls.Add(Me.btnSeacrIntervencaoPaciente)
+        Me.GroupIntervencoesInternamentosPaciente.Controls.Add(Me.ListIntervencaoPaciente)
+        Me.GroupIntervencoesInternamentosPaciente.Controls.Add(Me.Label17)
+        Me.GroupIntervencoesInternamentosPaciente.Controls.Add(Me.NumeroIntervencaoPaciente)
+        Me.GroupIntervencoesInternamentosPaciente.Controls.Add(Me.Label18)
+        Me.GroupIntervencoesInternamentosPaciente.Controls.Add(Me.NumeroInternamentoIntervencaoPaciente)
+        Me.GroupIntervencoesInternamentosPaciente.Controls.Add(Me.Label19)
+        Me.GroupIntervencoesInternamentosPaciente.Controls.Add(Me.CustoIntervencaoPaciente)
+        Me.GroupIntervencoesInternamentosPaciente.Controls.Add(Me.Label20)
+        Me.GroupIntervencoesInternamentosPaciente.Controls.Add(Me.ListProdutosIntervencaoPaciente)
+        Me.GroupIntervencoesInternamentosPaciente.Controls.Add(Me.Label21)
+        Me.GroupIntervencoesInternamentosPaciente.Controls.Add(Me.CodigoProdutoIntervencaoPaciente)
+        Me.GroupIntervencoesInternamentosPaciente.Controls.Add(Me.Label22)
+        Me.GroupIntervencoesInternamentosPaciente.Controls.Add(Me.TipoProdutoIntervencaoPaciente)
+        Me.GroupIntervencoesInternamentosPaciente.Controls.Add(Me.Label23)
+        Me.GroupIntervencoesInternamentosPaciente.Controls.Add(Me.CustoProdutoIntervencaoPaciente)
+        Me.GroupIntervencoesInternamentosPaciente.Controls.Add(Me.Label24)
+        Me.GroupIntervencoesInternamentosPaciente.Controls.Add(Me.CustoLimpezaIntervencaoPaciente)
+        Me.GroupIntervencoesInternamentosPaciente.Controls.Add(Me.Label25)
+        Me.GroupIntervencoesInternamentosPaciente.Location = New System.Drawing.Point(0, 0)
+        Me.GroupIntervencoesInternamentosPaciente.Name = "GroupIntervencoesInternamentosPaciente"
+        Me.GroupIntervencoesInternamentosPaciente.Size = New System.Drawing.Size(604, 350)
+        Me.GroupIntervencoesInternamentosPaciente.TabIndex = 34
+        Me.GroupIntervencoesInternamentosPaciente.TabStop = False
+        Me.GroupIntervencoesInternamentosPaciente.Text = "Intervenções"
+        Me.GroupIntervencoesInternamentosPaciente.Visible = False
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(420, 278)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(65, 13)
+        Me.Label16.TabIndex = 21
+        Me.Label16.Text = "Quantidade:"
+        '
+        'ProdutoQuantidadePaciente
+        '
+        Me.ProdutoQuantidadePaciente.Location = New System.Drawing.Point(420, 294)
+        Me.ProdutoQuantidadePaciente.Name = "ProdutoQuantidadePaciente"
+        Me.ProdutoQuantidadePaciente.Size = New System.Drawing.Size(148, 20)
+        Me.ProdutoQuantidadePaciente.TabIndex = 20
+        '
+        'btnExitIntervencoesInternamentoPaciente
+        '
+        Me.btnExitIntervencoesInternamentoPaciente.Location = New System.Drawing.Point(11, 285)
+        Me.btnExitIntervencoesInternamentoPaciente.Name = "btnExitIntervencoesInternamentoPaciente"
+        Me.btnExitIntervencoesInternamentoPaciente.Size = New System.Drawing.Size(214, 29)
+        Me.btnExitIntervencoesInternamentoPaciente.TabIndex = 19
+        Me.btnExitIntervencoesInternamentoPaciente.Text = "Voltar a Internamento"
+        Me.btnExitIntervencoesInternamentoPaciente.UseVisualStyleBackColor = True
+        '
+        'SearchIntervencaoPaciente
+        '
+        Me.SearchIntervencaoPaciente.Location = New System.Drawing.Point(10, 19)
+        Me.SearchIntervencaoPaciente.Name = "SearchIntervencaoPaciente"
+        Me.SearchIntervencaoPaciente.Size = New System.Drawing.Size(151, 20)
+        Me.SearchIntervencaoPaciente.TabIndex = 0
+        '
+        'btnSeacrIntervencaoPaciente
+        '
+        Me.btnSeacrIntervencaoPaciente.Location = New System.Drawing.Point(167, 18)
+        Me.btnSeacrIntervencaoPaciente.Name = "btnSeacrIntervencaoPaciente"
+        Me.btnSeacrIntervencaoPaciente.Size = New System.Drawing.Size(58, 22)
+        Me.btnSeacrIntervencaoPaciente.TabIndex = 1
+        Me.btnSeacrIntervencaoPaciente.Text = "Procurar"
+        Me.btnSeacrIntervencaoPaciente.UseVisualStyleBackColor = True
+        '
+        'ListIntervencaoPaciente
+        '
+        Me.ListIntervencaoPaciente.FormattingEnabled = True
+        Me.ListIntervencaoPaciente.Location = New System.Drawing.Point(11, 50)
+        Me.ListIntervencaoPaciente.Name = "ListIntervencaoPaciente"
+        Me.ListIntervencaoPaciente.Size = New System.Drawing.Size(214, 225)
+        Me.ListIntervencaoPaciente.TabIndex = 2
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(254, 23)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(122, 13)
+        Me.Label17.TabIndex = 3
+        Me.Label17.Text = "Número de Intervenção:"
+        '
+        'NumeroIntervencaoPaciente
+        '
+        Me.NumeroIntervencaoPaciente.Location = New System.Drawing.Point(257, 39)
+        Me.NumeroIntervencaoPaciente.Name = "NumeroIntervencaoPaciente"
+        Me.NumeroIntervencaoPaciente.Size = New System.Drawing.Size(312, 20)
+        Me.NumeroIntervencaoPaciente.TabIndex = 4
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Location = New System.Drawing.Point(254, 69)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(127, 13)
+        Me.Label18.TabIndex = 3
+        Me.Label18.Text = "Número de Internamento:"
+        '
+        'NumeroInternamentoIntervencaoPaciente
+        '
+        Me.NumeroInternamentoIntervencaoPaciente.Location = New System.Drawing.Point(257, 82)
+        Me.NumeroInternamentoIntervencaoPaciente.Name = "NumeroInternamentoIntervencaoPaciente"
+        Me.NumeroInternamentoIntervencaoPaciente.Size = New System.Drawing.Size(312, 20)
+        Me.NumeroInternamentoIntervencaoPaciente.TabIndex = 6
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Location = New System.Drawing.Point(254, 105)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(97, 13)
+        Me.Label19.TabIndex = 7
+        Me.Label19.Text = "Staff Responsavel:"
+        '
+        'CustoIntervencaoPaciente
+        '
+        Me.CustoIntervencaoPaciente.Location = New System.Drawing.Point(257, 125)
+        Me.CustoIntervencaoPaciente.Name = "CustoIntervencaoPaciente"
+        Me.CustoIntervencaoPaciente.Size = New System.Drawing.Size(312, 20)
+        Me.CustoIntervencaoPaciente.TabIndex = 8
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Location = New System.Drawing.Point(254, 151)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(92, 13)
+        Me.Label20.TabIndex = 9
+        Me.Label20.Text = "Lista de Produtos:"
+        '
+        'ListProdutosIntervencaoPaciente
+        '
+        Me.ListProdutosIntervencaoPaciente.FormattingEnabled = True
+        Me.ListProdutosIntervencaoPaciente.Location = New System.Drawing.Point(257, 167)
+        Me.ListProdutosIntervencaoPaciente.Name = "ListProdutosIntervencaoPaciente"
+        Me.ListProdutosIntervencaoPaciente.Size = New System.Drawing.Size(144, 147)
+        Me.ListProdutosIntervencaoPaciente.TabIndex = 10
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Location = New System.Drawing.Point(417, 151)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(97, 13)
+        Me.Label21.TabIndex = 11
+        Me.Label21.Text = "Código de produto:"
+        '
+        'CodigoProdutoIntervencaoPaciente
+        '
+        Me.CodigoProdutoIntervencaoPaciente.Location = New System.Drawing.Point(420, 167)
+        Me.CodigoProdutoIntervencaoPaciente.Name = "CodigoProdutoIntervencaoPaciente"
+        Me.CodigoProdutoIntervencaoPaciente.Size = New System.Drawing.Size(149, 20)
+        Me.CodigoProdutoIntervencaoPaciente.TabIndex = 12
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Location = New System.Drawing.Point(417, 195)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(85, 13)
+        Me.Label22.TabIndex = 13
+        Me.Label22.Text = "Tipo de produto:"
+        '
+        'TipoProdutoIntervencaoPaciente
+        '
+        Me.TipoProdutoIntervencaoPaciente.Location = New System.Drawing.Point(420, 211)
+        Me.TipoProdutoIntervencaoPaciente.Name = "TipoProdutoIntervencaoPaciente"
+        Me.TipoProdutoIntervencaoPaciente.Size = New System.Drawing.Size(149, 20)
+        Me.TipoProdutoIntervencaoPaciente.TabIndex = 14
+        '
+        'Label23
+        '
+        Me.Label23.AutoSize = True
+        Me.Label23.Location = New System.Drawing.Point(416, 238)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(62, 13)
+        Me.Label23.TabIndex = 15
+        Me.Label23.Text = "Custo Prod:"
+        '
+        'CustoProdutoIntervencaoPaciente
+        '
+        Me.CustoProdutoIntervencaoPaciente.Location = New System.Drawing.Point(420, 254)
+        Me.CustoProdutoIntervencaoPaciente.Name = "CustoProdutoIntervencaoPaciente"
+        Me.CustoProdutoIntervencaoPaciente.Size = New System.Drawing.Size(67, 20)
+        Me.CustoProdutoIntervencaoPaciente.TabIndex = 16
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Location = New System.Drawing.Point(492, 238)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(62, 13)
+        Me.Label24.TabIndex = 17
+        Me.Label24.Text = "Custo Limp:"
+        '
+        'CustoLimpezaIntervencaoPaciente
+        '
+        Me.CustoLimpezaIntervencaoPaciente.Location = New System.Drawing.Point(495, 255)
+        Me.CustoLimpezaIntervencaoPaciente.Name = "CustoLimpezaIntervencaoPaciente"
+        Me.CustoLimpezaIntervencaoPaciente.Size = New System.Drawing.Size(73, 20)
+        Me.CustoLimpezaIntervencaoPaciente.TabIndex = 18
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.Location = New System.Drawing.Point(255, 202)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(51, 13)
+        Me.Label25.TabIndex = 24
+        Me.Label25.Text = "Patologia"
+        '
+        'GroupFaturasPaciente
+        '
+        Me.GroupFaturasPaciente.Controls.Add(Me.btbSairFaturasPaciente)
+        Me.GroupFaturasPaciente.Controls.Add(Me.Label2)
+        Me.GroupFaturasPaciente.Controls.Add(Me.Label3)
+        Me.GroupFaturasPaciente.Controls.Add(Me.FaturaPacienteSeguro)
+        Me.GroupFaturasPaciente.Controls.Add(Me.FaturaPacienteNome)
+        Me.GroupFaturasPaciente.Controls.Add(Me.SearchFaturasPaciente)
+        Me.GroupFaturasPaciente.Controls.Add(Me.CodigoFaturaPaciente)
+        Me.GroupFaturasPaciente.Controls.Add(Me.CustoFaturaPaciente)
+        Me.GroupFaturasPaciente.Controls.Add(Me.DataPagamentoFaturaPaciente)
+        Me.GroupFaturasPaciente.Controls.Add(Me.btnSearchFaturasPaciente)
+        Me.GroupFaturasPaciente.Controls.Add(Me.ListFaturasPaciente)
+        Me.GroupFaturasPaciente.Controls.Add(Me.Label4)
+        Me.GroupFaturasPaciente.Controls.Add(Me.Label5)
+        Me.GroupFaturasPaciente.Controls.Add(Me.Label6)
+        Me.GroupFaturasPaciente.Location = New System.Drawing.Point(2, 0)
+        Me.GroupFaturasPaciente.Name = "GroupFaturasPaciente"
+        Me.GroupFaturasPaciente.Size = New System.Drawing.Size(602, 343)
+        Me.GroupFaturasPaciente.TabIndex = 32
+        Me.GroupFaturasPaciente.TabStop = False
+        Me.GroupFaturasPaciente.Text = "Faturas de Paciente"
+        Me.GroupFaturasPaciente.Visible = False
+        '
+        'btbSairFaturasPaciente
+        '
+        Me.btbSairFaturasPaciente.Location = New System.Drawing.Point(20, 289)
+        Me.btbSairFaturasPaciente.Name = "btbSairFaturasPaciente"
+        Me.btbSairFaturasPaciente.Size = New System.Drawing.Size(80, 32)
+        Me.btbSairFaturasPaciente.TabIndex = 26
+        Me.btbSairFaturasPaciente.Text = "Sair"
+        Me.btbSairFaturasPaciente.UseVisualStyleBackColor = True
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(262, 88)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(95, 13)
+        Me.Label2.TabIndex = 25
+        Me.Label2.Text = "Nome de Paciente"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(262, 127)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(92, 13)
+        Me.Label3.TabIndex = 24
+        Me.Label3.Text = "Código de Seguro"
+        '
+        'FaturaPacienteSeguro
+        '
+        Me.FaturaPacienteSeguro.Location = New System.Drawing.Point(265, 143)
+        Me.FaturaPacienteSeguro.Name = "FaturaPacienteSeguro"
+        Me.FaturaPacienteSeguro.Size = New System.Drawing.Size(312, 20)
+        Me.FaturaPacienteSeguro.TabIndex = 23
+        '
+        'FaturaPacienteNome
+        '
+        Me.FaturaPacienteNome.Location = New System.Drawing.Point(265, 104)
+        Me.FaturaPacienteNome.Name = "FaturaPacienteNome"
+        Me.FaturaPacienteNome.Size = New System.Drawing.Size(312, 20)
+        Me.FaturaPacienteNome.TabIndex = 22
+        '
+        'SearchFaturasPaciente
+        '
+        Me.SearchFaturasPaciente.Location = New System.Drawing.Point(19, 23)
+        Me.SearchFaturasPaciente.Name = "SearchFaturasPaciente"
+        Me.SearchFaturasPaciente.Size = New System.Drawing.Size(151, 20)
+        Me.SearchFaturasPaciente.TabIndex = 13
+        '
+        'CodigoFaturaPaciente
+        '
+        Me.CodigoFaturaPaciente.Location = New System.Drawing.Point(265, 182)
+        Me.CodigoFaturaPaciente.Name = "CodigoFaturaPaciente"
+        Me.CodigoFaturaPaciente.Size = New System.Drawing.Size(312, 20)
+        Me.CodigoFaturaPaciente.TabIndex = 17
+        '
+        'CustoFaturaPaciente
+        '
+        Me.CustoFaturaPaciente.Location = New System.Drawing.Point(263, 224)
+        Me.CustoFaturaPaciente.Name = "CustoFaturaPaciente"
+        Me.CustoFaturaPaciente.Size = New System.Drawing.Size(161, 20)
+        Me.CustoFaturaPaciente.TabIndex = 19
+        '
+        'DataPagamentoFaturaPaciente
+        '
+        Me.DataPagamentoFaturaPaciente.Location = New System.Drawing.Point(432, 224)
+        Me.DataPagamentoFaturaPaciente.Name = "DataPagamentoFaturaPaciente"
+        Me.DataPagamentoFaturaPaciente.Size = New System.Drawing.Size(145, 20)
+        Me.DataPagamentoFaturaPaciente.TabIndex = 21
+        '
+        'btnSearchFaturasPaciente
+        '
+        Me.btnSearchFaturasPaciente.Location = New System.Drawing.Point(176, 22)
+        Me.btnSearchFaturasPaciente.Name = "btnSearchFaturasPaciente"
+        Me.btnSearchFaturasPaciente.Size = New System.Drawing.Size(58, 22)
+        Me.btnSearchFaturasPaciente.TabIndex = 14
+        Me.btnSearchFaturasPaciente.Text = "Procurar"
+        Me.btnSearchFaturasPaciente.UseVisualStyleBackColor = True
+        '
+        'ListFaturasPaciente
+        '
+        Me.ListFaturasPaciente.FormattingEnabled = True
+        Me.ListFaturasPaciente.Location = New System.Drawing.Point(20, 54)
+        Me.ListFaturasPaciente.Name = "ListFaturasPaciente"
+        Me.ListFaturasPaciente.Size = New System.Drawing.Size(214, 225)
+        Me.ListFaturasPaciente.TabIndex = 15
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(262, 166)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(88, 13)
+        Me.Label4.TabIndex = 16
+        Me.Label4.Text = "Código de Fatura"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(262, 208)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(85, 13)
+        Me.Label5.TabIndex = 18
+        Me.Label5.Text = "Custo de Fatura:"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(429, 208)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(105, 13)
+        Me.Label6.TabIndex = 20
+        Me.Label6.Text = "Data de Pagamento:"
         '
         'SearchPaciente
         '
@@ -2060,94 +2436,104 @@ Partial Class Form1
         '
         'GroupInternamentosPaciente
         '
-        Me.GroupInternamentosPaciente.Controls.Add(Me.TextBox1)
-        Me.GroupInternamentosPaciente.Controls.Add(Me.TextBox2)
-        Me.GroupInternamentosPaciente.Controls.Add(Me.Button1)
-        Me.GroupInternamentosPaciente.Controls.Add(Me.TextBox3)
-        Me.GroupInternamentosPaciente.Controls.Add(Me.ListBox1)
-        Me.GroupInternamentosPaciente.Controls.Add(Me.Button2)
-        Me.GroupInternamentosPaciente.Controls.Add(Me.TextBox4)
-        Me.GroupInternamentosPaciente.Controls.Add(Me.TextBox5)
+        Me.GroupInternamentosPaciente.Controls.Add(Me.btnSairInternamentosPaciente)
+        Me.GroupInternamentosPaciente.Controls.Add(Me.NomePacienteInternamentoPaciente)
+        Me.GroupInternamentosPaciente.Controls.Add(Me.SearchInternamentoPaciente)
+        Me.GroupInternamentosPaciente.Controls.Add(Me.btnSearchInternamentoPaciente)
+        Me.GroupInternamentosPaciente.Controls.Add(Me.NumeroInternamentoPaciente)
+        Me.GroupInternamentosPaciente.Controls.Add(Me.ListInternamentosPaciente)
+        Me.GroupInternamentosPaciente.Controls.Add(Me.ListarIntervencoesInternamentoPaciente)
+        Me.GroupInternamentosPaciente.Controls.Add(Me.CodigoServicoInternamentoPaciente)
+        Me.GroupInternamentosPaciente.Controls.Add(Me.PatologiaInternamentoPaciente)
         Me.GroupInternamentosPaciente.Controls.Add(Me.Label9)
         Me.GroupInternamentosPaciente.Controls.Add(Me.Label10)
         Me.GroupInternamentosPaciente.Controls.Add(Me.Label11)
-        Me.GroupInternamentosPaciente.Controls.Add(Me.TextBox6)
+        Me.GroupInternamentosPaciente.Controls.Add(Me.NomeServicoInternamentoPaciente)
         Me.GroupInternamentosPaciente.Controls.Add(Me.Label12)
         Me.GroupInternamentosPaciente.Controls.Add(Me.Label13)
-        Me.GroupInternamentosPaciente.Controls.Add(Me.TextBox7)
+        Me.GroupInternamentosPaciente.Controls.Add(Me.CustoServicoInternamentoPaciente)
         Me.GroupInternamentosPaciente.Controls.Add(Me.Label14)
-        Me.GroupInternamentosPaciente.Controls.Add(Me.TextBox8)
-        Me.GroupInternamentosPaciente.Controls.Add(Me.TextBox9)
+        Me.GroupInternamentosPaciente.Controls.Add(Me.DataFimInternamentoPaciente)
+        Me.GroupInternamentosPaciente.Controls.Add(Me.DataInicioInternamentoPaciente)
         Me.GroupInternamentosPaciente.Controls.Add(Me.Label15)
-        Me.GroupInternamentosPaciente.Location = New System.Drawing.Point(-4, 0)
+        Me.GroupInternamentosPaciente.Location = New System.Drawing.Point(6, 0)
         Me.GroupInternamentosPaciente.Name = "GroupInternamentosPaciente"
-        Me.GroupInternamentosPaciente.Size = New System.Drawing.Size(608, 343)
+        Me.GroupInternamentosPaciente.Size = New System.Drawing.Size(598, 337)
         Me.GroupInternamentosPaciente.TabIndex = 33
         Me.GroupInternamentosPaciente.TabStop = False
         Me.GroupInternamentosPaciente.Text = "Internamentos de Paciente"
         Me.GroupInternamentosPaciente.Visible = False
         '
-        'TextBox1
+        'btnSairInternamentosPaciente
         '
-        Me.TextBox1.Location = New System.Drawing.Point(273, 44)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(311, 20)
-        Me.TextBox1.TabIndex = 41
+        Me.btnSairInternamentosPaciente.Location = New System.Drawing.Point(26, 294)
+        Me.btnSairInternamentosPaciente.Name = "btnSairInternamentosPaciente"
+        Me.btnSairInternamentosPaciente.Size = New System.Drawing.Size(58, 22)
+        Me.btnSairInternamentosPaciente.TabIndex = 43
+        Me.btnSairInternamentosPaciente.Text = "Sair"
+        Me.btnSairInternamentosPaciente.UseVisualStyleBackColor = True
         '
-        'TextBox2
+        'NomePacienteInternamentoPaciente
         '
-        Me.TextBox2.Location = New System.Drawing.Point(25, 24)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(151, 20)
-        Me.TextBox2.TabIndex = 24
+        Me.NomePacienteInternamentoPaciente.Location = New System.Drawing.Point(273, 44)
+        Me.NomePacienteInternamentoPaciente.Name = "NomePacienteInternamentoPaciente"
+        Me.NomePacienteInternamentoPaciente.Size = New System.Drawing.Size(311, 20)
+        Me.NomePacienteInternamentoPaciente.TabIndex = 41
         '
-        'Button1
+        'SearchInternamentoPaciente
         '
-        Me.Button1.Location = New System.Drawing.Point(182, 23)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(58, 22)
-        Me.Button1.TabIndex = 25
-        Me.Button1.Text = "Procurar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.SearchInternamentoPaciente.Location = New System.Drawing.Point(25, 24)
+        Me.SearchInternamentoPaciente.Name = "SearchInternamentoPaciente"
+        Me.SearchInternamentoPaciente.Size = New System.Drawing.Size(151, 20)
+        Me.SearchInternamentoPaciente.TabIndex = 24
         '
-        'TextBox3
+        'btnSearchInternamentoPaciente
         '
-        Me.TextBox3.Location = New System.Drawing.Point(273, 92)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(205, 20)
-        Me.TextBox3.TabIndex = 27
+        Me.btnSearchInternamentoPaciente.Location = New System.Drawing.Point(182, 23)
+        Me.btnSearchInternamentoPaciente.Name = "btnSearchInternamentoPaciente"
+        Me.btnSearchInternamentoPaciente.Size = New System.Drawing.Size(58, 22)
+        Me.btnSearchInternamentoPaciente.TabIndex = 25
+        Me.btnSearchInternamentoPaciente.Text = "Procurar"
+        Me.btnSearchInternamentoPaciente.UseVisualStyleBackColor = True
         '
-        'ListBox1
+        'NumeroInternamentoPaciente
         '
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.Location = New System.Drawing.Point(26, 55)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(214, 264)
-        Me.ListBox1.TabIndex = 26
+        Me.NumeroInternamentoPaciente.Location = New System.Drawing.Point(273, 92)
+        Me.NumeroInternamentoPaciente.Name = "NumeroInternamentoPaciente"
+        Me.NumeroInternamentoPaciente.Size = New System.Drawing.Size(205, 20)
+        Me.NumeroInternamentoPaciente.TabIndex = 27
         '
-        'Button2
+        'ListInternamentosPaciente
         '
-        Me.Button2.Location = New System.Drawing.Point(272, 277)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(311, 42)
-        Me.Button2.TabIndex = 40
-        Me.Button2.Text = "Listar Intervenções"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.ListInternamentosPaciente.FormattingEnabled = True
+        Me.ListInternamentosPaciente.Location = New System.Drawing.Point(26, 55)
+        Me.ListInternamentosPaciente.Name = "ListInternamentosPaciente"
+        Me.ListInternamentosPaciente.Size = New System.Drawing.Size(214, 225)
+        Me.ListInternamentosPaciente.TabIndex = 26
         '
-        'TextBox4
+        'ListarIntervencoesInternamentoPaciente
         '
-        Me.TextBox4.Location = New System.Drawing.Point(484, 92)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox4.TabIndex = 30
+        Me.ListarIntervencoesInternamentoPaciente.Location = New System.Drawing.Point(272, 277)
+        Me.ListarIntervencoesInternamentoPaciente.Name = "ListarIntervencoesInternamentoPaciente"
+        Me.ListarIntervencoesInternamentoPaciente.Size = New System.Drawing.Size(311, 42)
+        Me.ListarIntervencoesInternamentoPaciente.TabIndex = 40
+        Me.ListarIntervencoesInternamentoPaciente.Text = "Listar Intervenções"
+        Me.ListarIntervencoesInternamentoPaciente.UseVisualStyleBackColor = True
         '
-        'TextBox5
+        'CodigoServicoInternamentoPaciente
         '
-        Me.TextBox5.Location = New System.Drawing.Point(273, 223)
-        Me.TextBox5.Multiline = True
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(311, 33)
-        Me.TextBox5.TabIndex = 39
+        Me.CodigoServicoInternamentoPaciente.Location = New System.Drawing.Point(484, 92)
+        Me.CodigoServicoInternamentoPaciente.Name = "CodigoServicoInternamentoPaciente"
+        Me.CodigoServicoInternamentoPaciente.Size = New System.Drawing.Size(100, 20)
+        Me.CodigoServicoInternamentoPaciente.TabIndex = 30
+        '
+        'PatologiaInternamentoPaciente
+        '
+        Me.PatologiaInternamentoPaciente.Location = New System.Drawing.Point(273, 223)
+        Me.PatologiaInternamentoPaciente.Multiline = True
+        Me.PatologiaInternamentoPaciente.Name = "PatologiaInternamentoPaciente"
+        Me.PatologiaInternamentoPaciente.Size = New System.Drawing.Size(311, 33)
+        Me.PatologiaInternamentoPaciente.TabIndex = 39
         '
         'Label9
         '
@@ -2176,12 +2562,12 @@ Partial Class Form1
         Me.Label11.TabIndex = 33
         Me.Label11.Text = "Custo de Serviço:"
         '
-        'TextBox6
+        'NomeServicoInternamentoPaciente
         '
-        Me.TextBox6.Location = New System.Drawing.Point(273, 136)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(205, 20)
-        Me.TextBox6.TabIndex = 32
+        Me.NomeServicoInternamentoPaciente.Location = New System.Drawing.Point(273, 136)
+        Me.NomeServicoInternamentoPaciente.Name = "NomeServicoInternamentoPaciente"
+        Me.NomeServicoInternamentoPaciente.Size = New System.Drawing.Size(205, 20)
+        Me.NomeServicoInternamentoPaciente.TabIndex = 32
         '
         'Label12
         '
@@ -2201,12 +2587,12 @@ Partial Class Form1
         Me.Label13.TabIndex = 31
         Me.Label13.Text = "Nome do Serviço:"
         '
-        'TextBox7
+        'CustoServicoInternamentoPaciente
         '
-        Me.TextBox7.Location = New System.Drawing.Point(484, 136)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox7.TabIndex = 34
+        Me.CustoServicoInternamentoPaciente.Location = New System.Drawing.Point(484, 136)
+        Me.CustoServicoInternamentoPaciente.Name = "CustoServicoInternamentoPaciente"
+        Me.CustoServicoInternamentoPaciente.Size = New System.Drawing.Size(100, 20)
+        Me.CustoServicoInternamentoPaciente.TabIndex = 34
         '
         'Label14
         '
@@ -2217,19 +2603,19 @@ Partial Class Form1
         Me.Label14.TabIndex = 29
         Me.Label14.Text = "Numero de Internamento:"
         '
-        'TextBox8
+        'DataFimInternamentoPaciente
         '
-        Me.TextBox8.Location = New System.Drawing.Point(439, 179)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(145, 20)
-        Me.TextBox8.TabIndex = 38
+        Me.DataFimInternamentoPaciente.Location = New System.Drawing.Point(439, 179)
+        Me.DataFimInternamentoPaciente.Name = "DataFimInternamentoPaciente"
+        Me.DataFimInternamentoPaciente.Size = New System.Drawing.Size(145, 20)
+        Me.DataFimInternamentoPaciente.TabIndex = 38
         '
-        'TextBox9
+        'DataInicioInternamentoPaciente
         '
-        Me.TextBox9.Location = New System.Drawing.Point(273, 179)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(161, 20)
-        Me.TextBox9.TabIndex = 36
+        Me.DataInicioInternamentoPaciente.Location = New System.Drawing.Point(273, 179)
+        Me.DataInicioInternamentoPaciente.Name = "DataInicioInternamentoPaciente"
+        Me.DataInicioInternamentoPaciente.Size = New System.Drawing.Size(161, 20)
+        Me.DataInicioInternamentoPaciente.TabIndex = 36
         '
         'Label15
         '
@@ -2240,143 +2626,6 @@ Partial Class Form1
         Me.Label15.TabIndex = 42
         Me.Label15.Text = "Nome de Paciente:"
         '
-        'GroupFaturasPaciente
-        '
-        Me.GroupFaturasPaciente.Controls.Add(Me.btbSairFaturasPaciente)
-        Me.GroupFaturasPaciente.Controls.Add(Me.Label2)
-        Me.GroupFaturasPaciente.Controls.Add(Me.Label3)
-        Me.GroupFaturasPaciente.Controls.Add(Me.FaturaPacienteSeguro)
-        Me.GroupFaturasPaciente.Controls.Add(Me.FaturaPacienteNome)
-        Me.GroupFaturasPaciente.Controls.Add(Me.SearchFaturasPaciente)
-        Me.GroupFaturasPaciente.Controls.Add(Me.CodigoFaturaPaciente)
-        Me.GroupFaturasPaciente.Controls.Add(Me.CustoFaturaPaciente)
-        Me.GroupFaturasPaciente.Controls.Add(Me.DataPagamentoFaturaPaciente)
-        Me.GroupFaturasPaciente.Controls.Add(Me.btnSearchFaturasPaciente)
-        Me.GroupFaturasPaciente.Controls.Add(Me.ListFaturasPaciente)
-        Me.GroupFaturasPaciente.Controls.Add(Me.Label4)
-        Me.GroupFaturasPaciente.Controls.Add(Me.Label5)
-        Me.GroupFaturasPaciente.Controls.Add(Me.Label6)
-        Me.GroupFaturasPaciente.Location = New System.Drawing.Point(-4, 0)
-        Me.GroupFaturasPaciente.Name = "GroupFaturasPaciente"
-        Me.GroupFaturasPaciente.Size = New System.Drawing.Size(608, 340)
-        Me.GroupFaturasPaciente.TabIndex = 32
-        Me.GroupFaturasPaciente.TabStop = False
-        Me.GroupFaturasPaciente.Text = "Faturas de Paciente"
-        Me.GroupFaturasPaciente.Visible = False
-        '
-        'btbSairFaturasPaciente
-        '
-        Me.btbSairFaturasPaciente.Location = New System.Drawing.Point(20, 289)
-        Me.btbSairFaturasPaciente.Name = "btbSairFaturasPaciente"
-        Me.btbSairFaturasPaciente.Size = New System.Drawing.Size(80, 32)
-        Me.btbSairFaturasPaciente.TabIndex = 26
-        Me.btbSairFaturasPaciente.Text = "Sair"
-        Me.btbSairFaturasPaciente.UseVisualStyleBackColor = True
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(262, 88)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(95, 13)
-        Me.Label2.TabIndex = 25
-        Me.Label2.Text = "Nome de Paciente"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(262, 127)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(92, 13)
-        Me.Label3.TabIndex = 24
-        Me.Label3.Text = "Código de Seguro"
-        '
-        'FaturaPacienteSeguro
-        '
-        Me.FaturaPacienteSeguro.Location = New System.Drawing.Point(265, 143)
-        Me.FaturaPacienteSeguro.Name = "FaturaPacienteSeguro"
-        Me.FaturaPacienteSeguro.Size = New System.Drawing.Size(312, 20)
-        Me.FaturaPacienteSeguro.TabIndex = 23
-        '
-        'FaturaPacienteNome
-        '
-        Me.FaturaPacienteNome.Location = New System.Drawing.Point(265, 104)
-        Me.FaturaPacienteNome.Name = "FaturaPacienteNome"
-        Me.FaturaPacienteNome.Size = New System.Drawing.Size(312, 20)
-        Me.FaturaPacienteNome.TabIndex = 22
-        '
-        'SearchFaturasPaciente
-        '
-        Me.SearchFaturasPaciente.Location = New System.Drawing.Point(19, 23)
-        Me.SearchFaturasPaciente.Name = "SearchFaturasPaciente"
-        Me.SearchFaturasPaciente.Size = New System.Drawing.Size(151, 20)
-        Me.SearchFaturasPaciente.TabIndex = 13
-        '
-        'CodigoFaturaPaciente
-        '
-        Me.CodigoFaturaPaciente.Location = New System.Drawing.Point(265, 182)
-        Me.CodigoFaturaPaciente.Name = "CodigoFaturaPaciente"
-        Me.CodigoFaturaPaciente.Size = New System.Drawing.Size(312, 20)
-        Me.CodigoFaturaPaciente.TabIndex = 17
-        '
-        'CustoFaturaPaciente
-        '
-        Me.CustoFaturaPaciente.Location = New System.Drawing.Point(263, 224)
-        Me.CustoFaturaPaciente.Name = "CustoFaturaPaciente"
-        Me.CustoFaturaPaciente.Size = New System.Drawing.Size(161, 20)
-        Me.CustoFaturaPaciente.TabIndex = 19
-        '
-        'DataPagamentoFaturaPaciente
-        '
-        Me.DataPagamentoFaturaPaciente.Location = New System.Drawing.Point(432, 224)
-        Me.DataPagamentoFaturaPaciente.Name = "DataPagamentoFaturaPaciente"
-        Me.DataPagamentoFaturaPaciente.Size = New System.Drawing.Size(145, 20)
-        Me.DataPagamentoFaturaPaciente.TabIndex = 21
-        '
-        'btnSearchFaturasPaciente
-        '
-        Me.btnSearchFaturasPaciente.Location = New System.Drawing.Point(176, 22)
-        Me.btnSearchFaturasPaciente.Name = "btnSearchFaturasPaciente"
-        Me.btnSearchFaturasPaciente.Size = New System.Drawing.Size(58, 22)
-        Me.btnSearchFaturasPaciente.TabIndex = 14
-        Me.btnSearchFaturasPaciente.Text = "Procurar"
-        Me.btnSearchFaturasPaciente.UseVisualStyleBackColor = True
-        '
-        'ListFaturasPaciente
-        '
-        Me.ListFaturasPaciente.FormattingEnabled = True
-        Me.ListFaturasPaciente.Location = New System.Drawing.Point(20, 54)
-        Me.ListFaturasPaciente.Name = "ListFaturasPaciente"
-        Me.ListFaturasPaciente.Size = New System.Drawing.Size(214, 225)
-        Me.ListFaturasPaciente.TabIndex = 15
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(262, 166)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(88, 13)
-        Me.Label4.TabIndex = 16
-        Me.Label4.Text = "Código de Fatura"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(262, 208)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(85, 13)
-        Me.Label5.TabIndex = 18
-        Me.Label5.Text = "Custo de Fatura:"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(429, 208)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(105, 13)
-        Me.Label6.TabIndex = 20
-        Me.Label6.Text = "Data de Pagamento:"
-        '
         'TabControl
         '
         Me.TabControl.Controls.Add(Me.TabPaciente)
@@ -2386,77 +2635,11 @@ Partial Class Form1
         Me.TabControl.Controls.Add(Me.TabFatura)
         Me.TabControl.Controls.Add(Me.TabServico)
         Me.TabControl.Controls.Add(Me.TabMedicamento)
-        Me.TabControl.Controls.Add(Me.TabSeguros)
-        Me.TabControl.Location = New System.Drawing.Point(1, -4)
+        Me.TabControl.Location = New System.Drawing.Point(1, 3)
         Me.TabControl.Name = "TabControl"
         Me.TabControl.SelectedIndex = 0
         Me.TabControl.Size = New System.Drawing.Size(612, 372)
         Me.TabControl.TabIndex = 1
-        '
-        'TabSeguros
-        '
-        Me.TabSeguros.Controls.Add(Me.Listadeseguros_label)
-        Me.TabSeguros.Controls.Add(Me.ListSeguros)
-        Me.TabSeguros.Controls.Add(Me.DescontoLabel)
-        Me.TabSeguros.Controls.Add(Me.SeguroLabel)
-        Me.TabSeguros.Controls.Add(Me.Desconto)
-        Me.TabSeguros.Controls.Add(Me.Seguradora)
-        Me.TabSeguros.Location = New System.Drawing.Point(4, 22)
-        Me.TabSeguros.Name = "TabSeguros"
-        Me.TabSeguros.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabSeguros.Size = New System.Drawing.Size(604, 346)
-        Me.TabSeguros.TabIndex = 10
-        Me.TabSeguros.Text = "Seguros"
-        Me.TabSeguros.UseVisualStyleBackColor = True
-        '
-        'ListSeguros
-        '
-        Me.ListSeguros.FormattingEnabled = True
-        Me.ListSeguros.Location = New System.Drawing.Point(25, 71)
-        Me.ListSeguros.Name = "ListSeguros"
-        Me.ListSeguros.Size = New System.Drawing.Size(120, 95)
-        Me.ListSeguros.TabIndex = 4
-        '
-        'DescontoLabel
-        '
-        Me.DescontoLabel.AutoSize = True
-        Me.DescontoLabel.Location = New System.Drawing.Point(176, 130)
-        Me.DescontoLabel.Name = "DescontoLabel"
-        Me.DescontoLabel.Size = New System.Drawing.Size(134, 13)
-        Me.DescontoLabel.TabIndex = 3
-        Me.DescontoLabel.Text = "Percentagem de Desconto"
-        '
-        'SeguroLabel
-        '
-        Me.SeguroLabel.AutoSize = True
-        Me.SeguroLabel.Location = New System.Drawing.Point(179, 78)
-        Me.SeguroLabel.Name = "SeguroLabel"
-        Me.SeguroLabel.Size = New System.Drawing.Size(41, 13)
-        Me.SeguroLabel.TabIndex = 2
-        Me.SeguroLabel.Text = "Seguro"
-        '
-        'Desconto
-        '
-        Me.Desconto.Location = New System.Drawing.Point(179, 146)
-        Me.Desconto.Name = "Desconto"
-        Me.Desconto.Size = New System.Drawing.Size(100, 20)
-        Me.Desconto.TabIndex = 1
-        '
-        'Seguradora
-        '
-        Me.Seguradora.Location = New System.Drawing.Point(179, 97)
-        Me.Seguradora.Name = "Seguradora"
-        Me.Seguradora.Size = New System.Drawing.Size(100, 20)
-        Me.Seguradora.TabIndex = 0
-        '
-        'Listadeseguros_label
-        '
-        Me.Listadeseguros_label.AutoSize = True
-        Me.Listadeseguros_label.Location = New System.Drawing.Point(22, 45)
-        Me.Listadeseguros_label.Name = "Listadeseguros_label"
-        Me.Listadeseguros_label.Size = New System.Drawing.Size(86, 13)
-        Me.Listadeseguros_label.TabIndex = 5
-        Me.Listadeseguros_label.Text = "Lista de Seguros"
         '
         'Form1
         '
@@ -2483,13 +2666,13 @@ Partial Class Form1
         Me.TabMedico.PerformLayout()
         Me.TabPaciente.ResumeLayout(False)
         Me.TabPaciente.PerformLayout()
-        Me.GroupInternamentosPaciente.ResumeLayout(False)
-        Me.GroupInternamentosPaciente.PerformLayout()
+        Me.GroupIntervencoesInternamentosPaciente.ResumeLayout(False)
+        Me.GroupIntervencoesInternamentosPaciente.PerformLayout()
         Me.GroupFaturasPaciente.ResumeLayout(False)
         Me.GroupFaturasPaciente.PerformLayout()
+        Me.GroupInternamentosPaciente.ResumeLayout(False)
+        Me.GroupInternamentosPaciente.PerformLayout()
         Me.TabControl.ResumeLayout(False)
-        Me.TabSeguros.ResumeLayout(False)
-        Me.TabSeguros.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -2705,30 +2888,48 @@ Partial Class Form1
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents GroupInternamentosPaciente As GroupBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents ListBox1 As ListBox
-    Friend WithEvents Button2 As Button
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents NomePacienteInternamentoPaciente As TextBox
+    Friend WithEvents SearchInternamentoPaciente As TextBox
+    Friend WithEvents btnSearchInternamentoPaciente As Button
+    Friend WithEvents NumeroInternamentoPaciente As TextBox
+    Friend WithEvents ListInternamentosPaciente As ListBox
+    Friend WithEvents ListarIntervencoesInternamentoPaciente As Button
+    Friend WithEvents CodigoServicoInternamentoPaciente As TextBox
+    Friend WithEvents PatologiaInternamentoPaciente As TextBox
     Friend WithEvents Label9 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents Label11 As Label
-    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents NomeServicoInternamentoPaciente As TextBox
     Friend WithEvents Label12 As Label
     Friend WithEvents Label13 As Label
-    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents CustoServicoInternamentoPaciente As TextBox
     Friend WithEvents Label14 As Label
-    Friend WithEvents TextBox8 As TextBox
-    Friend WithEvents TextBox9 As TextBox
+    Friend WithEvents DataFimInternamentoPaciente As TextBox
+    Friend WithEvents DataInicioInternamentoPaciente As TextBox
     Friend WithEvents Label15 As Label
-    Friend WithEvents TabSeguros As TabPage
-    Friend WithEvents SeguroLabel As Label
-    Friend WithEvents Desconto As TextBox
-    Friend WithEvents Seguradora As TextBox
-    Friend WithEvents DescontoLabel As Label
-    Friend WithEvents ListSeguros As ListBox
-    Friend WithEvents Listadeseguros_label As Label
+    Friend WithEvents btnSairInternamentosPaciente As Button
+    Friend WithEvents GroupIntervencoesInternamentosPaciente As GroupBox
+    Friend WithEvents Label16 As Label
+    Friend WithEvents ProdutoQuantidadePaciente As TextBox
+    Friend WithEvents btnExitIntervencoesInternamentoPaciente As Button
+    Friend WithEvents SearchIntervencaoPaciente As TextBox
+    Friend WithEvents btnSeacrIntervencaoPaciente As Button
+    Friend WithEvents ListIntervencaoPaciente As ListBox
+    Friend WithEvents Label17 As Label
+    Friend WithEvents NumeroIntervencaoPaciente As TextBox
+    Friend WithEvents Label18 As Label
+    Friend WithEvents NumeroInternamentoIntervencaoPaciente As TextBox
+    Friend WithEvents Label19 As Label
+    Friend WithEvents CustoIntervencaoPaciente As TextBox
+    Friend WithEvents Label20 As Label
+    Friend WithEvents ListProdutosIntervencaoPaciente As ListBox
+    Friend WithEvents Label21 As Label
+    Friend WithEvents CodigoProdutoIntervencaoPaciente As TextBox
+    Friend WithEvents Label22 As Label
+    Friend WithEvents TipoProdutoIntervencaoPaciente As TextBox
+    Friend WithEvents Label23 As Label
+    Friend WithEvents CustoProdutoIntervencaoPaciente As TextBox
+    Friend WithEvents Label24 As Label
+    Friend WithEvents CustoLimpezaIntervencaoPaciente As TextBox
+    Friend WithEvents Label25 As Label
 End Class
