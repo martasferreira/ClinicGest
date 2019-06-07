@@ -68,8 +68,8 @@ create table ClinicGest.Servico(
     codigo_servico         int not null  identity(1,1),
     nome                   varchar(30) not null,
     custo                  int not null,
-    medico_responsavel     int,
-    enfermeiro_responsavel int,
+    medico_responsavel     int unique,
+    enfermeiro_responsavel int unique,
     primary key (codigo_servico),
     foreign key (medico_responsavel) references ClinicGest.Medico(codigo_med),
     foreign key (enfermeiro_responsavel) references ClinicGest.Enfermeiro(codigo_enf),
@@ -144,14 +144,6 @@ create table ClinicGest.Temseguro (
     foreign key (cod_paciente) references ClinicGest.Paciente(codigo_pac)
 )
 
-create table ClinicGest.Gastaproduto(
-    gasta_prod      int not null,
-    gasta_intervencao int not null,
-    primary key (gasta_prod,gasta_intervencao),
-    foreign key (gasta_prod) references ClinicGest.Produto(codigo_produto),
-    foreign key (gasta_intervencao) references ClinicGest.Intervencao(num_intervencao)
- )
- 
  create table ClinicGest.Medicoemservico(
  	codigo_med	int not null,
  	codigo_servico int not null,
@@ -167,5 +159,4 @@ create table ClinicGest.ProdutoIntervencao(
     primary key (numero_intervencao,codigo_produto),
     foreign key (codigo_produto) references ClinicGest.Produto(codigo_produto),
     foreign key (numero_intervencao) references ClinicGest.Intervencao(num_intervencao),
-
 )
