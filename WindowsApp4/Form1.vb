@@ -433,10 +433,10 @@ Public Class Form1
         paciente = CType(ListPacientes.Items.Item(currentPaciente), Paciente)
 
 
-        Dim cmd = New SqlCommand("dbo.TerInternamentosPaciente @paciente_codigo", CN)
+        Dim cmd = New SqlCommand("dbo.SP_TerInternamentosPaciente @paciente", CN)
         CN.Open()
         cmd.Parameters.Clear()
-        cmd.Parameters.AddWithValue("@paciente_codigo", paciente.Codigo)
+        cmd.Parameters.AddWithValue("@paciente", paciente.Codigo)
         Dim RDR As SqlDataReader
         RDR = cmd.ExecuteReader
         ListInternamentosPaciente.Items.Clear()

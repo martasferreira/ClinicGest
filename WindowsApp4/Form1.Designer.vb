@@ -382,7 +382,6 @@ Partial Class Form1
         Me.Label62 = New System.Windows.Forms.Label()
         Me.Label63 = New System.Windows.Forms.Label()
         Me.Label64 = New System.Windows.Forms.Label()
-        Me.TabGestao = New System.Windows.Forms.TabPage()
         Me.TabMedicamento.SuspendLayout()
         Me.TabServico.SuspendLayout()
         Me.GroupEnfermeirosServico.SuspendLayout()
@@ -545,6 +544,8 @@ Partial Class Form1
         '
         'TabServico
         '
+        Me.TabServico.Controls.Add(Me.GroupMedicosServico)
+        Me.TabServico.Controls.Add(Me.GroupEnfermeirosServico)
         Me.TabServico.Controls.Add(Me.SearchServico)
         Me.TabServico.Controls.Add(Me.CodigoServico)
         Me.TabServico.Controls.Add(Me.NomeServico)
@@ -560,8 +561,6 @@ Partial Class Form1
         Me.TabServico.Controls.Add(Me.LabelEnfermeiroServico)
         Me.TabServico.Controls.Add(Me.btnListMedicosServico)
         Me.TabServico.Controls.Add(Me.btnListEnfermeirosServico)
-        Me.TabServico.Controls.Add(Me.GroupEnfermeirosServico)
-        Me.TabServico.Controls.Add(Me.GroupMedicosServico)
         Me.TabServico.Location = New System.Drawing.Point(4, 22)
         Me.TabServico.Name = "TabServico"
         Me.TabServico.Size = New System.Drawing.Size(605, 339)
@@ -723,7 +722,7 @@ Partial Class Form1
         Me.GroupEnfermeirosServico.Controls.Add(Me.Label53)
         Me.GroupEnfermeirosServico.Location = New System.Drawing.Point(7, 3)
         Me.GroupEnfermeirosServico.Name = "GroupEnfermeirosServico"
-        Me.GroupEnfermeirosServico.Size = New System.Drawing.Size(595, 343)
+        Me.GroupEnfermeirosServico.Size = New System.Drawing.Size(598, 334)
         Me.GroupEnfermeirosServico.TabIndex = 63
         Me.GroupEnfermeirosServico.TabStop = False
         Me.GroupEnfermeirosServico.Text = "Enfermeiros"
@@ -988,7 +987,7 @@ Partial Class Form1
         Me.GroupMedicosServico.Controls.Add(Me.Label41)
         Me.GroupMedicosServico.Location = New System.Drawing.Point(7, 1)
         Me.GroupMedicosServico.Name = "GroupMedicosServico"
-        Me.GroupMedicosServico.Size = New System.Drawing.Size(598, 339)
+        Me.GroupMedicosServico.Size = New System.Drawing.Size(602, 342)
         Me.GroupMedicosServico.TabIndex = 15
         Me.GroupMedicosServico.TabStop = False
         Me.GroupMedicosServico.Text = "Medicos"
@@ -3596,7 +3595,6 @@ Partial Class Form1
         Me.TabControl.Controls.Add(Me.TabServico)
         Me.TabControl.Controls.Add(Me.TabMedicamento)
         Me.TabControl.Controls.Add(Me.TabProdutos)
-        Me.TabControl.Controls.Add(Me.TabGestao)
         Me.TabControl.Location = New System.Drawing.Point(1, 3)
         Me.TabControl.Name = "TabControl"
         Me.TabControl.SelectedIndex = 0
@@ -3710,15 +3708,6 @@ Partial Class Form1
         Me.Label64.Size = New System.Drawing.Size(79, 13)
         Me.Label64.TabIndex = 18
         Me.Label64.Text = "Custo Limpeza:"
-        '
-        'TabGestao
-        '
-        Me.TabGestao.Location = New System.Drawing.Point(4, 22)
-        Me.TabGestao.Name = "TabGestao"
-        Me.TabGestao.Size = New System.Drawing.Size(605, 339)
-        Me.TabGestao.TabIndex = 10
-        Me.TabGestao.Text = "Gestão"
-        Me.TabGestao.UseVisualStyleBackColor = True
         '
         'Form1
         '
@@ -4116,7 +4105,6 @@ Partial Class Form1
     Friend WithEvents Label60 As Label
     Friend WithEvents Label58 As Label
     Friend WithEvents btnSairReceitaMedico As Button
-    Friend WithEvents TabGestao As TabPage
     Friend WithEvents TabProdutos As TabPage
     Friend WithEvents Label65 As Label
     Friend WithEvents CustoProduto As TextBox
