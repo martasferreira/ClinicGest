@@ -1,0 +1,1 @@
+select nome,cc,telemovel,salario from ClinicGest.Pessoa as contacto join ClinicGest.staff as staffo on contacto.cc=staffo.cc_staff where staffo.salario >= 2500

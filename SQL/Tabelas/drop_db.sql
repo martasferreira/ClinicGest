@@ -1,4 +1,4 @@
-/*DECLARE @sql NVARCHAR(2000)
+DECLARE @sql NVARCHAR(2000)
 
 WHILE(EXISTS(SELECT 1 from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE CONSTRAINT_TYPE='FOREIGN KEY'))
 BEGIN
@@ -17,6 +17,6 @@ BEGIN
     EXEC(@sql)
     PRINT @sql
 END
-*/
 
-create schema ClinicGest
+
+-- create schema ClinicGest
